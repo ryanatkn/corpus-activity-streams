@@ -14,17 +14,9 @@ live on the web🕸️ [ryanatkn.github.io/corpus-activity-streams](https://ryan
   - [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
     the vocabulary examples data
 
-## develop
-
-```bash
-npm i
-npm run setup # needed the first time (TODO remove this step)
-npm start # or `gro dev` with global install: `npm i -g @feltcoop/gro`
-# browse to localhost:8999 or whatever it says
-```
-
 ## todo
 
+- Make it usable on smaller screens. Collapse columns to tabs, probably.
 - Clicking #hashlinks navigates like you'd expect, but browser nav backward/forward doesn't work.
 - Make it more usable as a library.
   Right now, developer users must import individual TypeScript modules.
@@ -34,6 +26,16 @@ npm start # or `gro dev` with global install: `npm i -g @feltcoop/gro`
   but all it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML.
   The app should parse and render the data at runtime instead of generating components,
   unless there's something more clever that can be done with codegen!
+
+## develop
+
+```bash
+# node 14+
+npm i
+npm run setup # needed the first time (TODO remove this step)
+npm start # or `gro dev` with global install: `npm i -g @feltcoop/gro`
+# browse to localhost:8999 or whatever it says
+```
 
 ## license 🐦
 
