@@ -18,7 +18,9 @@
 ## todo
 
 - Make it usable on smaller screens. Collapse columns to tabs, probably.
-- More data?
+- More data than just the vocabulary?
+  See [ActivityPub](https://www.w3.org/TR/activitypub/) and
+  [Activity Streams 2.0](https://www.w3.org/TR/activitystreams-core/).
 - More and better views! And then some way manage them.
 - Clicking #hashlinks navigates like you'd expect, but browser nav backward/forward doesn't work.
 - Make it more usable as a library.
