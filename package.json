@@ -11,7 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/ryanatkn/corpus-activity-streams.git"
   },
-  "author": "this",
+  "author": {
+    "name": "Ryan Atkinson",
+    "email": "mail@ryanatkn.com",
+    "url": "https://www.ryanatkn.com"
+  },
+  "engines": {
+    "node": ">=14"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ryanatkn/corpus-activity-streams/issues"
