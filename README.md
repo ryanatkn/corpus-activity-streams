@@ -18,6 +18,8 @@
 ## todo
 
 - Make it usable on smaller screens. Collapse columns to tabs, probably.
+- More data?
+- More and better views! And then some way manage them.
 - Clicking #hashlinks navigates like you'd expect, but browser nav backward/forward doesn't work.
 - Make it more usable as a library.
   Right now, developer users must import individual TypeScript modules.
@@ -32,7 +34,6 @@
   All it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML,
   so unless there's something more clever that can be done with codegen,
   the app should render notes from data at runtime instead of generating components.
-- More and better views! And then some way manage them.
 
 ## develop
 
