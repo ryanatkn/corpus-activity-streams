@@ -3,7 +3,7 @@ import {renderNoscriptSection, renderMetaTags} from '@feltcoop/gro/dist/gen/help
 
 export const gen: Gen = () => {
 	const title = 'corpus-activity-streams';
-	const sourceCodeUrl = 'https://github.com/feltcoop/corpus-activity-streams';
+	const sourceCodeUrl = 'https://github.com/ryanatkn/corpus-activity-streams';
 	// TODO get the `sourceCodeUrl` from gen context param?
 	return `<!DOCTYPE html>
 <html lang="en">
