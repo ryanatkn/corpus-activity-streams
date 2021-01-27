@@ -22,11 +22,14 @@
 - Make it more usable as a library.
   Right now, developer users must import individual TypeScript modules.
   It should be published in a more standard npm-friendly way.
+- Somehow display the
+  [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_examples.ts#L1426)
 - Currently this uses an inefficient codegen solution (that was quick to implement!)
   to output Svelte components to `src/notes`, bloating the JS payload,
   but all it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML.
   The app should parse and render the data at runtime instead of generating components,
   unless there's something more clever that can be done with codegen!
+- More and better views! And then some way manage them.
 
 ## develop
 
