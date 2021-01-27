@@ -2,7 +2,7 @@
 
 > [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data, components, and alternative docs
 
-live on the web🕸️ → [ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams) ←
+live on the web🕸️ [ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)
 
 ## contents
 
@@ -33,7 +33,7 @@ npm start # or `gro dev` with global install: `npm i -g @feltcoop/gro`
   to output Svelte components to `src/notes`, bloating the JS payload,
   but all it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML.
   The app should parse and render the data at runtime instead of generating components,
-  unless there's something more clever that can be done with codegen.
+  unless there's something more clever that can be done with codegen!
 
 ## license 🐦
 

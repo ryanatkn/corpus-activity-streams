@@ -9,13 +9,14 @@
 </script>
 
 <div class="app">
-	<!-- TODO nav goes here -->
+	<!-- TODO nav? -->
 	<div class="content">
 		<svelte:component this={view} {vocabulary} />
 	</div>
 </div>
 
 <style>
+	/* TODO import a static css file */
 	:global(html),
 	:global(body) {
 		height: 100%;
