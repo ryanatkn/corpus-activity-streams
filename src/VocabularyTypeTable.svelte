@@ -13,18 +13,15 @@
 	<thead>
 		<tr>
 			<th>type ({vocabulary.types.length})</th>
-			<th>category</th>
 			<th>extends</th>
 			<th>properties</th>
+			<th>category</th>
 		</tr>
 	</thead>
 	{#each vocabulary.types as item (item)}
 		<tr>
 			<td>
 				<EntityLink entity={item} />
-			</td>
-			<td>
-				<StringLink>{item.category}</StringLink>
 			</td>
 			<td>
 				<Items items={item.extends} let:item>
@@ -39,6 +36,9 @@
 						<EntityLink entity={vocabulary.byName[item]} />
 					{/if}
 				</Items>
+			</td>
+			<td>
+				<StringLink>{item.category}</StringLink>
 			</td>
 		</tr>
 	{/each}
