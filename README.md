@@ -2,18 +2,18 @@
 
 > [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data and alternative docs
 
-## live on the web🕸️
+## website🕸️
 
 <https://ryanatkn.github.io/corpus-activity-streams>
 
 ## useful modules
 
-- [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
 - [src/activity_streams.ts](src/activity_streams.ts): vocabulary types and pimary data
 - [src/activity_streams_notes.ts](src/activity_streams_notes.ts):
   the `notes` property of the vocabulary items
 - [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
   the vocabulary examples data
+- [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
 
 ## todo
 
