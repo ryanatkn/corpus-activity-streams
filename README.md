@@ -1,6 +1,8 @@
 # corpus-activity-streams
 
-> **[ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)**: data and components for [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/)
+> [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data, components, and alternative docs
+
+live on the web🕸️: [ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)
 
 ## develop
 
