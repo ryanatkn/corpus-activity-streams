@@ -2,7 +2,17 @@
 
 > [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data, components, and alternative docs
 
-live on the web🕸️: [ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)
+live on the web🕸️ → [ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams) ←
+
+## contents
+
+- some useful modules:
+  - [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
+  - [src/activity_streams.ts](src/activity_streams.ts): vocabulary types and pimary data
+  - [src/activity_streams_notes.ts](src/activity_streams_notes.ts):
+    the `notes` property of the vocabulary items
+  - [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
+    the vocabulary examples data
 
 ## develop
 
@@ -15,6 +25,10 @@ npm start # or `gro dev` with global install: `npm i -g @feltcoop/gro`
 
 ## todo
 
+- Clicking #hashlinks navigates like you'd expect, but browser nav backward/forward doesn't work.
+- Make it more usable as a library.
+  Right now, developer users must import individual TypeScript modules.
+  It should be published in a more standard npm-friendly way.
 - Currently this uses an inefficient codegen solution (that was quick to implement!)
   to output Svelte components to `src/notes`, bloating the JS payload,
   but all it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML.
