@@ -1,8 +1,10 @@
 {
   "name": "corpus-activity-streams",
+  "description": "data and components for Activity Streams 2.0 vocabulary",
+  "homepage": "https://ryanatkn.github.io/corpus-activity-streams",
+  "license": "MIT",
   "version": "0.0.0",
   "type": "module",
-  "description": "data and components for Activity Streams 2.0 vocabulary",
   "scripts": {
     "setup": "gro gen && gro assets",
     "start": "gro dev"
@@ -19,11 +21,9 @@
   "engines": {
     "node": ">=14"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ryanatkn/corpus-activity-streams/issues"
   },
-  "homepage": "https://github.com/ryanatkn/corpus-activity-streams#readme",
   "keywords": [
     "Activity Streams"
   ],
