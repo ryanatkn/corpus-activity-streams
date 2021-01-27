@@ -27,11 +27,10 @@
   Right now, developer users must import individual TypeScript modules.
   It should be published in a more standard npm-friendly way.
 - Somehow display the
-  [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_examples.ts#L1426)
+  [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_examples.ts#L1426).
 - It currently uses a harshly inefficient codegen solution
   (that was
-  [quick to implement](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_notes_html.gen.ts)
-  !)
+  [quick to implement](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_notes_html.gen.ts)!)
   to output Svelte components to `src/notes`, bloating the JS payload.
   All it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML,
   so unless there's something more clever that can be done with codegen,
