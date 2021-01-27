@@ -24,7 +24,10 @@
   It should be published in a more standard npm-friendly way.
 - Somehow display the
   [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_examples.ts#L1426)
-- Currently this uses an inefficient codegen solution (that was quick to implement!)
+- It currently uses a harshly inefficient codegen solution
+  (that was
+  [quick to implement](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_notes_html.gen.ts)
+  !)
   to output Svelte components to `src/notes`, bloating the JS payload,
   but all it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML.
   The app should parse and render the data at runtime instead of generating components,
