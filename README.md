@@ -1,6 +1,6 @@
 # corpus-activity-streams
 
-> [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data, components, and alternative docs
+> [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data and alternative docs
 
 ## live on the web🕸️
 
