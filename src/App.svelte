@@ -2,14 +2,16 @@
 	import {vocabulary} from './vocabulary.js';
 	import TabbedView from './TabbedView.svelte';
 	import TiledView from './TiledView.svelte';
+	import GitHubLink from './GitHubLink.svelte';
 
-	window.hack = ('vocabulary', vocabulary);
+	window.hack = ('vocabulary', vocabulary, GitHubLink);
 
 	let view = TiledView || TabbedView;
 </script>
 
 <div class="app">
 	<!-- TODO nav? -->
+	<GitHubLink />
 	<div class="content">
 		<svelte:component this={view} {vocabulary} />
 	</div>
