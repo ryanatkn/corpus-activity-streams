@@ -24,6 +24,9 @@
     "url": "https://github.com/ryanatkn/corpus-activity-streams/issues"
   },
   "homepage": "https://github.com/ryanatkn/corpus-activity-streams#readme",
+  "keywords": [
+    "Activity Streams"
+  ],
   "prettier": {
     "useTabs": true,
     "printWidth": 100,
