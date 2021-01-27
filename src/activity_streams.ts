@@ -12,7 +12,8 @@ export interface BaseVocabularyItem {
 	category: VocabularyCategory;
 }
 export interface VocabularyType extends BaseVocabularyItem {
-	extends?: string | string[];
+	extends?: string | string[]; // TODO should swap in the actual `VocabularyType` like `extendedBy`
+	extendedBy?: VocabularyType[];
 	properties?: string[];
 	disjointWith?: string;
 }
@@ -803,13 +804,19 @@ export const vocabulary: VocabularyItem[] = [
 	},
 ];
 
-// TODO type
-const addExtendedBy = (items: (VocabularyItem | any)[]) => {
+export const lookupVocabularyItem = (
+	names: string | string[],
+	items: VocabularyItem[],
+): VocabularyItem =>
+	(typeof names === 'string'
+		? items.find((i) => i.name === names)
+		: items.find((i) => names.includes(i.name)))!;
+
+// Mutates `items` to derive and populate `extendedBy`.
+const addExtendedBy = (items: VocabularyItem[]) => {
 	for (const item of items) {
-		if (item.extends) {
-			const extended = Array.isArray(item.extends)
-				? items.find((i) => item.extends.includes(i.name))
-				: items.find((i) => i.name === item.extends);
+		if ('extends' in item && item.extends) {
+			const extended = lookupVocabularyItem(item.extends, items) as VocabularyType;
 			if (!extended.extendedBy) {
 				extended.extendedBy = [item];
 			} else if (!extended.extendedBy.includes(item)) {
