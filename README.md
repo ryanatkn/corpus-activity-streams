@@ -2,17 +2,16 @@
 
 > [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data, components, and alternative docs
 
-live on the web🕸️ [ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)
+## live on the web🕸️ [ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)
 
-## contents
+## useful modules
 
-- some useful modules:
-  - [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
-  - [src/activity_streams.ts](src/activity_streams.ts): vocabulary types and pimary data
-  - [src/activity_streams_notes.ts](src/activity_streams_notes.ts):
-    the `notes` property of the vocabulary items
-  - [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
-    the vocabulary examples data
+- [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
+- [src/activity_streams.ts](src/activity_streams.ts): vocabulary types and pimary data
+- [src/activity_streams_notes.ts](src/activity_streams_notes.ts):
+  the `notes` property of the vocabulary items
+- [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
+  the vocabulary examples data
 
 ## todo
 
@@ -36,6 +35,9 @@ npm run setup # needed the first time (TODO remove this step)
 npm start # or `gro dev` with global install: `npm i -g @feltcoop/gro`
 # browse to localhost:8999 or whatever it says
 ```
+
+should look the same as the deployed version:
+[ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)
 
 ## license 🐦
 
