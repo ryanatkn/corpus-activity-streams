@@ -26,6 +26,7 @@ The properties are inferred from what `Object` and `Link` share.
 
 ## todo
 
+- bug: Clicking #hashlinks navigates like you'd expect, but browser nav backward/forward doesn't work.
 - Make it more usable as a library.
   Right now, developer users must import individual TypeScript modules.
   It should be published in a more standard npm-friendly way and include the data as JSON.
@@ -34,7 +35,6 @@ The properties are inferred from what `Object` and `Link` share.
   See [ActivityPub](https://www.w3.org/TR/activitypub/) and
   [Activity Streams 2.0](https://www.w3.org/TR/activitystreams-core/).
 - More and better views! And then some way manage them.
-- Clicking #hashlinks navigates like you'd expect, but browser nav backward/forward doesn't work.
 - Somehow display the
   [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_examples.ts#L1426).
 - It currently uses a harshly inefficient codegen solution
