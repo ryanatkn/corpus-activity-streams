@@ -15,17 +15,17 @@
 </script>
 
 <div class="tiled-view">
-	<div class="tile">
+	<!-- <div class="tile">
 		<VocabularyTypeTable {vocabulary} />
 	</div>
 	<div class="tile">
 		<VocabularyPropertyTable {vocabulary} />
+	</div> -->
+	<div class="tile">
+		<VocabularyTree {vocabulary} />
 	</div>
 	<div class="tile">
 		<VocabularyDetails {vocabulary} />
-	</div>
-	<div class="tile">
-		<VocabularyTree {vocabulary} />
 	</div>
 	<div class="tile">
 		<VocabularyGroups {vocabulary} />
