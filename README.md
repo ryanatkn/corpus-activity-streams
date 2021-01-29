@@ -2,7 +2,7 @@
 
 > [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data and alternative docs
 
-## website🕸️
+## website[🕸️](https://ryanatkn.github.io/corpus-activity-streams)
 
 <https://ryanatkn.github.io/corpus-activity-streams>
 
