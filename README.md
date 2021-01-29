@@ -26,7 +26,7 @@ The properties are inferred from what `Object` and `Link` share.
 
 ## todo
 
-- Make it more usable as a library
+- Make it more usable as a library.
   Right now, developer users must import individual TypeScript modules.
   It should be published in a more standard npm-friendly way and include the data as JSON.
 - Make it usable on smaller screens. Collapse columns to tabs, probably.
