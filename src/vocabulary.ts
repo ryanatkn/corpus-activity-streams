@@ -18,6 +18,9 @@ export const vocabulary: Vocabulary = {
 	types: activityStreamsVocabulary.filter((v) => v.category !== 'vocab.property'),
 	byTypeName: vocabularyCategories.reduce((result, t) => {
 		result[t] = activityStreamsVocabulary.filter((v) => v.category === t);
+		if (t === 'vocab.property') {
+			result[t].sort((a, b) => (a.name > b.name ? 1 : -1));
+		}
 		return result;
 	}, {} as Vocabulary['byTypeName']),
 	properties: activityStreamsVocabulary.filter((v) => v.category === 'vocab.property'),
