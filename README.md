@@ -15,6 +15,15 @@
   the vocabulary examples data
 - [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
 
+## compared to the spec
+
+This project's data was assembled by hand from both
+[the ActivityStreams website](https://www.w3.org/TR/activitystreams-vocabulary/) and
+[the w3c OWL spec](https://github.com/w3c/activitystreams/blob/master/vocabulary/activitystreams2.owl).
+
+The data also includes `Entity`, a term used only informally in the spec.
+The properties are inferred from what `Object` and `Link` share.
+
 ## todo
 
 - Make it usable on smaller screens. Collapse columns to tabs, probably.
