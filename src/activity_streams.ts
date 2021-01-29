@@ -824,5 +824,11 @@ const addExtendedBy = (items: VocabularyItem[]) => {
 			}
 		}
 	}
+	// Sort `extendedBy` by name.
+	for (const item of items) {
+		if ('extendedBy' in item && item.extendedBy) {
+			item.extendedBy.sort((a, b) => (a.name > b.name ? 1 : -1));
+		}
+	}
 };
 addExtendedBy(vocabulary);
