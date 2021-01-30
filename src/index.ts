@@ -15,5 +15,5 @@ export const app = new App({
 
 // fixes the browser back/forward buttons for reasons
 window.onhashchange = () => {
-	window.location.href = window.location.href;
+	if (window.location.hash) window.location.href = window.location.href;
 };
