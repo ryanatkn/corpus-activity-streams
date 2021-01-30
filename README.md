@@ -53,7 +53,7 @@ The properties are inferred from what `Object` and `Link` share.
 # node 14+
 npm i
 npm run setup # needed the first time (TODO remove this step)
-npm start # or `gro dev` with global install: `npm i -g @feltcoop/gro`
+npm start
 # browse to localhost:8999 or whatever it says
 ```
 
