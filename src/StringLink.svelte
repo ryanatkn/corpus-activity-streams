@@ -1,6 +1,5 @@
 <code class="string-link">
-	'
-	<slot />'
+	'<slot />'
 </code>
 
 <style>
