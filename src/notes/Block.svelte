@@ -14,3 +14,19 @@ block activities or content of other users. The
 and
 <EntityLink name="origin" />
 typically have no defined meaning.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally blocked Joe",
+  "<EntityLink name="type" />": "Block",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://joe.example.org"
+{'}'}
+			</pre>

@@ -9,3 +9,43 @@ A
 represents a content object that has been deleted. It can be used in
 <EntityLink name="Collection" />s to signify that there used to be an object at this position, but
 it has been deleted.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "OrderedCollection",
+  "<EntityLink name="totalItems" />": 3,
+  "<EntityLink
+		name="name"
+	/>": "Vacation photos 2016",
+  "<EntityLink name="orderedItems" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Image",
+      "<EntityLink
+		name="id"
+	/>": "http://image.example/1"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Tombstone",
+      "<EntityLink name="formerType" />": "Image",
+      "<EntityLink
+		name="id"
+	/>": "http://image.example/2",
+      "<EntityLink
+		name="deleted"
+	/>": "2016-03-17T00:00:00Z"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Image",
+      "<EntityLink name="id" />": "http://image.example/3"
+    {'}'}
+  ]
+{'}'}
+			</pre>

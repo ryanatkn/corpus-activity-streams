@@ -6,3 +6,57 @@
 
 Indicates an entity that describes an image for this object. Unlike the icon property, there are no
 aspect ratio or display size limitations assumed.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="name"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "This is all there is.",
+  "<EntityLink name="image" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Image",
+    "<EntityLink name="name" />": "A Cat",
+    "<EntityLink
+		name="url"
+	/>": "http://example.org/cat.png"
+  {'}'}
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="name"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "This is all there is.",
+  "<EntityLink name="image" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Image",
+      "<EntityLink name="name" />": "Cat 1",
+      "<EntityLink
+		name="url"
+	/>": "http://example.org/cat1.png"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Image",
+      "<EntityLink name="name" />": "Cat 2",
+      "<EntityLink
+		name="url"
+	/>": "http://example.org/cat2.png"
+    {'}'}
+  ]
+{'}'}
+			</pre>

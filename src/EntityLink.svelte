@@ -17,15 +17,16 @@
 		'vocab.core': 218,
 		'vocab.object': 258,
 		'vocab.link': 258,
-		'vocab.property': 189,
+		'vocab.property': 22,
 		'vocab.activity': 287,
 		'vocab.actor': 335,
 	};
 
+	const saturation = '43%';
 	$: hue = colors[ent.category];
-	$: color = `hsl(${hue}, 60%, 93%)`;
-	$: hoveredColor = `hsl(${hue}, 60%, 87%)`;
-	$: pressedColor = `hsl(${hue}, 60%, 82%)`;
+	$: color = `hsl(${hue}, ${saturation}, 93%)`;
+	$: hoveredColor = `hsl(${hue}, ${saturation}, 87%)`;
+	$: pressedColor = `hsl(${hue}, ${saturation}, 82%)`;
 
 	// TODO is there a significantly more efficient
 	// way to do this than listening to these events?

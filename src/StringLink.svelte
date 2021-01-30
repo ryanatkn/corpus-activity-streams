@@ -1,5 +1,6 @@
 <code class="string-link">
-	'<slot />'
+	'
+	<slot />'
 </code>
 
 <style>
@@ -7,6 +8,6 @@
 		padding: 0 3px;
 		margin: 0 3px;
 		border-radius: 2px;
-		background-color: #e4f7e3;
+		background-color: var(--color_green);
 	}
 </style>

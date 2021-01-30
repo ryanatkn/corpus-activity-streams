@@ -13,3 +13,27 @@ and
 <EntityLink name="tag" />
 is that the former implies association by inclusion, while the latter implies associated by
 reference.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Image",
+  "<EntityLink name="summary" />": "Picture of Sally",
+  "<EntityLink
+		name="url"
+	/>": "http://example.org/sally.jpg",
+  "<EntityLink name="tag" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Person",
+      "<EntityLink name="id" />": "http://sally.example.org",
+      "<EntityLink
+		name="name"
+	/>": "Sally"
+    {'}'}
+  ]
+{'}'}
+			</pre>

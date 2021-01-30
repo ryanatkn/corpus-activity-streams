@@ -8,3 +8,12 @@ Provides the globally unique identifier for an
 <EntityLink name="Object" />
 or
 <EntityLink name="Link" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="name"
+	/>": "Foo",
+  "<EntityLink name="id" />": "http://example.org/foo"
+{'}'}
+			</pre>

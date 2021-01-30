@@ -8,3 +8,18 @@ Indicates that the
 <EntityLink name="actor" />
 dislikes the
 <EntityLink name="object" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally disliked a post",
+  "<EntityLink name="type" />": "Dislike",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1"
+{'}'}
+			</pre>

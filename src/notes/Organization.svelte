@@ -5,3 +5,12 @@
 </script>
 
 Represents an organization.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Organization",
+  "<EntityLink name="name" />": "Example Co."
+{'}'}
+			</pre>

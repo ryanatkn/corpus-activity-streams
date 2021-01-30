@@ -9,3 +9,16 @@ On a
 object, the
 <EntityLink name="deleted" />
 property is a timestamp for when the object was deleted.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "This image has been deleted",
+  "<EntityLink name="type" />": "Tombstone",
+  "<EntityLink
+		name="deleted"
+	/>": "2016-05-03T00:00:00Z"
+{'}'}
+			</pre>

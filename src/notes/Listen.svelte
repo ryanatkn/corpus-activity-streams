@@ -8,3 +8,21 @@ Indicates that the
 <EntityLink name="actor" />
 has listened to the
 <EntityLink name="object" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally listened to a piece of music",
+  "<EntityLink name="type" />": "Listen",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": "http://example.org/music.mp3"
+{'}'}
+			</pre>

@@ -7,3 +7,32 @@
 A subtype of
 <EntityLink name="Collection" />
 in which members of the logical collection are assumed to always be strictly ordered.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's notes",
+  "<EntityLink name="type" />": "OrderedCollection",
+  "<EntityLink
+		name="totalItems"
+	/>": 2,
+  "<EntityLink name="orderedItems" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink
+		name="name"
+	/>": "A Simple Note"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink name="name" />": "Another Simple Note"
+    {'}'}
+  ]
+{'}'}
+			</pre>

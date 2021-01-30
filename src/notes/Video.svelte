@@ -5,3 +5,16 @@
 </script>
 
 Represents a video document of any kind.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Video",
+  "<EntityLink name="name" />": "Puppy Plays With Ball",
+  "<EntityLink
+		name="url"
+	/>": "http://example.org/video.mkv",
+  "<EntityLink name="duration" />": "PT2H"
+{'}'}
+			</pre>

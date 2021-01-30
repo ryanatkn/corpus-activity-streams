@@ -13,3 +13,24 @@ A link relation associated with a
 	href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5"
 >HTML5</a>], any string not containing the "space" U+0020, "tab" (U+0009), "LF" (U+000A), "FF"
 (U+000C), "CR" (U+000D) or "," (U+002C) characters can be used as a valid link relation.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Link",
+  "<EntityLink name="href" />": "http://example.org/abc",
+  "<EntityLink
+		name="hreflang"
+	/>": "en",
+  "<EntityLink name="mediaType" />": "text/html",
+  "<EntityLink
+		name="name"
+	/>": "Preview",
+  "<EntityLink name="rel" />": [
+    "canonical",
+    "preview"
+  ]
+{'}'}
+			</pre>

@@ -12,3 +12,20 @@ an
 property. If not specified, the
 <EntityLink name="content" />
 property is assumed to contain text/html content.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Link",
+  "<EntityLink name="href" />": "http://example.org/abc",
+  "<EntityLink
+		name="hreflang"
+	/>": "en",
+  "<EntityLink name="mediaType" />": "text/html",
+  "<EntityLink
+		name="name"
+	/>": "Next"
+{'}'}
+			</pre>

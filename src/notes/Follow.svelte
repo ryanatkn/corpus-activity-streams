@@ -13,3 +13,27 @@ in which the actor is interested in any activity performed by or on the object. 
 and
 <EntityLink name="origin" />
 typically have no defined meaning.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally followed John",
+  "<EntityLink name="type" />": "Follow",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "John"
+  {'}'}
+{'}'}
+			</pre>

@@ -12,3 +12,22 @@ is ignoring the
 and
 <EntityLink name="origin" />
 typically have no defined meaning.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally ignored a note",
+  "<EntityLink name="type" />": "Ignore",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": "http://example.org/notes/1"
+{'}'}
+			</pre>

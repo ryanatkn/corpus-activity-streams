@@ -9,3 +9,17 @@ On a
 object, the
 <EntityLink name="formerType" />
 property identifies the type of the object that was deleted.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "This image has been deleted",
+  "<EntityLink name="type" />": "Tombstone",
+  "<EntityLink
+		name="formerType"
+	/>": "Image",
+  "<EntityLink name="url" />": "http://example.org/image/2"
+{'}'}
+			</pre>

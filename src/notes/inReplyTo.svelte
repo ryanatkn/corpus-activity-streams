@@ -5,3 +5,40 @@
 </script>
 
 Indicates one or more entities for which this object is considered a response.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "This is all there is.",
+  "<EntityLink name="inReplyTo" />": {'{'}
+    "<EntityLink
+		name="summary"
+	/>": "Previous note",
+    "<EntityLink name="type" />": "Note",
+    "<EntityLink
+		name="content"
+	/>": "What else is there?"
+  {'}'}
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "This is all there is.",
+  "<EntityLink
+		name="inReplyTo"
+	/>": "http://example.org/posts/1"
+{'}'}
+			</pre>

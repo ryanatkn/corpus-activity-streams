@@ -7,3 +7,41 @@
 Identifies a
 <EntityLink name="Collection" />
 containing objects considered to be responses to this object.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="id"
+	/>": "http://www.test.example/notes/1",
+  "<EntityLink
+		name="content"
+	/>": "I am fine.",
+  "<EntityLink name="replies" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Collection",
+    "<EntityLink name="totalItems" />": 1,
+    "<EntityLink
+		name="items"
+	/>": [
+      {'{'}
+        "<EntityLink
+		name="summary"
+	/>": "A response to the note",
+        "<EntityLink name="type" />": "Note",
+        "<EntityLink
+		name="content"
+	/>": "I am glad to hear it.",
+        "<EntityLink
+		name="inReplyTo"
+	/>": "http://www.test.example/notes/1"
+      {'}'}
+    ]
+  {'}'}
+{'}'}
+			</pre>

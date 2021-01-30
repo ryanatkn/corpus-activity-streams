@@ -9,3 +9,21 @@ Indicates the altitude of a place. The measurement units is indicated using the
 property. If
 <EntityLink name="units" />
 is not specified, the default is assumed to be "m" indicating meters.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Place",
+  "<EntityLink name="name" />": "Fresno Area",
+  "<EntityLink
+		name="altitude"
+	/>": 15,
+  "<EntityLink name="latitude" />": 36.75,
+  "<EntityLink
+		name="longitude"
+	/>": 119.7667,
+  "<EntityLink name="units" />": "miles"
+{'}'}
+			</pre>

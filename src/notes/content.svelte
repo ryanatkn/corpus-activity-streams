@@ -12,3 +12,49 @@ is HTML. The
 <EntityLink name="mediaType" />
 property can be used in the object to indicate a different content type. The content MAY be
 expressed using multiple language-tagged values.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "A simple note"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink
+		name="type"
+	/>": "Note",
+  "contentMap": {'{'}
+    "en": "A simple note",
+    "es": "Una nota sencilla",
+    "zh-Hans": "一段简单的笔记"
+  {'}'}
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="mediaType"
+	/>": "text/markdown",
+  "<EntityLink
+		name="content"
+	/>": "## A simple note\nA simple markdown `note`"
+{'}'}
+			</pre>

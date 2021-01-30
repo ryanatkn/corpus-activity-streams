@@ -6,3 +6,23 @@
 
 Identifies one or more entities that represent the total population of entities for which the object
 can considered to be relevant.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="name"
+	/>": "Holiday announcement",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "Thursday will be a company-wide holiday. Enjoy your day off!",
+  "<EntityLink
+		name="audience"
+	/>": {'{'}
+    "<EntityLink name="type" />": "http://example.org/Organization",
+    "<EntityLink
+		name="name"
+	/>": "ExampleCo LLC"
+  {'}'}
+{'}'}
+			</pre>

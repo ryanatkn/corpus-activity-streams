@@ -10,3 +10,21 @@ object, the
 <EntityLink name="describes" />
 property identifies the object described by the
 <EntityLink name="Profile" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's profile",
+  "<EntityLink name="type" />": "Profile",
+  "<EntityLink
+		name="describes"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="url" />": "http://sally.example.org"
+{'}'}
+			</pre>

@@ -11,3 +11,21 @@ and
 properties on a
 <EntityLink name="Place" />
 object. If not specified, the default is assumed to be "m" for "meters".
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Place",
+  "<EntityLink name="name" />": "Fresno Area",
+  "<EntityLink
+		name="latitude"
+	/>": 36.75,
+  "<EntityLink name="longitude" />": 119.7667,
+  "<EntityLink
+		name="radius"
+	/>": 15,
+  "<EntityLink name="units" />": "miles"
+{'}'}
+			</pre>

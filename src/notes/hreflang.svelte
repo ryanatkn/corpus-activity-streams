@@ -7,3 +7,20 @@
 Hints as to the language used by the target resource. Value MUST be a [<a
 	href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-BCP47"
 >BCP47</a>] Language-Tag.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Link",
+  "<EntityLink name="href" />": "http://example.org/abc",
+  "<EntityLink
+		name="hreflang"
+	/>": "en",
+  "<EntityLink name="mediaType" />": "text/html",
+  "<EntityLink
+		name="name"
+	/>": "Previous"
+{'}'}
+			</pre>

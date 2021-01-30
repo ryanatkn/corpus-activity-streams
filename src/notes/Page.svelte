@@ -5,3 +5,15 @@
 </script>
 
 Represents a Web Page.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Page",
+  "<EntityLink name="name" />": "Omaha Weather Report",
+  "<EntityLink
+		name="url"
+	/>": "http://example.org/weather-in-omaha.html"
+{'}'}
+			</pre>

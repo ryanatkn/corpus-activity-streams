@@ -12,3 +12,35 @@ is offering the
 indicates the entity to which the
 <EntityLink name="object" />
 is being offered.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally offered 50% off to Lewis",
+  "<EntityLink name="type" />": "Offer",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "http://www.types.example/ProductOffer",
+    "<EntityLink
+		name="name"
+	/>": "50% Off!"
+  {'}'},
+  "<EntityLink name="target" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Lewis"
+  {'}'}
+{'}'}
+			</pre>

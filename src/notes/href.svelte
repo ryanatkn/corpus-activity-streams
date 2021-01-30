@@ -6,3 +6,17 @@
 
 The target resource pointed to by a
 <EntityLink name="Link" />
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Link",
+  "<EntityLink name="href" />": "http://example.org/abc",
+  "<EntityLink
+		name="mediaType"
+	/>": "text/html",
+  "<EntityLink name="name" />": "Previous"
+{'}'}
+			</pre>

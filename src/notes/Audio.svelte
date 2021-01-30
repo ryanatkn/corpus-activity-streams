@@ -5,3 +5,23 @@
 </script>
 
 Represents an audio document of any kind.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Audio",
+  "<EntityLink name="name" />": "Interview With A Famous Technologist",
+  "<EntityLink
+		name="url"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Link",
+    "<EntityLink
+		name="href"
+	/>": "http://example.org/podcast.mp3",
+    "<EntityLink
+		name="mediaType"
+	/>": "audio/mp3"
+  {'}'}
+{'}'}
+			</pre>

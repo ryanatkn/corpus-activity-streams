@@ -5,3 +5,18 @@
 </script>
 
 Represents any kind of multi-paragraph written work.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Article",
+  "<EntityLink name="name" />": "What a Crazy Day I Had",
+  "<EntityLink
+		name="content"
+	/>": "... you will never believe ...",
+  "<EntityLink
+		name="attributedTo"
+	/>": "http://sally.example.org"
+{'}'}
+			</pre>

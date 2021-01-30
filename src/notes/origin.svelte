@@ -7,3 +7,32 @@
 Describes an indirect object of the activity from which the activity is directed. The precise
 meaning of the origin is the object of the English preposition "from". For instance, in the activity
 "John moved an item to List B from List A", the origin of the activity is "List A".
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally moved a post from List A to List B",
+  "<EntityLink
+		name="type"
+	/>": "Move",
+  "<EntityLink name="actor" />": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1",
+  "<EntityLink name="target" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Collection",
+    "<EntityLink name="name" />": "List B"
+  {'}'},
+  "<EntityLink
+		name="origin"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Collection",
+    "<EntityLink
+		name="name"
+	/>": "List A"
+  {'}'}
+{'}'}
+			</pre>

@@ -17,3 +17,65 @@ The
 can be used to identify the context from which the
 <EntityLink name="object" />
 originated.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally added an object",
+  "<EntityLink name="type" />": "Add",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": "http://example.org/abc"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally added a picture of her cat to her cat picture collection",
+  "<EntityLink
+		name="type"
+	/>": "Add",
+  "<EntityLink name="actor" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="object"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Image",
+    "<EntityLink
+		name="name"
+	/>": "A picture of my cat",
+    "<EntityLink
+		name="url"
+	/>": "http://example.org/img/cat.png"
+  {'}'},
+  "<EntityLink
+		name="origin"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Collection",
+    "<EntityLink
+		name="name"
+	/>": "Camera Roll"
+  {'}'},
+  "<EntityLink name="target" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Collection",
+    "<EntityLink name="name" />": "My Cat Pictures"
+  {'}'}
+{'}'}
+			</pre>

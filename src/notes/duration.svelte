@@ -10,3 +10,17 @@ property indicates the object's approximate duration. The value MUST be expresse
 `xsd:duration` as defined by [
 <a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-xmlschema11-2">xmlschema11-2</a>],
 section 3.3.6 (e.g. a period of 5 seconds is represented as "PT5S").
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Video",
+  "<EntityLink name="name" />": "Birds Flying",
+  "<EntityLink
+		name="url"
+	/>": "http://example.org/video.mkv",
+  "<EntityLink name="duration" />": "PT2H"
+{'}'}
+			</pre>

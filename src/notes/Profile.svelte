@@ -10,3 +10,21 @@ is a content object that describes another
 <EntityLink name="Object" />, typically used to describe `Actor Type` objects. The
 <EntityLink name="describes" />
 property is used to reference the object being described by the profile.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Profile",
+  "<EntityLink name="summary" />": "Sally's Profile",
+  "<EntityLink
+		name="describes"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally Smith"
+  {'}'}
+{'}'}
+			</pre>

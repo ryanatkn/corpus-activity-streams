@@ -12,3 +12,31 @@ property identifies the kind of relationship that exists between
 <EntityLink name="subject" />
 and
 <EntityLink name="object" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally is an acquaintance of John's",
+  "<EntityLink
+		name="type"
+	/>": "Relationship",
+  "<EntityLink name="subject" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="relationship"
+	/>": "http://purl.org/vocab/relationship/acquaintanceOf",
+  "<EntityLink
+		name="object"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "John"
+  {'}'}
+{'}'}
+			</pre>

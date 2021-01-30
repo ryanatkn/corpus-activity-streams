@@ -5,3 +5,15 @@
 </script>
 
 Represents a short written work typically less than a single paragraph in length.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Note",
+  "<EntityLink name="name" />": "A Word of Warning",
+  "<EntityLink
+		name="content"
+	/>": "Looks like it is going to rain today. Bring an umbrella!"
+{'}'}
+			</pre>

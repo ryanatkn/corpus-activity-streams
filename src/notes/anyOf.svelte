@@ -13,3 +13,28 @@ can have multiple answers. To indicate that a
 <EntityLink name="Question" />
 can have only one answer, use
 <EntityLink name="oneOf" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Question",
+  "<EntityLink name="name" />": "What is the answer?",
+  "<EntityLink
+		name="anyOf"
+	/>": [
+    {'{'}
+      "<EntityLink name="type" />": "Note",
+      "<EntityLink
+		name="name"
+	/>": "Option A"
+    {'}'},
+    {'{'}
+      "<EntityLink name="type" />": "Note",
+      "<EntityLink
+		name="name"
+	/>": "Option B"
+    {'}'}
+  ]
+{'}'}
+			</pre>

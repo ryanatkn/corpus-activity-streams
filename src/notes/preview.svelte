@@ -5,3 +5,32 @@
 </script>
 
 Identifies an entity that provides a preview of this object.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Video",
+  "<EntityLink name="name" />": "Cool New Movie",
+  "<EntityLink
+		name="duration"
+	/>": "PT2H30M",
+  "<EntityLink name="preview" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Video",
+    "<EntityLink name="name" />": "Trailer",
+    "<EntityLink
+		name="duration"
+	/>": "PT1M",
+    "<EntityLink name="url" />": {'{'}
+      "<EntityLink
+		name="href"
+	/>": "http://example.org/trailer.mkv",
+      "<EntityLink
+		name="mediaType"
+	/>": "video/mkv"
+    {'}'}
+  {'}'}
+{'}'}
+			</pre>

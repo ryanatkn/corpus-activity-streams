@@ -9,3 +9,21 @@ Indicates that the
 is "flagging" the
 <EntityLink name="object" />. Flagging is defined in the sense common to many social platforms as
 reporting content as being inappropriate for any number of reasons.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally flagged an inappropriate note",
+  "<EntityLink name="type" />": "Flag",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Note",
+    "<EntityLink name="content" />": "An inappropriate note"
+  {'}'}
+{'}'}
+			</pre>

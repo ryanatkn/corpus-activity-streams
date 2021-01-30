@@ -6,3 +6,29 @@
 
 Identifies one or more objects used (or to be used) in the completion of an
 <EntityLink name="Activity" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally listened to a piece of music on the Acme Music Service",
+  "<EntityLink
+		name="type"
+	/>": "Listen",
+  "<EntityLink name="actor" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/foo.mp3",
+  "<EntityLink name="instrument" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Service",
+    "<EntityLink name="name" />": "Acme Music Service"
+  {'}'}
+{'}'}
+			</pre>

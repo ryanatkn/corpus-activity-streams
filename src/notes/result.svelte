@@ -6,3 +6,31 @@
 
 Describes the result of the activity. For instance, if a particular action results in the creation
 of a new resource, the result property can be used to describe that new resource.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally checked that her flight was on time",
+  "<EntityLink
+		name="type"
+	/>": [
+    "Activity",
+    "http://www.verbs.example/Check"
+  ],
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/flights/1",
+  "<EntityLink name="result" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "http://www.types.example/flightstatus",
+    "<EntityLink
+		name="name"
+	/>": "On Time"
+  {'}'}
+{'}'}
+			</pre>

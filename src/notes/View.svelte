@@ -8,3 +8,28 @@ Indicates that the
 <EntityLink name="actor" />
 has viewed the
 <EntityLink name="object" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally read an article",
+  "<EntityLink name="type" />": "View",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Article",
+    "<EntityLink
+		name="name"
+	/>": "What You Should Know About Activity Streams"
+  {'}'}
+{'}'}
+			</pre>

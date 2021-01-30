@@ -16,3 +16,35 @@ can be used to identify the context from which the
 originated. The
 <EntityLink name="target" />
 typically has no defined meaning.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally arrived at work",
+  "<EntityLink name="type" />": "Arrive",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="location" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Place",
+    "<EntityLink name="name" />": "Work"
+  {'}'},
+  "<EntityLink
+		name="origin"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Place",
+    "<EntityLink
+		name="name"
+	/>": "Home"
+  {'}'}
+{'}'}
+			</pre>

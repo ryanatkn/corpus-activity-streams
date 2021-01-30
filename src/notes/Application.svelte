@@ -5,3 +5,12 @@
 </script>
 
 Describes a software application.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Application",
+  "<EntityLink name="name" />": "Exampletron 3000"
+{'}'}
+			</pre>

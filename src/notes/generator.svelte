@@ -5,3 +5,21 @@
 </script>
 
 Identifies the entity (e.g. an application) that generated the object.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "This is all there is.",
+  "<EntityLink name="generator" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Application",
+    "<EntityLink name="name" />": "Exampletron 3000"
+  {'}'}
+{'}'}
+			</pre>

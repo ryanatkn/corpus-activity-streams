@@ -21,3 +21,20 @@ connecting the subject (the containing object) to the resource identified by the
 <EntityLink name="href" />. Properties of the
 <EntityLink name="Link" />
 are properties of the reference as opposed to properties of the resource.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Link",
+  "<EntityLink name="href" />": "http://example.org/abc",
+  "<EntityLink
+		name="hreflang"
+	/>": "en",
+  "<EntityLink name="mediaType" />": "text/html",
+  "<EntityLink
+		name="name"
+	/>": "An example link"
+{'}'}
+			</pre>

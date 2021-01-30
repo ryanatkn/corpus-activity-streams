@@ -17,3 +17,42 @@ and
 <EntityLink name="oneOf" />
 properties MAY be used to express possible answers, but a Question object MUST NOT have both
 properties.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Question",
+  "<EntityLink name="name" />": "What is the answer?",
+  "<EntityLink
+		name="oneOf"
+	/>": [
+    {'{'}
+      "<EntityLink name="type" />": "Note",
+      "<EntityLink
+		name="name"
+	/>": "Option A"
+    {'}'},
+    {'{'}
+      "<EntityLink name="type" />": "Note",
+      "<EntityLink
+		name="name"
+	/>": "Option B"
+    {'}'}
+  ]
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Question",
+  "<EntityLink name="name" />": "What is the answer?",
+  "<EntityLink
+		name="closed"
+	/>": "2016-05-10T00:00:00Z"
+{'}'}
+			</pre>

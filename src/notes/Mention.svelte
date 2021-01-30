@@ -7,3 +7,19 @@
 A specialized
 <EntityLink name="Link" />
 that represents an @mention.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Mention of Joe by Carrie in her note",
+  "<EntityLink
+		name="type"
+	/>": "Mention",
+  "<EntityLink name="href" />": "http://example.org/joe",
+  "<EntityLink
+		name="name"
+	/>": "Joe"
+{'}'}
+			</pre>

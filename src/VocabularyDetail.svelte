@@ -3,17 +3,13 @@
 	import EntityLink from './EntityLink.svelte';
 	import UnknownLink from './UnknownLink.svelte';
 	import StringLink from './StringLink.svelte';
-	import VocabularyDetailExamples from './VocabularyDetailExamples.svelte';
 	import * as notes from './notes/index.js';
-	import {examples} from './activity_streams_examples.js';
 	export let item;
 	export let vocabulary;
 	window.hack = ('Items', Items);
 	window.hack = ('EntityLink', EntityLink);
 	window.hack = ('UnknownLink', UnknownLink);
 	window.hack = ('StringLink', StringLink);
-	window.hack = ('VocabularyDetailExamples', VocabularyDetailExamples);
-	window.hack = ('examples', examples);
 </script>
 
 <div class="item" id={item.name}>
@@ -89,7 +85,6 @@
 		{/if}
 	</table>
 	<svelte:component this={notes[item.name]} />
-	<VocabularyDetailExamples examples={examples[item.name]} />
 </div>
 
 <style>

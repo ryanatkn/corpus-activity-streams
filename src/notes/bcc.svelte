@@ -5,3 +5,26 @@
 </script>
 
 Identifies one or more Objects that are part of the private secondary audience of this Object.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally offered a post to John",
+  "<EntityLink name="type" />": "Offer",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1",
+  "<EntityLink
+		name="target"
+	/>": "http://john.example.org",
+  "<EntityLink
+		name="bcc"
+	/>": [
+    "http://joe.example.org"
+  ]
+{'}'}
+			</pre>

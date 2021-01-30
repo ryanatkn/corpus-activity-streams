@@ -9,3 +9,13 @@ Identifies the
 or
 <EntityLink name="Link" />
 type. Multiple values may be specified.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A foo",
+  "<EntityLink name="type" />": "http://example.org/Foo"
+{'}'}
+			</pre>

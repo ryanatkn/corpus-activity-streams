@@ -8,3 +8,29 @@ Indicates that the
 <EntityLink name="actor" />
 has created the
 <EntityLink name="object" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally created a note",
+  "<EntityLink name="type" />": "Create",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Note",
+    "<EntityLink name="name" />": "A Simple Note",
+    "<EntityLink
+		name="content"
+	/>": "This is a simple note"
+  {'}'}
+{'}'}
+			</pre>

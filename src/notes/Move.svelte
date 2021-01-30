@@ -16,3 +16,38 @@ to
 or
 <EntityLink name="target" />
 are not specified, either can be determined by context.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally moved a post from List A to List B",
+  "<EntityLink
+		name="type"
+	/>": "Move",
+  "<EntityLink name="actor" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1",
+  "<EntityLink name="target" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Collection",
+    "<EntityLink name="name" />": "List B"
+  {'}'},
+  "<EntityLink
+		name="origin"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Collection",
+    "<EntityLink
+		name="name"
+	/>": "List A"
+  {'}'}
+{'}'}
+			</pre>

@@ -8,3 +8,43 @@ Describes the indirect object, or target, of the activity. The precise meaning o
 largely dependent on the type of action being described but will often be the object of the English
 preposition "to". For instance, in the activity "John added a movie to his wishlist", the target of
 the activity is John's wishlist. An activity can have more than one target.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally offered the post to John",
+  "<EntityLink name="type" />": "Offer",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1",
+  "<EntityLink
+		name="target"
+	/>": "http://john.example.org"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally offered the post to John",
+  "<EntityLink name="type" />": "Offer",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1",
+  "<EntityLink name="target" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "John"
+  {'}'}
+{'}'}
+			</pre>

@@ -17,3 +17,28 @@ article but, for whatever reason, might choose to undo that like at some later p
 and
 <EntityLink name="origin" />
 typically have no defined meaning.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally retracted her offer to John",
+  "<EntityLink name="type" />": "Undo",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Offer",
+    "<EntityLink name="actor" />": "http://sally.example.org",
+    "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1",
+    "<EntityLink
+		name="target"
+	/>": "http://john.example.org"
+  {'}'}
+{'}'}
+			</pre>

@@ -8,3 +8,32 @@ A non-negative integer specifying the total number of objects contained by the l
 collection. This number might not reflect the actual number of items serialized within the
 <EntityLink name="Collection" />
 object instance.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's notes",
+  "<EntityLink name="type" />": "Collection",
+  "<EntityLink
+		name="totalItems"
+	/>": 2,
+  "<EntityLink name="items" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink
+		name="name"
+	/>": "Which Staircase Should I Use"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink name="name" />": "Something to Remember"
+    {'}'}
+  ]
+{'}'}
+			</pre>

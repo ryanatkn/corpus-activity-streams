@@ -7,3 +7,16 @@
 On a
 <EntityLink name="Link" />, specifies a hint as to the rendering width in device-independent pixels
 of the linked resource.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Link",
+  "<EntityLink name="href" />": "http://example.org/image.png",
+  "<EntityLink
+		name="height"
+	/>": 100,
+  "<EntityLink name="width" />": 100
+{'}'}
+			</pre>

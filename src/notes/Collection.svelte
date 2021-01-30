@@ -17,3 +17,32 @@ instances. Refer to the
 specification for a complete description of the
 <EntityLink name="Collection" />
 type.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's notes",
+  "<EntityLink name="type" />": "Collection",
+  "<EntityLink
+		name="totalItems"
+	/>": 2,
+  "<EntityLink name="items" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink
+		name="name"
+	/>": "A Simple Note"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink name="name" />": "Another Simple Note"
+    {'}'}
+  ]
+{'}'}
+			</pre>

@@ -9,3 +9,35 @@ Identifies the
 to which a
 <EntityLink name="CollectionPage" />
 objects items belong.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Page 1 of Sally's notes",
+  "<EntityLink name="type" />": "CollectionPage",
+  "<EntityLink
+		name="id"
+	/>": "http://example.org/collection?page=1",
+  "<EntityLink
+		name="partOf"
+	/>": "http://example.org/collection",
+  "<EntityLink name="items" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink
+		name="name"
+	/>": "Pizza Toppings to Try"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink name="name" />": "Thought about California"
+    {'}'}
+  ]
+{'}'}
+			</pre>

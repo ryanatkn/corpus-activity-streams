@@ -6,3 +6,69 @@
 
 Indicates an entity that describes an icon for this object. The image should have an aspect ratio of
 one (horizontal) to one (vertical) and should be suitable for presentation at a small size.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "This is all there is.",
+  "<EntityLink name="icon" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Image",
+    "<EntityLink name="name" />": "Note icon",
+    "<EntityLink
+		name="url"
+	/>": "http://example.org/note.png",
+    "<EntityLink name="width" />": 16,
+    "<EntityLink
+		name="height"
+	/>": 16
+  {'}'}
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "A simple note",
+  "<EntityLink name="icon" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Image",
+      "<EntityLink name="summary" />": "Note (16x16)",
+      "<EntityLink
+		name="url"
+	/>": "http://example.org/note1.png",
+      "<EntityLink name="width" />": 16,
+      "<EntityLink
+		name="height"
+	/>": 16
+    {'}'},
+    {'{'}
+      "<EntityLink name="type" />": "Image",
+      "<EntityLink
+		name="summary"
+	/>": "Note (32x32)",
+      "<EntityLink
+		name="url"
+	/>": "http://example.org/note2.png",
+      "<EntityLink name="width" />": 32,
+      "<EntityLink
+		name="height"
+	/>": 32
+    {'}'}
+  ]
+{'}'}
+			</pre>

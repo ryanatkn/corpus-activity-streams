@@ -6,3 +6,26 @@
 
 A simple, human-readable, plain-text name for the object. HTML markup MUST NOT be included. The name
 MAY be expressed using multiple language-tagged values.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Note",
+  "<EntityLink name="name" />": "A simple note"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Note",
+  "nameMap": {'{'}
+    "en": "A simple note",
+    "es": "Una nota sencilla",
+    "zh-Hans": "一段简单的笔记"
+  {'}'}
+{'}'}
+			</pre>

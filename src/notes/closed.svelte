@@ -5,3 +5,15 @@
 </script>
 
 Indicates that a question has been closed, and answers are no longer accepted.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Question",
+  "<EntityLink name="name" />": "What is the answer?",
+  "<EntityLink
+		name="closed"
+	/>": "2016-05-10T00:00:00Z"
+{'}'}
+			</pre>

@@ -11,3 +11,37 @@ Used to represent ordered subsets of items from an
 for a complete description of the
 <EntityLink name="OrderedCollectionPage" />
 object.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Page 1 of Sally's notes",
+  "<EntityLink
+		name="type"
+	/>": "OrderedCollectionPage",
+  "<EntityLink
+		name="id"
+	/>": "http://example.org/foo?page=1",
+  "<EntityLink
+		name="partOf"
+	/>": "http://example.org/foo",
+  "<EntityLink name="orderedItems" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink
+		name="name"
+	/>": "A Simple Note"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink name="name" />": "Another Simple Note"
+    {'}'}
+  ]
+{'}'}
+			</pre>

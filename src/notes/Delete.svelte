@@ -12,3 +12,30 @@ has deleted the
 indicates the context from which the
 <EntityLink name="object" />
 was deleted.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally deleted a note",
+  "<EntityLink name="type" />": "Delete",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": "http://example.org/notes/1",
+  "<EntityLink
+		name="origin"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Collection",
+    "<EntityLink
+		name="name"
+	/>": "Sally's Notes"
+  {'}'}
+{'}'}
+			</pre>

@@ -5,3 +5,12 @@
 </script>
 
 Represents a service of any kind.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Service",
+  "<EntityLink name="name" />": "Acme Web Service"
+{'}'}
+			</pre>

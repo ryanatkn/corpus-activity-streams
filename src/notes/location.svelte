@@ -5,3 +5,30 @@
 </script>
 
 Indicates one or more physical or logical locations associated with the object.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Person",
+  "<EntityLink name="name" />": "Sally",
+  "<EntityLink
+		name="location"
+	/>": {'{'}
+    "<EntityLink
+		name="name"
+	/>": "Over the Arabian Sea, east of Socotra Island Nature Sanctuary",
+    "<EntityLink
+		name="type"
+	/>": "Place",
+    "<EntityLink name="longitude" />": 12.34,
+    "<EntityLink
+		name="latitude"
+	/>": 56.78,
+    "<EntityLink name="altitude" />": 90,
+    "<EntityLink
+		name="units"
+	/>": "m"
+  {'}'}
+{'}'}
+			</pre>

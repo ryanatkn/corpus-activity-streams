@@ -5,3 +5,15 @@
 </script>
 
 Represents a document of any kind.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Document",
+  "<EntityLink name="name" />": "4Q Sales Forecast",
+  "<EntityLink
+		name="url"
+	/>": "http://example.org/4q-sales-forecast.pdf"
+{'}'}
+			</pre>

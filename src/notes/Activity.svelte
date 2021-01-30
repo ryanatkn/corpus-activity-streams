@@ -15,3 +15,27 @@ type itself serves as an abstract base type for all types of activities. It is i
 that the
 <EntityLink name="Activity" />
 type itself does not carry any specific semantics about the kind of action being taken.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Activity",
+  "<EntityLink name="summary" />": "Sally did something to a note",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Note",
+    "<EntityLink name="name" />": "A Note"
+  {'}'}
+{'}'}
+			</pre>

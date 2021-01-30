@@ -6,3 +6,32 @@
 
 A natural language summarization of the object encoded as HTML. Multiple language tagged summaries
 MAY be provided.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="name"
+	/>": "Cane Sugar Processing",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="name"
+	/>": "Cane Sugar Processing",
+  "<EntityLink
+		name="type"
+	/>": "Note",
+  "summaryMap": {'{'}
+    "en": "A simple note",
+    "es": "Una nota sencilla",
+    "zh-Hans": "一段简单的笔记"
+  {'}'}
+{'}'}
+			</pre>

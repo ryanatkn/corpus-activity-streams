@@ -8,3 +8,21 @@ Indicates that the
 <EntityLink name="actor" />
 has read the
 <EntityLink name="object" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally read a blog post",
+  "<EntityLink name="type" />": "Read",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": "http://example.org/posts/1"
+{'}'}
+			</pre>

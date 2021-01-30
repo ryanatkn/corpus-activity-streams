@@ -7,3 +7,52 @@
 In a paged
 <EntityLink name="Collection" />, indicates the page that contains the most recently updated member
 items.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's blog posts",
+  "<EntityLink name="type" />": "Collection",
+  "<EntityLink
+		name="totalItems"
+	/>": 3,
+  "<EntityLink name="current" />": "http://example.org/collection",
+  "<EntityLink
+		name="items"
+	/>": [
+    "http://example.org/posts/1",
+    "http://example.org/posts/2",
+    "http://example.org/posts/3"
+  ]
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's blog posts",
+  "<EntityLink name="type" />": "Collection",
+  "<EntityLink
+		name="totalItems"
+	/>": 3,
+  "<EntityLink name="current" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Link",
+    "<EntityLink name="summary" />": "Most Recent Items",
+    "<EntityLink
+		name="href"
+	/>": "http://example.org/collection"
+  {'}'},
+  "<EntityLink
+		name="items"
+	/>": [
+    "http://example.org/posts/1",
+    "http://example.org/posts/2",
+    "http://example.org/posts/3"
+  ]
+{'}'}
+			</pre>

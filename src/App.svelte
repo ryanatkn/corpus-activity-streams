@@ -18,6 +18,10 @@
 </div>
 
 <style>
+	:global(:root) {
+		--color_green: #e4f7e3;
+		--color_yellow: rgb(252, 250, 238);
+	}
 	/* TODO import a static css file */
 	:global(html),
 	:global(body) {
@@ -57,5 +61,11 @@
 	}
 	:global(*, *:before, *:after) {
 		box-sizing: border-box;
+	}
+	:global(pre) {
+		background-color: var(--color_yellow);
+		color: rgba(75, 70, 50);
+		padding: 4px;
+		overflow: hidden; /* maybe `auto`, but this looks better */
 	}
 </style>

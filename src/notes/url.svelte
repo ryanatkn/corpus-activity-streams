@@ -5,3 +5,67 @@
 </script>
 
 Identifies one or more links to representations of the object.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Document",
+  "<EntityLink name="name" />": "4Q Sales Forecast",
+  "<EntityLink
+		name="url"
+	/>": "http://example.org/4q-sales-forecast.pdf"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Document",
+  "<EntityLink name="name" />": "4Q Sales Forecast",
+  "<EntityLink
+		name="url"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Link",
+    "<EntityLink
+		name="href"
+	/>": "http://example.org/4q-sales-forecast.pdf"
+  {'}'}
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Document",
+  "<EntityLink name="name" />": "4Q Sales Forecast",
+  "<EntityLink
+		name="url"
+	/>": [
+    {'{'}
+      "<EntityLink name="type" />": "Link",
+      "<EntityLink
+		name="href"
+	/>": "http://example.org/4q-sales-forecast.pdf",
+      "<EntityLink
+		name="mediaType"
+	/>": "application/pdf"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Link",
+      "<EntityLink
+		name="href"
+	/>": "http://example.org/4q-sales-forecast.html",
+      "<EntityLink
+		name="mediaType"
+	/>": "text/html"
+    {'}'}
+  ]
+{'}'}
+			</pre>

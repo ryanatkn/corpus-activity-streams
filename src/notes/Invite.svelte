@@ -12,3 +12,42 @@ is extending an invitation for the
 <EntityLink name="object" />
 to the
 <EntityLink name="target" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally invited John and Lisa to a party",
+  "<EntityLink
+		name="type"
+	/>": "Invite",
+  "<EntityLink name="actor" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="object"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Event",
+    "<EntityLink
+		name="name"
+	/>": "A Party"
+  {'}'},
+  "<EntityLink name="target" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Person",
+      "<EntityLink name="name" />": "John"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Person",
+      "<EntityLink name="name" />": "Lisa"
+    {'}'}
+  ]
+{'}'}
+			</pre>

@@ -8,3 +8,43 @@ Identifies the context within which the object exists or an activity was perform
 "context" used is intentionally vague. The intended function is to serve as a means of grouping
 objects and activities that share a common originating context or purpose. An example could be all
 activities relating to a common project or event.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Activities in context 1",
+  "<EntityLink name="type" />": "Collection",
+  "<EntityLink
+		name="items"
+	/>": [
+    {'{'}
+      "<EntityLink name="type" />": "Offer",
+      "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+      "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1",
+      "<EntityLink
+		name="target"
+	/>": "http://john.example.org",
+      "<EntityLink
+		name="context"
+	/>": "http://example.org/contexts/1"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Like",
+      "<EntityLink name="actor" />": "http://joe.example.org",
+      "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/2",
+      "<EntityLink
+		name="context"
+	/>": "http://example.org/contexts/1"
+    {'}'}
+  ]
+{'}'}
+			</pre>

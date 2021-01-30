@@ -12,3 +12,27 @@ has joined the
 and
 <EntityLink name="origin" />
 typically have no defined meaning.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally joined a group",
+  "<EntityLink name="type" />": "Join",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Group",
+    "<EntityLink name="name" />": "A Simple Group"
+  {'}'}
+{'}'}
+			</pre>

@@ -5,3 +5,34 @@
 </script>
 
 Represents an image document of any kind.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Image",
+  "<EntityLink name="name" />": "Cat Jumping on Wagon",
+  "<EntityLink
+		name="url"
+	/>": [
+    {'{'}
+      "<EntityLink name="type" />": "Link",
+      "<EntityLink
+		name="href"
+	/>": "http://example.org/image.jpeg",
+      "<EntityLink
+		name="mediaType"
+	/>": "image/jpeg"
+    {'}'},
+    {'{'}
+      "<EntityLink name="type" />": "Link",
+      "<EntityLink
+		name="href"
+	/>": "http://example.org/image.png",
+      "<EntityLink
+		name="mediaType"
+	/>": "image/png"
+    {'}'}
+  ]
+{'}'}
+			</pre>

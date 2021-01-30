@@ -18,3 +18,35 @@ specifies the direct object. If the
 or
 <EntityLink name="origin" />
 are not specified, either can be determined by context.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally went home from work",
+  "<EntityLink name="type" />": "Travel",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="target" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Place",
+    "<EntityLink name="name" />": "Home"
+  {'}'},
+  "<EntityLink
+		name="origin"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Place",
+    "<EntityLink
+		name="name"
+	/>": "Work"
+  {'}'}
+{'}'}
+			</pre>

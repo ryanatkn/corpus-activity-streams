@@ -10,3 +10,65 @@ single activity can have multiple
 <EntityLink name="actor" />
 MAY be specified using an indirect
 <EntityLink name="Link" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally offered the Foo object",
+  "<EntityLink name="type" />": "Offer",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/foo"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally offered the Foo object",
+  "<EntityLink name="type" />": "Offer",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="id"
+	/>": "http://sally.example.org",
+    "<EntityLink name="summary" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/foo"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally and Joe offered the Foo object",
+  "<EntityLink name="type" />": "Offer",
+  "<EntityLink
+		name="actor"
+	/>": [
+    "http://joe.example.org",
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Person",
+      "<EntityLink name="id" />": "http://sally.example.org",
+      "<EntityLink
+		name="name"
+	/>": "Sally"
+    {'}'}
+  ],
+  "<EntityLink name="object" />": "http://example.org/foo"
+{'}'}
+			</pre>

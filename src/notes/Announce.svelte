@@ -11,3 +11,38 @@ is calling the
 <EntityLink name="object" />. The
 <EntityLink name="origin" />
 typically has no defined meaning.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally announced that she had arrived at work",
+  "<EntityLink
+		name="type"
+	/>": "Announce",
+  "<EntityLink name="actor" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="id" />": "http://sally.example.org",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Arrive",
+    "<EntityLink name="actor" />": "http://sally.example.org",
+    "<EntityLink
+		name="location"
+	/>": {'{'}
+      "<EntityLink name="type" />": "Place",
+      "<EntityLink
+		name="name"
+	/>": "Work"
+    {'}'}
+  {'}'}
+{'}'}
+			</pre>

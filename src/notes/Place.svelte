@@ -7,3 +7,31 @@
 Represents a logical or physical location. See
 <a href="https://www.w3.org/TR/activitystreams-vocabulary/#places">5.3 Representing Places</a>
 for additional information.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Place",
+  "<EntityLink name="name" />": "Work"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Place",
+  "<EntityLink name="name" />": "Fresno Area",
+  "<EntityLink
+		name="latitude"
+	/>": 36.75,
+  "<EntityLink name="longitude" />": 119.7667,
+  "<EntityLink
+		name="radius"
+	/>": 15,
+  "<EntityLink name="units" />": "miles"
+{'}'}
+			</pre>

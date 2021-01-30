@@ -9,3 +9,19 @@ The date and time describing the actual or expected starting time of the object.
 object, for instance, the
 <EntityLink name="startTime" />
 property specifies the moment the activity began or is scheduled to begin.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Event",
+  "<EntityLink name="name" />": "Going-Away Party for Jim",
+  "<EntityLink
+		name="startTime"
+	/>": "2014-12-31T23:00:00-08:00",
+  "<EntityLink
+		name="endTime"
+	/>": "2015-01-01T06:00:00-08:00"
+{'}'}
+			</pre>

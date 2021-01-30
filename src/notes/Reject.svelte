@@ -12,3 +12,37 @@ is rejecting the
 and
 <EntityLink name="origin" />
 typically have no defined meaning.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally rejected an invitation to a party",
+  "<EntityLink
+		name="type"
+	/>": "Reject",
+  "<EntityLink name="actor" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="object"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Invite",
+    "<EntityLink
+		name="actor"
+	/>": "http://john.example.org",
+    "<EntityLink name="object" />": {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Event",
+      "<EntityLink
+		name="name"
+	/>": "Going-Away Party for Jim"
+    {'}'}
+  {'}'}
+{'}'}
+			</pre>

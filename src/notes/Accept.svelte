@@ -12,3 +12,69 @@ accepts the
 property can be used in certain circumstances to indicate the context into which the
 <EntityLink name="object" />
 has been accepted.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally accepted an invitation to a party",
+  "<EntityLink
+		name="type"
+	/>": "Accept",
+  "<EntityLink name="actor" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="object"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Invite",
+    "<EntityLink
+		name="actor"
+	/>": "http://john.example.org",
+    "<EntityLink name="object" />": {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Event",
+      "<EntityLink
+		name="name"
+	/>": "Going-Away Party for Jim"
+    {'}'}
+  {'}'}
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally accepted Joe into the club",
+  "<EntityLink name="type" />": "Accept",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Joe"
+  {'}'},
+  "<EntityLink
+		name="target"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Group",
+    "<EntityLink
+		name="name"
+	/>": "The Club"
+  {'}'}
+{'}'}
+			</pre>

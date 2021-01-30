@@ -6,3 +6,26 @@
 
 Identifies an entity considered to be part of the public primary audience of an
 <EntityLink name="Object" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally offered the post to John",
+  "<EntityLink name="type" />": "Offer",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1",
+  "<EntityLink
+		name="target"
+	/>": "http://john.example.org",
+  "<EntityLink
+		name="to"
+	/>": [
+    "http://joe.example.org"
+  ]
+{'}'}
+			</pre>

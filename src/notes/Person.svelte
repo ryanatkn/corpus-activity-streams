@@ -5,3 +5,12 @@
 </script>
 
 Represents an individual person.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Person",
+  "<EntityLink name="name" />": "Sally Smith"
+{'}'}
+			</pre>

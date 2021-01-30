@@ -11,3 +11,27 @@ are a subtype of
 representing intransitive actions. The
 <EntityLink name="object" />
 property is therefore inappropriate for these activities.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Travel",
+  "<EntityLink name="summary" />": "Sally went to work",
+  "<EntityLink
+		name="actor"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Person",
+    "<EntityLink
+		name="name"
+	/>": "Sally"
+  {'}'},
+  "<EntityLink name="target" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Place",
+    "<EntityLink name="name" />": "Work"
+  {'}'}
+{'}'}
+			</pre>

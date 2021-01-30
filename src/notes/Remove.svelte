@@ -12,3 +12,64 @@ is removing the
 indicates the context from which the
 <EntityLink name="object" />
 is being removed.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally removed a note from her notes folder",
+  "<EntityLink
+		name="type"
+	/>": "Remove",
+  "<EntityLink name="actor" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/notes/1",
+  "<EntityLink name="target" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Collection",
+    "<EntityLink name="name" />": "Notes Folder"
+  {'}'}
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "The moderator removed Sally from a group",
+  "<EntityLink
+		name="type"
+	/>": "Remove",
+  "<EntityLink name="actor" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "http://example.org/Role",
+    "<EntityLink
+		name="name"
+	/>": "The Moderator"
+  {'}'},
+  "<EntityLink name="object" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Person",
+    "<EntityLink name="name" />": "Sally"
+  {'}'},
+  "<EntityLink
+		name="origin"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Group",
+    "<EntityLink
+		name="name"
+	/>": "A Simple Group"
+  {'}'}
+{'}'}
+			</pre>

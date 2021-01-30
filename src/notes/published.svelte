@@ -5,3 +5,16 @@
 </script>
 
 The date and time at which the object was published
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "A simple note",
+  "<EntityLink name="type" />": "Note",
+  "<EntityLink
+		name="content"
+	/>": "Fish swim.",
+  "<EntityLink name="published" />": "2014-12-12T12:12:12Z"
+{'}'}
+			</pre>

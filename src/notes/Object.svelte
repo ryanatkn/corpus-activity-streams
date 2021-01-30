@@ -13,3 +13,15 @@ Vocabulary, including other Core types such as
 <EntityLink name="Collection" />
 and
 <EntityLink name="OrderedCollection" />.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Object",
+  "<EntityLink name="id" />": "http://www.test.example/object/1",
+  "<EntityLink
+		name="name"
+	/>": "A Simple, non-specific object"
+{'}'}
+			</pre>

@@ -6,3 +6,38 @@
 
 In a paged
 <EntityLink name="Collection" />, indicates the furthest preceeding page of items in the collection.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's blog posts",
+  "<EntityLink name="type" />": "Collection",
+  "<EntityLink
+		name="totalItems"
+	/>": 3,
+  "<EntityLink name="first" />": "http://example.org/collection?page=0"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's blog posts",
+  "<EntityLink name="type" />": "Collection",
+  "<EntityLink
+		name="totalItems"
+	/>": 3,
+  "<EntityLink name="first" />": {'{'}
+    "<EntityLink
+		name="type"
+	/>": "Link",
+    "<EntityLink name="summary" />": "First Page",
+    "<EntityLink
+		name="href"
+	/>": "http://example.org/collection?page=0"
+  {'}'}
+{'}'}
+			</pre>

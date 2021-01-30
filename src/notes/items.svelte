@@ -5,3 +5,62 @@
 </script>
 
 Identifies the items contained in a collection. The items might be ordered or unordered.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's notes",
+  "<EntityLink name="type" />": "Collection",
+  "<EntityLink
+		name="totalItems"
+	/>": 2,
+  "<EntityLink name="items" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink
+		name="name"
+	/>": "Reminder for Going-Away Party"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink name="name" />": "Meeting 2016-11-17"
+    {'}'}
+  ]
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally's notes",
+  "<EntityLink name="type" />": "OrderedCollection",
+  "<EntityLink
+		name="totalItems"
+	/>": 2,
+  "<EntityLink name="orderedItems" />": [
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink
+		name="name"
+	/>": "Meeting 2016-11-17"
+    {'}'},
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink
+		name="name"
+	/>": "Reminder for Going-Away Party"
+    {'}'}
+  ]
+{'}'}
+			</pre>

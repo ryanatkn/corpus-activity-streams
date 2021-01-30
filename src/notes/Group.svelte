@@ -5,3 +5,12 @@
 </script>
 
 Represents a formal or informal collective of Actors.
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Group",
+  "<EntityLink name="name" />": "Big Beards of Austin"
+{'}'}
+			</pre>

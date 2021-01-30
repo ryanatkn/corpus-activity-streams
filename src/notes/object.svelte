@@ -12,3 +12,64 @@ used within a
 describes the entity to which the
 <EntityLink name="subject" />
 is related.
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally liked a post",
+  "<EntityLink name="type" />": "Like",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": "http://example.org/posts/1"
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="type"
+	/>": "Like",
+  "<EntityLink name="actor" />": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": {'{'}
+    "<EntityLink name="type" />": "Note",
+    "<EntityLink
+		name="content"
+	/>": "A simple note"
+  {'}'}
+{'}'}
+			</pre>
+
+<pre>
+				{'{'}
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "<EntityLink
+		name="summary"
+	/>": "Sally liked a note",
+  "<EntityLink name="type" />": "Like",
+  "<EntityLink
+		name="actor"
+	/>": "http://sally.example.org",
+  "<EntityLink
+		name="object"
+	/>": [
+    "http://example.org/posts/1",
+    {'{'}
+      "<EntityLink
+		name="type"
+	/>": "Note",
+      "<EntityLink name="summary" />": "A simple note",
+      "<EntityLink
+		name="content"
+	/>": "That is a tree."
+    {'}'}
+  ]
+{'}'}
+			</pre>
