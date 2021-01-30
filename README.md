@@ -6,9 +6,10 @@
 
 <https://ryanatkn.github.io/corpus-activity-streams>
 
-## useful modules
+## useful data & modules
 
-- [src/activity_streams.ts](src/activity_streams.ts): vocabulary types and pimary data
+- [src/activity_streams.json](src/activity_streams.json): vocabulary JSON data
+- [src/activity_streams.ts](src/activity_streams.ts): vocabulary pimary data and types
 - [src/activity_streams_notes.ts](src/activity_streams_notes.ts):
   the `notes` property of the vocabulary items
 - [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
@@ -29,7 +30,7 @@ The properties are inferred from what `Object` and `Link` share.
 - bug: Clicking #hashlinks navigates like you'd expect, but browser nav backward/forward doesn't work.
 - Make it more usable as a library.
   Right now, developer users must import individual TypeScript modules.
-  It should be published in a more standard npm-friendly way and include the data as JSON.
+  It should be published in a more standard npm-friendly way.
 - Make it usable on smaller screens. Collapse columns to tabs, probably.
 - More data than just the vocabulary?
   See [ActivityPub](https://www.w3.org/TR/activitypub/) and
