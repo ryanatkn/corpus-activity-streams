@@ -28,7 +28,7 @@ The properties are inferred from what `Object` and `Link` share.
 
 ## todo
 
-- Publish to npm and whatever.
+- Export modules correctly and publish to npm.
 - Make it usable on smaller screens. Collapse columns to tabs, probably.
 - More data than just the vocabulary?
   See [ActivityPub](https://www.w3.org/TR/activitypub/) and
