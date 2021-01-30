@@ -28,9 +28,7 @@ The properties are inferred from what `Object` and `Link` share.
 
 ## todo
 
-- Make it more usable as a library.
-  Right now, developer users must import individual TypeScript modules.
-  It should be published in a more standard npm-friendly way.
+- Publish to npm and whatever.
 - Make it usable on smaller screens. Collapse columns to tabs, probably.
 - More data than just the vocabulary?
   See [ActivityPub](https://www.w3.org/TR/activitypub/) and
