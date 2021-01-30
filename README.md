@@ -28,7 +28,6 @@ The properties are inferred from what `Object` and `Link` share.
 
 ## todo
 
-- bug: Clicking #hashlinks navigates like you'd expect, but browser nav backward/forward doesn't work.
 - Make it more usable as a library.
   Right now, developer users must import individual TypeScript modules.
   It should be published in a more standard npm-friendly way.

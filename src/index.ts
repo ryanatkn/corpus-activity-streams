@@ -12,3 +12,8 @@ export const app = new App({
 });
 
 (window as any).app = app;
+
+// fixes the browser back/forward buttons for reasons
+window.onhashchange = () => {
+	window.location.href = window.location.href;
+};
