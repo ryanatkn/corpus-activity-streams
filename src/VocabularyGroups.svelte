@@ -23,12 +23,9 @@
 	.vocabulary-group {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 	}
 	.items {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: flex-start;
 	}
 </style>
