@@ -19,9 +19,13 @@
 
 <style>
 	:global(:root) {
-		--color_green: #e4f7e3;
-		--color_gray: hsl(0, 0%, 93%);
-		--color_yellow: rgb(252, 250, 238);
+		--color_gray: hsl(0, 0%, 96%);
+		--color_yellow: hsl(51, 70%, 96%);
+		--color_green: hsl(123, 70%, 96%);
+		--color_blue: hsl(195, 70%, 96%);
+		--color_purple: hsl(267, 70%, 96%);
+		--color_pink: hsl(339, 70%, 96%);
+		--color_yellow_bg: hsl(51, 70%, 98%);
 		--color_yellow_text: rgba(75, 70, 50);
 	}
 	/* TODO import a static css file */
@@ -65,7 +69,7 @@
 		box-sizing: border-box;
 	}
 	:global(pre) {
-		background-color: var(--color_yellow);
+		background-color: var(--color_yellow_bg);
 		color: var(--color_yellow_text);
 		padding: 4px;
 		overflow: hidden; /* maybe `auto`, but this looks better */

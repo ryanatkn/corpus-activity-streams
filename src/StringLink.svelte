@@ -7,6 +7,6 @@
 		padding: 0 3px;
 		margin: 0 3px;
 		border-radius: 2px;
-		background-color: var(--color_green);
+		background-color: var(--color_gray);
 	}
 </style>

@@ -14,12 +14,12 @@
 	$: hovered = ent && ent === $hoveredEntity;
 
 	const colors = {
-		'vocab.core': 218,
-		'vocab.object': 258,
-		'vocab.link': 258,
-		'vocab.property': 22,
-		'vocab.activity': 287,
-		'vocab.actor': 335,
+		'vocab.core': 123,
+		'vocab.object': 195,
+		'vocab.link': 195,
+		'vocab.property': 51,
+		'vocab.activity': 267,
+		'vocab.actor': 339,
 	};
 
 	const saturation = '43%';
