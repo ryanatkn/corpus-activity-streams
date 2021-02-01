@@ -59,4 +59,4 @@ should look the same as the deployed version:
 
 ## license 🐦
 
-[MIT](LICENSE)
+[public domain](LICENSE) (The Unlicense)

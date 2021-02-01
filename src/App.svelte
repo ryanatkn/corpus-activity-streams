@@ -20,7 +20,9 @@
 <style>
 	:global(:root) {
 		--color_green: #e4f7e3;
+		--color_gray: hsl(0, 0%, 93%);
 		--color_yellow: rgb(252, 250, 238);
+		--color_yellow_text: rgba(75, 70, 50);
 	}
 	/* TODO import a static css file */
 	:global(html),
@@ -64,7 +66,7 @@
 	}
 	:global(pre) {
 		background-color: var(--color_yellow);
-		color: rgba(75, 70, 50);
+		color: var(--color_yellow_text);
 		padding: 4px;
 		overflow: hidden; /* maybe `auto`, but this looks better */
 	}

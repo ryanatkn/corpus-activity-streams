@@ -2,7 +2,7 @@
   "name": "corpus-activity-streams",
   "description": "Activity Streams 2.0 vocabulary data and alternative docs",
   "homepage": "https://ryanatkn.github.io/corpus-activity-streams",
-  "license": "MIT",
+  "license": "Unlicense",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
