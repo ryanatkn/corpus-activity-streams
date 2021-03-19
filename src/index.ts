@@ -1,4 +1,4 @@
-// import '@feltcoop/gro/dist/frontend/devtools.js';
+import '@feltcoop/gro/dist/client/devtools.js';
 
 import App from './App.svelte';
 

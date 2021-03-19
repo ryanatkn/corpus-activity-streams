@@ -7,5 +7,5 @@ env*
 *.ignore
 *.ignore.*
 
-build/
+.gro/
 dist/
