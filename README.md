@@ -29,9 +29,9 @@ The properties are inferred from what `Object` and `Link` share.
 ## todo
 
 - generate JSON schema for each term (see the in-progress branch
-  [`schema`](https://github.com/ryanatkn/corpus-activity-streams/tree/schema))
+  [**schema**](https://github.com/ryanatkn/corpus-activity-streams/tree/schema))
   - use JSON schemas to generate types with
-    [json-schema-to-typescript](https://github.com/bcherny/json-schema-to-typescript)
+    [`json-schema-to-typescript`](https://github.com/bcherny/json-schema-to-typescript)
   - generate fakes and other things too
 - Export modules correctly and publish to npm.
 - Make it usable on smaller screens. Collapse columns to tabs, probably.
