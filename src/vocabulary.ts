@@ -2,12 +2,13 @@ import {
 	vocabulary as activityStreamsVocabulary,
 	VocabularyItem,
 	vocabularyCategories,
+	VocabularyProperty,
 } from './activity_streams.js';
 
 export interface Vocabulary {
 	items: VocabularyItem[];
 	types: VocabularyItem[];
-	properties: VocabularyItem[]; // with `.category === 'vocab.property'`
+	properties: VocabularyProperty[]; // with `.category === 'vocab.property'`
 	byTypeName: {[key: string]: VocabularyItem[]};
 	byName: {[key: string]: VocabularyItem};
 	typesTreeRoot: VocabularyItem;

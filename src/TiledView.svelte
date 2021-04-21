@@ -1,26 +1,13 @@
-<script>
-	import VocabularyTypeTable from './VocabularyTypeTable.svelte';
-	import VocabularyPropertyTable from './VocabularyPropertyTable.svelte';
+<script lang="ts">
 	import VocabularyDetails from './VocabularyDetails.svelte';
 	import VocabularyTree from './VocabularyTree.svelte';
 	import VocabularyGroups from './VocabularyGroups.svelte';
+	import type {Vocabulary} from './vocabulary.js';
 
-	window.hack = ('VocabularyTypeTable', VocabularyTypeTable);
-	window.hack = ('VocabularyPropertyTable', VocabularyPropertyTable);
-	window.hack = ('VocabularyDetails', VocabularyDetails);
-	window.hack = ('VocabularyTree', VocabularyTree);
-	window.hack = ('VocabularyGroups', VocabularyGroups);
-
-	export let vocabulary;
+	export let vocabulary: Vocabulary;
 </script>
 
 <div class="tiled-view">
-	<!-- <div class="tile">
-		<VocabularyTypeTable {vocabulary} />
-	</div>
-	<div class="tile">
-		<VocabularyPropertyTable {vocabulary} />
-	</div> -->
 	<div class="tile">
 		<VocabularyTree {vocabulary} />
 	</div>

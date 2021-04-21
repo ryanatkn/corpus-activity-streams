@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
 	import {vocabulary} from './vocabulary.js';
 	import {hoveredEntity} from './entities.js';
+	import type {VocabularyItem} from './activity_streams.js';
 
 	// one of these two is required
-	export let entity = null;
-	export let name = null;
+	export let entity: VocabularyItem | null = null;
+	export let name: string | null = null;
 
-	window.linkCount = (window.linkCount || 0) + 1;
-	window.hack = hoveredEntity;
+	if (!entity && !name) throw Error('Expected an entity or a name');
 
-	$: ent = name ? vocabulary.byName[name] : entity;
+	$: ent = name ? vocabulary.byName[name] : entity!;
 
 	$: hovered = ent && ent === $hoveredEntity;
 

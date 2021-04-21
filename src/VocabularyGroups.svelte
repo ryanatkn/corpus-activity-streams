@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import EntityLink from './EntityLink.svelte';
 	import StringLink from './StringLink.svelte';
-	window.hack = ('EntityLink', EntityLink);
-	window.hack = ('StringLink', StringLink);
-	export let vocabulary;
+	import type {Vocabulary} from './vocabulary.js';
+
+	export let vocabulary: Vocabulary;
 </script>
 
 {#each Object.keys(vocabulary.byTypeName) as typeName (typeName)}

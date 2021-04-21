@@ -1,5 +1,5 @@
-<script>
-	export let items;
+<script lang="ts">
+	export let items: any | any[];
 </script>
 
 {#if Array.isArray(items)}

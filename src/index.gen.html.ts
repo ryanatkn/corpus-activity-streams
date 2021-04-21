@@ -1,4 +1,4 @@
-import {Gen} from '@feltcoop/gro';
+import type {Gen} from '@feltcoop/gro';
 import {renderNoscriptSection, renderMetaTags} from '@feltcoop/gro/dist/gen/helpers/html.js';
 
 export const gen: Gen = () => {

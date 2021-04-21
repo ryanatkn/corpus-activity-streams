@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import VocabularyDetail from './VocabularyDetail.svelte';
-	window.hack = ('VocabularyDetail', VocabularyDetail);
+	import type {Vocabulary} from './vocabulary.js';
 
-	export let vocabulary;
+	export let vocabulary: Vocabulary;
 </script>
 
 {#each vocabulary.items as item (item)}

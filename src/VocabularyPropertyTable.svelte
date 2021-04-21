@@ -1,12 +1,10 @@
-<script>
+<script lang="ts">
 	import EntityLink from './EntityLink.svelte';
 	import Items from './Items.svelte';
 	import UnknownLink from './UnknownLink.svelte';
-	window.hack = ('EntityLink', EntityLink);
-	window.hack = ('Items', Items);
-	window.hack = ('UnknownLink', UnknownLink);
+	import type {Vocabulary} from './vocabulary.js';
 
-	export let vocabulary;
+	export let vocabulary: Vocabulary;
 </script>
 
 <table>

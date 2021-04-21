@@ -1,12 +1,10 @@
-<script>
+<script lang="ts">
 	import EntityLink from './EntityLink.svelte';
 	import Items from './Items.svelte';
 	import StringLink from './StringLink.svelte';
-	window.hack = ('EntityLink', EntityLink);
-	window.hack = ('Items', Items);
-	window.hack = ('StringLink', StringLink);
+	import type {Vocabulary} from './vocabulary.js';
 
-	export let vocabulary;
+	export let vocabulary: Vocabulary;
 </script>
 
 <table>
@@ -23,20 +21,24 @@
 			<td>
 				<EntityLink entity={item} />
 			</td>
-			<td>
-				<Items items={item.extends} let:item>
-					{#if item}
-						<EntityLink entity={vocabulary.byName[item]} />
-					{/if}
-				</Items>
-			</td>
-			<td>
-				<Items items={item.properties} let:item>
-					{#if item}
-						<EntityLink entity={vocabulary.byName[item]} />
-					{/if}
-				</Items>
-			</td>
+			{#if 'extends' in item}
+				<td>
+					<Items items={item.extends} let:item>
+						{#if item}
+							<EntityLink entity={vocabulary.byName[item]} />
+						{/if}
+					</Items>
+				</td>
+			{/if}
+			{#if 'extends' in item}
+				<td>
+					<Items items={item.properties} let:item>
+						{#if item}
+							<EntityLink entity={vocabulary.byName[item]} />
+						{/if}
+					</Items>
+				</td>
+			{/if}
 			<td>
 				<StringLink>{item.category}</StringLink>
 			</td>

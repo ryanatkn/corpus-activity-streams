@@ -48,13 +48,15 @@ The properties are inferred from what `Object` and `Link` share.
   All it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML,
   so unless there's something more clever that can be done with codegen,
   the app should render notes from data at runtime instead of generating components.
+  - remove `activity_streams_examples.ts` and stringify json?
+    - put notes abck
+    - generic component
 
 ## develop
 
 ```bash
 # node 14+
 npm i
-npm run setup # needed the first time (TODO remove this step)
 npm start
 # browse to localhost:8999 or whatever it says
 ```

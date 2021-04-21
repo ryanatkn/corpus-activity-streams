@@ -1,16 +1,14 @@
-<script>
+<script lang="ts">
 	import EntityLink from './EntityLink.svelte';
 	import {slide} from 'svelte/transition';
+	import type {VocabularyType} from './activity_streams.js';
 
-	window.hack = ('EntityLink', EntityLink);
-	window.hack = ('slide', slide);
-
-	export let tree;
-	export let getChildren;
+	export let tree: VocabularyType;
+	export let getChildren: (item: VocabularyType) => VocabularyType[];
 	export let depth = 0;
 
 	let showChildren = true;
-	const toggleShowChildren = (e) => {
+	const toggleShowChildren = (e: MouseEvent) => {
 		// If `preventDefault` and `stopPropagation` are put on the event handler as modifiers,
 		// it results in undesired UX, because we want to conditionally add the click handler and behavior.
 		// We solve this problem with `getChildren` above, which also seems like a hack.

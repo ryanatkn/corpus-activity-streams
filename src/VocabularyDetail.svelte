@@ -1,15 +1,14 @@
-<script>
+<script lang="ts">
 	import Items from './Items.svelte';
 	import EntityLink from './EntityLink.svelte';
 	import UnknownLink from './UnknownLink.svelte';
 	import StringLink from './StringLink.svelte';
-	import * as notes from './notes/index.js';
-	export let item;
-	export let vocabulary;
-	window.hack = ('Items', Items);
-	window.hack = ('EntityLink', EntityLink);
-	window.hack = ('UnknownLink', UnknownLink);
-	window.hack = ('StringLink', StringLink);
+	import Note from './Note.svelte';
+	import type {Vocabulary} from './vocabulary.js';
+	import type {VocabularyItem} from './activity_streams.js';
+
+	export let item: VocabularyItem;
+	export let vocabulary: Vocabulary;
 </script>
 
 <div class="item" id={item.name}>
@@ -23,7 +22,7 @@
 				<StringLink>{item.category}</StringLink>
 			</td>
 		</tr>
-		{#if item.extends}
+		{#if 'extends' in item}
 			<tr>
 				<td class="property-name">extends</td>
 				<td class="property-value">
@@ -33,17 +32,17 @@
 				</td>
 			</tr>
 		{/if}
-		{#if item.extendedBy}
+		{#if 'extendedBy' in item}
 			<tr>
 				<td class="property-name">extendedBy</td>
 				<td class="property-value">
 					<Items items={item.extendedBy} let:item>
-						<EntityLink entity={item} />
+						<EntityLink entity={vocabulary.byName[item]} />
 					</Items>
 				</td>
 			</tr>
 		{/if}
-		{#if item.domain}
+		{#if 'domain' in item}
 			<tr>
 				<td class="property-name">domain</td>
 				<td class="property-value">
@@ -53,7 +52,7 @@
 				</td>
 			</tr>
 		{/if}
-		{#if item.range}
+		{#if 'range' in item}
 			<tr>
 				<td class="property-name">range</td>
 				<td class="property-value">
@@ -67,7 +66,7 @@
 				</td>
 			</tr>
 		{/if}
-		{#if item.properties}
+		{#if 'properties' in item}
 			<tr>
 				<td class="property-name">properties</td>
 				<td class="property-value">
@@ -84,7 +83,7 @@
 			</tr>
 		{/if}
 	</table>
-	<svelte:component this={notes[item.name]} />
+	<Note {item} />
 </div>
 
 <style>

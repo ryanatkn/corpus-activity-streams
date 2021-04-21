@@ -1,21 +1,16 @@
-<script>
+<script lang="ts">
 	import VocabularyTypeTable from './VocabularyTypeTable.svelte';
 	import VocabularyPropertyTable from './VocabularyPropertyTable.svelte';
 	import VocabularyDetails from './VocabularyDetails.svelte';
 	import VocabularyTree from './VocabularyTree.svelte';
 	import VocabularyGroups from './VocabularyGroups.svelte';
+	import type {Vocabulary} from './vocabulary.js';
 
-	window.hack = ('VocabularyTypeTable', VocabularyTypeTable);
-	window.hack = ('VocabularyPropertyTable', VocabularyPropertyTable);
-	window.hack = ('VocabularyDetails', VocabularyDetails);
-	window.hack = ('VocabularyTree', VocabularyTree);
-	window.hack = ('VocabularyGroups', VocabularyGroups);
-
-	export let vocabulary;
+	export let vocabulary: Vocabulary;
 
 	// TODO render multiple at once, and sync them
 	let activeTab = 'tree'; // 'details' | 'tables' | 'tree'
-	const goTo = (tab) => (activeTab = tab);
+	const goTo = (tab: string) => (activeTab = tab);
 </script>
 
 <nav>
