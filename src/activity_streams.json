@@ -1,4 +1,9 @@
 {
+	"description": "Activity Streams 2.0 vocabulary",
+	"source": [
+		"https://www.w3.org/TR/activitystreams-vocabulary/",
+		"https://github.com/w3c/activitystreams/blob/master/vocabulary/activitystreams2.owl"
+	],
 	"vocabulary": [
 		{
 			"name": "Entity",
