@@ -36,7 +36,7 @@
     "svelteBracketNewLine": true,
     "overrides": [
       {
-        "files": "*.json",
+        "files": "package.json",
         "options": {
           "useTabs": false
         }
