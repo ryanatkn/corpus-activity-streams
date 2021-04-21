@@ -41,16 +41,6 @@ The properties are inferred from what `Object` and `Link` share.
 - More and better views! And then some way manage them.
 - Somehow display the
   [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_examples.ts#L1426).
-- It currently uses a harshly inefficient codegen solution
-  (that was
-  [quick to implement](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_notes_html.gen.ts)!)
-  to output Svelte components to `src/notes`, bloating the JS payload.
-  All it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML,
-  so unless there's something more clever that can be done with codegen,
-  the app should render notes from data at runtime instead of generating components.
-  - remove `activity_streams_examples.ts` and stringify json?
-    - put notes abck
-    - generic component
 
 ## develop
 
