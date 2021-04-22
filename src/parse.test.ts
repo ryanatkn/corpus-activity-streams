@@ -2,10 +2,10 @@ import {suite} from 'uvu';
 import * as t from 'uvu/assert';
 
 import {parseNotes} from './parse.js';
-import {assignNodeIds, toDeterministicToId} from './markup.js';
+import {assignNodeIds, toToDeterministicId} from './markup.js';
 import type {MarkupNode} from './markup.js';
 
-const normalize = (node: MarkupNode) => assignNodeIds(node, toDeterministicToId());
+const normalize = (node: MarkupNode) => assignNodeIds(node, toToDeterministicId());
 
 /* test_parse */
 const test_parse = suite('parse');
