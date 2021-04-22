@@ -3,8 +3,18 @@
 	import TabbedView from './TabbedView.svelte';
 	import TiledView from './TiledView.svelte';
 	import GitHubLink from './GitHubLink.svelte';
+	import {provideComponents} from './components.js';
+	import type {Components} from './components.js';
+	import EntityLink from './EntityLink.svelte';
 
 	let view = TiledView || TabbedView;
+	type DefaultComponents = 'EntityLink';
+
+	const toDefaultComponents = (): Components<DefaultComponents> => ({
+		EntityLink,
+	});
+
+	provideComponents(toDefaultComponents());
 </script>
 
 <div class="app">

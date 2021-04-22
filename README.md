@@ -30,6 +30,7 @@ The properties are inferred from what `Object` and `Link` share.
 
 ## todo
 
+- add `Element` markup type and use `'pre'` for the JSON
 - generate JSON schema for each term (see the in-progress branch
   [**schema**](https://github.com/ryanatkn/corpus-activity-streams/tree/schema))
   - use JSON schemas to generate types with

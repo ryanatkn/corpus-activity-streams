@@ -1,7 +1,6 @@
 import type {MarkupNode, ToId} from './markup.js';
 import {assignNodeIds} from './markup.js';
 import {vocabulary, parseVocabulary} from './vocabulary.js';
-import JsonView from './JsonView.svelte';
 import type {VocabularyTerm} from './activity_streams.js';
 
 // TODO this should only be one function, `parse`
@@ -24,11 +23,9 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): MarkupNo
 				})),
 		};
 		children.push({
-			// TODO consider type \`Tag\` and \`pre\` w/o the component wrapper
-			type: 'Component',
-			component: JsonView,
-			props: {node: assignNodeIds(node, toId)}, // TODO assigning b/c not real children
-			// children: [node] // TODO hmm?
+			type: 'Element',
+			element: 'pre',
+			children: [node],
 		});
 	}
 	return assignNodeIds({type: 'Block', children}, toId);

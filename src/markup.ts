@@ -1,5 +1,3 @@
-import type {SvelteComponent} from 'svelte';
-
 /*
 
 
@@ -30,6 +28,7 @@ export type MarkupNode =
 	| MarkupBlockNode
 	| MarkupTextNode
 	| MarkupHtmlNode
+	| MarkupElementNode
 	| MarkupComponentNode
 	| MarkupFrameNode;
 
@@ -47,10 +46,15 @@ export interface MarkupHtmlNode extends BaseMarkupNode<MarkupNode> {
 	content: string;
 }
 
+export interface MarkupElementNode extends BaseMarkupNode<MarkupNode> {
+	type: 'Element';
+	element: 'pre' | 'code';
+}
+
 // TODO or `MarkupViewNode` ?
 export interface MarkupComponentNode extends BaseMarkupNode<MarkupNode> {
 	type: 'Component';
-	component: typeof SvelteComponent; // TODO type
+	component: string; // TODO type? `ComponentName` or `ComponentId` ?
 	props: {[key: string]: any}; // TODO type
 }
 
