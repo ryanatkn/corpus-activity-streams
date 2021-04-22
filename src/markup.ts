@@ -1,5 +1,7 @@
 /*
 
+TODO reconsider all of these names, I don't love "node"
+
 
 ```ts
 const node: MarkupNode = [
@@ -89,10 +91,8 @@ export const assignNodeIds = <T extends MarkupNode>(node: T, toId: ToId = toToId
 	return node;
 };
 
-// TODO import random utils from `felt`
-// TODO `uid` probably
-export const toToId: ToToId = (i = Number(Math.random().toString().substring(7))) => {
-	return () => `node${i++}`;
-};
+// TODO import random utils from `felt` using `uid` probably
+export const toToId: ToToId = (i = Number(Math.random().toString().substring(7))) => () =>
+	`node${i++}`;
 // this name lol ask luke
 export const toToDeterministicId: ToToId = () => toToId(0);
