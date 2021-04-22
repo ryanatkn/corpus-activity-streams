@@ -13,7 +13,7 @@ export const gen: Gen = async () => {
   }`;
 };
 
+let id = 0;
 const toId = () => {
-	let id = 0;
 	return () => `node${id++}`;
 };
