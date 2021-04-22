@@ -20,7 +20,7 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): MarkupNo
 					children:
 						str in vocabulary.byName
 							? [{type: 'Text', content: '\t'}, parseVocabulary(str), {type: 'Text', content: ': '}]
-							: [{type: 'Html', content: str}],
+							: [{type: 'Html', content: str === '@context' ? `\t${str}: ` : str}], // TODO hacky
 				})),
 		};
 		children.push({
