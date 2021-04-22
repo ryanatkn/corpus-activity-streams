@@ -1,6 +1,6 @@
 import type {MarkupNode, ToId} from './markup.js';
 import {assignNodeIds} from './markup.js';
-import {parseVocabulary} from './vocabulary.js';
+import {vocabulary, parseVocabulary} from './vocabulary.js';
 import JsonView from './JsonView.svelte';
 import type {VocabularyTerm} from './activity_streams.js';
 
@@ -15,7 +15,13 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): MarkupNo
 			type: 'Block',
 			children: JSON.stringify(example, null, 2)
 				.split(/  "(.+?)": /g)
-				.map((str) => parseVocabulary(str)),
+				.map((str) => ({
+					type: 'Block',
+					children:
+						str in vocabulary.byName
+							? [{type: 'Text', content: '\t'}, parseVocabulary(str), {type: 'Text', content: ': '}]
+							: [{type: 'Html', content: str}],
+				})),
 		};
 		children.push({
 			// TODO consider type \`Tag\` and \`pre\` w/o the component wrapper

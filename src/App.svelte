@@ -25,6 +25,7 @@
 		--color_pink: hsl(339, 70%, 96%);
 		--color_yellow_bg: hsl(51, 70%, 98%);
 		--color_yellow_text: rgba(75, 70, 50);
+		--tab_size: 2;
 	}
 	/* TODO import a static css file */
 	:global(html),
@@ -36,6 +37,7 @@
 	:global(body) {
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		font-size: 16px;
+		tab-size: var(--tab_size);
 	}
 	:global(#root) {
 		height: 100%;
