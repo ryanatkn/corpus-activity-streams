@@ -10,6 +10,7 @@ export const gen: Gen = () => {
 	<head>
 		<title>${title}</title>
 		${renderMetaTags()}
+		<link rel="shortcut icon" href="/favicon.png" />
 		<link rel="stylesheet" href="bundle.svelte.css" />
 	</head>
 
