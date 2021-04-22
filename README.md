@@ -16,7 +16,7 @@
   the `notes` property of the vocabulary items
 - [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
   the vocabulary examples data
-- [activity_streams_notes.json](src/activity_streams_notes.json):
+- [src/activity_streams_notes.json](src/activity_streams_notes.json):
   AST for the notes content
 
 ## compared to the spec
