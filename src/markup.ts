@@ -82,7 +82,7 @@ export interface ToToId {
 	(): ToId;
 }
 
-export const assignNodeIds = <T extends MarkupNode>(node: T, toId: ToId = defaultToId()): T => {
+export const assignNodeIds = <T extends MarkupNode>(node: T, toId: ToId = toDefaultToId()): T => {
 	forEachNode(node, (node) => {
 		node.id = toId(); // TODO ? path? what if we passed in the parent so we could do /1/3/2/2?
 	});
@@ -90,7 +90,11 @@ export const assignNodeIds = <T extends MarkupNode>(node: T, toId: ToId = defaul
 };
 
 // TODO import random utils from `felt`
-const defaultToId: ToToId = () => {
-	let id = Number(Math.random().toString().substring(7)); // TODO `uid` probably
-	return () => `node${id++}`;
+export const toDefaultToId: ToToId = () => {
+	let i = Number(Math.random().toString().substring(7)); // TODO `uid` probably
+	return () => `node${i++}`;
+};
+export const toDeterministicToId: ToToId = () => {
+	let i = 0;
+	return () => `node${i++}`;
 };
