@@ -29,6 +29,7 @@ export const vocabulary: Vocabulary = {
 	typesTreeRoot: activityStreamsVocabulary.find((v) => v.name === 'Entity')!,
 };
 
+// TODO parameterize or refactor
 export const parseVocabulary = (content: string): MarkupNode => {
 	if (content in vocabulary.byName) {
 		return {
