@@ -41,3 +41,14 @@ export const parseNotes = (notes: string, toId?: ToId): MarkupNode => {
 	);
 	return node;
 };
+
+export const parse = (content: string, toId?: ToId): MarkupNode => {
+	const node: MarkupNode = assignNodeIds(
+		{
+			type: 'Block',
+			children: content.split(/`(.+?)`/g).map((str) => parseVocabulary(str)),
+		},
+		toId,
+	);
+	return node;
+};
