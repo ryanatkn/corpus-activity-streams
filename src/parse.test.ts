@@ -2,18 +2,18 @@ import {suite} from 'uvu';
 import * as t from 'uvu/assert';
 
 import {parse} from './parse.js';
-import {assignNodeIds, toToDeterministicId} from './markup.js';
-import type {MarkupNode} from './markup.js';
+import {assignNodeIds, toToDeterministicId} from './tree.js';
+import type {Tree} from './tree.js';
 
-const normalize = (node: MarkupNode) => assignNodeIds(node, toToDeterministicId());
+const normalizeTree = (node: Tree) => assignNodeIds(node, toToDeterministicId());
 
 /* test_parse */
 const test_parse = suite('parse');
 
 test_parse('parse', () => {
 	t.equal(
-		normalize(parse('The `Entity` is the base of all of types.')),
-		normalize({
+		normalizeTree(parse('The `Entity` is the base of all of types.')),
+		normalizeTree({
 			type: 'Block',
 			children: [
 				{type: 'Html', content: 'The ', id: 'node1'},
@@ -28,7 +28,7 @@ test_parse('parse', () => {
 // test_parse('parse', () => {
 // 	console.log(
 // 		'hey',
-// 		normalize(
+// 		normalizeTree(
 // 			parse(
 // 				JSON.stringify(
 // 					{
@@ -44,7 +44,7 @@ test_parse('parse', () => {
 // 		),
 // 	);
 // 	t.equal(
-// 		normalize(
+// 		normalizeTree(
 // 			parse(
 // 				JSON.stringify(
 // 					{
@@ -58,7 +58,7 @@ test_parse('parse', () => {
 // 				),
 // 			)!,
 // 		),
-// 		normalize({
+// 		normalizeTree({
 // 			type: 'Block',
 // 			children: [
 // 				{

@@ -1,6 +1,6 @@
 import {vocabulary as activityStreamsVocabulary, vocabularyCategories} from './activity_streams.js';
 import type {VocabularyItem, VocabularyProperty} from './activity_streams.js';
-import type {MarkupNode} from './markup.js';
+import type {Tree} from './tree.js';
 
 export interface Vocabulary {
 	items: VocabularyItem[];
@@ -30,7 +30,7 @@ export const vocabulary: Vocabulary = {
 };
 
 // TODO parameterize or refactor
-export const parseVocabulary = (content: string): MarkupNode => {
+export const parseVocabulary = (content: string): Tree => {
 	if (content in vocabulary.byName) {
 		return {
 			type: 'Component',
