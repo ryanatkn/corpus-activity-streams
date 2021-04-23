@@ -58,4 +58,4 @@ should look the same as the deployed version:
 
 ## license 🐦
 
-[public domain](license) (The Unlicense)
+public domain ([The Unlicense](license))
