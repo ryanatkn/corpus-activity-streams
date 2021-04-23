@@ -13,7 +13,7 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 		const tree: Tree = {
 			type: 'Block',
 			children: JSON.stringify(example, null, 2)
-				.split(/  "(.+?)": /g)
+				.split(/"(.+?)": /g)
 				.map((str) => ({
 					type: 'Block',
 					children:
