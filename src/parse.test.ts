@@ -23,23 +23,6 @@ test_parse('parse', () => {
 });
 
 test_parse('parse', () => {
-	console.log(
-		'hey',
-		normalizeChildren(
-			parse(
-				JSON.stringify(
-					{
-						'@context': 'https://www.w3.org/ns/activitystreams',
-						type: 'Object',
-						id: 'http://www.test.example/object/1',
-						name: 'A Simple, non-specific object',
-					},
-					null,
-					2,
-				),
-			)!,
-		),
-	);
 	t.equal(
 		normalizeChildren(
 			parse(

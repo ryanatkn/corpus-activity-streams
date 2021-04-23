@@ -43,6 +43,8 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 	let currentString = '';
 	let insideBackticks = false;
 	let insideBackticksContents = '';
+	let insideQuotes = false;
+	let insideQuotesContents = '';
 	while (i < len) {
 		const char = content[i];
 		if (char === '`') {
@@ -73,8 +75,39 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 				// enter backticks
 				if (insideBackticksContents !== '') throw Error('TODO ?');
 			}
+		} else if (char === '"') {
+			if (insideQuotes) {
+				// lookup the identifier
+				// TODO normalize?
+				if (insideQuotesContents in vocabulary.byName) {
+					// this is the item, but we don't need it ?
+					// const vocabularyItem = vocabulary.byName[insideQuotesContents];
+					if (currentString) {
+						children.push({type: 'Html', content: currentString});
+						currentString = '';
+					}
+					children.push({
+						type: 'Component',
+						component: 'EntityLink',
+						props: {name: insideQuotesContents},
+					});
+					insideQuotesContents = '';
+				} else {
+					// un-resolved identifier, so treat as plain text
+					currentString += `"${insideQuotesContents}"`;
+					insideQuotesContents = '';
+				}
+				insideQuotes = false;
+			} else {
+				insideQuotes = true;
+				// enter backticks
+				if (insideQuotesContents !== '') throw Error('TODO ?');
+			}
 		} else if (insideBackticks) {
 			insideBackticksContents += char;
+		} else if (insideQuotes) {
+			// TODO this is bugged
+			insideQuotesContents += char;
 		} else {
 			currentString += char;
 		}
