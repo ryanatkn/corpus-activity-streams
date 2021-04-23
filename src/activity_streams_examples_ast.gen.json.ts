@@ -15,5 +15,5 @@ export const gen: Gen = async () => {
 
 let id = 0;
 const toId = () => {
-	return () => `node${id++}`;
+	return () => `tree${id++}`;
 };

@@ -1,7 +1,7 @@
 import {suite} from 'uvu';
 import * as t from 'uvu/assert';
 
-import {toToDeterministicId, toToId} from './markup.js';
+import {toToDeterministicId, toToId} from './tree.js';
 
 /* test_toToId */
 const test_toToId = suite('toToId');

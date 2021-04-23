@@ -1,2424 +1,1480 @@
 {
-	"Entity": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "The ", "id": "node1"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Entity"}, "id": "node2"},
-			{"type": "Html", "content": " is the base of all of types.", "id": "node3"}
-		],
-		"id": "node0"
-	},
-	"Object": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Describes an object of any kind. The ", "id": "node5"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "node6"},
-			{
-				"type": "Html",
-				"content": " type serves as the base type for most of the other kinds of objects defined in the Activity Vocabulary, including other Core types such as ",
-				"id": "node7"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node8"
-			},
-			{"type": "Html", "content": ", ", "id": "node9"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "IntransitiveActivity"},
-				"id": "node10"
-			},
-			{"type": "Html", "content": ", ", "id": "node11"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node12"
-			},
-			{"type": "Html", "content": " and ", "id": "node13"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "OrderedCollection"},
-				"id": "node14"
-			},
-			{"type": "Html", "content": ".", "id": "node15"}
-		],
-		"id": "node4"
-	},
-	"Link": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A ", "id": "node17"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node18"},
-			{
-				"type": "Html",
-				"content": " is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is established by [ <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988\">RFC5988</a>]. Many of the properties defined by the Activity Vocabulary allow values that are either instances of ",
-				"id": "node19"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "node20"},
-			{"type": "Html", "content": " or ", "id": "node21"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node22"},
-			{"type": "Html", "content": ". When a ", "id": "node23"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node24"},
-			{
-				"type": "Html",
-				"content": " is used, it establishes a <a href=\"http://patterns.dataincubator.org/book/qualified-relation.html\">qualified relation</a> connecting the subject (the containing object) to the resource identified by the ",
-				"id": "node25"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "href"}, "id": "node26"},
-			{"type": "Html", "content": ". Properties of the ", "id": "node27"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node28"},
-			{
-				"type": "Html",
-				"content": " are properties of the reference as opposed to properties of the resource.",
-				"id": "node29"
-			}
-		],
-		"id": "node16"
-	},
-	"Activity": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "An ", "id": "node31"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node32"
-			},
-			{"type": "Html", "content": " is a subtype of ", "id": "node33"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "node34"},
-			{
-				"type": "Html",
-				"content": " that describes some form of action that may happen, is currently happening, or has already happened. The ",
-				"id": "node35"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node36"
-			},
-			{
-				"type": "Html",
-				"content": " type itself serves as an abstract base type for all types of activities. It is important to note that the ",
-				"id": "node37"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node38"
-			},
-			{
-				"type": "Html",
-				"content": " type itself does not carry any specific semantics about the kind of action being taken.",
-				"id": "node39"
-			}
-		],
-		"id": "node30"
-	},
-	"IntransitiveActivity": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Instances of ", "id": "node41"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "IntransitiveActivity"},
-				"id": "node42"
-			},
-			{"type": "Html", "content": " are a subtype of ", "id": "node43"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node44"
-			},
-			{"type": "Html", "content": " representing intransitive actions. The ", "id": "node45"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "node46"},
-			{
-				"type": "Html",
-				"content": " property is therefore inappropriate for these activities.",
-				"id": "node47"
-			}
-		],
-		"id": "node40"
-	},
-	"Collection": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A ", "id": "node49"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node50"
-			},
-			{"type": "Html", "content": " is a subtype of ", "id": "node51"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "node52"},
-			{"type": "Html", "content": " that represents ordered or unordered sets of ", "id": "node53"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "node54"},
-			{"type": "Html", "content": " or ", "id": "node55"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node56"},
-			{
-				"type": "Html",
-				"content": " instances. Refer to the <a href=\"https://www.w3.org/TR/activitystreams-core/#collection\">Activity Streams 2.0 Core</a> specification for a complete description of the ",
-				"id": "node57"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node58"
-			},
-			{"type": "Html", "content": " type.", "id": "node59"}
-		],
-		"id": "node48"
-	},
-	"OrderedCollection": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A subtype of ", "id": "node61"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node62"
-			},
-			{
-				"type": "Html",
-				"content": " in which members of the logical collection are assumed to always be strictly ordered.",
-				"id": "node63"
-			}
-		],
-		"id": "node60"
-	},
-	"CollectionPage": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Used to represent distinct subsets of items from a ",
-				"id": "node65"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node66"
-			},
-			{
-				"type": "Html",
-				"content": ". Refer to the <a href=\"https://www.w3.org/TR/activitystreams-core/#dfn-collectionpage\">Activity Streams 2.0 Core</a> for a complete description of the ",
-				"id": "node67"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "CollectionPage"},
-				"id": "node68"
-			},
-			{"type": "Html", "content": " object.", "id": "node69"}
-		],
-		"id": "node64"
-	},
-	"OrderedCollectionPage": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Used to represent ordered subsets of items from an ",
-				"id": "node71"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "OrderedCollection"},
-				"id": "node72"
-			},
-			{
-				"type": "Html",
-				"content": ". Refer to the <a href=\"https://www.w3.org/TR/activitystreams-core/#dfn-orderedcollectionpage\">Activity Streams 2.0 Core</a> for a complete description of the ",
-				"id": "node73"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "OrderedCollectionPage"},
-				"id": "node74"
-			},
-			{"type": "Html", "content": " object.", "id": "node75"}
-		],
-		"id": "node70"
-	},
-	"Accept": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node77"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node78"},
-			{"type": "Html", "content": " accepts the ", "id": "node79"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "node80"},
-			{"type": "Html", "content": ". The ", "id": "node81"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "node82"},
-			{
-				"type": "Html",
-				"content": " property can be used in certain circumstances to indicate the context into which the ",
-				"id": "node83"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "node84"},
-			{"type": "Html", "content": " has been accepted.", "id": "node85"}
-		],
-		"id": "node76"
-	},
-	"Add": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node87"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node88"},
-			{"type": "Html", "content": " has added the ", "id": "node89"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "node90"},
-			{"type": "Html", "content": " to the ", "id": "node91"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "node92"},
-			{"type": "Html", "content": ". If the ", "id": "node93"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "node94"},
-			{
-				"type": "Html",
-				"content": " property is not explicitly specified, the target would need to be determined implicitly by context. The ",
-				"id": "node95"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "node96"},
-			{
-				"type": "Html",
-				"content": " can be used to identify the context from which the ",
-				"id": "node97"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "node98"},
-			{"type": "Html", "content": " originated.", "id": "node99"}
-		],
-		"id": "node86"
-	},
-	"Announce": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node101"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node102"},
-			{"type": "Html", "content": " is calling the ", "id": "node103"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node104"
-			},
-			{"type": "Html", "content": "'s attention the ", "id": "node105"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node106"
-			},
-			{"type": "Html", "content": ". The ", "id": "node107"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node108"
-			},
-			{"type": "Html", "content": " typically has no defined meaning.", "id": "node109"}
-		],
-		"id": "node100"
-	},
-	"Arrive": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "An ", "id": "node111"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "IntransitiveActivity"},
-				"id": "node112"
-			},
-			{"type": "Html", "content": " that indicates that the ", "id": "node113"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node114"},
-			{"type": "Html", "content": " has arrived at the ", "id": "node115"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "location"},
-				"id": "node116"
-			},
-			{"type": "Html", "content": ". The ", "id": "node117"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node118"
-			},
-			{
-				"type": "Html",
-				"content": " can be used to identify the context from which the ",
-				"id": "node119"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node120"},
-			{"type": "Html", "content": " originated. The ", "id": "node121"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node122"
-			},
-			{"type": "Html", "content": " typically has no defined meaning.", "id": "node123"}
-		],
-		"id": "node110"
-	},
-	"Block": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node125"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node126"},
-			{"type": "Html", "content": " is blocking the ", "id": "node127"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node128"
-			},
-			{"type": "Html", "content": ". Blocking is a stronger form of ", "id": "node129"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Ignore"},
-				"id": "node130"
-			},
-			{
-				"type": "Html",
-				"content": ". The typical use is to support social systems that allow one user to block activities or content of other users. The ",
-				"id": "node131"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node132"
-			},
-			{"type": "Html", "content": " and ", "id": "node133"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node134"
-			},
-			{"type": "Html", "content": " typically have no defined meaning.", "id": "node135"}
-		],
-		"id": "node124"
-	},
-	"Create": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node137"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node138"},
-			{"type": "Html", "content": " has created the ", "id": "node139"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node140"
-			},
-			{"type": "Html", "content": ".", "id": "node141"}
-		],
-		"id": "node136"
-	},
-	"Delete": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node143"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node144"},
-			{"type": "Html", "content": " has deleted the ", "id": "node145"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node146"
-			},
-			{"type": "Html", "content": ". If specified, the ", "id": "node147"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node148"
-			},
-			{"type": "Html", "content": " indicates the context from which the ", "id": "node149"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node150"
-			},
-			{"type": "Html", "content": " was deleted.", "id": "node151"}
-		],
-		"id": "node142"
-	},
-	"Dislike": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node153"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node154"},
-			{"type": "Html", "content": " dislikes the ", "id": "node155"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node156"
-			},
-			{"type": "Html", "content": ".", "id": "node157"}
-		],
-		"id": "node152"
-	},
-	"Flag": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node159"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node160"},
-			{"type": "Html", "content": " is \"flagging\" the ", "id": "node161"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node162"
-			},
-			{
-				"type": "Html",
-				"content": ". Flagging is defined in the sense common to many social platforms as reporting content as being inappropriate for any number of reasons.",
-				"id": "node163"
-			}
-		],
-		"id": "node158"
-	},
-	"Follow": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node165"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node166"},
-			{"type": "Html", "content": " is \"following\" the ", "id": "node167"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node168"
-			},
-			{
-				"type": "Html",
-				"content": ". Following is defined in the sense typically used within Social systems in which the actor is interested in any activity performed by or on the object. The ",
-				"id": "node169"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node170"
-			},
-			{"type": "Html", "content": " and ", "id": "node171"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node172"
-			},
-			{"type": "Html", "content": " typically have no defined meaning.", "id": "node173"}
-		],
-		"id": "node164"
-	},
-	"Ignore": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node175"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node176"},
-			{"type": "Html", "content": " is ignoring the ", "id": "node177"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node178"
-			},
-			{"type": "Html", "content": ". The ", "id": "node179"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node180"
-			},
-			{"type": "Html", "content": " and ", "id": "node181"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node182"
-			},
-			{"type": "Html", "content": " typically have no defined meaning.", "id": "node183"}
-		],
-		"id": "node174"
-	},
-	"Invite": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A specialization of ", "id": "node185"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Offer"}, "id": "node186"},
-			{"type": "Html", "content": " in which the ", "id": "node187"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node188"},
-			{"type": "Html", "content": " is extending an invitation for the ", "id": "node189"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node190"
-			},
-			{"type": "Html", "content": " to the ", "id": "node191"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node192"
-			},
-			{"type": "Html", "content": ".", "id": "node193"}
-		],
-		"id": "node184"
-	},
-	"Join": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node195"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node196"},
-			{"type": "Html", "content": " has joined the ", "id": "node197"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node198"
-			},
-			{"type": "Html", "content": ". The ", "id": "node199"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node200"
-			},
-			{"type": "Html", "content": " and ", "id": "node201"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node202"
-			},
-			{"type": "Html", "content": " typically have no defined meaning.", "id": "node203"}
-		],
-		"id": "node194"
-	},
-	"Leave": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node205"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node206"},
-			{"type": "Html", "content": " has left the ", "id": "node207"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node208"
-			},
-			{"type": "Html", "content": ". The ", "id": "node209"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node210"
-			},
-			{"type": "Html", "content": " and ", "id": "node211"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node212"
-			},
-			{"type": "Html", "content": " typically have no meaning.", "id": "node213"}
-		],
-		"id": "node204"
-	},
-	"Like": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node215"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node216"},
-			{"type": "Html", "content": " likes, recommends or endorses the ", "id": "node217"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node218"
-			},
-			{"type": "Html", "content": ". The ", "id": "node219"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node220"
-			},
-			{"type": "Html", "content": " and ", "id": "node221"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node222"
-			},
-			{"type": "Html", "content": " typically have no defined meaning.", "id": "node223"}
-		],
-		"id": "node214"
-	},
-	"Listen": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node225"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node226"},
-			{"type": "Html", "content": " has listened to the ", "id": "node227"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node228"
-			},
-			{"type": "Html", "content": ".", "id": "node229"}
-		],
-		"id": "node224"
-	},
-	"Move": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node231"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node232"},
-			{"type": "Html", "content": " has moved ", "id": "node233"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node234"
-			},
-			{"type": "Html", "content": " from ", "id": "node235"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node236"
-			},
-			{"type": "Html", "content": " to ", "id": "node237"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node238"
-			},
-			{"type": "Html", "content": ". If the ", "id": "node239"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node240"
-			},
-			{"type": "Html", "content": " or ", "id": "node241"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node242"
-			},
-			{
-				"type": "Html",
-				"content": " are not specified, either can be determined by context.",
-				"id": "node243"
-			}
-		],
-		"id": "node230"
-	},
-	"Offer": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node245"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node246"},
-			{"type": "Html", "content": " is offering the ", "id": "node247"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node248"
-			},
-			{"type": "Html", "content": ". If specified, the ", "id": "node249"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node250"
-			},
-			{"type": "Html", "content": " indicates the entity to which the ", "id": "node251"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node252"
-			},
-			{"type": "Html", "content": " is being offered.", "id": "node253"}
-		],
-		"id": "node244"
-	},
-	"Question": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Represents a question being asked. Question objects are an extension of ",
-				"id": "node255"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "IntransitiveActivity"},
-				"id": "node256"
-			},
-			{"type": "Html", "content": ". That is, the ", "id": "node257"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Question"},
-				"id": "node258"
-			},
-			{"type": "Html", "content": " object is an ", "id": "node259"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node260"
-			},
-			{
-				"type": "Html",
-				"content": ", but the direct object is the question itself and therefore it would not contain an ",
-				"id": "node261"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node262"
-			},
-			{"type": "Html", "content": " property. Either of the ", "id": "node263"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "node264"},
-			{"type": "Html", "content": " and ", "id": "node265"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "node266"},
-			{
-				"type": "Html",
-				"content": " properties MAY be used to express possible answers, but a Question object MUST NOT have both properties.",
-				"id": "node267"
-			}
-		],
-		"id": "node254"
-	},
-	"Reject": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node269"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node270"},
-			{"type": "Html", "content": " is rejecting the ", "id": "node271"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node272"
-			},
-			{"type": "Html", "content": ". The ", "id": "node273"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node274"
-			},
-			{"type": "Html", "content": " and ", "id": "node275"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node276"
-			},
-			{"type": "Html", "content": " typically have no defined meaning.", "id": "node277"}
-		],
-		"id": "node268"
-	},
-	"Read": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node279"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node280"},
-			{"type": "Html", "content": " has read the ", "id": "node281"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node282"
-			},
-			{"type": "Html", "content": ".", "id": "node283"}
-		],
-		"id": "node278"
-	},
-	"Remove": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node285"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node286"},
-			{"type": "Html", "content": " is removing the ", "id": "node287"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node288"
-			},
-			{"type": "Html", "content": ". If specified, the ", "id": "node289"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node290"
-			},
-			{"type": "Html", "content": " indicates the context from which the ", "id": "node291"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node292"
-			},
-			{"type": "Html", "content": " is being removed.", "id": "node293"}
-		],
-		"id": "node284"
-	},
-	"TentativeReject": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A specialization of ", "id": "node295"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Reject"},
-				"id": "node296"
-			},
-			{
-				"type": "Html",
-				"content": " in which the rejection is considered tentative.",
-				"id": "node297"
-			}
-		],
-		"id": "node294"
-	},
-	"TentativeAccept": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A specialization of ", "id": "node299"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Accept"},
-				"id": "node300"
-			},
-			{"type": "Html", "content": " indicating that the acceptance is tentative.", "id": "node301"}
-		],
-		"id": "node298"
-	},
-	"Travel": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node303"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node304"},
-			{"type": "Html", "content": " is traveling to ", "id": "node305"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node306"
-			},
-			{"type": "Html", "content": " from ", "id": "node307"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node308"
-			},
-			{"type": "Html", "content": ". ", "id": "node309"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Travel"},
-				"id": "node310"
-			},
-			{"type": "Html", "content": " is an ", "id": "node311"},
-			{"type": "Html", "content": "IntransitiveObject", "id": "node312"},
-			{"type": "Html", "content": " whose ", "id": "node313"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node314"},
-			{"type": "Html", "content": " specifies the direct object. If the ", "id": "node315"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node316"
-			},
-			{"type": "Html", "content": " or ", "id": "node317"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node318"
-			},
-			{
-				"type": "Html",
-				"content": " are not specified, either can be determined by context.",
-				"id": "node319"
-			}
-		],
-		"id": "node302"
-	},
-	"Undo": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node321"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node322"},
-			{"type": "Html", "content": " is undoing the ", "id": "node323"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node324"
-			},
-			{"type": "Html", "content": ". In most cases, the ", "id": "node325"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node326"
-			},
-			{"type": "Html", "content": " will be an ", "id": "node327"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node328"
-			},
-			{
-				"type": "Html",
-				"content": " describing some previously performed action (for instance, a person may have previously \"liked\" an article but, for whatever reason, might choose to undo that like at some later point in time). The ",
-				"id": "node329"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node330"
-			},
-			{"type": "Html", "content": " and ", "id": "node331"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node332"
-			},
-			{"type": "Html", "content": " typically have no defined meaning.", "id": "node333"}
-		],
-		"id": "node320"
-	},
-	"Update": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node335"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node336"},
-			{"type": "Html", "content": " has updated the ", "id": "node337"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node338"
-			},
-			{
-				"type": "Html",
-				"content": ". Note, however, that this vocabulary does not define a mechanism for describing the actual set of modifications made to ",
-				"id": "node339"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node340"
-			},
-			{"type": "Html", "content": ". The ", "id": "node341"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "target"},
-				"id": "node342"
-			},
-			{"type": "Html", "content": " and ", "id": "node343"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "origin"},
-				"id": "node344"
-			},
-			{"type": "Html", "content": " typically have no defined meaning.", "id": "node345"}
-		],
-		"id": "node334"
-	},
-	"View": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Indicates that the ", "id": "node347"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node348"},
-			{"type": "Html", "content": " has viewed the ", "id": "node349"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node350"
-			},
-			{"type": "Html", "content": ".", "id": "node351"}
-		],
-		"id": "node346"
-	},
-	"Application": {
-		"type": "Block",
-		"children": [{"type": "Html", "content": "Describes a software application.", "id": "node353"}],
-		"id": "node352"
-	},
-	"Group": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Represents a formal or informal collective of Actors.",
-				"id": "node355"
-			}
-		],
-		"id": "node354"
-	},
-	"Organization": {
-		"type": "Block",
-		"children": [{"type": "Html", "content": "Represents an organization.", "id": "node357"}],
-		"id": "node356"
-	},
-	"Person": {
-		"type": "Block",
-		"children": [{"type": "Html", "content": "Represents an individual person.", "id": "node359"}],
-		"id": "node358"
-	},
-	"Service": {
-		"type": "Block",
-		"children": [{"type": "Html", "content": "Represents a service of any kind.", "id": "node361"}],
-		"id": "node360"
-	},
-	"Article": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Represents any kind of multi-paragraph written work.",
-				"id": "node363"
-			}
-		],
-		"id": "node362"
-	},
-	"Audio": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Represents an audio document of any kind.", "id": "node365"}
-		],
-		"id": "node364"
-	},
-	"Document": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Represents a document of any kind.", "id": "node367"}
-		],
-		"id": "node366"
-	},
-	"Event": {
-		"type": "Block",
-		"children": [{"type": "Html", "content": "Represents any kind of event.", "id": "node369"}],
-		"id": "node368"
-	},
-	"Image": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Represents an image document of any kind.", "id": "node371"}
-		],
-		"id": "node370"
-	},
-	"Note": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Represents a short written work typically less than a single paragraph in length.",
-				"id": "node373"
-			}
-		],
-		"id": "node372"
-	},
-	"Page": {
-		"type": "Block",
-		"children": [{"type": "Html", "content": "Represents a Web Page.", "id": "node375"}],
-		"id": "node374"
-	},
-	"Place": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Represents a logical or physical location. See <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#places\">5.3 Representing Places</a> for additional information.",
-				"id": "node377"
-			}
-		],
-		"id": "node376"
-	},
-	"Profile": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A ", "id": "node379"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Profile"},
-				"id": "node380"
-			},
-			{"type": "Html", "content": " is a content object that describes another ", "id": "node381"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Object"},
-				"id": "node382"
-			},
-			{"type": "Html", "content": ", typically used to describe ", "id": "node383"},
-			{"type": "Html", "content": "Actor Type", "id": "node384"},
-			{"type": "Html", "content": " objects. The ", "id": "node385"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "describes"},
-				"id": "node386"
-			},
-			{
-				"type": "Html",
-				"content": " property is used to reference the object being described by the profile.",
-				"id": "node387"
-			}
-		],
-		"id": "node378"
-	},
-	"Relationship": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Describes a relationship between two individuals. The ",
-				"id": "node389"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "subject"},
-				"id": "node390"
-			},
-			{"type": "Html", "content": " and ", "id": "node391"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node392"
-			},
-			{
-				"type": "Html",
-				"content": " properties are used to identify the connected individuals. <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#connections\">See 5.2 Representing Relationships Between Entities</a> for additional information.",
-				"id": "node393"
-			}
-		],
-		"id": "node388"
-	},
-	"Tombstone": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A ", "id": "node395"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Tombstone"},
-				"id": "node396"
-			},
-			{
-				"type": "Html",
-				"content": " represents a content object that has been deleted. It can be used in ",
-				"id": "node397"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node398"
-			},
-			{
-				"type": "Html",
-				"content": "s to signify that there used to be an object at this position, but it has been deleted.",
-				"id": "node399"
-			}
-		],
-		"id": "node394"
-	},
-	"Video": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Represents a video document of any kind.", "id": "node401"}
-		],
-		"id": "node400"
-	},
-	"Mention": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A specialized ", "id": "node403"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node404"},
-			{"type": "Html", "content": " that represents an @mention.", "id": "node405"}
-		],
-		"id": "node402"
-	},
-	"id": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Provides the globally unique identifier for an ",
-				"id": "node407"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Object"},
-				"id": "node408"
-			},
-			{"type": "Html", "content": " or ", "id": "node409"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node410"},
-			{"type": "Html", "content": ".", "id": "node411"}
-		],
-		"id": "node406"
-	},
-	"type": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Identifies the ", "id": "node413"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Object"},
-				"id": "node414"
-			},
-			{"type": "Html", "content": " or ", "id": "node415"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node416"},
-			{"type": "Html", "content": " type. Multiple values may be specified.", "id": "node417"}
-		],
-		"id": "node412"
-	},
-	"actor": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Describes one or more entities that either performed or are expected to perform the activity. Any single activity can have multiple ",
-				"id": "node419"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node420"},
-			{"type": "Html", "content": "s. The ", "id": "node421"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "node422"},
-			{"type": "Html", "content": " MAY be specified using an indirect ", "id": "node423"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node424"},
-			{"type": "Html", "content": ".", "id": "node425"}
-		],
-		"id": "node418"
-	},
-	"attachment": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies a resource attached or related to an object that potentially requires special handling. The intent is to provide a model that is at least semantically similar to attachments in email.",
-				"id": "node427"
-			}
-		],
-		"id": "node426"
-	},
-	"attributedTo": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies one or more entities to which this object is attributed. The attributed entities might not be Actors. For instance, an object might be attributed to the completion of another activity. ",
-				"id": "node429"
-			}
-		],
-		"id": "node428"
-	},
-	"audience": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies one or more entities that represent the total population of entities for which the object can considered to be relevant.",
-				"id": "node431"
-			}
-		],
-		"id": "node430"
-	},
-	"bcc": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies one or more Objects that are part of the private secondary audience of this Object.",
-				"id": "node433"
-			}
-		],
-		"id": "node432"
-	},
-	"bto": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies an Object that is part of the private primary audience of this Object.",
-				"id": "node435"
-			}
-		],
-		"id": "node434"
-	},
-	"cc": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies an Object that is part of the public secondary audience of this Object.",
-				"id": "node437"
-			}
-		],
-		"id": "node436"
-	},
-	"context": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies the context within which the object exists or an activity was performed. The notion of \"context\" used is intentionally vague. The intended function is to serve as a means of grouping objects and activities that share a common originating context or purpose. An example could be all activities relating to a common project or event.",
-				"id": "node439"
-			}
-		],
-		"id": "node438"
-	},
-	"current": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "In a paged ", "id": "node441"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node442"
-			},
-			{
-				"type": "Html",
-				"content": ", indicates the page that contains the most recently updated member items.",
-				"id": "node443"
-			}
-		],
-		"id": "node440"
-	},
-	"first": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "In a paged ", "id": "node445"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node446"
-			},
-			{
-				"type": "Html",
-				"content": ", indicates the furthest preceeding page of items in the collection.",
-				"id": "node447"
-			}
-		],
-		"id": "node444"
-	},
-	"generator": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies the entity (e.g. an application) that generated the object.",
-				"id": "node449"
-			}
-		],
-		"id": "node448"
-	},
-	"icon": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Indicates an entity that describes an icon for this object. The image should have an aspect ratio of one (horizontal) to one (vertical) and should be suitable for presentation at a small size.",
-				"id": "node451"
-			}
-		],
-		"id": "node450"
-	},
-	"image": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Indicates an entity that describes an image for this object. Unlike the icon property, there are no aspect ratio or display size limitations assumed.",
-				"id": "node453"
-			}
-		],
-		"id": "node452"
-	},
-	"inReplyTo": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Indicates one or more entities for which this object is considered a response.",
-				"id": "node455"
-			}
-		],
-		"id": "node454"
-	},
-	"instrument": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies one or more objects used (or to be used) in the completion of an ",
-				"id": "node457"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node458"
-			},
-			{"type": "Html", "content": ".", "id": "node459"}
-		],
-		"id": "node456"
-	},
-	"last": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "In a paged ", "id": "node461"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node462"
-			},
-			{
-				"type": "Html",
-				"content": ", indicates the furthest proceeding page of the collection.",
-				"id": "node463"
-			}
-		],
-		"id": "node460"
-	},
-	"location": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Indicates one or more physical or logical locations associated with the object.",
-				"id": "node465"
-			}
-		],
-		"id": "node464"
-	},
-	"items": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies the items contained in a collection. The items might be ordered or unordered.",
-				"id": "node467"
-			}
-		],
-		"id": "node466"
-	},
-	"orderedItems": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies the items contained in a collection. The items are unordered.",
-				"id": "node469"
-			}
-		],
-		"id": "node468"
-	},
-	"oneOf": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Identifies an exclusive option for a ", "id": "node471"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Question"},
-				"id": "node472"
-			},
-			{"type": "Html", "content": ". Use of ", "id": "node473"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "node474"},
-			{"type": "Html", "content": " implies that the ", "id": "node475"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Question"},
-				"id": "node476"
-			},
-			{
-				"type": "Html",
-				"content": " can have only a single answer. To indicate that a ",
-				"id": "node477"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Question"},
-				"id": "node478"
-			},
-			{"type": "Html", "content": " can have multiple answers, use ", "id": "node479"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "node480"},
-			{"type": "Html", "content": ".", "id": "node481"}
-		],
-		"id": "node470"
-	},
-	"anyOf": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Identifies an inclusive option for a ", "id": "node483"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Question"},
-				"id": "node484"
-			},
-			{"type": "Html", "content": ". Use of ", "id": "node485"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "node486"},
-			{"type": "Html", "content": " implies that the ", "id": "node487"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Question"},
-				"id": "node488"
-			},
-			{
-				"type": "Html",
-				"content": " can have multiple answers. To indicate that a ",
-				"id": "node489"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Question"},
-				"id": "node490"
-			},
-			{"type": "Html", "content": " can have only one answer, use ", "id": "node491"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "node492"},
-			{"type": "Html", "content": ".", "id": "node493"}
-		],
-		"id": "node482"
-	},
-	"closed": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Indicates that a question has been closed, and answers are no longer accepted.",
-				"id": "node495"
-			}
-		],
-		"id": "node494"
-	},
-	"origin": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Describes an indirect object of the activity from which the activity is directed. The precise meaning of the origin is the object of the English preposition \"from\". For instance, in the activity \"John moved an item to List B from List A\", the origin of the activity is \"List A\".",
-				"id": "node497"
-			}
-		],
-		"id": "node496"
-	},
-	"next": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "In a paged ", "id": "node499"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node500"
-			},
-			{"type": "Html", "content": ", indicates the next page of items.", "id": "node501"}
-		],
-		"id": "node498"
-	},
-	"object": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "When used within an ", "id": "node503"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node504"
-			},
-			{
-				"type": "Html",
-				"content": ", describes the direct object of the activity. For instance, in the activity \"John added a movie to his wishlist\", the object of the activity is the movie added. When used within a ",
-				"id": "node505"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Relationship"},
-				"id": "node506"
-			},
-			{"type": "Html", "content": " describes the entity to which the ", "id": "node507"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "subject"},
-				"id": "node508"
-			},
-			{"type": "Html", "content": " is related.", "id": "node509"}
-		],
-		"id": "node502"
-	},
-	"prev": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "In a paged ", "id": "node511"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node512"
-			},
-			{"type": "Html", "content": ", identifies the previous page of items.", "id": "node513"}
-		],
-		"id": "node510"
-	},
-	"preview": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies an entity that provides a preview of this object.",
-				"id": "node515"
-			}
-		],
-		"id": "node514"
-	},
-	"result": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Describes the result of the activity. For instance, if a particular action results in the creation of a new resource, the result property can be used to describe that new resource.",
-				"id": "node517"
-			}
-		],
-		"id": "node516"
-	},
-	"replies": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Identifies a ", "id": "node519"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node520"
-			},
-			{
-				"type": "Html",
-				"content": " containing objects considered to be responses to this object.",
-				"id": "node521"
-			}
-		],
-		"id": "node518"
-	},
-	"tag": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "One or more \"tags\" that have been associated with an objects. A ",
-				"id": "node523"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "tag"}, "id": "node524"},
-			{"type": "Html", "content": " can be any kind of ", "id": "node525"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Object"},
-				"id": "node526"
-			},
-			{"type": "Html", "content": ". The key difference between ", "id": "node527"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "attachment"},
-				"id": "node528"
-			},
-			{"type": "Html", "content": " and ", "id": "node529"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "tag"}, "id": "node530"},
-			{
-				"type": "Html",
-				"content": " is that the former implies association by inclusion, while the latter implies associated by reference.",
-				"id": "node531"
-			}
-		],
-		"id": "node522"
-	},
-	"target": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Describes the indirect object, or target, of the activity. The precise meaning of the target is largely dependent on the type of action being described but will often be the object of the English preposition \"to\". For instance, in the activity \"John added a movie to his wishlist\", the target of the activity is John's wishlist. An activity can have more than one target.",
-				"id": "node533"
-			}
-		],
-		"id": "node532"
-	},
-	"to": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies an entity considered to be part of the public primary audience of an ",
-				"id": "node535"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Object"},
-				"id": "node536"
-			},
-			{"type": "Html", "content": ".", "id": "node537"}
-		],
-		"id": "node534"
-	},
-	"url": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Identifies one or more links to representations of the object.",
-				"id": "node539"
-			}
-		],
-		"id": "node538"
-	},
-	"accuracy": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Indicates the accuracy of position coordinates on a ",
-				"id": "node541"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "node542"},
-			{
-				"type": "Html",
-				"content": " objects. Expressed in properties of percentage. e.g. \"94.0\" means \"94.0% accurate\".",
-				"id": "node543"
-			}
-		],
-		"id": "node540"
-	},
-	"altitude": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Indicates the altitude of a place. The measurement units is indicated using the ",
-				"id": "node545"
-			},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "node546"},
-			{"type": "Html", "content": " property. If ", "id": "node547"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "node548"},
-			{
-				"type": "Html",
-				"content": " is not specified, the default is assumed to be \"m\" indicating meters.",
-				"id": "node549"
-			}
-		],
-		"id": "node544"
-	},
-	"content": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "The content or textual representation of the ", "id": "node551"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Object"},
-				"id": "node552"
-			},
-			{
-				"type": "Html",
-				"content": " encoded as a JSON string. By default, the value of ",
-				"id": "node553"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "content"},
-				"id": "node554"
-			},
-			{"type": "Html", "content": " is HTML. The ", "id": "node555"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "mediaType"},
-				"id": "node556"
-			},
-			{
-				"type": "Html",
-				"content": " property can be used in the object to indicate a different content type. The content MAY be expressed using multiple language-tagged values.",
-				"id": "node557"
-			}
-		],
-		"id": "node550"
-	},
-	"name": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "A simple, human-readable, plain-text name for the object. HTML markup MUST NOT be included. The name MAY be expressed using multiple language-tagged values.",
-				"id": "node559"
-			}
-		],
-		"id": "node558"
-	},
-	"duration": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "When the object describes a time-bound resource, such as an audio or video, a meeting, etc, the ",
-				"id": "node561"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "duration"},
-				"id": "node562"
-			},
-			{
-				"type": "Html",
-				"content": " property indicates the object's approximate duration. The value MUST be expressed as an ",
-				"id": "node563"
-			},
-			{"type": "Html", "content": "xsd:duration", "id": "node564"},
-			{
-				"type": "Html",
-				"content": " as defined by [ <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-xmlschema11-2\">xmlschema11-2</a>], section 3.3.6 (e.g. a period of 5 seconds is represented as \"PT5S\").",
-				"id": "node565"
-			}
-		],
-		"id": "node560"
-	},
-	"height": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "On a ", "id": "node567"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node568"},
-			{
-				"type": "Html",
-				"content": ", specifies a hint as to the rendering height in device-independent pixels of the linked resource.",
-				"id": "node569"
-			}
-		],
-		"id": "node566"
-	},
-	"href": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "The target resource pointed to by a ", "id": "node571"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node572"},
-			{"type": "Html", "content": "", "id": "node573"}
-		],
-		"id": "node570"
-	},
-	"hreflang": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "Hints as to the language used by the target resource. Value MUST be a [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-BCP47\">BCP47</a>] Language-Tag.",
-				"id": "node575"
-			}
-		],
-		"id": "node574"
-	},
-	"partOf": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Identifies the ", "id": "node577"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node578"
-			},
-			{"type": "Html", "content": " to which a ", "id": "node579"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "CollectionPage"},
-				"id": "node580"
-			},
-			{"type": "Html", "content": " objects items belong.", "id": "node581"}
-		],
-		"id": "node576"
-	},
-	"latitude": {
-		"type": "Block",
-		"children": [{"type": "Html", "content": "The latitude of a place", "id": "node583"}],
-		"id": "node582"
-	},
-	"longitude": {
-		"type": "Block",
-		"children": [{"type": "Html", "content": "The longitude of a place", "id": "node585"}],
-		"id": "node584"
-	},
-	"mediaType": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "When used on a ", "id": "node587"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node588"},
-			{
-				"type": "Html",
-				"content": ", identifies the MIME media type of the referenced resource. When used on an ",
-				"id": "node589"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Object"},
-				"id": "node590"
-			},
-			{
-				"type": "Html",
-				"content": ", identifies the MIME media type of the value of the ",
-				"id": "node591"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "content"},
-				"id": "node592"
-			},
-			{"type": "Html", "content": " property. If not specified, the ", "id": "node593"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "content"},
-				"id": "node594"
-			},
-			{
-				"type": "Html",
-				"content": " property is assumed to contain text/html content.",
-				"id": "node595"
-			}
-		],
-		"id": "node586"
-	},
-	"endTime": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "The date and time describing the actual or expected ending time of the object. When used with an ",
-				"id": "node597"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node598"
-			},
-			{"type": "Html", "content": " object, for instance, the ", "id": "node599"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "endTime"},
-				"id": "node600"
-			},
-			{
-				"type": "Html",
-				"content": " property specifies the moment the activity concluded or is expected to conclude.",
-				"id": "node601"
-			}
-		],
-		"id": "node596"
-	},
-	"published": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "The date and time at which the object was published",
-				"id": "node603"
-			}
-		],
-		"id": "node602"
-	},
-	"startTime": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "The date and time describing the actual or expected starting time of the object. When used with an ",
-				"id": "node605"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Activity"},
-				"id": "node606"
-			},
-			{"type": "Html", "content": " object, for instance, the ", "id": "node607"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "startTime"},
-				"id": "node608"
-			},
-			{
-				"type": "Html",
-				"content": " property specifies the moment the activity began or is scheduled to begin.",
-				"id": "node609"
-			}
-		],
-		"id": "node604"
-	},
-	"radius": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "The radius from the given ", "id": "node611"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "latitude"},
-				"id": "node612"
-			},
-			{"type": "Html", "content": " and ", "id": "node613"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "longitude"},
-				"id": "node614"
-			},
-			{"type": "Html", "content": " for a ", "id": "node615"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "node616"},
-			{"type": "Html", "content": ". The units is expressed by the ", "id": "node617"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "node618"},
-			{"type": "Html", "content": " property. If ", "id": "node619"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "node620"},
-			{
-				"type": "Html",
-				"content": " is not specified, the default is assumed to be \"m\" indicating \"meters\".",
-				"id": "node621"
-			}
-		],
-		"id": "node610"
-	},
-	"rel": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "A link relation associated with a ", "id": "node623"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node624"},
-			{
-				"type": "Html",
-				"content": ". The value MUST conform to both the [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5\">HTML5</a>] and [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988\">RFC5988</a>] \"link relation\" definitions. In the [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5\">HTML5</a>], any string not containing the \"space\" U+0020, \"tab\" (U+0009), \"LF\" (U+000A), \"FF\" (U+000C), \"CR\" (U+000D) or \",\" (U+002C) characters can be used as a valid link relation.",
-				"id": "node625"
-			}
-		],
-		"id": "node622"
-	},
-	"startIndex": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "A non-negative integer value identifying the relative position within the logical view of a strictly ordered collection.",
-				"id": "node627"
-			}
-		],
-		"id": "node626"
-	},
-	"summary": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "A natural language summarization of the object encoded as HTML. Multiple language tagged summaries MAY be provided.",
-				"id": "node629"
-			}
-		],
-		"id": "node628"
-	},
-	"totalItems": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "A non-negative integer specifying the total number of objects contained by the logical view of the collection. This number might not reflect the actual number of items serialized within the ",
-				"id": "node631"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Collection"},
-				"id": "node632"
-			},
-			{"type": "Html", "content": " object instance.", "id": "node633"}
-		],
-		"id": "node630"
-	},
-	"units": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "Specifies the measurement units for the ", "id": "node635"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "radius"},
-				"id": "node636"
-			},
-			{"type": "Html", "content": " and ", "id": "node637"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "altitude"},
-				"id": "node638"
-			},
-			{"type": "Html", "content": " properties on a ", "id": "node639"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "node640"},
-			{
-				"type": "Html",
-				"content": " object. If not specified, the default is assumed to be \"m\" for \"meters\".",
-				"id": "node641"
-			}
-		],
-		"id": "node634"
-	},
-	"updated": {
-		"type": "Block",
-		"children": [
-			{
-				"type": "Html",
-				"content": "The date and time at which the object was updated",
-				"id": "node643"
-			}
-		],
-		"id": "node642"
-	},
-	"width": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "On a ", "id": "node645"},
-			{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "node646"},
-			{
-				"type": "Html",
-				"content": ", specifies a hint as to the rendering width in device-independent pixels of the linked resource.",
-				"id": "node647"
-			}
-		],
-		"id": "node644"
-	},
-	"subject": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "On a ", "id": "node649"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Relationship"},
-				"id": "node650"
-			},
-			{"type": "Html", "content": " object, the ", "id": "node651"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "subject"},
-				"id": "node652"
-			},
-			{
-				"type": "Html",
-				"content": " property identifies one of the connected individuals. For instance, for a ",
-				"id": "node653"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Relationship"},
-				"id": "node654"
-			},
-			{
-				"type": "Html",
-				"content": " object describing \"John is related to Sally\", ",
-				"id": "node655"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "subject"},
-				"id": "node656"
-			},
-			{"type": "Html", "content": " would refer to John.", "id": "node657"}
-		],
-		"id": "node648"
-	},
-	"relationship": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "On a ", "id": "node659"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Relationship"},
-				"id": "node660"
-			},
-			{"type": "Html", "content": " object, the ", "id": "node661"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "relationship"},
-				"id": "node662"
-			},
-			{
-				"type": "Html",
-				"content": " property identifies the kind of relationship that exists between ",
-				"id": "node663"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "subject"},
-				"id": "node664"
-			},
-			{"type": "Html", "content": " and ", "id": "node665"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "object"},
-				"id": "node666"
-			},
-			{"type": "Html", "content": ".", "id": "node667"}
-		],
-		"id": "node658"
-	},
-	"describes": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "On a ", "id": "node669"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Profile"},
-				"id": "node670"
-			},
-			{"type": "Html", "content": " object, the ", "id": "node671"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "describes"},
-				"id": "node672"
-			},
-			{
-				"type": "Html",
-				"content": " property identifies the object described by the ",
-				"id": "node673"
-			},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Profile"},
-				"id": "node674"
-			},
-			{"type": "Html", "content": ".", "id": "node675"}
-		],
-		"id": "node668"
-	},
-	"formerType": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "On a ", "id": "node677"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Tombstone"},
-				"id": "node678"
-			},
-			{"type": "Html", "content": " object, the ", "id": "node679"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "formerType"},
-				"id": "node680"
-			},
-			{
-				"type": "Html",
-				"content": " property identifies the type of the object that was deleted.",
-				"id": "node681"
-			}
-		],
-		"id": "node676"
-	},
-	"deleted": {
-		"type": "Block",
-		"children": [
-			{"type": "Html", "content": "On a ", "id": "node683"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "Tombstone"},
-				"id": "node684"
-			},
-			{"type": "Html", "content": " object, the ", "id": "node685"},
-			{
-				"type": "Component",
-				"component": "EntityLink",
-				"props": {"name": "deleted"},
-				"id": "node686"
-			},
-			{
-				"type": "Html",
-				"content": " property is a timestamp for when the object was deleted.",
-				"id": "node687"
-			}
-		],
-		"id": "node682"
-	}
+	"Entity": [
+		{"type": "Html", "content": "The ", "id": "tree0"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Entity"}, "id": "tree1"},
+		{"type": "Html", "content": " is the base of all of types.", "id": "tree2"}
+	],
+	"Object": [
+		{"type": "Html", "content": "Describes an object of any kind. The ", "id": "tree3"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree4"},
+		{
+			"type": "Html",
+			"content": " type serves as the base type for most of the other kinds of objects defined in the Activity Vocabulary, including other Core types such as ",
+			"id": "tree5"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree6"},
+		{"type": "Html", "content": ", ", "id": "tree7"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "IntransitiveActivity"},
+			"id": "tree8"
+		},
+		{"type": "Html", "content": ", ", "id": "tree9"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree10"
+		},
+		{"type": "Html", "content": " and ", "id": "tree11"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "OrderedCollection"},
+			"id": "tree12"
+		},
+		{"type": "Html", "content": ".", "id": "tree13"}
+	],
+	"Link": [
+		{"type": "Html", "content": "A ", "id": "tree14"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree15"},
+		{
+			"type": "Html",
+			"content": " is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is established by [ <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988\">RFC5988</a>]. Many of the properties defined by the Activity Vocabulary allow values that are either instances of ",
+			"id": "tree16"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree17"},
+		{"type": "Html", "content": " or ", "id": "tree18"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree19"},
+		{"type": "Html", "content": ". When a ", "id": "tree20"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree21"},
+		{
+			"type": "Html",
+			"content": " is used, it establishes a <a href=\"http://patterns.dataincubator.org/book/qualified-relation.html\">qualified relation</a> connecting the subject (the containing object) to the resource identified by the ",
+			"id": "tree22"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "href"}, "id": "tree23"},
+		{"type": "Html", "content": ". Properties of the ", "id": "tree24"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree25"},
+		{
+			"type": "Html",
+			"content": " are properties of the reference as opposed to properties of the resource.",
+			"id": "tree26"
+		}
+	],
+	"Activity": [
+		{"type": "Html", "content": "An ", "id": "tree27"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree28"},
+		{"type": "Html", "content": " is a subtype of ", "id": "tree29"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree30"},
+		{
+			"type": "Html",
+			"content": " that describes some form of action that may happen, is currently happening, or has already happened. The ",
+			"id": "tree31"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree32"},
+		{
+			"type": "Html",
+			"content": " type itself serves as an abstract base type for all types of activities. It is important to note that the ",
+			"id": "tree33"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree34"},
+		{
+			"type": "Html",
+			"content": " type itself does not carry any specific semantics about the kind of action being taken.",
+			"id": "tree35"
+		}
+	],
+	"IntransitiveActivity": [
+		{"type": "Html", "content": "Instances of ", "id": "tree36"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "IntransitiveActivity"},
+			"id": "tree37"
+		},
+		{"type": "Html", "content": " are a subtype of ", "id": "tree38"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree39"},
+		{"type": "Html", "content": " representing intransitive actions. The ", "id": "tree40"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree41"},
+		{
+			"type": "Html",
+			"content": " property is therefore inappropriate for these activities.",
+			"id": "tree42"
+		}
+	],
+	"Collection": [
+		{"type": "Html", "content": "A ", "id": "tree43"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree44"
+		},
+		{"type": "Html", "content": " is a subtype of ", "id": "tree45"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree46"},
+		{"type": "Html", "content": " that represents ordered or unordered sets of ", "id": "tree47"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree48"},
+		{"type": "Html", "content": " or ", "id": "tree49"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree50"},
+		{
+			"type": "Html",
+			"content": " instances. Refer to the <a href=\"https://www.w3.org/TR/activitystreams-core/#collection\">Activity Streams 2.0 Core</a> specification for a complete description of the ",
+			"id": "tree51"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree52"
+		},
+		{"type": "Html", "content": " type.", "id": "tree53"}
+	],
+	"OrderedCollection": [
+		{"type": "Html", "content": "A subtype of ", "id": "tree54"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree55"
+		},
+		{
+			"type": "Html",
+			"content": " in which members of the logical collection are assumed to always be strictly ordered.",
+			"id": "tree56"
+		}
+	],
+	"CollectionPage": [
+		{
+			"type": "Html",
+			"content": "Used to represent distinct subsets of items from a ",
+			"id": "tree57"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree58"
+		},
+		{
+			"type": "Html",
+			"content": ". Refer to the <a href=\"https://www.w3.org/TR/activitystreams-core/#dfn-collectionpage\">Activity Streams 2.0 Core</a> for a complete description of the ",
+			"id": "tree59"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "CollectionPage"},
+			"id": "tree60"
+		},
+		{"type": "Html", "content": " object.", "id": "tree61"}
+	],
+	"OrderedCollectionPage": [
+		{
+			"type": "Html",
+			"content": "Used to represent ordered subsets of items from an ",
+			"id": "tree62"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "OrderedCollection"},
+			"id": "tree63"
+		},
+		{
+			"type": "Html",
+			"content": ". Refer to the <a href=\"https://www.w3.org/TR/activitystreams-core/#dfn-orderedcollectionpage\">Activity Streams 2.0 Core</a> for a complete description of the ",
+			"id": "tree64"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "OrderedCollectionPage"},
+			"id": "tree65"
+		},
+		{"type": "Html", "content": " object.", "id": "tree66"}
+	],
+	"Accept": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree67"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree68"},
+		{"type": "Html", "content": " accepts the ", "id": "tree69"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree70"},
+		{"type": "Html", "content": ". The ", "id": "tree71"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree72"},
+		{
+			"type": "Html",
+			"content": " property can be used in certain circumstances to indicate the context into which the ",
+			"id": "tree73"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree74"},
+		{"type": "Html", "content": " has been accepted.", "id": "tree75"}
+	],
+	"Add": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree76"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree77"},
+		{"type": "Html", "content": " has added the ", "id": "tree78"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree79"},
+		{"type": "Html", "content": " to the ", "id": "tree80"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree81"},
+		{"type": "Html", "content": ". If the ", "id": "tree82"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree83"},
+		{
+			"type": "Html",
+			"content": " property is not explicitly specified, the target would need to be determined implicitly by context. The ",
+			"id": "tree84"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree85"},
+		{
+			"type": "Html",
+			"content": " can be used to identify the context from which the ",
+			"id": "tree86"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree87"},
+		{"type": "Html", "content": " originated.", "id": "tree88"}
+	],
+	"Announce": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree89"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree90"},
+		{"type": "Html", "content": " is calling the ", "id": "tree91"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree92"},
+		{"type": "Html", "content": "'s attention the ", "id": "tree93"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree94"},
+		{"type": "Html", "content": ". The ", "id": "tree95"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree96"},
+		{"type": "Html", "content": " typically has no defined meaning.", "id": "tree97"}
+	],
+	"Arrive": [
+		{"type": "Html", "content": "An ", "id": "tree98"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "IntransitiveActivity"},
+			"id": "tree99"
+		},
+		{"type": "Html", "content": " that indicates that the ", "id": "tree100"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree101"},
+		{"type": "Html", "content": " has arrived at the ", "id": "tree102"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "location"},
+			"id": "tree103"
+		},
+		{"type": "Html", "content": ". The ", "id": "tree104"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree105"},
+		{
+			"type": "Html",
+			"content": " can be used to identify the context from which the ",
+			"id": "tree106"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree107"},
+		{"type": "Html", "content": " originated. The ", "id": "tree108"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree109"},
+		{"type": "Html", "content": " typically has no defined meaning.", "id": "tree110"}
+	],
+	"Block": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree111"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree112"},
+		{"type": "Html", "content": " is blocking the ", "id": "tree113"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree114"},
+		{"type": "Html", "content": ". Blocking is a stronger form of ", "id": "tree115"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Ignore"}, "id": "tree116"},
+		{
+			"type": "Html",
+			"content": ". The typical use is to support social systems that allow one user to block activities or content of other users. The ",
+			"id": "tree117"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree118"},
+		{"type": "Html", "content": " and ", "id": "tree119"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree120"},
+		{"type": "Html", "content": " typically have no defined meaning.", "id": "tree121"}
+	],
+	"Create": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree122"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree123"},
+		{"type": "Html", "content": " has created the ", "id": "tree124"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree125"},
+		{"type": "Html", "content": ".", "id": "tree126"}
+	],
+	"Delete": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree127"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree128"},
+		{"type": "Html", "content": " has deleted the ", "id": "tree129"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree130"},
+		{"type": "Html", "content": ". If specified, the ", "id": "tree131"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree132"},
+		{"type": "Html", "content": " indicates the context from which the ", "id": "tree133"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree134"},
+		{"type": "Html", "content": " was deleted.", "id": "tree135"}
+	],
+	"Dislike": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree136"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree137"},
+		{"type": "Html", "content": " dislikes the ", "id": "tree138"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree139"},
+		{"type": "Html", "content": ".", "id": "tree140"}
+	],
+	"Flag": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree141"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree142"},
+		{"type": "Html", "content": " is \"flagging\" the ", "id": "tree143"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree144"},
+		{
+			"type": "Html",
+			"content": ". Flagging is defined in the sense common to many social platforms as reporting content as being inappropriate for any number of reasons.",
+			"id": "tree145"
+		}
+	],
+	"Follow": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree146"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree147"},
+		{"type": "Html", "content": " is \"following\" the ", "id": "tree148"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree149"},
+		{
+			"type": "Html",
+			"content": ". Following is defined in the sense typically used within Social systems in which the actor is interested in any activity performed by or on the object. The ",
+			"id": "tree150"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree151"},
+		{"type": "Html", "content": " and ", "id": "tree152"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree153"},
+		{"type": "Html", "content": " typically have no defined meaning.", "id": "tree154"}
+	],
+	"Ignore": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree155"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree156"},
+		{"type": "Html", "content": " is ignoring the ", "id": "tree157"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree158"},
+		{"type": "Html", "content": ". The ", "id": "tree159"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree160"},
+		{"type": "Html", "content": " and ", "id": "tree161"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree162"},
+		{"type": "Html", "content": " typically have no defined meaning.", "id": "tree163"}
+	],
+	"Invite": [
+		{"type": "Html", "content": "A specialization of ", "id": "tree164"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Offer"}, "id": "tree165"},
+		{"type": "Html", "content": " in which the ", "id": "tree166"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree167"},
+		{"type": "Html", "content": " is extending an invitation for the ", "id": "tree168"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree169"},
+		{"type": "Html", "content": " to the ", "id": "tree170"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree171"},
+		{"type": "Html", "content": ".", "id": "tree172"}
+	],
+	"Join": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree173"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree174"},
+		{"type": "Html", "content": " has joined the ", "id": "tree175"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree176"},
+		{"type": "Html", "content": ". The ", "id": "tree177"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree178"},
+		{"type": "Html", "content": " and ", "id": "tree179"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree180"},
+		{"type": "Html", "content": " typically have no defined meaning.", "id": "tree181"}
+	],
+	"Leave": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree182"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree183"},
+		{"type": "Html", "content": " has left the ", "id": "tree184"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree185"},
+		{"type": "Html", "content": ". The ", "id": "tree186"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree187"},
+		{"type": "Html", "content": " and ", "id": "tree188"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree189"},
+		{"type": "Html", "content": " typically have no meaning.", "id": "tree190"}
+	],
+	"Like": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree191"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree192"},
+		{"type": "Html", "content": " likes, recommends or endorses the ", "id": "tree193"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree194"},
+		{"type": "Html", "content": ". The ", "id": "tree195"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree196"},
+		{"type": "Html", "content": " and ", "id": "tree197"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree198"},
+		{"type": "Html", "content": " typically have no defined meaning.", "id": "tree199"}
+	],
+	"Listen": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree200"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree201"},
+		{"type": "Html", "content": " has listened to the ", "id": "tree202"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree203"},
+		{"type": "Html", "content": ".", "id": "tree204"}
+	],
+	"Move": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree205"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree206"},
+		{"type": "Html", "content": " has moved ", "id": "tree207"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree208"},
+		{"type": "Html", "content": " from ", "id": "tree209"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree210"},
+		{"type": "Html", "content": " to ", "id": "tree211"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree212"},
+		{"type": "Html", "content": ". If the ", "id": "tree213"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree214"},
+		{"type": "Html", "content": " or ", "id": "tree215"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree216"},
+		{
+			"type": "Html",
+			"content": " are not specified, either can be determined by context.",
+			"id": "tree217"
+		}
+	],
+	"Offer": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree218"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree219"},
+		{"type": "Html", "content": " is offering the ", "id": "tree220"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree221"},
+		{"type": "Html", "content": ". If specified, the ", "id": "tree222"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree223"},
+		{"type": "Html", "content": " indicates the entity to which the ", "id": "tree224"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree225"},
+		{"type": "Html", "content": " is being offered.", "id": "tree226"}
+	],
+	"Question": [
+		{
+			"type": "Html",
+			"content": "Represents a question being asked. Question objects are an extension of ",
+			"id": "tree227"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "IntransitiveActivity"},
+			"id": "tree228"
+		},
+		{"type": "Html", "content": ". That is, the ", "id": "tree229"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Question"},
+			"id": "tree230"
+		},
+		{"type": "Html", "content": " object is an ", "id": "tree231"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Activity"},
+			"id": "tree232"
+		},
+		{
+			"type": "Html",
+			"content": ", but the direct object is the question itself and therefore it would not contain an ",
+			"id": "tree233"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree234"},
+		{"type": "Html", "content": " property. Either of the ", "id": "tree235"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "tree236"},
+		{"type": "Html", "content": " and ", "id": "tree237"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "tree238"},
+		{
+			"type": "Html",
+			"content": " properties MAY be used to express possible answers, but a Question object MUST NOT have both properties.",
+			"id": "tree239"
+		}
+	],
+	"Reject": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree240"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree241"},
+		{"type": "Html", "content": " is rejecting the ", "id": "tree242"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree243"},
+		{"type": "Html", "content": ". The ", "id": "tree244"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree245"},
+		{"type": "Html", "content": " and ", "id": "tree246"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree247"},
+		{"type": "Html", "content": " typically have no defined meaning.", "id": "tree248"}
+	],
+	"Read": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree249"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree250"},
+		{"type": "Html", "content": " has read the ", "id": "tree251"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree252"},
+		{"type": "Html", "content": ".", "id": "tree253"}
+	],
+	"Remove": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree254"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree255"},
+		{"type": "Html", "content": " is removing the ", "id": "tree256"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree257"},
+		{"type": "Html", "content": ". If specified, the ", "id": "tree258"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree259"},
+		{"type": "Html", "content": " indicates the context from which the ", "id": "tree260"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree261"},
+		{"type": "Html", "content": " is being removed.", "id": "tree262"}
+	],
+	"TentativeReject": [
+		{"type": "Html", "content": "A specialization of ", "id": "tree263"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Reject"}, "id": "tree264"},
+		{"type": "Html", "content": " in which the rejection is considered tentative.", "id": "tree265"}
+	],
+	"TentativeAccept": [
+		{"type": "Html", "content": "A specialization of ", "id": "tree266"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Accept"}, "id": "tree267"},
+		{"type": "Html", "content": " indicating that the acceptance is tentative.", "id": "tree268"}
+	],
+	"Travel": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree269"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree270"},
+		{"type": "Html", "content": " is traveling to ", "id": "tree271"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree272"},
+		{"type": "Html", "content": " from ", "id": "tree273"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree274"},
+		{"type": "Html", "content": ". ", "id": "tree275"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Travel"}, "id": "tree276"},
+		{"type": "Html", "content": " is an `IntransitiveObject` whose ", "id": "tree277"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree278"},
+		{"type": "Html", "content": " specifies the direct object. If the ", "id": "tree279"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree280"},
+		{"type": "Html", "content": " or ", "id": "tree281"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree282"},
+		{
+			"type": "Html",
+			"content": " are not specified, either can be determined by context.",
+			"id": "tree283"
+		}
+	],
+	"Undo": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree284"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree285"},
+		{"type": "Html", "content": " is undoing the ", "id": "tree286"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree287"},
+		{"type": "Html", "content": ". In most cases, the ", "id": "tree288"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree289"},
+		{"type": "Html", "content": " will be an ", "id": "tree290"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Activity"},
+			"id": "tree291"
+		},
+		{
+			"type": "Html",
+			"content": " describing some previously performed action (for instance, a person may have previously \"liked\" an article but, for whatever reason, might choose to undo that like at some later point in time). The ",
+			"id": "tree292"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree293"},
+		{"type": "Html", "content": " and ", "id": "tree294"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree295"},
+		{"type": "Html", "content": " typically have no defined meaning.", "id": "tree296"}
+	],
+	"Update": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree297"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree298"},
+		{"type": "Html", "content": " has updated the ", "id": "tree299"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree300"},
+		{
+			"type": "Html",
+			"content": ". Note, however, that this vocabulary does not define a mechanism for describing the actual set of modifications made to ",
+			"id": "tree301"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree302"},
+		{"type": "Html", "content": ". The ", "id": "tree303"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree304"},
+		{"type": "Html", "content": " and ", "id": "tree305"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree306"},
+		{"type": "Html", "content": " typically have no defined meaning.", "id": "tree307"}
+	],
+	"View": [
+		{"type": "Html", "content": "Indicates that the ", "id": "tree308"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree309"},
+		{"type": "Html", "content": " has viewed the ", "id": "tree310"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree311"},
+		{"type": "Html", "content": ".", "id": "tree312"}
+	],
+	"Application": [
+		{"type": "Html", "content": "Describes a software application.", "id": "tree313"}
+	],
+	"Group": [
+		{
+			"type": "Html",
+			"content": "Represents a formal or informal collective of Actors.",
+			"id": "tree314"
+		}
+	],
+	"Organization": [{"type": "Html", "content": "Represents an organization.", "id": "tree315"}],
+	"Person": [{"type": "Html", "content": "Represents an individual person.", "id": "tree316"}],
+	"Service": [{"type": "Html", "content": "Represents a service of any kind.", "id": "tree317"}],
+	"Article": [
+		{
+			"type": "Html",
+			"content": "Represents any kind of multi-paragraph written work.",
+			"id": "tree318"
+		}
+	],
+	"Audio": [
+		{"type": "Html", "content": "Represents an audio document of any kind.", "id": "tree319"}
+	],
+	"Document": [{"type": "Html", "content": "Represents a document of any kind.", "id": "tree320"}],
+	"Event": [{"type": "Html", "content": "Represents any kind of event.", "id": "tree321"}],
+	"Image": [
+		{"type": "Html", "content": "Represents an image document of any kind.", "id": "tree322"}
+	],
+	"Note": [
+		{
+			"type": "Html",
+			"content": "Represents a short written work typically less than a single paragraph in length.",
+			"id": "tree323"
+		}
+	],
+	"Page": [{"type": "Html", "content": "Represents a Web Page.", "id": "tree324"}],
+	"Place": [
+		{
+			"type": "Html",
+			"content": "Represents a logical or physical location. See <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#places\">5.3 Representing Places</a> for additional information.",
+			"id": "tree325"
+		}
+	],
+	"Profile": [
+		{"type": "Html", "content": "A ", "id": "tree326"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Profile"}, "id": "tree327"},
+		{"type": "Html", "content": " is a content object that describes another ", "id": "tree328"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree329"},
+		{
+			"type": "Html",
+			"content": ", typically used to describe `Actor Type` objects. The ",
+			"id": "tree330"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "describes"},
+			"id": "tree331"
+		},
+		{
+			"type": "Html",
+			"content": " property is used to reference the object being described by the profile.",
+			"id": "tree332"
+		}
+	],
+	"Relationship": [
+		{
+			"type": "Html",
+			"content": "Describes a relationship between two individuals. The ",
+			"id": "tree333"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree334"},
+		{"type": "Html", "content": " and ", "id": "tree335"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree336"},
+		{
+			"type": "Html",
+			"content": " properties are used to identify the connected individuals. <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#connections\">See 5.2 Representing Relationships Between Entities</a> for additional information.",
+			"id": "tree337"
+		}
+	],
+	"Tombstone": [
+		{"type": "Html", "content": "A ", "id": "tree338"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Tombstone"},
+			"id": "tree339"
+		},
+		{
+			"type": "Html",
+			"content": " represents a content object that has been deleted. It can be used in ",
+			"id": "tree340"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree341"
+		},
+		{
+			"type": "Html",
+			"content": "s to signify that there used to be an object at this position, but it has been deleted.",
+			"id": "tree342"
+		}
+	],
+	"Video": [
+		{"type": "Html", "content": "Represents a video document of any kind.", "id": "tree343"}
+	],
+	"Mention": [
+		{"type": "Html", "content": "A specialized ", "id": "tree344"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree345"},
+		{"type": "Html", "content": " that represents an @mention.", "id": "tree346"}
+	],
+	"id": [
+		{"type": "Html", "content": "Provides the globally unique identifier for an ", "id": "tree347"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree348"},
+		{"type": "Html", "content": " or ", "id": "tree349"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree350"},
+		{"type": "Html", "content": ".", "id": "tree351"}
+	],
+	"type": [
+		{"type": "Html", "content": "Identifies the ", "id": "tree352"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree353"},
+		{"type": "Html", "content": " or ", "id": "tree354"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree355"},
+		{"type": "Html", "content": " type. Multiple values may be specified.", "id": "tree356"}
+	],
+	"actor": [
+		{
+			"type": "Html",
+			"content": "Describes one or more entities that either performed or are expected to perform the activity. Any single activity can have multiple ",
+			"id": "tree357"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree358"},
+		{"type": "Html", "content": "s. The ", "id": "tree359"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree360"},
+		{"type": "Html", "content": " MAY be specified using an indirect ", "id": "tree361"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree362"},
+		{"type": "Html", "content": ".", "id": "tree363"}
+	],
+	"attachment": [
+		{
+			"type": "Html",
+			"content": "Identifies a resource attached or related to an object that potentially requires special handling. The intent is to provide a model that is at least semantically similar to attachments in email.",
+			"id": "tree364"
+		}
+	],
+	"attributedTo": [
+		{
+			"type": "Html",
+			"content": "Identifies one or more entities to which this object is attributed. The attributed entities might not be Actors. For instance, an object might be attributed to the completion of another activity. ",
+			"id": "tree365"
+		}
+	],
+	"audience": [
+		{
+			"type": "Html",
+			"content": "Identifies one or more entities that represent the total population of entities for which the object can considered to be relevant.",
+			"id": "tree366"
+		}
+	],
+	"bcc": [
+		{
+			"type": "Html",
+			"content": "Identifies one or more Objects that are part of the private secondary audience of this Object.",
+			"id": "tree367"
+		}
+	],
+	"bto": [
+		{
+			"type": "Html",
+			"content": "Identifies an Object that is part of the private primary audience of this Object.",
+			"id": "tree368"
+		}
+	],
+	"cc": [
+		{
+			"type": "Html",
+			"content": "Identifies an Object that is part of the public secondary audience of this Object.",
+			"id": "tree369"
+		}
+	],
+	"context": [
+		{
+			"type": "Html",
+			"content": "Identifies the context within which the object exists or an activity was performed. The notion of \"",
+			"id": "tree370"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "context"}, "id": "tree371"},
+		{
+			"type": "Html",
+			"content": "\" used is intentionally vague. The intended function is to serve as a means of grouping objects and activities that share a common originating context or purpose. An example could be all activities relating to a common project or event.",
+			"id": "tree372"
+		}
+	],
+	"current": [
+		{"type": "Html", "content": "In a paged ", "id": "tree373"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree374"
+		},
+		{
+			"type": "Html",
+			"content": ", indicates the page that contains the most recently updated member items.",
+			"id": "tree375"
+		}
+	],
+	"first": [
+		{"type": "Html", "content": "In a paged ", "id": "tree376"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree377"
+		},
+		{
+			"type": "Html",
+			"content": ", indicates the furthest preceeding page of items in the collection.",
+			"id": "tree378"
+		}
+	],
+	"generator": [
+		{
+			"type": "Html",
+			"content": "Identifies the entity (e.g. an application) that generated the object.",
+			"id": "tree379"
+		}
+	],
+	"icon": [
+		{
+			"type": "Html",
+			"content": "Indicates an entity that describes an icon for this object. The image should have an aspect ratio of one (horizontal) to one (vertical) and should be suitable for presentation at a small size.",
+			"id": "tree380"
+		}
+	],
+	"image": [
+		{
+			"type": "Html",
+			"content": "Indicates an entity that describes an image for this object. Unlike the icon property, there are no aspect ratio or display size limitations assumed.",
+			"id": "tree381"
+		}
+	],
+	"inReplyTo": [
+		{
+			"type": "Html",
+			"content": "Indicates one or more entities for which this object is considered a response.",
+			"id": "tree382"
+		}
+	],
+	"instrument": [
+		{
+			"type": "Html",
+			"content": "Identifies one or more objects used (or to be used) in the completion of an ",
+			"id": "tree383"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Activity"},
+			"id": "tree384"
+		},
+		{"type": "Html", "content": ".", "id": "tree385"}
+	],
+	"last": [
+		{"type": "Html", "content": "In a paged ", "id": "tree386"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree387"
+		},
+		{
+			"type": "Html",
+			"content": ", indicates the furthest proceeding page of the collection.",
+			"id": "tree388"
+		}
+	],
+	"location": [
+		{
+			"type": "Html",
+			"content": "Indicates one or more physical or logical locations associated with the object.",
+			"id": "tree389"
+		}
+	],
+	"items": [
+		{
+			"type": "Html",
+			"content": "Identifies the items contained in a collection. The items might be ordered or unordered.",
+			"id": "tree390"
+		}
+	],
+	"orderedItems": [
+		{
+			"type": "Html",
+			"content": "Identifies the items contained in a collection. The items are unordered.",
+			"id": "tree391"
+		}
+	],
+	"oneOf": [
+		{"type": "Html", "content": "Identifies an exclusive option for a ", "id": "tree392"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Question"},
+			"id": "tree393"
+		},
+		{"type": "Html", "content": ". Use of ", "id": "tree394"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "tree395"},
+		{"type": "Html", "content": " implies that the ", "id": "tree396"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Question"},
+			"id": "tree397"
+		},
+		{
+			"type": "Html",
+			"content": " can have only a single answer. To indicate that a ",
+			"id": "tree398"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Question"},
+			"id": "tree399"
+		},
+		{"type": "Html", "content": " can have multiple answers, use ", "id": "tree400"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "tree401"},
+		{"type": "Html", "content": ".", "id": "tree402"}
+	],
+	"anyOf": [
+		{"type": "Html", "content": "Identifies an inclusive option for a ", "id": "tree403"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Question"},
+			"id": "tree404"
+		},
+		{"type": "Html", "content": ". Use of ", "id": "tree405"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "tree406"},
+		{"type": "Html", "content": " implies that the ", "id": "tree407"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Question"},
+			"id": "tree408"
+		},
+		{"type": "Html", "content": " can have multiple answers. To indicate that a ", "id": "tree409"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Question"},
+			"id": "tree410"
+		},
+		{"type": "Html", "content": " can have only one answer, use ", "id": "tree411"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "tree412"},
+		{"type": "Html", "content": ".", "id": "tree413"}
+	],
+	"closed": [
+		{
+			"type": "Html",
+			"content": "Indicates that a question has been closed, and answers are no longer accepted.",
+			"id": "tree414"
+		}
+	],
+	"origin": [
+		{
+			"type": "Html",
+			"content": "Describes an indirect object of the activity from which the activity is directed. The precise meaning of the origin is the object of the English preposition \"from\". For instance, in the activity \"John moved an item to List B from List A\", the origin of the activity is \"List A\".",
+			"id": "tree415"
+		}
+	],
+	"next": [
+		{"type": "Html", "content": "In a paged ", "id": "tree416"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree417"
+		},
+		{"type": "Html", "content": ", indicates the next page of items.", "id": "tree418"}
+	],
+	"object": [
+		{"type": "Html", "content": "When used within an ", "id": "tree419"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Activity"},
+			"id": "tree420"
+		},
+		{
+			"type": "Html",
+			"content": ", describes the direct object of the activity. For instance, in the activity \"John added a movie to his wishlist\", the object of the activity is the movie added. When used within a ",
+			"id": "tree421"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Relationship"},
+			"id": "tree422"
+		},
+		{"type": "Html", "content": " describes the entity to which the ", "id": "tree423"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree424"},
+		{"type": "Html", "content": " is related.", "id": "tree425"}
+	],
+	"prev": [
+		{"type": "Html", "content": "In a paged ", "id": "tree426"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree427"
+		},
+		{"type": "Html", "content": ", identifies the previous page of items.", "id": "tree428"}
+	],
+	"preview": [
+		{
+			"type": "Html",
+			"content": "Identifies an entity that provides a preview of this object.",
+			"id": "tree429"
+		}
+	],
+	"result": [
+		{
+			"type": "Html",
+			"content": "Describes the result of the activity. For instance, if a particular action results in the creation of a new resource, the result property can be used to describe that new resource.",
+			"id": "tree430"
+		}
+	],
+	"replies": [
+		{"type": "Html", "content": "Identifies a ", "id": "tree431"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree432"
+		},
+		{
+			"type": "Html",
+			"content": " containing objects considered to be responses to this object.",
+			"id": "tree433"
+		}
+	],
+	"tag": [
+		{
+			"type": "Html",
+			"content": "One or more \"tags\" that have been associated with an objects. A ",
+			"id": "tree434"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "tag"}, "id": "tree435"},
+		{"type": "Html", "content": " can be any kind of ", "id": "tree436"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree437"},
+		{"type": "Html", "content": ". The key difference between ", "id": "tree438"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "attachment"},
+			"id": "tree439"
+		},
+		{"type": "Html", "content": " and ", "id": "tree440"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "tag"}, "id": "tree441"},
+		{
+			"type": "Html",
+			"content": " is that the former implies association by inclusion, while the latter implies associated by reference.",
+			"id": "tree442"
+		}
+	],
+	"target": [
+		{
+			"type": "Html",
+			"content": "Describes the indirect object, or target, of the activity. The precise meaning of the target is largely dependent on the type of action being described but will often be the object of the English preposition \"",
+			"id": "tree443"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "to"}, "id": "tree444"},
+		{
+			"type": "Html",
+			"content": "\". For instance, in the activity \"John added a movie to his wishlist\", the target of the activity is John's wishlist. An activity can have more than one target.",
+			"id": "tree445"
+		}
+	],
+	"to": [
+		{
+			"type": "Html",
+			"content": "Identifies an entity considered to be part of the public primary audience of an ",
+			"id": "tree446"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree447"},
+		{"type": "Html", "content": ".", "id": "tree448"}
+	],
+	"url": [
+		{
+			"type": "Html",
+			"content": "Identifies one or more links to representations of the object.",
+			"id": "tree449"
+		}
+	],
+	"accuracy": [
+		{
+			"type": "Html",
+			"content": "Indicates the accuracy of position coordinates on a ",
+			"id": "tree450"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "tree451"},
+		{
+			"type": "Html",
+			"content": " objects. Expressed in properties of percentage. e.g. \"94.0\" means \"94.0% accurate\".",
+			"id": "tree452"
+		}
+	],
+	"altitude": [
+		{
+			"type": "Html",
+			"content": "Indicates the altitude of a place. The measurement units is indicated using the ",
+			"id": "tree453"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree454"},
+		{"type": "Html", "content": " property. If ", "id": "tree455"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree456"},
+		{
+			"type": "Html",
+			"content": " is not specified, the default is assumed to be \"m\" indicating meters.",
+			"id": "tree457"
+		}
+	],
+	"content": [
+		{"type": "Html", "content": "The content or textual representation of the ", "id": "tree458"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree459"},
+		{
+			"type": "Html",
+			"content": " encoded as a JSON string. By default, the value of ",
+			"id": "tree460"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "content"}, "id": "tree461"},
+		{"type": "Html", "content": " is HTML. The ", "id": "tree462"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "mediaType"},
+			"id": "tree463"
+		},
+		{
+			"type": "Html",
+			"content": " property can be used in the object to indicate a different content type. The content MAY be expressed using multiple language-tagged values.",
+			"id": "tree464"
+		}
+	],
+	"name": [
+		{
+			"type": "Html",
+			"content": "A simple, human-readable, plain-text name for the object. HTML markup MUST NOT be included. The name MAY be expressed using multiple language-tagged values.",
+			"id": "tree465"
+		}
+	],
+	"duration": [
+		{
+			"type": "Html",
+			"content": "When the object describes a time-bound resource, such as an audio or video, a meeting, etc, the ",
+			"id": "tree466"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "duration"},
+			"id": "tree467"
+		},
+		{
+			"type": "Html",
+			"content": " property indicates the object's approximate duration. The value MUST be expressed as an `xsd:duration` as defined by [ <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-xmlschema11-2\">xmlschema11-2</a>], section 3.3.6 (e.g. a period of 5 seconds is represented as \"PT5S\").",
+			"id": "tree468"
+		}
+	],
+	"height": [
+		{"type": "Html", "content": "On a ", "id": "tree469"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree470"},
+		{
+			"type": "Html",
+			"content": ", specifies a hint as to the rendering height in device-independent pixels of the linked resource.",
+			"id": "tree471"
+		}
+	],
+	"href": [
+		{"type": "Html", "content": "The target resource pointed to by a ", "id": "tree472"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree473"}
+	],
+	"hreflang": [
+		{
+			"type": "Html",
+			"content": "Hints as to the language used by the target resource. Value MUST be a [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-BCP47\">BCP47</a>] Language-Tag.",
+			"id": "tree474"
+		}
+	],
+	"partOf": [
+		{"type": "Html", "content": "Identifies the ", "id": "tree475"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree476"
+		},
+		{"type": "Html", "content": " to which a ", "id": "tree477"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "CollectionPage"},
+			"id": "tree478"
+		},
+		{"type": "Html", "content": " objects items belong.", "id": "tree479"}
+	],
+	"latitude": [{"type": "Html", "content": "The latitude of a place", "id": "tree480"}],
+	"longitude": [{"type": "Html", "content": "The longitude of a place", "id": "tree481"}],
+	"mediaType": [
+		{"type": "Html", "content": "When used on a ", "id": "tree482"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree483"},
+		{
+			"type": "Html",
+			"content": ", identifies the MIME media type of the referenced resource. When used on an ",
+			"id": "tree484"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree485"},
+		{
+			"type": "Html",
+			"content": ", identifies the MIME media type of the value of the ",
+			"id": "tree486"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "content"}, "id": "tree487"},
+		{"type": "Html", "content": " property. If not specified, the ", "id": "tree488"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "content"}, "id": "tree489"},
+		{
+			"type": "Html",
+			"content": " property is assumed to contain text/html content.",
+			"id": "tree490"
+		}
+	],
+	"endTime": [
+		{
+			"type": "Html",
+			"content": "The date and time describing the actual or expected ending time of the object. When used with an ",
+			"id": "tree491"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Activity"},
+			"id": "tree492"
+		},
+		{"type": "Html", "content": " object, for instance, the ", "id": "tree493"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "endTime"}, "id": "tree494"},
+		{
+			"type": "Html",
+			"content": " property specifies the moment the activity concluded or is expected to conclude.",
+			"id": "tree495"
+		}
+	],
+	"published": [
+		{
+			"type": "Html",
+			"content": "The date and time at which the object was published",
+			"id": "tree496"
+		}
+	],
+	"startTime": [
+		{
+			"type": "Html",
+			"content": "The date and time describing the actual or expected starting time of the object. When used with an ",
+			"id": "tree497"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Activity"},
+			"id": "tree498"
+		},
+		{"type": "Html", "content": " object, for instance, the ", "id": "tree499"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "startTime"},
+			"id": "tree500"
+		},
+		{
+			"type": "Html",
+			"content": " property specifies the moment the activity began or is scheduled to begin.",
+			"id": "tree501"
+		}
+	],
+	"radius": [
+		{"type": "Html", "content": "The radius from the given ", "id": "tree502"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "latitude"},
+			"id": "tree503"
+		},
+		{"type": "Html", "content": " and ", "id": "tree504"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "longitude"},
+			"id": "tree505"
+		},
+		{"type": "Html", "content": " for a ", "id": "tree506"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "tree507"},
+		{"type": "Html", "content": ". The units is expressed by the ", "id": "tree508"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree509"},
+		{"type": "Html", "content": " property. If ", "id": "tree510"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree511"},
+		{
+			"type": "Html",
+			"content": " is not specified, the default is assumed to be \"m\" indicating \"meters\".",
+			"id": "tree512"
+		}
+	],
+	"rel": [
+		{"type": "Html", "content": "A link relation associated with a ", "id": "tree513"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree514"},
+		{
+			"type": "Html",
+			"content": ". The value MUST conform to both the [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5\">HTML5</a>] and [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988\">RFC5988</a>] \"link relation\" definitions. In the [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5\">HTML5</a>], any string not containing the \"space\" U+0020, \"tab\" (U+0009), \"LF\" (U+000A), \"FF\" (U+000C), \"CR\" (U+000D) or \",\" (U+002C) characters can be used as a valid link relation.",
+			"id": "tree515"
+		}
+	],
+	"startIndex": [
+		{
+			"type": "Html",
+			"content": "A non-negative integer value identifying the relative position within the logical view of a strictly ordered collection.",
+			"id": "tree516"
+		}
+	],
+	"summary": [
+		{
+			"type": "Html",
+			"content": "A natural language summarization of the object encoded as HTML. Multiple language tagged summaries MAY be provided.",
+			"id": "tree517"
+		}
+	],
+	"totalItems": [
+		{
+			"type": "Html",
+			"content": "A non-negative integer specifying the total number of objects contained by the logical view of the collection. This number might not reflect the actual number of items serialized within the ",
+			"id": "tree518"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Collection"},
+			"id": "tree519"
+		},
+		{"type": "Html", "content": " object instance.", "id": "tree520"}
+	],
+	"units": [
+		{"type": "Html", "content": "Specifies the measurement units for the ", "id": "tree521"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "radius"}, "id": "tree522"},
+		{"type": "Html", "content": " and ", "id": "tree523"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "altitude"},
+			"id": "tree524"
+		},
+		{"type": "Html", "content": " properties on a ", "id": "tree525"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "tree526"},
+		{
+			"type": "Html",
+			"content": " object. If not specified, the default is assumed to be \"m\" for \"meters\".",
+			"id": "tree527"
+		}
+	],
+	"updated": [
+		{
+			"type": "Html",
+			"content": "The date and time at which the object was updated",
+			"id": "tree528"
+		}
+	],
+	"width": [
+		{"type": "Html", "content": "On a ", "id": "tree529"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree530"},
+		{
+			"type": "Html",
+			"content": ", specifies a hint as to the rendering width in device-independent pixels of the linked resource.",
+			"id": "tree531"
+		}
+	],
+	"subject": [
+		{"type": "Html", "content": "On a ", "id": "tree532"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Relationship"},
+			"id": "tree533"
+		},
+		{"type": "Html", "content": " object, the ", "id": "tree534"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree535"},
+		{
+			"type": "Html",
+			"content": " property identifies one of the connected individuals. For instance, for a ",
+			"id": "tree536"
+		},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Relationship"},
+			"id": "tree537"
+		},
+		{
+			"type": "Html",
+			"content": " object describing \"John is related to Sally\", ",
+			"id": "tree538"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree539"},
+		{"type": "Html", "content": " would refer to John.", "id": "tree540"}
+	],
+	"relationship": [
+		{"type": "Html", "content": "On a ", "id": "tree541"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Relationship"},
+			"id": "tree542"
+		},
+		{"type": "Html", "content": " object, the ", "id": "tree543"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "relationship"},
+			"id": "tree544"
+		},
+		{
+			"type": "Html",
+			"content": " property identifies the kind of relationship that exists between ",
+			"id": "tree545"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree546"},
+		{"type": "Html", "content": " and ", "id": "tree547"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree548"},
+		{"type": "Html", "content": ".", "id": "tree549"}
+	],
+	"describes": [
+		{"type": "Html", "content": "On a ", "id": "tree550"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Profile"}, "id": "tree551"},
+		{"type": "Html", "content": " object, the ", "id": "tree552"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "describes"},
+			"id": "tree553"
+		},
+		{
+			"type": "Html",
+			"content": " property identifies the object described by the ",
+			"id": "tree554"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Profile"}, "id": "tree555"},
+		{"type": "Html", "content": ".", "id": "tree556"}
+	],
+	"formerType": [
+		{"type": "Html", "content": "On a ", "id": "tree557"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Tombstone"},
+			"id": "tree558"
+		},
+		{"type": "Html", "content": " object, the ", "id": "tree559"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "formerType"},
+			"id": "tree560"
+		},
+		{
+			"type": "Html",
+			"content": " property identifies the type of the object that was deleted.",
+			"id": "tree561"
+		}
+	],
+	"deleted": [
+		{"type": "Html", "content": "On a ", "id": "tree562"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Tombstone"},
+			"id": "tree563"
+		},
+		{"type": "Html", "content": " object, the ", "id": "tree564"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "deleted"}, "id": "tree565"},
+		{
+			"type": "Html",
+			"content": " property is a timestamp for when the object was deleted.",
+			"id": "tree566"
+		}
+	]
 }
