@@ -16,6 +16,7 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 		const char = content[i];
 		if (char === '`') {
 			if (insideBackticks) {
+				// TODO NOTICE THE COPYPASTA				// TODO NOTICE THE COPYPASTA
 				// lookup the identifier
 				// TODO normalize?
 				if (insideBackticksContents in vocabulary.byName) {
@@ -30,12 +31,11 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 						component: 'EntityLink',
 						props: {name: insideBackticksContents},
 					});
-					insideBackticksContents = '';
 				} else {
 					// un-resolved identifier, so treat as plain text
 					currentString += `\`${insideBackticksContents}\``;
-					insideBackticksContents = '';
 				}
+				insideBackticksContents = '';
 				insideBackticks = false;
 			} else {
 				insideBackticks = true;
@@ -46,6 +46,7 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 			insideBackticksContents += char;
 		} else if (char === '"') {
 			if (insideQuotes) {
+				// TODO NOTICE THE COPYPASTA				// TODO NOTICE THE COPYPASTA
 				// lookup the identifier
 				// TODO normalize?
 				if (insideQuotesContents in vocabulary.byName) {
@@ -60,12 +61,11 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 						component: 'EntityLink',
 						props: {name: insideQuotesContents},
 					});
-					insideQuotesContents = '';
 				} else {
 					// un-resolved identifier, so treat as plain text
 					currentString += `"${insideQuotesContents}"`;
-					insideQuotesContents = '';
 				}
+				insideQuotesContents = '';
 				insideQuotes = false;
 			} else {
 				insideQuotes = true;
@@ -73,13 +73,14 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 				if (insideQuotesContents !== '') throw Error('TODO ?');
 			}
 		} else if (insideQuotes) {
-			// TODO this is bugged
 			insideQuotesContents += char;
 		} else {
 			currentString += char;
 		}
 		i++;
 	}
+	// TODO hmm
+	currentString += insideBackticksContents + insideQuotesContents;
 	if (currentString) {
 		children.push({type: 'Html', content: currentString});
 		currentString = '';
