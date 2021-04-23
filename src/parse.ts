@@ -3,8 +3,8 @@ import {assignNodeIds} from './tree.js';
 import {vocabulary, parseVocabulary} from './vocabulary.js';
 import type {VocabularyTerm} from './activity_streams.js';
 
-// TODO this should only be one function, `parse`
-
+// original version
+// TODO delete this?
 export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | null => {
 	if (!examples) return null;
 	const children: Tree[] = [];
@@ -30,7 +30,9 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 	}
 	return assignNodeIds({type: 'Block', children}, toId);
 };
-// TODO unify with above
+
+// original version
+// TODO delete this?
 export const parseNotes = (notes: string, toId?: ToId): Tree => {
 	const node: Tree = assignNodeIds(
 		{
