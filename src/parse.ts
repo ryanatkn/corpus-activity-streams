@@ -61,6 +61,8 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 				// enter backticks
 				if (insideBackticksContents !== '') throw Error('TODO ?');
 			}
+		} else if (insideBackticks) {
+			insideBackticksContents += char;
 		} else if (char === '"') {
 			if (insideQuotes) {
 				// lookup the identifier
@@ -89,8 +91,6 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 				// enter backticks
 				if (insideQuotesContents !== '') throw Error('TODO ?');
 			}
-		} else if (insideBackticks) {
-			insideBackticksContents += char;
 		} else if (insideQuotes) {
 			// TODO this is bugged
 			insideQuotesContents += char;
