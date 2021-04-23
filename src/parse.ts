@@ -1,7 +1,19 @@
 import type {Tree, ToId} from './tree.js';
 import {assignNodeIds} from './tree.js';
-import {vocabulary, parseVocabulary} from './vocabulary.js';
+import {vocabulary} from './vocabulary.js';
 import type {VocabularyTerm} from './activity_streams.js';
+
+// TODO parameterize or refactor
+export const parseVocabulary = (content: string): Tree => {
+	if (content in vocabulary.byName) {
+		return {
+			type: 'Component',
+			component: 'EntityLink',
+			props: {name: content},
+		};
+	}
+	return {type: 'Html', content};
+};
 
 // original version
 // TODO delete this?
@@ -12,15 +24,7 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 		// TODO can this be flattened?
 		const tree: Tree = {
 			type: 'Block',
-			children: JSON.stringify(example, null, 2)
-				.split(/"(.+?)": /g)
-				.map((str) => ({
-					type: 'Block',
-					children:
-						str in vocabulary.byName
-							? [{type: 'Text', content: '\t'}, parseVocabulary(str), {type: 'Text', content: ': '}]
-							: [{type: 'Html', content: str === '@context' ? `\t${str}: ` : str}], // TODO hacky
-				})),
+			children: parse(JSON.stringify(example, null, 2)),
 		};
 		children.push({
 			type: 'Element',
@@ -32,7 +36,7 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 };
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
-export const parse = (content: string, toId?: ToId): Tree => {
+export const parse = (content: string, toId?: ToId): Tree[] => {
 	const children: Tree[] = [];
 	let i = 0;
 	let len = content.length;
@@ -80,7 +84,5 @@ export const parse = (content: string, toId?: ToId): Tree => {
 		children.push({type: 'Html', content: currentString});
 		currentString = '';
 	}
-	// TODO remove the wrapper?
-	const tree = assignNodeIds({type: 'Block', children}, toId);
-	return tree;
+	return children.map((c) => assignNodeIds(c));
 };
