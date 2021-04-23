@@ -31,19 +31,6 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 	return assignNodeIds({type: 'Block', children}, toId);
 };
 
-// original version
-// TODO delete this?
-export const parseNotes = (notes: string, toId?: ToId): Tree => {
-	const tree: Tree = assignNodeIds(
-		{
-			type: 'Block',
-			children: notes.split(/`(.+?)`/g).map((str) => parseVocabulary(str)),
-		},
-		toId,
-	);
-	return tree;
-};
-
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 export const parse = (content: string, toId?: ToId): Tree => {
 	const children: Tree[] = [];
