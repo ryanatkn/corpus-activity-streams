@@ -84,5 +84,5 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 		children.push({type: 'Html', content: currentString});
 		currentString = '';
 	}
-	return children.map((c) => assignNodeIds(c));
+	return children.map((c) => assignNodeIds(c, toId));
 };
