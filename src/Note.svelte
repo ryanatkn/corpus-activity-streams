@@ -12,8 +12,9 @@
 	$: examplesTree = parseExamples(examples[item.name]);
 </script>
 
-<Markup tree={notesTree} />
-
+{#each notesTree as tree (tree.id)}
+	<Markup {tree} />
+{/each}
 {#if examplesTree}
 	<Markup tree={examplesTree} />
 {/if}
