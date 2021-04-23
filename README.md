@@ -13,11 +13,11 @@
 - [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
 - [src/activity_streams.ts](src/activity_streams.ts): vocabulary pimary data and types
 - [src/activity_streams_notes.ts](src/activity_streams_notes.ts):
-  the `notes` property of the vocabulary items
+  the `notes` property of the vocabulary items and
+  [its AST](src/activity_streams_notes_ast.json)
 - [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
-  the vocabulary examples data
-- [src/activity_streams_notes.json](src/activity_streams_notes.json):
-  AST for the notes content
+  the vocabulary examples data and
+  [its AST](src/activity_streams_examples_ast.json)
 
 ## compared to the spec
 
