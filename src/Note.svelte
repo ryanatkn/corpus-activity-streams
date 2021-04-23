@@ -8,12 +8,12 @@
 	export let item: VocabularyItem;
 
 	$: itemNotes = vocabularyNotes[item.name];
-	$: notesNode = parseNotes(itemNotes);
-	$: examplesNode = parseExamples(examples[item.name]);
+	$: notesTree = parseNotes(itemNotes);
+	$: examplesTree = parseExamples(examples[item.name]);
 </script>
 
-<Markup node={notesNode} />
+<Markup tree={notesTree} />
 
-{#if examplesNode}
-	<Markup node={examplesNode} />
+{#if examplesTree}
+	<Markup tree={examplesTree} />
 {/if}
