@@ -3,19 +3,6 @@ import {assignNodeIds} from './tree.js';
 import {vocabulary} from './vocabulary.js';
 import type {VocabularyTerm} from './activity_streams.js';
 
-// TODO parameterize or refactor
-export const parseVocabulary = (content: string): Tree => {
-	if (content in vocabulary.byName) {
-		return {
-			type: 'Component',
-			component: 'EntityLink',
-			props: {name: content},
-		};
-	}
-	return {type: 'Html', content};
-};
-
-// original version
 // TODO delete this?
 export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | null => {
 	if (!examples) return null;
