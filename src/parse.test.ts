@@ -39,42 +39,15 @@ test_parse('parse', () => {
 			)!,
 		),
 		normalizeChildren([
-			{type: 'Block', children: [{type: 'Html', content: '{\n  '}]},
-			{type: 'Block', children: [{type: 'Html', content: '\t@context: '}]},
-			{
-				type: 'Block',
-				children: [{type: 'Html', content: '"https://www.w3.org/ns/activitystreams",\n  '}],
-			},
-			{
-				type: 'Block',
-				children: [
-					{type: 'Text', content: '\t'},
-					{type: 'Component', component: 'EntityLink', props: {name: 'type'}},
-					{type: 'Text', content: ': '},
-				],
-			},
-			{type: 'Block', children: [{type: 'Html', content: '"Object",\n  '}]},
-			{
-				type: 'Block',
-				children: [
-					{type: 'Text', content: '\t'},
-					{type: 'Component', component: 'EntityLink', props: {name: 'id'}},
-					{type: 'Text', content: ': '},
-				],
-			},
-			{
-				type: 'Block',
-				children: [{type: 'Html', content: '"http://www.test.example/object/1",\n  '}],
-			},
-			{
-				type: 'Block',
-				children: [
-					{type: 'Text', content: '\t'},
-					{type: 'Component', component: 'EntityLink', props: {name: 'name'}},
-					{type: 'Text', content: ': '},
-				],
-			},
-			{type: 'Block', children: [{type: 'Html', content: '"A Simple, non-specific object"\n}'}]},
+			{type: 'Html', content: '{\n  "@context": "https://www.w3.org/ns/activitystreams",\n  "'},
+			{type: 'Component', component: 'EntityLink', props: {name: 'type'}},
+			{type: 'Html', content: '": "'},
+			{type: 'Component', component: 'EntityLink', props: {name: 'Object'}},
+			{type: 'Html', content: '",\n  "'},
+			{type: 'Component', component: 'EntityLink', props: {name: 'id'}},
+			{type: 'Html', content: '": "http://www.test.example/object/1",\n  "'},
+			{type: 'Component', component: 'EntityLink', props: {name: 'name'}},
+			{type: 'Html', content: '": "A Simple, non-specific object"\n}'},
 		]),
 	);
 });

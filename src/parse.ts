@@ -21,7 +21,6 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 	if (!examples) return null;
 	const children: Tree[] = [];
 	for (const example of examples) {
-		// TODO can this be flattened?
 		const tree: Tree = {
 			type: 'Block',
 			children: parse(JSON.stringify(example, null, 2)),
@@ -83,8 +82,8 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 					// this is the item, but we don't need it ?
 					// const vocabularyItem = vocabulary.byName[insideQuotesContents];
 					if (currentString) {
-						children.push({type: 'Html', content: currentString});
-						currentString = '';
+						children.push({type: 'Html', content: currentString + '"'});
+						currentString = '"';
 					}
 					children.push({
 						type: 'Component',
