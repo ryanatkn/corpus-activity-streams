@@ -10,7 +10,7 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 	const children: Tree[] = [];
 	for (const example of examples) {
 		// TODO can this be flattened?
-		const node: Tree = {
+		const tree: Tree = {
 			type: 'Block',
 			children: JSON.stringify(example, null, 2)
 				.split(/  "(.+?)": /g)
@@ -25,7 +25,7 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 		children.push({
 			type: 'Element',
 			element: 'pre',
-			children: [node],
+			children: [tree],
 		});
 	}
 	return assignNodeIds({type: 'Block', children}, toId);
@@ -34,14 +34,14 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 // original version
 // TODO delete this?
 export const parseNotes = (notes: string, toId?: ToId): Tree => {
-	const node: Tree = assignNodeIds(
+	const tree: Tree = assignNodeIds(
 		{
 			type: 'Block',
 			children: notes.split(/`(.+?)`/g).map((str) => parseVocabulary(str)),
 		},
 		toId,
 	);
-	return node;
+	return tree;
 };
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
@@ -91,6 +91,6 @@ export const parse = (content: string, toId?: ToId): Tree => {
 		i++;
 	}
 	// TODO remove the wrapper?
-	const node = assignNodeIds({type: 'Block', children}, toId);
-	return node;
+	const tree = assignNodeIds({type: 'Block', children}, toId);
+	return tree;
 };

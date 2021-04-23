@@ -5,7 +5,7 @@ import {parse} from './parse.js';
 import {assignNodeIds, toToDeterministicId} from './tree.js';
 import type {Tree} from './tree.js';
 
-const normalizeTree = (node: Tree) => assignNodeIds(node, toToDeterministicId());
+const normalizeTree = (tree: Tree) => assignNodeIds(tree, toToDeterministicId());
 
 /* test_parse */
 const test_parse = suite('parse');
@@ -16,11 +16,11 @@ test_parse('parse', () => {
 		normalizeTree({
 			type: 'Block',
 			children: [
-				{type: 'Html', content: 'The ', id: 'node1'},
-				{type: 'Component', component: 'EntityLink', props: {name: 'Entity'}, id: 'node2'},
-				{type: 'Html', content: ' is the base of all of types.', id: 'node3'},
+				{type: 'Html', content: 'The ', id: 'tree1'},
+				{type: 'Component', component: 'EntityLink', props: {name: 'Entity'}, id: 'tree2'},
+				{type: 'Html', content: ' is the base of all of types.', id: 'tree3'},
 			],
-			id: 'node0',
+			id: 'tree0',
 		}),
 	);
 });
@@ -63,13 +63,13 @@ test_parse('parse', () => {
 // 			children: [
 // 				{
 // 					type: 'Block',
-// 					children: [{type: 'Html', content: '{\n', id: 'node4'}],
-// 					id: 'node3',
+// 					children: [{type: 'Html', content: '{\n', id: 'tree4'}],
+// 					id: 'tree3',
 // 				},
 // 				{
 // 					type: 'Block',
-// 					children: [{type: 'Html', content: '\t@context: ', id: 'node6'}],
-// 					id: 'node5',
+// 					children: [{type: 'Html', content: '\t@context: ', id: 'tree6'}],
+// 					id: 'tree5',
 // 				},
 // 				{
 // 					type: 'Block',
@@ -77,43 +77,43 @@ test_parse('parse', () => {
 // 						{
 // 							type: 'Html',
 // 							content: '"https://www.w3.org/ns/activitystreams",\n',
-// 							id: 'node8',
+// 							id: 'tree8',
 // 						},
 // 					],
-// 					id: 'node7',
+// 					id: 'tree7',
 // 				},
 // 				{
 // 					type: 'Block',
 // 					children: [
-// 						{type: 'Text', content: '\t', id: 'node10'},
+// 						{type: 'Text', content: '\t', id: 'tree10'},
 // 						{
 // 							type: 'Component',
 // 							component: 'EntityLink',
 // 							props: {name: 'type'},
-// 							id: 'node11',
+// 							id: 'tree11',
 // 						},
-// 						{type: 'Text', content: ': ', id: 'node12'},
+// 						{type: 'Text', content: ': ', id: 'tree12'},
 // 					],
-// 					id: 'node9',
+// 					id: 'tree9',
 // 				},
 // 				{
 // 					type: 'Block',
-// 					children: [{type: 'Html', content: '"Object",\n', id: 'node14'}],
-// 					id: 'node13',
+// 					children: [{type: 'Html', content: '"Object",\n', id: 'tree14'}],
+// 					id: 'tree13',
 // 				},
 // 				{
 // 					type: 'Block',
 // 					children: [
-// 						{type: 'Text', content: '\t', id: 'node16'},
+// 						{type: 'Text', content: '\t', id: 'tree16'},
 // 						{
 // 							type: 'Component',
 // 							component: 'EntityLink',
 // 							props: {name: 'id'},
-// 							id: 'node17',
+// 							id: 'tree17',
 // 						},
-// 						{type: 'Text', content: ': ', id: 'node18'},
+// 						{type: 'Text', content: ': ', id: 'tree18'},
 // 					],
-// 					id: 'node15',
+// 					id: 'tree15',
 // 				},
 // 				{
 // 					type: 'Block',
@@ -121,24 +121,24 @@ test_parse('parse', () => {
 // 						{
 // 							type: 'Html',
 // 							content: '"http://www.test.example/object/1",\n',
-// 							id: 'node20',
+// 							id: 'tree20',
 // 						},
 // 					],
-// 					id: 'node19',
+// 					id: 'tree19',
 // 				},
 // 				{
 // 					type: 'Block',
 // 					children: [
-// 						{type: 'Text', content: '\t', id: 'node22'},
+// 						{type: 'Text', content: '\t', id: 'tree22'},
 // 						{
 // 							type: 'Component',
 // 							component: 'EntityLink',
 // 							props: {name: 'name'},
-// 							id: 'node23',
+// 							id: 'tree23',
 // 						},
-// 						{type: 'Text', content: ': ', id: 'node24'},
+// 						{type: 'Text', content: ': ', id: 'tree24'},
 // 					],
-// 					id: 'node21',
+// 					id: 'tree21',
 // 				},
 // 				{
 // 					type: 'Block',
@@ -146,13 +146,13 @@ test_parse('parse', () => {
 // 						{
 // 							type: 'Html',
 // 							content: '"A Simple, non-specific object"\n}',
-// 							id: 'node26',
+// 							id: 'tree26',
 // 						},
 // 					],
-// 					id: 'node25',
+// 					id: 'tree25',
 // 				},
 // 			],
-// 			id: 'node2',
+// 			id: 'tree2',
 // 		}),
 // 	);
 // });
