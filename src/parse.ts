@@ -61,27 +61,26 @@ export const parse = (content: string, toId?: ToId): Tree => {
 				if (insideBackticksContents in vocabulary.byName) {
 					// this is the item, but we don't need it ?
 					// const vocabularyItem = vocabulary.byName[insideBackticksContents];
+					if (currentString) {
+						children.push({type: 'Html', content: currentString});
+						currentString = '';
+					}
 					children.push({
 						type: 'Component',
 						component: 'EntityLink',
 						props: {name: insideBackticksContents},
 					});
-					if (currentString) {
-						currentString = '';
-					}
+					insideBackticksContents = '';
 				} else {
-					// un-resolved text, so not treated as a linked identifier
-					currentString += insideBackticksContents;
+					// un-resolved identifier, so treat as plain text
+					currentString += `\`${insideBackticksContents}\``;
+					insideBackticksContents = '';
 				}
 				insideBackticks = false;
 			} else {
 				insideBackticks = true;
 				// enter backticks
-				if (currentString) {
-					currentString = '';
-					children.push({type: 'Html', content: currentString});
-				}
-				insideBackticksContents = '';
+				if (insideBackticksContents !== '') throw Error('TODO ?');
 			}
 		} else if (insideBackticks) {
 			insideBackticksContents += char;
@@ -89,6 +88,10 @@ export const parse = (content: string, toId?: ToId): Tree => {
 			currentString += char;
 		}
 		i++;
+	}
+	if (currentString) {
+		children.push({type: 'Html', content: currentString});
+		currentString = '';
 	}
 	// TODO remove the wrapper?
 	const tree = assignNodeIds({type: 'Block', children}, toId);
