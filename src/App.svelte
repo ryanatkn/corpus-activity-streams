@@ -48,6 +48,7 @@
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		font-size: 16px;
 		tab-size: var(--tab_size);
+		-moz-tab-size: var(--tab_size);
 	}
 	:global(#root) {
 		height: 100%;
