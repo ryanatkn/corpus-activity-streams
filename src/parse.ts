@@ -1,25 +1,6 @@
 import type {Tree, ToId} from './tree.js';
 import {assignNodeIds} from './tree.js';
 import {vocabulary} from './vocabulary.js';
-import type {VocabularyTerm} from './activity_streams.js';
-
-// TODO delete this?
-export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | null => {
-	if (!examples) return null;
-	const children: Tree[] = [];
-	for (const example of examples) {
-		const tree: Tree = {
-			type: 'Block',
-			children: parse(JSON.stringify(example, null, '\t')),
-		};
-		children.push({
-			type: 'Element',
-			element: 'pre',
-			children: [tree],
-		});
-	}
-	return assignNodeIds({type: 'Block', children}, toId);
-};
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 export const parse = (content: string, toId?: ToId): Tree[] => {

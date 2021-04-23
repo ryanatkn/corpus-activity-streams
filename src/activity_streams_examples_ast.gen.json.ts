@@ -1,7 +1,7 @@
 import type {Gen} from '@feltcoop/gro/dist/gen/gen.js';
 
 import {examples} from './activity_streams_examples.js';
-import {parseExamples} from './parse.js';
+import {parseExamples} from './parseExamples.js';
 
 // parses markup and outputs its AST - we're not using it yet, but it's cool
 
