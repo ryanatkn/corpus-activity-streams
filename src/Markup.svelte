@@ -6,10 +6,6 @@
 
 	// TODO maybe rename `MarkupView`?
 
-	// This currently renders trees generically based on the available properties,
-	// with no regard for the type or if the combination of properties makes sense.
-	// We may need to change this strategy in the future to support certain features.
-
 	export let tree: Tree;
 
 	const components = useComponents(); // TODO is this the pattern we want?
