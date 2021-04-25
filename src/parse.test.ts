@@ -30,7 +30,7 @@ test_parse('parses entity links in quotes', () => {
 			parse(
 				JSON.stringify(
 					{
-						'@context': 'https://www.w3.org/ns/activitystreams',
+						'@context': 'http://www.w3.org/ns/activitystreams',
 						type: 'Object',
 						id: 'http://www.test.example/object/1',
 						name: 'A Simple, non-specific object `note`',
@@ -41,7 +41,7 @@ test_parse('parses entity links in quotes', () => {
 			)!,
 		),
 		normalizeChildren([
-			{type: 'Html', content: '{\n  "@context": "https://www.w3.org/ns/activitystreams",\n  "'},
+			{type: 'Html', content: '{\n  "@context": "http://www.w3.org/ns/activitystreams",\n  "'},
 			{type: 'Component', component: 'EntityLink', props: {name: 'type'}},
 			{type: 'Html', content: '": "'},
 			{type: 'Component', component: 'EntityLink', props: {name: 'Object'}},
@@ -61,6 +61,28 @@ test_parse('parses link', () => {
 			{type: 'Html', content: 'this '},
 			{type: 'Component', component: 'Link', props: {url: 'https://www.felt.dev'}},
 			{type: 'Html', content: ' is an external link'},
+		]),
+	);
+});
+
+test_parse('parses link in backricks', () => {
+	t.equal(
+		normalizeChildren(parse('this `https://www.felt.dev` is an external link')),
+		normalizeChildren([
+			{type: 'Html', content: 'this '},
+			{type: 'Component', component: 'Link', props: {url: 'https://www.felt.dev'}},
+			{type: 'Html', content: ' is an external link'},
+		]),
+	);
+});
+
+test_parse('parses link in quotes', () => {
+	t.equal(
+		normalizeChildren(parse('this "https://www.felt.dev" is an external link')),
+		normalizeChildren([
+			{type: 'Html', content: 'this "'},
+			{type: 'Component', component: 'Link', props: {url: 'https://www.felt.dev'}},
+			{type: 'Html', content: '" is an external link'},
 		]),
 	);
 });

@@ -62,8 +62,20 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 								props: wrapperChar.toProps(insideWrapperCharContents),
 							});
 						} else {
-							// un-resolved identifier, so treat as plain text
-							currentString += `${preserve ? '' : char}${insideWrapperCharContents}${char}`;
+							if (insideWrapperCharContents.startsWith('https://')) {
+								if (currentString) {
+									children.push({type: 'Html', content: currentString});
+								}
+								currentString = preserve ? char : '';
+								children.push({
+									type: 'Component',
+									component: 'Link',
+									props: {url: insideWrapperCharContents},
+								});
+							} else {
+								// un-resolved identifier, so treat as plain text
+								currentString += `${preserve ? '' : char}${insideWrapperCharContents}${char}`;
+							}
 						}
 						insideWrapperCharContents = '';
 						insideWrapperChar = null;
