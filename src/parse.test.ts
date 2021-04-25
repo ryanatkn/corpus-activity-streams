@@ -59,7 +59,7 @@ test_parse('parses link', () => {
 		normalizeChildren(parse('this https://www.felt.dev is an external link')),
 		normalizeChildren([
 			{type: 'Html', content: 'this '},
-			{type: 'Component', component: 'ExternalLink', props: {href: 'https://www.felt.dev'}},
+			{type: 'Component', component: 'Link', props: {url: 'https://www.felt.dev'}},
 			{type: 'Html', content: ' is an external link'},
 		]),
 	);
