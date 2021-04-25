@@ -13,7 +13,7 @@ const normalizeChildren = (children: Tree[]) => {
 /* test_parse */
 const test_parse = suite('parse');
 
-test_parse('parse', () => {
+test_parse('parses entity link in backticks', () => {
 	t.equal(
 		normalizeChildren(parse('The `Entity` is the base of all of types.')),
 		normalizeChildren([
@@ -24,7 +24,7 @@ test_parse('parse', () => {
 	);
 });
 
-test_parse('parse', () => {
+test_parse('parses entity links in quotes', () => {
 	t.equal(
 		normalizeChildren(
 			parse(
@@ -50,6 +50,17 @@ test_parse('parse', () => {
 			{type: 'Html', content: '": "http://www.test.example/object/1",\n  "'},
 			{type: 'Component', component: 'EntityLink', props: {name: 'name'}},
 			{type: 'Html', content: '": "A Simple, non-specific object `note`"\n}'},
+		]),
+	);
+});
+
+test_parse('parses link', () => {
+	t.equal(
+		normalizeChildren(parse('this https://www.felt.dev is an external link')),
+		normalizeChildren([
+			{type: 'Html', content: 'this '},
+			{type: 'Component', component: 'Link', props: {url: 'https://www.felt.dev'}},
+			{type: 'Html', content: ' is an external link'},
 		]),
 	);
 });
