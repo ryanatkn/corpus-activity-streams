@@ -6,6 +6,8 @@
 
 <https://ryanatkn.github.io/corpus-activity-streams>
 
+<https://github.com/w3c/activitystreams>
+
 ## useful data & modules
 
 - [src/activity_streams.json](src/activity_streams.json): vocabulary JSON data
