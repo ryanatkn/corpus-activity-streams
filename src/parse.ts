@@ -74,18 +74,15 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 				shouldAppendChar = false;
 			}
 		}
-		// TODO refactor this, messy/confusing from old code
 		if (shouldAppendChar) {
 			currentString += char;
 			shouldAppendChar = false;
 		}
 		i++;
 	}
-	// TODO hmm
-	currentString += insideWrapperCharContents;
+	if (insideWrapperCharContents) currentString += insideWrapperCharContents;
 	if (currentString) {
 		children.push({type: 'Html', content: currentString});
-		currentString = '';
 	}
 	return children.map((c) => assignNodeIds(c, toId));
 };
