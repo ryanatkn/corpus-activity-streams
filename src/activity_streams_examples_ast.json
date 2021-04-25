@@ -13,7 +13,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree4"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree5"},
@@ -41,7 +41,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://www.test.example/object/1"},
+								"props": {"href": "http://www.test.example/object/1"},
 								"id": "tree12"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree13"},
@@ -79,7 +79,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree20"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree21"},
@@ -107,7 +107,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/abc"},
+								"props": {"href": "http://example.org/abc"},
 								"id": "tree28"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree29"},
@@ -155,7 +155,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree40"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree41"},
@@ -263,7 +263,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree68"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree69"},
@@ -367,7 +367,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree96"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree97"},
@@ -479,7 +479,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree124"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree125"},
@@ -591,7 +591,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree152"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree153"},
@@ -630,7 +630,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/foo?page=1"},
+								"props": {"href": "http://example.org/foo?page=1"},
 								"id": "tree162"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree163"},
@@ -644,7 +644,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/foo"},
+								"props": {"href": "http://example.org/foo"},
 								"id": "tree166"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree167"},
@@ -728,7 +728,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree186"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree187"},
@@ -767,7 +767,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/foo?page=1"},
+								"props": {"href": "http://example.org/foo?page=1"},
 								"id": "tree196"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree197"},
@@ -781,7 +781,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/foo"},
+								"props": {"href": "http://example.org/foo"},
 								"id": "tree200"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree201"},
@@ -865,7 +865,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree220"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree221"},
@@ -953,7 +953,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree244"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree245"},
@@ -1006,7 +1006,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree257"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree258"},
@@ -1142,7 +1142,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree293"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree294"},
@@ -1230,7 +1230,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree317"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree318"},
@@ -1289,7 +1289,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree331"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree332"},
@@ -1352,7 +1352,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/abc"},
+								"props": {"href": "http://example.org/abc"},
 								"id": "tree349"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree350"}
@@ -1373,7 +1373,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree354"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree355"},
@@ -1468,7 +1468,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/img/cat.png"},
+								"props": {"href": "http://example.org/img/cat.png"},
 								"id": "tree380"
 							},
 							{"type": "Html", "content": "\"\n\t},\n\t\"", "id": "tree381"},
@@ -1551,7 +1551,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree402"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree403"},
@@ -1683,7 +1683,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree438"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree439"},
@@ -1794,7 +1794,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree468"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree469"},
@@ -1857,7 +1857,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/notes/1"},
+								"props": {"href": "http://example.org/notes/1"},
 								"id": "tree486"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree487"},
@@ -1912,7 +1912,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree500"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree501"},
@@ -2016,7 +2016,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree528"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree529"},
@@ -2079,7 +2079,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/notes/1"},
+								"props": {"href": "http://example.org/notes/1"},
 								"id": "tree546"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree547"}
@@ -2106,7 +2106,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree552"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree553"},
@@ -2210,7 +2210,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree580"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree581"},
@@ -2308,7 +2308,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree607"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree608"},
@@ -2412,7 +2412,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree635"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree636"},
@@ -2475,7 +2475,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/notes/1"},
+								"props": {"href": "http://example.org/notes/1"},
 								"id": "tree653"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree654"}
@@ -2502,7 +2502,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree659"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree660"},
@@ -2576,7 +2576,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://www.types.example/ProductOffer"},
+								"props": {"href": "http://www.types.example/ProductOffer"},
 								"id": "tree679"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree680"},
@@ -2638,7 +2638,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree695"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree696"},
@@ -2795,7 +2795,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree737"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree738"},
@@ -2883,7 +2883,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree761"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree762"},
@@ -2942,7 +2942,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree775"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree776"},
@@ -3030,7 +3030,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree799"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree800"},
@@ -3089,7 +3089,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree813"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree814"},
@@ -3156,7 +3156,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/notes/1"},
+								"props": {"href": "http://example.org/notes/1"},
 								"id": "tree831"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree832"},
@@ -3205,7 +3205,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree844"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree845"},
@@ -3251,7 +3251,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/Role"},
+								"props": {"href": "http://example.org/Role"},
 								"id": "tree856"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree857"},
@@ -3341,7 +3341,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree880"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree881"},
@@ -3380,7 +3380,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree890"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree891"},
@@ -3415,7 +3415,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree900"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree901"},
@@ -3429,7 +3429,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree904"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree905"},
@@ -3443,7 +3443,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree908"
 							},
 							{"type": "Html", "content": "\"\n\t}\n}", "id": "tree909"}
@@ -3470,7 +3470,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree914"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree915"},
@@ -3533,7 +3533,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/notes/1"},
+								"props": {"href": "http://example.org/notes/1"},
 								"id": "tree932"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree933"}
@@ -3560,7 +3560,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree938"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree939"},
@@ -3668,7 +3668,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree966"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree967"},
@@ -3735,7 +3735,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/music.mp3"},
+								"props": {"href": "http://example.org/music.mp3"},
 								"id": "tree984"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree985"}
@@ -3762,7 +3762,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree990"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree991"},
@@ -3825,7 +3825,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree1008"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1009"}
@@ -3852,7 +3852,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1014"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1015"},
@@ -3919,7 +3919,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree1032"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1033"},
@@ -4002,7 +4002,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1054"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1055"},
@@ -4138,7 +4138,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1090"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1091"},
@@ -4198,7 +4198,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1106"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree1107"},
@@ -4240,7 +4240,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1118"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree1119"},
@@ -4295,7 +4295,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1132"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1133"},
@@ -4330,7 +4330,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1142"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1143"},
@@ -4344,7 +4344,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://joe.example.org"},
+								"props": {"href": "http://joe.example.org"},
 								"id": "tree1146"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1147"}
@@ -4371,7 +4371,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1152"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1153"},
@@ -4410,7 +4410,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1162"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1163"},
@@ -4465,7 +4465,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1176"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1177"},
@@ -4500,7 +4500,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1186"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1187"},
@@ -4514,7 +4514,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree1190"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1191"}
@@ -4541,7 +4541,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1196"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1197"},
@@ -4636,7 +4636,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1221"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1222"},
@@ -4691,7 +4691,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1235"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1236"},
@@ -4739,7 +4739,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1247"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1248"},
@@ -4787,7 +4787,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1259"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1260"},
@@ -4835,7 +4835,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1271"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1272"},
@@ -4883,7 +4883,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1283"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1284"},
@@ -4931,7 +4931,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1295"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1296"},
@@ -4998,7 +4998,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://purl.org/vocab/relationship/acquaintanceOf"},
+								"props": {"href": "http://purl.org/vocab/relationship/acquaintanceOf"},
 								"id": "tree1313"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1314"},
@@ -5053,7 +5053,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1327"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1328"},
@@ -5103,7 +5103,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1339"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1340"}
@@ -5130,7 +5130,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1345"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1346"},
@@ -5165,7 +5165,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/4q-sales-forecast.pdf"},
+								"props": {"href": "http://example.org/4q-sales-forecast.pdf"},
 								"id": "tree1355"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1356"}
@@ -5192,7 +5192,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1361"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1362"},
@@ -5252,7 +5252,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/podcast.mp3"},
+								"props": {"href": "http://example.org/podcast.mp3"},
 								"id": "tree1377"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree1378"},
@@ -5286,7 +5286,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1385"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1386"},
@@ -5342,7 +5342,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/image.jpeg"},
+								"props": {"href": "http://example.org/image.jpeg"},
 								"id": "tree1401"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree1402"},
@@ -5381,7 +5381,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/image.png"},
+								"props": {"href": "http://example.org/image.png"},
 								"id": "tree1411"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree1412"},
@@ -5415,7 +5415,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1419"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1420"},
@@ -5450,7 +5450,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/video.mkv"},
+								"props": {"href": "http://example.org/video.mkv"},
 								"id": "tree1429"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1430"},
@@ -5484,7 +5484,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1437"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1438"},
@@ -5543,7 +5543,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1451"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1452"},
@@ -5578,7 +5578,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/weather-in-omaha.html"},
+								"props": {"href": "http://example.org/weather-in-omaha.html"},
 								"id": "tree1461"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1462"}
@@ -5605,7 +5605,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1467"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1468"},
@@ -5675,7 +5675,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1483"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1484"},
@@ -5717,7 +5717,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1494"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1495"},
@@ -5793,7 +5793,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1514"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1515"},
@@ -5832,7 +5832,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/joe"},
+								"props": {"href": "http://example.org/joe"},
 								"id": "tree1524"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1525"},
@@ -5866,7 +5866,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1532"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1533"},
@@ -5942,7 +5942,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1552"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1553"},
@@ -6005,7 +6005,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://image.example/1"},
+								"props": {"href": "http://image.example/1"},
 								"id": "tree1570"
 							},
 							{"type": "Html", "content": "\"\n\t\t},\n\t\t{\n\t\t\t\"", "id": "tree1571"},
@@ -6047,7 +6047,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://image.example/2"},
+								"props": {"href": "http://image.example/2"},
 								"id": "tree1582"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree1583"},
@@ -6086,7 +6086,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://image.example/3"},
+								"props": {"href": "http://image.example/3"},
 								"id": "tree1592"
 							},
 							{"type": "Html", "content": "\"\n\t\t}\n\t]\n}", "id": "tree1593"}
@@ -6113,7 +6113,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1598"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1599"},
@@ -6134,7 +6134,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/foo"},
+								"props": {"href": "http://example.org/foo"},
 								"id": "tree1604"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1605"}
@@ -6161,7 +6161,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1610"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1611"},
@@ -6182,7 +6182,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/Foo"},
+								"props": {"href": "http://example.org/Foo"},
 								"id": "tree1616"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1617"}
@@ -6209,7 +6209,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1622"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1623"},
@@ -6248,7 +6248,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1632"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1633"},
@@ -6262,7 +6262,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/foo"},
+								"props": {"href": "http://example.org/foo"},
 								"id": "tree1636"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1637"}
@@ -6283,7 +6283,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1641"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1642"},
@@ -6343,7 +6343,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1657"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree1658"},
@@ -6364,7 +6364,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/foo"},
+								"props": {"href": "http://example.org/foo"},
 								"id": "tree1663"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1664"}
@@ -6385,7 +6385,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1668"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1669"},
@@ -6424,7 +6424,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://joe.example.org"},
+								"props": {"href": "http://joe.example.org"},
 								"id": "tree1678"
 							},
 							{"type": "Html", "content": "\",\n\t\t{\n\t\t\t\"", "id": "tree1679"},
@@ -6452,7 +6452,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1686"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree1687"},
@@ -6473,7 +6473,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/foo"},
+								"props": {"href": "http://example.org/foo"},
 								"id": "tree1692"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1693"}
@@ -6500,7 +6500,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1698"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1699"},
@@ -6567,7 +6567,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/cat.jpeg"},
+								"props": {"href": "http://example.org/cat.jpeg"},
 								"id": "tree1716"
 							},
 							{"type": "Html", "content": "\"\n\t\t}\n\t]\n}", "id": "tree1717"}
@@ -6594,7 +6594,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1722"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1723"},
@@ -6629,7 +6629,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/cat.jpeg"},
+								"props": {"href": "http://example.org/cat.jpeg"},
 								"id": "tree1732"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1733"},
@@ -6678,7 +6678,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1745"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1746"},
@@ -6713,7 +6713,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/cat.jpeg"},
+								"props": {"href": "http://example.org/cat.jpeg"},
 								"id": "tree1755"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1756"},
@@ -6727,7 +6727,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://joe.example.org"},
+								"props": {"href": "http://joe.example.org"},
 								"id": "tree1759"
 							},
 							{"type": "Html", "content": "\",\n\t\t{\n\t\t\t\"", "id": "tree1760"},
@@ -6775,7 +6775,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1771"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1772"},
@@ -6828,7 +6828,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/Organization"},
+								"props": {"href": "http://example.org/Organization"},
 								"id": "tree1785"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree1786"},
@@ -6862,7 +6862,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1793"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1794"},
@@ -6901,7 +6901,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1803"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1804"},
@@ -6915,7 +6915,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree1807"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1808"},
@@ -6929,7 +6929,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree1811"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1812"},
@@ -6943,7 +6943,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://joe.example.org"},
+								"props": {"href": "http://joe.example.org"},
 								"id": "tree1815"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree1816"}
@@ -6970,7 +6970,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1821"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1822"},
@@ -7009,7 +7009,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1831"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1832"},
@@ -7023,7 +7023,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree1835"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1836"},
@@ -7037,7 +7037,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree1839"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1840"},
@@ -7051,7 +7051,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://joe.example.org"},
+								"props": {"href": "http://joe.example.org"},
 								"id": "tree1843"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree1844"}
@@ -7078,7 +7078,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1849"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1850"},
@@ -7117,7 +7117,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1859"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1860"},
@@ -7131,7 +7131,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree1863"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1864"},
@@ -7145,7 +7145,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree1867"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1868"},
@@ -7159,7 +7159,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://joe.example.org"},
+								"props": {"href": "http://joe.example.org"},
 								"id": "tree1871"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree1872"}
@@ -7186,7 +7186,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1877"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1878"},
@@ -7246,7 +7246,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree1893"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree1894"},
@@ -7260,7 +7260,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree1897"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree1898"},
@@ -7274,7 +7274,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree1901"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree1902"},
@@ -7288,7 +7288,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/contexts/1"},
+								"props": {"href": "http://example.org/contexts/1"},
 								"id": "tree1905"
 							},
 							{"type": "Html", "content": "\"\n\t\t},\n\t\t{\n\t\t\t\"", "id": "tree1906"},
@@ -7316,7 +7316,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://joe.example.org"},
+								"props": {"href": "http://joe.example.org"},
 								"id": "tree1913"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree1914"},
@@ -7330,7 +7330,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/2"},
+								"props": {"href": "http://example.org/posts/2"},
 								"id": "tree1917"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree1918"},
@@ -7344,7 +7344,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/contexts/1"},
+								"props": {"href": "http://example.org/contexts/1"},
 								"id": "tree1921"
 							},
 							{"type": "Html", "content": "\"\n\t\t}\n\t]\n}", "id": "tree1922"}
@@ -7371,7 +7371,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1927"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1928"},
@@ -7413,7 +7413,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection"},
+								"props": {"href": "http://example.org/collection"},
 								"id": "tree1939"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1940"},
@@ -7427,21 +7427,21 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree1943"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree1944"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/2"},
+								"props": {"href": "http://example.org/posts/2"},
 								"id": "tree1945"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree1946"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/3"},
+								"props": {"href": "http://example.org/posts/3"},
 								"id": "tree1947"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree1948"}
@@ -7462,7 +7462,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1952"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1953"},
@@ -7532,7 +7532,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection"},
+								"props": {"href": "http://example.org/collection"},
 								"id": "tree1972"
 							},
 							{"type": "Html", "content": "\"\n\t},\n\t\"", "id": "tree1973"},
@@ -7546,21 +7546,21 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree1976"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree1977"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/2"},
+								"props": {"href": "http://example.org/posts/2"},
 								"id": "tree1978"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree1979"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/3"},
+								"props": {"href": "http://example.org/posts/3"},
 								"id": "tree1980"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree1981"}
@@ -7587,7 +7587,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree1986"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree1987"},
@@ -7629,7 +7629,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection?page=0"},
+								"props": {"href": "http://example.org/collection?page=0"},
 								"id": "tree1998"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree1999"}
@@ -7650,7 +7650,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2003"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2004"},
@@ -7720,7 +7720,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection?page=0"},
+								"props": {"href": "http://example.org/collection?page=0"},
 								"id": "tree2023"
 							},
 							{"type": "Html", "content": "\"\n\t}\n}", "id": "tree2024"}
@@ -7747,7 +7747,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2029"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2030"},
@@ -7830,7 +7830,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2051"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2052"},
@@ -7900,7 +7900,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/note.png"},
+								"props": {"href": "http://example.org/note.png"},
 								"id": "tree2071"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2072"},
@@ -7935,7 +7935,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2080"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2081"},
@@ -8005,7 +8005,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/note1.png"},
+								"props": {"href": "http://example.org/note1.png"},
 								"id": "tree2100"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree2101"},
@@ -8054,7 +8054,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/note2.png"},
+								"props": {"href": "http://example.org/note2.png"},
 								"id": "tree2114"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree2115"},
@@ -8095,7 +8095,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2124"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2125"},
@@ -8165,7 +8165,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/cat.png"},
+								"props": {"href": "http://example.org/cat.png"},
 								"id": "tree2144"
 							},
 							{"type": "Html", "content": "\"\n\t}\n}", "id": "tree2145"}
@@ -8186,7 +8186,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2149"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2150"},
@@ -8256,7 +8256,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/cat1.png"},
+								"props": {"href": "http://example.org/cat1.png"},
 								"id": "tree2169"
 							},
 							{"type": "Html", "content": "\"\n\t\t},\n\t\t{\n\t\t\t\"", "id": "tree2170"},
@@ -8291,7 +8291,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/cat2.png"},
+								"props": {"href": "http://example.org/cat2.png"},
 								"id": "tree2179"
 							},
 							{"type": "Html", "content": "\"\n\t\t}\n\t]\n}", "id": "tree2180"}
@@ -8318,7 +8318,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2185"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2186"},
@@ -8402,7 +8402,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2208"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2209"},
@@ -8444,7 +8444,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2220"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree2221"}
@@ -8471,7 +8471,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2226"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2227"},
@@ -8538,7 +8538,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/foo.mp3"},
+								"props": {"href": "http://example.org/foo.mp3"},
 								"id": "tree2244"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2245"},
@@ -8593,7 +8593,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2258"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2259"},
@@ -8635,7 +8635,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection?page=1"},
+								"props": {"href": "http://example.org/collection?page=1"},
 								"id": "tree2270"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree2271"}
@@ -8656,7 +8656,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2275"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2276"},
@@ -8726,7 +8726,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection?page=1"},
+								"props": {"href": "http://example.org/collection?page=1"},
 								"id": "tree2295"
 							},
 							{"type": "Html", "content": "\"\n\t}\n}", "id": "tree2296"}
@@ -8753,7 +8753,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2301"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2302"},
@@ -8861,7 +8861,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2329"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2330"},
@@ -8967,7 +8967,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2356"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2357"},
@@ -9079,7 +9079,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2384"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2385"},
@@ -9180,7 +9180,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2410"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2411"},
@@ -9281,7 +9281,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2436"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2437"},
@@ -9336,7 +9336,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2450"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2451"},
@@ -9375,7 +9375,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree2460"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2461"},
@@ -9389,7 +9389,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2464"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2465"},
@@ -9472,7 +9472,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2486"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2487"},
@@ -9511,7 +9511,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection?page=2"},
+								"props": {"href": "http://example.org/collection?page=2"},
 								"id": "tree2496"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2497"},
@@ -9525,21 +9525,21 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2500"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2501"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/2"},
+								"props": {"href": "http://example.org/posts/2"},
 								"id": "tree2502"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2503"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/3"},
+								"props": {"href": "http://example.org/posts/3"},
 								"id": "tree2504"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree2505"}
@@ -9560,7 +9560,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2509"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2510"},
@@ -9627,7 +9627,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection?page=2"},
+								"props": {"href": "http://example.org/collection?page=2"},
 								"id": "tree2527"
 							},
 							{"type": "Html", "content": "\"\n\t},\n\t\"", "id": "tree2528"},
@@ -9641,21 +9641,21 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2531"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2532"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/2"},
+								"props": {"href": "http://example.org/posts/2"},
 								"id": "tree2533"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2534"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/3"},
+								"props": {"href": "http://example.org/posts/3"},
 								"id": "tree2535"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree2536"}
@@ -9682,7 +9682,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2541"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2542"},
@@ -9717,7 +9717,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree2551"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2552"},
@@ -9731,7 +9731,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2555"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree2556"}
@@ -9752,7 +9752,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2560"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2561"},
@@ -9780,7 +9780,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree2568"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2569"},
@@ -9829,7 +9829,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2581"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2582"},
@@ -9864,7 +9864,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree2591"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2592"},
@@ -9878,7 +9878,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2595"
 							},
 							{"type": "Html", "content": "\",\n\t\t{\n\t\t\t\"", "id": "tree2596"},
@@ -9937,7 +9937,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2609"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2610"},
@@ -9976,7 +9976,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection?page=1"},
+								"props": {"href": "http://example.org/collection?page=1"},
 								"id": "tree2619"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2620"},
@@ -9990,21 +9990,21 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2623"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2624"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/2"},
+								"props": {"href": "http://example.org/posts/2"},
 								"id": "tree2625"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2626"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/3"},
+								"props": {"href": "http://example.org/posts/3"},
 								"id": "tree2627"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree2628"}
@@ -10025,7 +10025,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2632"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2633"},
@@ -10092,7 +10092,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection?page=1"},
+								"props": {"href": "http://example.org/collection?page=1"},
 								"id": "tree2650"
 							},
 							{"type": "Html", "content": "\"\n\t},\n\t\"", "id": "tree2651"},
@@ -10106,21 +10106,21 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2654"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2655"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/2"},
+								"props": {"href": "http://example.org/posts/2"},
 								"id": "tree2656"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2657"},
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/3"},
+								"props": {"href": "http://example.org/posts/3"},
 								"id": "tree2658"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree2659"}
@@ -10147,7 +10147,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2664"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2665"},
@@ -10231,7 +10231,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/trailer.mkv"},
+								"props": {"href": "http://example.org/trailer.mkv"},
 								"id": "tree2688"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree2689"},
@@ -10265,7 +10265,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2696"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2697"},
@@ -10297,7 +10297,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://www.verbs.example/Check"},
+								"props": {"href": "http://www.verbs.example/Check"},
 								"id": "tree2704"
 							},
 							{"type": "Html", "content": "\"\n\t],\n\t\"", "id": "tree2705"},
@@ -10311,7 +10311,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree2708"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2709"},
@@ -10325,7 +10325,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/flights/1"},
+								"props": {"href": "http://example.org/flights/1"},
 								"id": "tree2712"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2713"},
@@ -10346,7 +10346,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://www.types.example/flightstatus"},
+								"props": {"href": "http://www.types.example/flightstatus"},
 								"id": "tree2718"
 							},
 							{"type": "Html", "content": "\",\n\t\t\"", "id": "tree2719"},
@@ -10380,7 +10380,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2726"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2727"},
@@ -10415,7 +10415,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://www.test.example/notes/1"},
+								"props": {"href": "http://www.test.example/notes/1"},
 								"id": "tree2736"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2737"},
@@ -10507,7 +10507,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://www.test.example/notes/1"},
+								"props": {"href": "http://www.test.example/notes/1"},
 								"id": "tree2760"
 							},
 							{"type": "Html", "content": "\"\n\t\t\t}\n\t\t]\n\t}\n}", "id": "tree2761"}
@@ -10534,7 +10534,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2766"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2767"},
@@ -10569,7 +10569,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/sally.jpg"},
+								"props": {"href": "http://example.org/sally.jpg"},
 								"id": "tree2776"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2777"},
@@ -10604,7 +10604,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree2786"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree2787"},
@@ -10638,7 +10638,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2794"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2795"},
@@ -10677,7 +10677,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree2804"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2805"},
@@ -10691,7 +10691,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2808"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2809"},
@@ -10705,7 +10705,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree2812"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree2813"}
@@ -10726,7 +10726,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2817"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2818"},
@@ -10765,7 +10765,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree2827"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2828"},
@@ -10779,7 +10779,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2831"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2832"},
@@ -10834,7 +10834,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2845"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2846"},
@@ -10873,7 +10873,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree2855"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2856"},
@@ -10887,7 +10887,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/posts/1"},
+								"props": {"href": "http://example.org/posts/1"},
 								"id": "tree2859"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2860"},
@@ -10901,7 +10901,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://john.example.org"},
+								"props": {"href": "http://john.example.org"},
 								"id": "tree2863"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2864"},
@@ -10915,7 +10915,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://joe.example.org"},
+								"props": {"href": "http://joe.example.org"},
 								"id": "tree2867"
 							},
 							{"type": "Html", "content": "\"\n\t]\n}", "id": "tree2868"}
@@ -10942,7 +10942,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2873"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2874"},
@@ -10977,7 +10977,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/4q-sales-forecast.pdf"},
+								"props": {"href": "http://example.org/4q-sales-forecast.pdf"},
 								"id": "tree2883"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree2884"}
@@ -10998,7 +10998,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2888"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2889"},
@@ -11054,7 +11054,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/4q-sales-forecast.pdf"},
+								"props": {"href": "http://example.org/4q-sales-forecast.pdf"},
 								"id": "tree2904"
 							},
 							{"type": "Html", "content": "\"\n\t}\n}", "id": "tree2905"}
@@ -11075,7 +11075,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2909"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2910"},
@@ -11131,7 +11131,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/4q-sales-forecast.pdf"},
+								"props": {"href": "http://example.org/4q-sales-forecast.pdf"},
 								"id": "tree2925"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree2926"},
@@ -11170,7 +11170,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/4q-sales-forecast.html"},
+								"props": {"href": "http://example.org/4q-sales-forecast.html"},
 								"id": "tree2935"
 							},
 							{"type": "Html", "content": "\",\n\t\t\t\"", "id": "tree2936"},
@@ -11204,7 +11204,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2943"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2944"},
@@ -11277,7 +11277,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2961"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2962"},
@@ -11353,7 +11353,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2981"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2982"},
@@ -11402,7 +11402,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree2994"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree2995"},
@@ -11448,7 +11448,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3005"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3006"},
@@ -11514,7 +11514,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3021"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3022"},
@@ -11556,7 +11556,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3032"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3033"},
@@ -11601,7 +11601,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3042"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3043"},
@@ -11636,7 +11636,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/video.mkv"},
+								"props": {"href": "http://example.org/video.mkv"},
 								"id": "tree3052"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3053"},
@@ -11670,7 +11670,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3060"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3061"},
@@ -11698,7 +11698,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/image.png"},
+								"props": {"href": "http://example.org/image.png"},
 								"id": "tree3068"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3069"},
@@ -11739,7 +11739,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3078"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3079"},
@@ -11767,7 +11767,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/abc"},
+								"props": {"href": "http://example.org/abc"},
 								"id": "tree3086"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3087"},
@@ -11808,7 +11808,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3096"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3097"},
@@ -11836,7 +11836,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/abc"},
+								"props": {"href": "http://example.org/abc"},
 								"id": "tree3104"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3105"},
@@ -11884,7 +11884,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3116"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3117"},
@@ -11923,7 +11923,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection?page=1"},
+								"props": {"href": "http://example.org/collection?page=1"},
 								"id": "tree3126"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3127"},
@@ -11937,7 +11937,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/collection"},
+								"props": {"href": "http://example.org/collection"},
 								"id": "tree3130"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3131"},
@@ -12021,7 +12021,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3150"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3151"},
@@ -12097,7 +12097,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3170"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3171"},
@@ -12173,7 +12173,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3190"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3191"},
@@ -12201,7 +12201,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/abc"},
+								"props": {"href": "http://example.org/abc"},
 								"id": "tree3198"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3199"},
@@ -12249,7 +12249,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3210"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3211"},
@@ -12319,7 +12319,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3226"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3227"},
@@ -12381,7 +12381,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3242"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3243"},
@@ -12451,7 +12451,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3258"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3259"},
@@ -12527,7 +12527,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3278"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3279"},
@@ -12555,7 +12555,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/abc"},
+								"props": {"href": "http://example.org/abc"},
 								"id": "tree3286"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3287"},
@@ -12617,7 +12617,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3302"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3303"},
@@ -12733,7 +12733,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3330"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3331"},
@@ -12782,7 +12782,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3343"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3344"},
@@ -12834,7 +12834,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3355"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3356"},
@@ -12946,7 +12946,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3383"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3384"},
@@ -13022,7 +13022,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3403"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3404"},
@@ -13088,7 +13088,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3419"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3420"},
@@ -13116,7 +13116,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/image.png"},
+								"props": {"href": "http://example.org/image.png"},
 								"id": "tree3427"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3428"},
@@ -13157,7 +13157,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3437"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3438"},
@@ -13224,7 +13224,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://purl.org/vocab/relationship/acquaintanceOf"},
+								"props": {"href": "http://purl.org/vocab/relationship/acquaintanceOf"},
 								"id": "tree3455"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3456"},
@@ -13279,7 +13279,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3469"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3470"},
@@ -13346,7 +13346,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://purl.org/vocab/relationship/acquaintanceOf"},
+								"props": {"href": "http://purl.org/vocab/relationship/acquaintanceOf"},
 								"id": "tree3487"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3488"},
@@ -13401,7 +13401,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3501"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3502"},
@@ -13464,7 +13464,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://sally.example.org"},
+								"props": {"href": "http://sally.example.org"},
 								"id": "tree3519"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree3520"}
@@ -13491,7 +13491,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3525"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3526"},
@@ -13544,7 +13544,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "http://example.org/image/2"},
+								"props": {"href": "http://example.org/image/2"},
 								"id": "tree3539"
 							},
 							{"type": "Html", "content": "\"\n}", "id": "tree3540"}
@@ -13571,7 +13571,7 @@
 							{
 								"type": "Component",
 								"component": "Link",
-								"props": {"url": "https://www.w3.org/ns/activitystreams"},
+								"props": {"href": "https://www.w3.org/ns/activitystreams"},
 								"id": "tree3545"
 							},
 							{"type": "Html", "content": "\",\n\t\"", "id": "tree3546"},

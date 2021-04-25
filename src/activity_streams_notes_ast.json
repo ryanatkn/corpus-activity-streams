@@ -1254,7 +1254,7 @@
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-BCP47"},
+			"props": {"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-BCP47"},
 			"id": "tree491"
 		},
 		{"type": "Html", "content": "\">BCP47</a>] Language-Tag.", "id": "tree492"}
@@ -1391,14 +1391,14 @@
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5"},
+			"props": {"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5"},
 			"id": "tree534"
 		},
 		{"type": "Html", "content": "\">HTML5</a>] and [<a href=\"", "id": "tree535"},
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988"},
+			"props": {"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988"},
 			"id": "tree536"
 		},
 		{
@@ -1409,7 +1409,7 @@
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5"},
+			"props": {"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5"},
 			"id": "tree538"
 		},
 		{
