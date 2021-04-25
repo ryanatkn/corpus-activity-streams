@@ -15,6 +15,7 @@ export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | n
 		children.push({
 			type: 'Element',
 			element: 'pre',
+			attributes: {},
 			children: [tree],
 		});
 	}
