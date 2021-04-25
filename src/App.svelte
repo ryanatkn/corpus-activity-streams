@@ -5,12 +5,14 @@
 	import GitHubLink from './GitHubLink.svelte';
 	import {provideComponents} from './components.js';
 	import type {Components} from './components.js';
+	import Link from './Link.svelte';
 	import EntityLink from './EntityLink.svelte';
 
 	let view = TiledView || TabbedView;
-	type DefaultComponents = 'EntityLink';
+	type DefaultComponents = 'Link' | 'EntityLink';
 
 	const toDefaultComponents = (): Components<DefaultComponents> => ({
+		Link,
 		EntityLink,
 	});
 
@@ -35,6 +37,7 @@
 		--color_pink: hsl(339, 70%, 96%);
 		--color_yellow_bg: hsl(51, 70%, 98%);
 		--color_yellow_text: rgba(75, 70, 50);
+		--color_brown_text: hsl(10, 16%, 40%);
 		--tab_size: 2;
 	}
 	/* TODO import a static css file */

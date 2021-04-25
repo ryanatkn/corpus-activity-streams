@@ -34,7 +34,6 @@
 </script>
 
 <a
-	class="entity-link"
 	class:hovered
 	style="--color: {color}; --hovered-color: {hoveredColor}; --pressed-color: {pressedColor};"
 	href="#{ent.name}"
