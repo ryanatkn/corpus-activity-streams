@@ -132,7 +132,8 @@ test_parse('parses a simple html anchor link', () => {
 			{
 				type: 'Component',
 				component: 'Link',
-				props: {href: 'https://felt.social', name: 'felt', content: 'content'},
+				props: {href: 'https://felt.social', name: 'felt'},
+				children: [{type: 'Text', content: 'content'}],
 			},
 			{type: 'Text', content: ' is an external link'},
 		]),
@@ -152,32 +153,78 @@ test_parse('parses a more complex html anchor link', () => {
 					a: '1',
 					b: '2',
 					c: '3',
-					content: '1 2 3',
 				},
+				children: [{type: 'Text', content: '1 2 3'}],
 			},
 			{type: 'Text', content: '] and'},
 		]),
 	);
 });
+
 test_parse('parses simple nested html', () => {
 	t.equal(
-		normalizeChildren(parse('the [<a href="https://felt.social">1 <pre>2</pre> 3</a>] and')),
+		normalizeChildren(parse('a <a href="https://felt.social">1 <pre>2</pre> 3</a> b')),
 		normalizeChildren([
-			{type: 'Text', content: 'the ['},
+			{type: 'Text', content: 'a '},
 			{
 				type: 'Component',
 				component: 'Link',
-				props: {
-					href: 'https://felt.social',
-					content: '1 2 3',
-				},
+				props: {href: 'https://felt.social'},
 				children: [
 					{type: 'Text', content: '1 '},
-					{type: 'Element', element: 'pre', children: [{type: 'Text', content: '2'}]},
+					{
+						type: 'Element',
+						element: 'pre',
+						attributes: {},
+						children: [{type: 'Text', content: '2'}],
+					},
 					{type: 'Text', content: ' 3'},
 				],
 			},
-			{type: 'Text', content: '] and'},
+			{type: 'Text', content: ' b'},
+		]),
+	);
+});
+
+test_parse('parses complex nested html, components, and custom markup', () => {
+	t.equal(
+		normalizeChildren(
+			parse(`
+a
+<a href="https://felt.social">
+	1
+	<pre>
+		_
+		<div>
+			<span>before</span>
+			<Thing>*contents*</Thing>
+			<span>after</span>
+		</div>
+		_
+	</pre>
+	3
+</a>
+b
+`),
+		),
+		normalizeChildren([
+			{type: 'Text', content: 'a '},
+			{
+				type: 'Component',
+				component: 'Link',
+				props: {href: 'https://felt.social'},
+				children: [
+					{type: 'Text', content: '1 '},
+					{
+						type: 'Element',
+						element: 'pre',
+						attributes: {},
+						children: [{type: 'Text', content: '2'}],
+					},
+					{type: 'Text', content: ' 3'},
+				],
+			},
+			{type: 'Text', content: ' b'},
 		]),
 	);
 });

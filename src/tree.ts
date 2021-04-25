@@ -37,6 +37,7 @@ export interface TextTree extends BaseTree<Tree> {
 export interface ElementTree extends BaseTree<Tree> {
 	type: 'Element';
 	element: 'pre' | 'code';
+	attributes: {[key: string]: any}; // TODO type
 }
 
 // TODO or `MarkupViewNode` ?

@@ -50,6 +50,7 @@ const LINK_MATCHER = /^https?:\/\//;
 // also I (naively) like the idea of having no intermediate data structure, to keep minimal for UX
 export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrapperChars): Tree[] => {
 	const children: Tree[] = [];
+	const stack: Tree[][] = [];
 	const vocabularyByName = vocabulary.byName; // TODO make this an arg or smth
 	let i = 0;
 	let len = content.length;
@@ -104,6 +105,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 				if (char === TAG_CLOSE_CHAR) {
 					// console.log('finalized attrs', tagAttributes);
 					parsingHtml = 'children';
+					stack.push([]);
 				} else {
 					tagAttributes += char;
 				}
@@ -119,12 +121,25 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 				if (char === TAG_CLOSE_CHAR) {
 					// console.log('finalized close tag', tagName);
 					parsingHtml = null;
-					if (tagName !== 'a') throw Error('TODO');
-					children.push({
-						type: 'Component',
-						component: 'Link',
-						props: {...parseAttributes(tagAttributes), content: tagContent}, // TODO parse actual children
-					});
+					console.log('tagContent', tagContent);
+					// TODO push
+					const popped = stack.pop();
+					// TODO instead of recursing, we can do this implicit state machine thing right?
+					// children.push(
+					// 	tagName === 'a'
+					// 		? {
+					// 				type: 'Component',
+					// 				component: 'Link',
+					// 				props: parseAttributes(tagAttributes),
+					// 				children: parse(tagContent, toId, wrapperChars),
+					// 		  }
+					// 		: {
+					// 				type: 'Element',
+					// 				element: tagName as 'pre',
+					// 				attributes: parseAttributes(tagAttributes),
+					// 				children: parse(tagContent, toId, wrapperChars),
+					// 		  },
+					// );
 				}
 			} else {
 				throw Error();
