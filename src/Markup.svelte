@@ -15,7 +15,12 @@
 	const components = useComponents(); // TODO is this the pattern we want?
 </script>
 
-<!-- this code is horrific because 1) whitespace behavior and 2) intentional lack of abstraction -->
+<!--
+	this code is horrific because
+	1) whitespace behavior and
+	2) intentional lack of abstraction.
+	also, surely it can be improved in various ways
+-->
 
 {#if tree.type === 'Text'}{tree.content}{:else if tree.type === 'Html'}{@html tree.content}{:else if tree.type === 'Component'}<svelte:component
 		this={components[tree.component]}
