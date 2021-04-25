@@ -1,6 +1,10 @@
 # corpus-activity-streams
 
-> [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data and alternative docs
+> [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/)
+> data and alternative docs
+
+> **important**: this project is unofficial and
+> [non-normative](https://github.com/w3c/activitystreams/issues/516)
 
 <https://github.com/w3c/activitystreams>
 
