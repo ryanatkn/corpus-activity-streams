@@ -1,3 +1,5 @@
+// TODO should be JSON
+
 // TODO should this go in "./fixtures/*" or something?
 
 // https://www.w3.org/TR/activitystreams-core/
