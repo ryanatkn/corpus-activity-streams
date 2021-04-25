@@ -34,6 +34,7 @@ const TAG_CLOSE_CHAR = '>';
 const LINK_MATCHER = /^https?:\/\//;
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
+// also I (naively) like the idea of having no intermediate data structure, to keep minimal for UX
 export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrapperChars): Tree[] => {
 	const children: Tree[] = [];
 	const vocabularyByName = vocabulary.byName; // TODO make this an arg or smth
