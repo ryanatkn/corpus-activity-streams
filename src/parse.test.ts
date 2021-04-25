@@ -139,5 +139,25 @@ test_parse('parses a simple html anchor link', () => {
 	);
 });
 
+test_parse('parses a more complex html anchor link', () => {
+	t.equal(
+		normalizeChildren(parse('the [<a href="https://felt.social">1 2 3</a>] and')),
+		normalizeChildren([
+			{type: 'Html', content: 'the ['},
+			{
+				type: 'Component',
+				component: 'Link',
+				props: {
+					href: 'https://felt.social',
+					content: '1 2 3',
+				},
+			},
+			{type: 'Html', content: '] and'},
+		]),
+	);
+});
+
+// TODO nested html
+
 test_parse.run();
 /* /test_parse */

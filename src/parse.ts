@@ -66,7 +66,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 		} else {
 			word += char;
 		}
-		if (parsingHtml === null && word === TAG_OPEN_CHAR && !insideWrapperChar) {
+		if (parsingHtml === null && char === TAG_OPEN_CHAR && !insideWrapperChar) {
 			// < ...
 			if (currentString) {
 				children.push({type: 'Html', content: currentString});
