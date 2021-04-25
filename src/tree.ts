@@ -1,7 +1,7 @@
 /*
 
 ```ts
-const tree: Tree = [
+const tree: Tree[] = [
 	{type: 'Text', content: 'hey~!'},
 	{
 		type: 'Block',
