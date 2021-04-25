@@ -3,17 +3,22 @@ import {assignNodeIds} from './tree.js';
 import {vocabulary} from './vocabulary.js';
 
 // TODO haphazardly named
-interface WrapperChar {
+export interface WrapperChar {
 	char: string;
-	preserve?: boolean; // TODO maybe more direct control, via function hooks or sometihng
+	preserve: boolean; // TODO maybe more direct control, via function hooks or sometihng
+	component: string;
+	toProps: (...args: any[]) => Record<string, any>; // TODO type ? generic?
 }
-const wrapperChars: WrapperChar[] = [{char: '`'}, {char: '"', preserve: true}];
+export const defaultWrapperChars: WrapperChar[] = [
+	{char: '`', preserve: false, component: 'EntityLink', toProps: (name: string) => ({name})},
+	{char: '"', preserve: true, component: 'EntityLink', toProps: (name: string) => ({name})},
+];
 
 // TODO regexp? refactor?
 const breaksWord: Set<string> = new Set([' ', '\n']);
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
-export const parse = (content: string, toId?: ToId): Tree[] => {
+export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrapperChars): Tree[] => {
 	const children: Tree[] = [];
 	const vocabularyByName = vocabulary.byName; // TODO make this an arg or smth
 	let i = 0;
@@ -43,7 +48,7 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 		}
 		for (const wrapperChar of wrapperChars) {
 			if (char === wrapperChar.char) {
-				const preserve = !!wrapperChar.preserve;
+				const {preserve} = wrapperChar;
 				if (insideWrapperChar) {
 					if (insideWrapperChar === wrapperChar) {
 						if (insideWrapperCharContents in vocabularyByName) {
@@ -53,8 +58,8 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 							currentString = preserve ? char : '';
 							children.push({
 								type: 'Component',
-								component: 'EntityLink',
-								props: {name: insideWrapperCharContents},
+								component: wrapperChar.component,
+								props: wrapperChar.toProps(insideWrapperCharContents),
 							});
 						} else {
 							// un-resolved identifier, so treat as plain text

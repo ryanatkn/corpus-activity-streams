@@ -65,5 +65,25 @@ test_parse('parses link', () => {
 	);
 });
 
+test_parse('parses custom link in backticks', () => {
+	t.equal(
+		normalizeChildren(
+			parse('The `Entity` is the base of all of types.', undefined, [
+				{
+					char: '`',
+					preserve: false,
+					component: 'CustomLink',
+					toProps: (name: string) => ({othername: name}),
+				},
+			]),
+		),
+		normalizeChildren([
+			{type: 'Html', content: 'The '},
+			{type: 'Component', component: 'CustomLink', props: {othername: 'Entity'}},
+			{type: 'Html', content: ' is the base of all of types.'},
+		]),
+	);
+});
+
 test_parse.run();
 /* /test_parse */
