@@ -22,7 +22,7 @@
 	also, surely it can be improved in various ways
 -->
 
-{#if tree.type === 'Text'}{tree.content}{:else if tree.type === 'Html'}{@html tree.content}{:else if tree.type === 'Component'}<svelte:component
+{#if tree.type === 'Text'}{tree.content}{:else if tree.type === 'Component'}<svelte:component
 		this={components[tree.component]}
 		{...tree.props}
 	/>{:else if tree.type === 'Frame'}<div class="markup-Frame">

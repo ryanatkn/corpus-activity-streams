@@ -57,7 +57,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 			if (LINK_MATCHER.test(word)) {
 				currentString = currentString.substring(0, currentString.length - word.length);
 				if (currentString) {
-					children.push({type: 'Html', content: currentString});
+					children.push({type: 'Text', content: currentString});
 					currentString = '';
 				}
 				children.push({type: 'Component', component: 'Link', props: {href: word}});
@@ -69,7 +69,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 		if (parsingHtml === null && char === TAG_OPEN_CHAR && !insideWrapperChar) {
 			// < ...
 			if (currentString) {
-				children.push({type: 'Html', content: currentString});
+				children.push({type: 'Text', content: currentString});
 				currentString = '';
 			}
 			// console.log('open');
@@ -124,7 +124,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 						if (insideWrapperChar === wrapperChar) {
 							if (insideWrapperCharContents in vocabularyByName) {
 								if (currentString) {
-									children.push({type: 'Html', content: currentString});
+									children.push({type: 'Text', content: currentString});
 								}
 								currentString = preserve ? char : '';
 								children.push({
@@ -135,7 +135,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 							} else {
 								if (LINK_MATCHER.test(insideWrapperCharContents)) {
 									if (currentString) {
-										children.push({type: 'Html', content: currentString});
+										children.push({type: 'Text', content: currentString});
 									}
 									currentString = preserve ? char : '';
 									children.push({
@@ -171,7 +171,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 	}
 	if (insideWrapperCharContents) currentString += insideWrapperCharContents;
 	if (currentString) {
-		children.push({type: 'Html', content: currentString});
+		children.push({type: 'Text', content: currentString});
 	}
 	return children.map((c) => assignNodeIds(c, toId));
 };

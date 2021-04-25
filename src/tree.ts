@@ -23,7 +23,7 @@ export interface BaseTree<TChildren extends BaseTree = BaseTree<any>> {
 	content?: string;
 }
 
-export type Tree = BlockTree | TextTree | HtmlTree | ElementTree | ComponentTree | FrameTree;
+export type Tree = BlockTree | TextTree | ElementTree | ComponentTree | FrameTree;
 
 export interface BlockTree extends BaseTree<Tree> {
 	type: 'Block';
@@ -31,11 +31,6 @@ export interface BlockTree extends BaseTree<Tree> {
 
 export interface TextTree extends BaseTree<Tree> {
 	type: 'Text';
-	content: string;
-}
-
-export interface HtmlTree extends BaseTree<Tree> {
-	type: 'Html';
 	content: string;
 }
 
