@@ -33,7 +33,7 @@ test_parse('parse', () => {
 						'@context': 'https://www.w3.org/ns/activitystreams',
 						type: 'Object',
 						id: 'http://www.test.example/object/1',
-						name: 'A Simple, non-specific object',
+						name: 'A Simple, non-specific object `note`',
 					},
 					null,
 					2,
@@ -49,7 +49,7 @@ test_parse('parse', () => {
 			{type: 'Component', component: 'EntityLink', props: {name: 'id'}},
 			{type: 'Html', content: '": "http://www.test.example/object/1",\n  "'},
 			{type: 'Component', component: 'EntityLink', props: {name: 'name'}},
-			{type: 'Html', content: '": "A Simple, non-specific object"\n}'},
+			{type: 'Html', content: '": "A Simple, non-specific object `note`"\n}'},
 		]),
 	);
 });

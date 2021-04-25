@@ -12,6 +12,7 @@ const wrapperChars: WrapperChar[] = [{char: '`'}, {char: '"', preserve: true}];
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 export const parse = (content: string, toId?: ToId): Tree[] => {
 	const children: Tree[] = [];
+	const vocabularyByName = vocabulary.byName; // TODO make this an arg or smth
 	let i = 0;
 	let len = content.length;
 	let currentString = '';
@@ -27,7 +28,7 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 				const preserve = !!wrapperChar.preserve;
 				if (insideWrapperChar) {
 					if (insideWrapperChar === wrapperChar) {
-						if (insideWrapperCharContents in vocabulary.byName) {
+						if (insideWrapperCharContents in vocabularyByName) {
 							if (currentString) {
 								children.push({type: 'Html', content: currentString});
 							}
@@ -43,10 +44,8 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 						}
 						insideWrapperCharContents = '';
 						insideWrapperChar = null;
-					} else {
-						// is a different char, so treat as string
-						insideWrapperCharContents += char;
 					}
+					// else is a different char, so treat as string
 					shouldAppendChar = false;
 				} else {
 					insideWrapperChar = wrapperChar;
