@@ -141,7 +141,7 @@ test_parse('parses a simple html anchor link', () => {
 
 test_parse('parses a more complex html anchor link', () => {
 	t.equal(
-		normalizeChildren(parse('the [<a href="https://felt.social">1 2 3</a>] and')),
+		normalizeChildren(parse('the [<a href="https://felt.social" a="1" b=2 c="3">1 2 3</a>] and')),
 		normalizeChildren([
 			{type: 'Text', content: 'the ['},
 			{
@@ -149,6 +149,9 @@ test_parse('parses a more complex html anchor link', () => {
 				component: 'Link',
 				props: {
 					href: 'https://felt.social',
+					a: '1',
+					b: '2',
+					c: '3',
 					content: '1 2 3',
 				},
 			},
