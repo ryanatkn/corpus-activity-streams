@@ -24,13 +24,14 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 		shouldAppendChar = true;
 		for (const wrapperChar of wrapperChars) {
 			if (char === wrapperChar.char) {
+				const preserve = !!wrapperChar.preserve;
 				if (insideWrapperChar) {
 					if (insideWrapperChar === wrapperChar) {
 						if (insideWrapperCharContents in vocabulary.byName) {
 							if (currentString) {
 								children.push({type: 'Html', content: currentString});
 							}
-							currentString = wrapperChar.preserve ? char : '';
+							currentString = preserve ? char : '';
 							children.push({
 								type: 'Component',
 								component: 'EntityLink',
@@ -38,9 +39,7 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 							});
 						} else {
 							// un-resolved identifier, so treat as plain text
-							currentString += `${
-								wrapperChar.preserve ? '' : char
-							}${insideWrapperCharContents}${char}`;
+							currentString += `${preserve ? '' : char}${insideWrapperCharContents}${char}`;
 						}
 						insideWrapperCharContents = '';
 						insideWrapperChar = null;
@@ -51,7 +50,7 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 					shouldAppendChar = false;
 				} else {
 					insideWrapperChar = wrapperChar;
-					shouldAppendChar = !!wrapperChar.preserve;
+					shouldAppendChar = preserve;
 				}
 			} else if (wrapperChar === insideWrapperChar) {
 				insideWrapperCharContents += char;
