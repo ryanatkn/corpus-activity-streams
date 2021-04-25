@@ -80,7 +80,7 @@ test_parse('parses insecure http link', () => {
 	);
 });
 
-test_parse('parses link in backricks', () => {
+test_parse('parses link in backticks', () => {
 	t.equal(
 		normalizeChildren(parse('this `https://felt.social` is an external link')),
 		normalizeChildren([
