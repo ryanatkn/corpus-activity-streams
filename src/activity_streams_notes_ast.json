@@ -41,18 +41,21 @@
 		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree15"},
 		{
 			"type": "Html",
-			"content": " is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is established by [ <a href=\"",
+			"content": " is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is established by [ ",
 			"id": "tree16"
 		},
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988"},
+			"props": {
+				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988",
+				"content": "RFC5988"
+			},
 			"id": "tree17"
 		},
 		{
 			"type": "Html",
-			"content": "\">RFC5988</a>]. Many of the properties defined by the Activity Vocabulary allow values that are either instances of ",
+			"content": "]. Many of the properties defined by the Activity Vocabulary allow values that are either instances of ",
 			"id": "tree18"
 		},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree19"},
@@ -60,16 +63,19 @@
 		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree21"},
 		{"type": "Html", "content": ". When a ", "id": "tree22"},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree23"},
-		{"type": "Html", "content": " is used, it establishes a <a href=\"", "id": "tree24"},
+		{"type": "Html", "content": " is used, it establishes a ", "id": "tree24"},
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "http://patterns.dataincubator.org/book/qualified-relation.html"},
+			"props": {
+				"href": "http://patterns.dataincubator.org/book/qualified-relation.html",
+				"content": "RFC5988qualified relation"
+			},
 			"id": "tree25"
 		},
 		{
 			"type": "Html",
-			"content": "\">qualified relation</a> connecting the subject (the containing object) to the resource identified by the ",
+			"content": " connecting the subject (the containing object) to the resource identified by the ",
 			"id": "tree26"
 		},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "href"}, "id": "tree27"},
@@ -136,16 +142,19 @@
 		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree52"},
 		{"type": "Html", "content": " or ", "id": "tree53"},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree54"},
-		{"type": "Html", "content": " instances. Refer to the <a href=\"", "id": "tree55"},
+		{"type": "Html", "content": " instances. Refer to the ", "id": "tree55"},
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-core/#collection"},
+			"props": {
+				"href": "https://www.w3.org/TR/activitystreams-core/#collection",
+				"content": "Activity Streams 2.0 Core"
+			},
 			"id": "tree56"
 		},
 		{
 			"type": "Html",
-			"content": "\">Activity Streams 2.0 Core</a> specification for a complete description of the ",
+			"content": " specification for a complete description of the ",
 			"id": "tree57"
 		},
 		{
@@ -182,18 +191,17 @@
 			"props": {"name": "Collection"},
 			"id": "tree64"
 		},
-		{"type": "Html", "content": ". Refer to the <a href=\"", "id": "tree65"},
+		{"type": "Html", "content": ". Refer to the ", "id": "tree65"},
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-core/#dfn-collectionpage"},
+			"props": {
+				"href": "https://www.w3.org/TR/activitystreams-core/#dfn-collectionpage",
+				"content": "Activity Streams 2.0 Core"
+			},
 			"id": "tree66"
 		},
-		{
-			"type": "Html",
-			"content": "\">Activity Streams 2.0 Core</a> for a complete description of the ",
-			"id": "tree67"
-		},
+		{"type": "Html", "content": " for a complete description of the ", "id": "tree67"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
@@ -214,18 +222,17 @@
 			"props": {"name": "OrderedCollection"},
 			"id": "tree71"
 		},
-		{"type": "Html", "content": ". Refer to the <a href=\"", "id": "tree72"},
+		{"type": "Html", "content": ". Refer to the ", "id": "tree72"},
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-core/#dfn-orderedcollectionpage"},
+			"props": {
+				"href": "https://www.w3.org/TR/activitystreams-core/#dfn-orderedcollectionpage",
+				"content": "Activity Streams 2.0 Core"
+			},
 			"id": "tree73"
 		},
-		{
-			"type": "Html",
-			"content": "\">Activity Streams 2.0 Core</a> for a complete description of the ",
-			"id": "tree74"
-		},
+		{"type": "Html", "content": " for a complete description of the ", "id": "tree74"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
@@ -659,22 +666,17 @@
 	],
 	"Page": [{"type": "Html", "content": "Represents a Web Page.", "id": "tree334"}],
 	"Place": [
-		{
-			"type": "Html",
-			"content": "Represents a logical or physical location. See <a href=\"",
-			"id": "tree335"
-		},
+		{"type": "Html", "content": "Represents a logical or physical location. See ", "id": "tree335"},
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-vocabulary/#places"},
+			"props": {
+				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#places",
+				"content": "5.3 Representing Places"
+			},
 			"id": "tree336"
 		},
-		{
-			"type": "Html",
-			"content": "\">5.3 Representing Places</a> for additional information.",
-			"id": "tree337"
-		}
+		{"type": "Html", "content": " for additional information.", "id": "tree337"}
 	],
 	"Profile": [
 		{"type": "Html", "content": "A ", "id": "tree338"},
@@ -709,20 +711,19 @@
 		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree348"},
 		{
 			"type": "Html",
-			"content": " properties are used to identify the connected individuals. <a href=\"",
+			"content": " properties are used to identify the connected individuals. ",
 			"id": "tree349"
 		},
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-vocabulary/#connections"},
+			"props": {
+				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#connections",
+				"content": "See 5.2 Representing Relationships Between Entities"
+			},
 			"id": "tree350"
 		},
-		{
-			"type": "Html",
-			"content": "\">See 5.2 Representing Relationships Between Entities</a> for additional information.",
-			"id": "tree351"
-		}
+		{"type": "Html", "content": " for additional information.", "id": "tree351"}
 	],
 	"Tombstone": [
 		{"type": "Html", "content": "A ", "id": "tree352"},
@@ -1213,18 +1214,21 @@
 		},
 		{
 			"type": "Html",
-			"content": " property indicates the object's approximate duration. The value MUST be expressed as an `xsd:duration` as defined by [ <a href=\"",
+			"content": " property indicates the object's approximate duration. The value MUST be expressed as an `xsd:duration` as defined by [ ",
 			"id": "tree482"
 		},
 		{
 			"type": "Component",
 			"component": "Link",
-			"props": {"url": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-xmlschema11-2"},
+			"props": {
+				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-xmlschema11-2",
+				"content": "xmlschema11-2"
+			},
 			"id": "tree483"
 		},
 		{
 			"type": "Html",
-			"content": "\">xmlschema11-2</a>], section 3.3.6 (e.g. a period of 5 seconds is represented as \"PT5S\").",
+			"content": "], section 3.3.6 (e.g. a period of 5 seconds is represented as \"PT5S\").",
 			"id": "tree484"
 		}
 	],

@@ -60,10 +60,10 @@ test_parse('parses entity links in quotes', () => {
 
 test_parse('parses link', () => {
 	t.equal(
-		normalizeChildren(parse('this https://www.felt.dev is an external link')),
+		normalizeChildren(parse('this https://felt.social is an external link')),
 		normalizeChildren([
 			{type: 'Html', content: 'this '},
-			{type: 'Component', component: 'Link', props: {url: 'https://www.felt.dev'}},
+			{type: 'Component', component: 'Link', props: {url: 'https://felt.social'}},
 			{type: 'Html', content: ' is an external link'},
 		]),
 	);
@@ -71,10 +71,10 @@ test_parse('parses link', () => {
 
 test_parse('parses insecure http link', () => {
 	t.equal(
-		normalizeChildren(parse('this http://www.felt.dev is an external link')),
+		normalizeChildren(parse('this http://felt.social is an external link')),
 		normalizeChildren([
 			{type: 'Html', content: 'this '},
-			{type: 'Component', component: 'Link', props: {url: 'http://www.felt.dev'}},
+			{type: 'Component', component: 'Link', props: {url: 'http://felt.social'}},
 			{type: 'Html', content: ' is an external link'},
 		]),
 	);
@@ -82,10 +82,10 @@ test_parse('parses insecure http link', () => {
 
 test_parse('parses link in backricks', () => {
 	t.equal(
-		normalizeChildren(parse('this `https://www.felt.dev` is an external link')),
+		normalizeChildren(parse('this `https://felt.social` is an external link')),
 		normalizeChildren([
 			{type: 'Html', content: 'this '},
-			{type: 'Component', component: 'Link', props: {url: 'https://www.felt.dev'}},
+			{type: 'Component', component: 'Link', props: {url: 'https://felt.social'}},
 			{type: 'Html', content: ' is an external link'},
 		]),
 	);
@@ -93,10 +93,10 @@ test_parse('parses link in backricks', () => {
 
 test_parse('parses link in quotes', () => {
 	t.equal(
-		normalizeChildren(parse('this "https://www.felt.dev" is an external link')),
+		normalizeChildren(parse('this "https://felt.social" is an external link')),
 		normalizeChildren([
 			{type: 'Html', content: 'this "'},
-			{type: 'Component', component: 'Link', props: {url: 'https://www.felt.dev'}},
+			{type: 'Component', component: 'Link', props: {url: 'https://felt.social'}},
 			{type: 'Html', content: '" is an external link'},
 		]),
 	);
@@ -118,6 +118,23 @@ test_parse('parses custom link in backticks', () => {
 			{type: 'Html', content: 'The '},
 			{type: 'Component', component: 'CustomLink', props: {othername: 'Entity'}},
 			{type: 'Html', content: ' is the base of all of types.'},
+		]),
+	);
+});
+
+test_parse('parses a simple html anchor link', () => {
+	t.equal(
+		normalizeChildren(
+			parse('this <a href="https://felt.social" name="felt">content</a> is an external link'),
+		),
+		normalizeChildren([
+			{type: 'Html', content: 'this '},
+			{
+				type: 'Component',
+				component: 'Link',
+				props: {href: 'https://felt.social', name: 'felt', content: 'content'},
+			},
+			{type: 'Html', content: ' is an external link'},
 		]),
 	);
 });
