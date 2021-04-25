@@ -1,6 +1,14 @@
 import type {Tree, ToId} from './tree.js';
 import {assignNodeIds} from './tree.js';
 import {vocabulary} from './vocabulary.js';
+/*
+
+TODO
+
+- /absolute and ./relative ../links
+- emoji
+
+*/
 
 // TODO haphazardly named
 export interface WrapperChar {
@@ -16,6 +24,8 @@ export const defaultWrapperChars: WrapperChar[] = [
 
 // TODO regexp? refactor?
 const breaksWord: Set<string> = new Set([' ', '\n']);
+
+const LINK_MATCHER = /^https?:\/\//;
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrapperChars): Tree[] => {
@@ -34,7 +44,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 		shouldAppendChar = true;
 		// TODO refactor all of this
 		if (breaksWord.has(char)) {
-			if (word.startsWith('https://')) {
+			if (LINK_MATCHER.test(word)) {
 				currentString = currentString.substring(0, currentString.length - word.length);
 				if (currentString) {
 					children.push({type: 'Html', content: currentString});
@@ -62,7 +72,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 								props: wrapperChar.toProps(insideWrapperCharContents),
 							});
 						} else {
-							if (insideWrapperCharContents.startsWith('https://')) {
+							if (LINK_MATCHER.test(insideWrapperCharContents)) {
 								if (currentString) {
 									children.push({type: 'Html', content: currentString});
 								}
