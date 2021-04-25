@@ -6,7 +6,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "gro dev"
+    "dev": "gro dev",
+    "build": "gro build",
+    "start": "gro start"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,7 @@
     "url": "https://github.com/ryanatkn/corpus-activity-streams/issues"
   },
   "keywords": [
-    "Activity Streams"
+    "ActivityStreams"
   ],
   "prettier": {
     "useTabs": true,

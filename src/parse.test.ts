@@ -5,8 +5,10 @@ import {parse} from './parse.js';
 import {assignNodeIds, toToDeterministicId} from './tree.js';
 import type {Tree} from './tree.js';
 
-const normalizeChildren = (children: Tree[]) =>
-	children.map((c) => assignNodeIds(c, toToDeterministicId()));
+const normalizeChildren = (children: Tree[]) => {
+	const toId = toToDeterministicId();
+	return children.map((c) => assignNodeIds(c, toId));
+};
 
 /* test_parse */
 const test_parse = suite('parse');

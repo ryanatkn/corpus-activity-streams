@@ -2,85 +2,71 @@ import type {Tree, ToId} from './tree.js';
 import {assignNodeIds} from './tree.js';
 import {vocabulary} from './vocabulary.js';
 
+// TODO haphazardly named
+interface WrapperChar {
+	char: string;
+	preserve?: boolean; // TODO maybe more direct control, via function hooks or sometihng
+}
+const wrapperChars: WrapperChar[] = [{char: '`'}, {char: '"', preserve: true}];
+
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 export const parse = (content: string, toId?: ToId): Tree[] => {
 	const children: Tree[] = [];
 	let i = 0;
 	let len = content.length;
 	let currentString = '';
-	let insideBackticks = false;
-	let insideBackticksContents = '';
-	let insideQuotes = false;
-	let insideQuotesContents = '';
+	let insideWrapperChar: WrapperChar | null = null;
+	let insideWrapperCharContents = '';
+	let char: string;
+	let shouldAppendChar = false;
 	while (i < len) {
-		const char = content[i];
-		if (char === '`') {
-			if (insideBackticks) {
-				// TODO NOTICE THE COPYPASTA				// TODO NOTICE THE COPYPASTA
-				// lookup the identifier
-				// TODO normalize?
-				if (insideBackticksContents in vocabulary.byName) {
-					// this is the item, but we don't need it ?
-					// const vocabularyItem = vocabulary.byName[insideBackticksContents];
-					if (currentString) {
-						children.push({type: 'Html', content: currentString});
-						currentString = '';
+		char = content[i];
+		shouldAppendChar = true;
+		for (const wrapperChar of wrapperChars) {
+			if (char === wrapperChar.char) {
+				if (insideWrapperChar) {
+					if (insideWrapperChar === wrapperChar) {
+						if (insideWrapperCharContents in vocabulary.byName) {
+							if (currentString) {
+								children.push({type: 'Html', content: currentString});
+							}
+							currentString = wrapperChar.preserve ? char : '';
+							children.push({
+								type: 'Component',
+								component: 'EntityLink',
+								props: {name: insideWrapperCharContents},
+							});
+						} else {
+							// un-resolved identifier, so treat as plain text
+							currentString += `${
+								wrapperChar.preserve ? '' : char
+							}${insideWrapperCharContents}${char}`;
+						}
+						insideWrapperCharContents = '';
+						insideWrapperChar = null;
+					} else {
+						// is a different char, so treat as string
+						insideWrapperCharContents += char;
 					}
-					children.push({
-						type: 'Component',
-						component: 'EntityLink',
-						props: {name: insideBackticksContents},
-					});
+					shouldAppendChar = false;
 				} else {
-					// un-resolved identifier, so treat as plain text
-					currentString += `\`${insideBackticksContents}\``;
+					insideWrapperChar = wrapperChar;
+					shouldAppendChar = !!wrapperChar.preserve;
 				}
-				insideBackticksContents = '';
-				insideBackticks = false;
-			} else {
-				insideBackticks = true;
-				// enter backticks
-				if (insideBackticksContents !== '') throw Error('TODO ?');
+			} else if (wrapperChar === insideWrapperChar) {
+				insideWrapperCharContents += char;
+				shouldAppendChar = false;
 			}
-		} else if (insideBackticks) {
-			insideBackticksContents += char;
-		} else if (char === '"') {
-			if (insideQuotes) {
-				// TODO NOTICE THE COPYPASTA				// TODO NOTICE THE COPYPASTA
-				// lookup the identifier
-				// TODO normalize?
-				if (insideQuotesContents in vocabulary.byName) {
-					// this is the item, but we don't need it ?
-					// const vocabularyItem = vocabulary.byName[insideQuotesContents];
-					if (currentString) {
-						children.push({type: 'Html', content: currentString + '"'});
-						currentString = '"';
-					}
-					children.push({
-						type: 'Component',
-						component: 'EntityLink',
-						props: {name: insideQuotesContents},
-					});
-				} else {
-					// un-resolved identifier, so treat as plain text
-					currentString += `"${insideQuotesContents}"`;
-				}
-				insideQuotesContents = '';
-				insideQuotes = false;
-			} else {
-				insideQuotes = true;
-				// enter backticks
-				if (insideQuotesContents !== '') throw Error('TODO ?');
-			}
-		} else if (insideQuotes) {
-			insideQuotesContents += char;
-		} else {
+		}
+		// TODO refactor this, messy/confusing from old code
+		if (shouldAppendChar) {
 			currentString += char;
+			shouldAppendChar = false;
 		}
 		i++;
 	}
 	// TODO hmm
-	currentString += insideBackticksContents + insideQuotesContents;
+	currentString += insideWrapperCharContents;
 	if (currentString) {
 		children.push({type: 'Html', content: currentString});
 		currentString = '';
