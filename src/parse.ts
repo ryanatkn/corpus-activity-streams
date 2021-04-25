@@ -8,6 +8,7 @@ import {vocabulary} from './vocabulary.js';
 
 TODO
 
+- nested html, components, and custom markup
 - /absolute and ./relative ../links
 - emoji
 
