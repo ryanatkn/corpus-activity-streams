@@ -124,13 +124,15 @@ test_parse('parses custom link in backticks', () => {
 
 test_parse('parses a simple html anchor link', () => {
 	t.equal(
-		normalizeChildren(parse('this <a href="https://felt.social">content</a> is an external link')),
+		normalizeChildren(
+			parse('this <a href="https://felt.social" name="felt">content</a> is an external link'),
+		),
 		normalizeChildren([
 			{type: 'Html', content: 'this '},
 			{
 				type: 'Component',
 				component: 'Link',
-				props: {url: 'https://felt.social', content: 'content'},
+				props: {href: 'https://felt.social', name: 'felt', content: 'content'},
 			},
 			{type: 'Html', content: ' is an external link'},
 		]),
