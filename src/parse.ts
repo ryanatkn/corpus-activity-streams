@@ -72,14 +72,14 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 				children.push({type: 'Html', content: currentString});
 				currentString = '';
 			}
-			console.log('open');
+			// console.log('open');
 			parsingHtml = 'open';
 			tagName = '';
 			// tagAttributes = ''; // TODO ?
 		} else if (parsingHtml) {
 			if (parsingHtml === 'open') {
 				if (breaks) {
-					console.log('finalized tag', tagName);
+					// console.log('finalized tag', tagName);
 					parsingHtml = 'attributes';
 					tagAttributes = ''; // TODO ?
 				} else {
@@ -87,14 +87,14 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 				}
 			} else if (parsingHtml === 'attributes') {
 				if (char === TAG_CLOSE_CHAR) {
-					console.log('finalized attrs', tagAttributes);
+					// console.log('finalized attrs', tagAttributes);
 					parsingHtml = 'children';
 				} else {
 					tagAttributes += char;
 				}
 			} else if (parsingHtml === 'children') {
 				if (char === TAG_OPEN_CHAR) {
-					console.log('finalized children', tagContent);
+					// console.log('finalized children', tagContent);
 					parsingHtml = 'close';
 				} else {
 					tagContent += char;
@@ -102,7 +102,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 			} else if (parsingHtml === 'close') {
 				// ../
 				if (char === TAG_CLOSE_CHAR) {
-					console.log('finalized close tag', tagName);
+					// console.log('finalized close tag', tagName);
 					parsingHtml = null;
 					if (tagName !== 'a') throw Error('TODO');
 					children.push({
@@ -176,7 +176,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 	return children.map((c) => assignNodeIds(c, toId));
 };
 
-// TODO test this. also, lol
+// TODO tests
 const parseAttributes = (tagAttributes: string): {[key: string]: any} => {
 	let result: {[key: string]: any} = {};
 	let key = '';
@@ -208,7 +208,7 @@ const parseAttributes = (tagAttributes: string): {[key: string]: any} => {
 // TODO hacky
 const toValue = (value: string): string => {
 	if (value[0] === '"' && value[value.length - 1] === '"') {
-		value = value.substring(1, value.length - 1);
+		return value.substring(1, value.length - 1);
 	}
 	return value;
 };
