@@ -13,6 +13,7 @@ export interface Vocabulary {
 export const vocabulary: Vocabulary = {
 	items: activityStreamsVocabulary,
 	types: activityStreamsVocabulary.filter((v) => v.category !== 'vocab.property'),
+	properties: activityStreamsVocabulary.filter((v) => v.category === 'vocab.property'),
 	byTypeName: vocabularyCategories.reduce((result, t) => {
 		result[t] = activityStreamsVocabulary.filter((v) => v.category === t);
 		if (t === 'vocab.property') {
@@ -20,7 +21,6 @@ export const vocabulary: Vocabulary = {
 		}
 		return result;
 	}, {} as Vocabulary['byTypeName']),
-	properties: activityStreamsVocabulary.filter((v) => v.category === 'vocab.property'),
 	byName: activityStreamsVocabulary.reduce((result, item) => {
 		result[item.name] = item;
 		return result;
