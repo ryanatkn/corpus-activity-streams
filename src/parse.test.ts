@@ -148,12 +148,7 @@ test_parse('parses a more complex html anchor link', () => {
 			{
 				type: 'Component',
 				component: 'Link',
-				props: {
-					href: 'https://felt.social',
-					a: '1',
-					b: '2',
-					c: '3',
-				},
+				props: {href: 'https://felt.social', a: '1', b: '2', c: '3'},
 				children: [{type: 'Text', content: '1 2 3'}],
 			},
 			{type: 'Text', content: '] and'},
@@ -163,7 +158,7 @@ test_parse('parses a more complex html anchor link', () => {
 
 test_parse('parses simple nested html', () => {
 	t.equal(
-		normalizeChildren(parse('a <a href="https://felt.social">1 <pre>2</pre> 3</a> b')),
+		normalizeChildren(parse('a <a href="https://felt.social">1 <pre a=1 b="2">2</pre> 3</a> b')),
 		normalizeChildren([
 			{type: 'Text', content: 'a '},
 			{
@@ -175,7 +170,7 @@ test_parse('parses simple nested html', () => {
 					{
 						type: 'Element',
 						element: 'pre',
-						attributes: {},
+						attributes: {a: '1', b: '2'},
 						children: [{type: 'Text', content: '2'}],
 					},
 					{type: 'Text', content: ' 3'},
