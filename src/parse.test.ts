@@ -159,8 +159,28 @@ test_parse('parses a more complex html anchor link', () => {
 		]),
 	);
 });
-
-// TODO nested html
+test_parse('parses simple nested html', () => {
+	t.equal(
+		normalizeChildren(parse('the [<a href="https://felt.social">1 <pre>2</pre> 3</a>] and')),
+		normalizeChildren([
+			{type: 'Text', content: 'the ['},
+			{
+				type: 'Component',
+				component: 'Link',
+				props: {
+					href: 'https://felt.social',
+					content: '1 2 3',
+				},
+				children: [
+					{type: 'Text', content: '1 '},
+					{type: 'Element', element: 'pre', children: [{type: 'Text', content: '2'}]},
+					{type: 'Text', content: ' 3'},
+				],
+			},
+			{type: 'Text', content: '] and'},
+		]),
+	);
+});
 
 test_parse.run();
 /* /test_parse */
