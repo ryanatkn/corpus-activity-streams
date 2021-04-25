@@ -122,5 +122,20 @@ test_parse('parses custom link in backticks', () => {
 	);
 });
 
+test_parse('parses a simple html anchor link', () => {
+	t.equal(
+		normalizeChildren(parse('this <a href="http://www.felt.dev">content</a> is an external link')),
+		normalizeChildren([
+			{type: 'Html', content: 'this '},
+			{
+				type: 'Component',
+				component: 'Link',
+				props: {url: 'http://www.felt.dev', content: 'content'},
+			},
+			{type: 'Html', content: ' is an external link'},
+		]),
+	);
+});
+
 test_parse.run();
 /* /test_parse */
