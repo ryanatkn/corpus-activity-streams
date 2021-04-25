@@ -60,7 +60,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 					children.push({type: 'Html', content: currentString});
 					currentString = '';
 				}
-				children.push({type: 'Component', component: 'Link', props: {url: word}});
+				children.push({type: 'Component', component: 'Link', props: {href: word}});
 			}
 			word = '';
 		} else {
@@ -141,7 +141,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 									children.push({
 										type: 'Component',
 										component: 'Link',
-										props: {url: insideWrapperCharContents},
+										props: {href: insideWrapperCharContents},
 									});
 								} else {
 									// un-resolved identifier, so treat as plain text
