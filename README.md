@@ -6,7 +6,7 @@
 > **important**: this project is unofficial and
 > [non-normative](https://github.com/w3c/activitystreams/issues/516#issuecomment-805937131)
 
-<https://github.com/w3c/activitystreams>
+> spec: [w3c/activitystreams](https://github.com/w3c/activitystreams)
 
 ## website[🕸️](https://ryanatkn.github.io/corpus-activity-streams)
 
