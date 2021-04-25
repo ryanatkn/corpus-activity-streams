@@ -47,7 +47,7 @@ The properties are inferred from what `Object` and `Link` share.
 ## develop
 
 ```bash
-# node 14+
+# node >=14.16
 npm i
 npm start
 # browse to localhost:8999 or whatever it says
