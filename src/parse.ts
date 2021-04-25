@@ -9,6 +9,9 @@ interface WrapperChar {
 }
 const wrapperChars: WrapperChar[] = [{char: '`'}, {char: '"', preserve: true}];
 
+// TODO regexp? refactor?
+const breaksWord: Set<string> = new Set([' ', '\n']);
+
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 export const parse = (content: string, toId?: ToId): Tree[] => {
 	const children: Tree[] = [];
@@ -18,11 +21,26 @@ export const parse = (content: string, toId?: ToId): Tree[] => {
 	let currentString = '';
 	let insideWrapperChar: WrapperChar | null = null;
 	let insideWrapperCharContents = '';
+	let word = '';
 	let char: string;
 	let shouldAppendChar = false;
 	while (i < len) {
 		char = content[i];
 		shouldAppendChar = true;
+		// TODO refactor all of this
+		if (breaksWord.has(char)) {
+			if (word.startsWith('https://')) {
+				currentString = currentString.substring(0, currentString.length - word.length);
+				if (currentString) {
+					children.push({type: 'Html', content: currentString});
+					currentString = '';
+				}
+				children.push({type: 'Component', component: 'Link', props: {url: word}});
+			}
+			word = '';
+		} else {
+			word += char;
+		}
 		for (const wrapperChar of wrapperChars) {
 			if (char === wrapperChar.char) {
 				const preserve = !!wrapperChar.preserve;
