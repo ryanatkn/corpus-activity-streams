@@ -2,11 +2,11 @@
 
 > [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data and alternative docs
 
+<https://github.com/w3c/activitystreams>
+
 ## website[🕸️](https://ryanatkn.github.io/corpus-activity-streams)
 
 <https://ryanatkn.github.io/corpus-activity-streams>
-
-<https://github.com/w3c/activitystreams>
 
 ## useful data & modules
 
