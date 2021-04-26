@@ -12,6 +12,7 @@ goals
 - small code size
 - fast
 - safe subset that can be securely shared and rendered without trust
+	(security by capability? e.g. no external link resource loading, so no IP address leakage)
 - incomplete: handle the "80%"" of use cases; need Svelte/mdsvex tooling for the full language
 - minimal: single-pass parsing, no intermediate lexed/tokenized data structure
 
