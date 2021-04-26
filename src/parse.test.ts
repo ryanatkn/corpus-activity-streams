@@ -207,13 +207,13 @@ test_parse('parses simple nested html', () => {
 // <a href="https://felt.social">
 // 	1
 // 	<pre>
-// 		_
+// 		"
 // 		<div>
 // 			<span>before</span>
 // 			<Thing>*contents*</Thing>
 // 			<span>after</span>
 // 		</div>
-// 		_
+// 		"
 // 	</pre>
 // 	3
 // </a>

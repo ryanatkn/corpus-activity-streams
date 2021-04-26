@@ -45,12 +45,35 @@ const TAG_CLOSE_CHAR = '>';
 const LINK_MATCHER = /^https?:\/\//;
 
 // export const isSafeSubset = (content: string): boolean => // TODO
+// TODO use object pooling
+interface ParsingContext {
+	children: Tree[];
+	currentString: string;
+	parsingHtml: null | 'open' | 'attributes' | 'children' | 'close';
+	tagName: string;
+	tagAttributes: string;
+	tagContent: string; // TODO maybe combine with `tagAttributes` into a single kind? and `insideWrapperCharContents`?
+	insideWrapperChar: WrapperChar | null;
+	insideWrapperCharContents: string;
+	shouldAppendChar: boolean; // TODO?
+}
+const toParsingContext = (): ParsingContext => ({
+	children: [],
+	currentString: '',
+	parsingHtml: null,
+	tagName: '',
+	tagAttributes: '',
+	tagContent: '',
+	insideWrapperChar: null,
+	insideWrapperCharContents: '',
+	shouldAppendChar: false,
+});
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 // also I (naively) like the idea of having no intermediate data structure, to keep minimal for UX
 export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrapperChars): Tree[] => {
 	const children: Tree[] = [];
-	const stack: Tree[][] = [];
+	const stack: ParsingContext[] = [];
 	const vocabularyByName = vocabulary.byName; // TODO make this an arg or smth
 	let i = 0;
 	let len = content.length;
@@ -70,6 +93,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 		// TODO refactor all of this
 		const breaks = breaksWord.has(char);
 		if (breaks) {
+			// TODO bad
 			if (LINK_MATCHER.test(word)) {
 				currentString = currentString.substring(0, currentString.length - word.length);
 				if (currentString) {
@@ -105,7 +129,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 				if (char === TAG_CLOSE_CHAR) {
 					// console.log('finalized attrs', tagAttributes);
 					parsingHtml = 'children';
-					stack.push([]);
+					stack.push(toParsingContext());
 				} else {
 					tagAttributes += char;
 				}
