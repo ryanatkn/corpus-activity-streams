@@ -1,11 +1,9 @@
+.DS_Store
 node_modules
-npm-debug.log
 
-*.env
-env*
-
+/.gro
+/dist
 *.ignore
 *.ignore.*
-
-.gro/
-dist/
+ignore/
+*.pem
