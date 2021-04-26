@@ -121,25 +121,35 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 				if (char === TAG_CLOSE_CHAR) {
 					// console.log('finalized close tag', tagName);
 					parsingHtml = null;
-					console.log('tagContent', tagContent);
-					// TODO push
-					const popped = stack.pop();
-					// TODO instead of recursing, we can do this implicit state machine thing right?
-					// children.push(
-					// 	tagName === 'a'
-					// 		? {
-					// 				type: 'Component',
-					// 				component: 'Link',
-					// 				props: parseAttributes(tagAttributes),
-					// 				children: parse(tagContent, toId, wrapperChars),
-					// 		  }
-					// 		: {
-					// 				type: 'Element',
-					// 				element: tagName as 'pre',
-					// 				attributes: parseAttributes(tagAttributes),
-					// 				children: parse(tagContent, toId, wrapperChars),
-					// 		  },
-					// );
+					// TODO `toComponent` but how to implement?
+					const component = tagName === 'a' ? 'Link' : tagName;
+					if (component[0] === component[0].toLocaleLowerCase()) {
+						throw Error('TODO must be uppercase right now');
+					}
+					children.push({
+						type: 'Component',
+						component,
+						props: {...parseAttributes(tagAttributes), content: tagContent}, // TODO parse actual children
+					});
+					// console.log('tagContent', tagContent);
+					// // TODO push
+					// const popped = stack.pop();
+					// // TODO instead of recursing, we can do this implicit state machine thing right?
+					// // children.push(
+					// // 	tagName === 'a'
+					// // 		? {
+					// // 				type: 'Component',
+					// // 				component: 'Link',
+					// // 				props: parseAttributes(tagAttributes),
+					// // 				children: parse(tagContent, toId, wrapperChars),
+					// // 		  }
+					// // 		: {
+					// // 				type: 'Element',
+					// // 				element: tagName as 'pre',
+					// // 				attributes: parseAttributes(tagAttributes),
+					// // 				children: parse(tagContent, toId, wrapperChars),
+					// // 		  },
+					// // );
 				}
 			} else {
 				throw Error();
