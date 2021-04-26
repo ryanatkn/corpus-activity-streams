@@ -15,9 +15,10 @@
 ## useful data & modules
 
 - [src/activity_streams.json](src/activity_streams.json): vocabulary JSON data
-- [src/activity_streams.ts](src/activity_streams.ts): vocabulary pimary types
+  - [src/activity_streams_notes.json](src/activity_streams_notes.json): notes data
+  - [src/activity_streams_examples.json](src/activity_streams_examples.json): examples JSON data
+- [src/activity_streams.ts](src/activity_streams.ts): vocabulary types
 - [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
-- [src/activity_streams_examples.json](src/activity_streams_examples.json): examples JSON data
 - [src/activity_streams_notes.ts](src/activity_streams_notes.ts):
   the `notes` property of the vocabulary items and
   [its AST](src/activity_streams_notes_ast.json)
