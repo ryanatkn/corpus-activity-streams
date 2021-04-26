@@ -11,6 +11,7 @@ goals
 
 - small code size
 - fast
+- safe subset that can be securely shared and rendered without trust
 - incomplete: handle the "80%"" of use cases; need Svelte/mdsvex tooling for the full language
 - minimal: single-pass parsing, no intermediate lexed/tokenized data structure
 
@@ -41,6 +42,8 @@ const breaksWord: Set<string> = new Set([' ', '\n']);
 const TAG_OPEN_CHAR = '<';
 const TAG_CLOSE_CHAR = '>';
 const LINK_MATCHER = /^https?:\/\//;
+
+// export const isSafeSubset = (content: string): boolean => // TODO
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 // also I (naively) like the idea of having no intermediate data structure, to keep minimal for UX
