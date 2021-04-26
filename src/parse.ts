@@ -4,7 +4,15 @@
 import type {Tree, ToId} from './tree.js';
 import {assignNodeIds} from './tree.js';
 import {vocabulary} from './vocabulary.js';
+
 /*
+
+goals
+
+- small code size
+- fast
+- incomplete: handle the "80%"" of use cases; need Svelte/mdsvex tooling for the full language
+- minimal: single-pass parsing, no intermediate lexed/tokenized data structure
 
 TODO
 
