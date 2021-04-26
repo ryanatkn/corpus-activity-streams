@@ -1,12 +1,20 @@
-<a href="https://github.com/ryanatkn/corpus-activity-streams" class="github-link">
-	<img src="assets/octocat.png" alt="github octocat" />
+<script>
+	import GithubLogo from './GithubLogo.svelte';
+</script>
+
+<a href="https://github.com/ryanatkn/corpus-activity-streams">
+	<GithubLogo />
 </a>
 
 <style>
-	.github-link {
+	a {
 		position: fixed;
 		top: 0;
 		right: 0;
 		padding: 4px;
+		opacity: 0.8;
+	}
+	a:hover {
+		opacity: 1;
 	}
 </style>
