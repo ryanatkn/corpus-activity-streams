@@ -56,8 +56,7 @@ The properties are inferred from what `Object` and `Link` share.
 # node >=14.16
 npm i
 npm test # everything should look ok
-npm start
-# browse to localhost:8999 or whatever it says
+npm start # browse to localhost:8999 or whatever it says
 ```
 
 should look the same as the deployed version:
