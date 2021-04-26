@@ -541,7 +541,6 @@ export const examples: {[key: string]: VocabularyTerm[]} = {
 	Mention: [
 		{
 			'@context': 'https://www.w3.org/ns/activitystreams',
-			summary: 'Mention of Joe by Carrie in her note',
 			type: 'Mention',
 			href: 'http://example.org/joe',
 			name: 'Joe',
@@ -762,10 +761,8 @@ export const examples: {[key: string]: VocabularyTerm[]} = {
 			content: 'This is all there is.',
 			icon: {
 				type: 'Image',
-				name: 'Note icon',
-				url: 'http://example.org/note.png',
-				width: 16,
-				height: 16,
+				summary: 'Note (16x16)',
+				url: {type: 'Link', href: 'http://example.org/note.png', width: 16, height: 16},
 			},
 		},
 		{
@@ -777,16 +774,12 @@ export const examples: {[key: string]: VocabularyTerm[]} = {
 				{
 					type: 'Image',
 					summary: 'Note (16x16)',
-					url: 'http://example.org/note1.png',
-					width: 16,
-					height: 16,
+					url: {type: 'Link', href: 'http://example.org/note1.png', width: 16, height: 16},
 				},
 				{
 					type: 'Image',
 					summary: 'Note (32x32)',
-					url: 'http://example.org/note2.png',
-					width: 32,
-					height: 32,
+					url: {type: 'Link', href: 'http://example.org/note2.png', width: 32, height: 32},
 				},
 			],
 		},
