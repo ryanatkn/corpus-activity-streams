@@ -132,9 +132,8 @@ test_parse('parses a simple html anchor link', () => {
 			{
 				type: 'Component',
 				component: 'Link',
-				props: {href: 'https://felt.social', name: 'felt', content: 'content'},
-				// props: {href: 'https://felt.social', name: 'felt'},
-				// children: [{type: 'Text', content: 'content'}],
+				props: {href: 'https://felt.social', name: 'felt'},
+				children: [{type: 'Text', content: 'content'}],
 			},
 			{type: 'Text', content: ' is an external link'},
 		]),
@@ -149,15 +148,8 @@ test_parse('parses a more complex html anchor link', () => {
 			{
 				type: 'Component',
 				component: 'Link',
-				props: {
-					href: 'https://felt.social',
-					a: '1',
-					b: '2',
-					c: '3',
-					content: '1 2 3',
-				},
-				// props: {href: 'https://felt.social', a: '1', b: '2', c: '3'},
-				// children: [{type: 'Text', content: '1 2 3'}],
+				props: {href: 'https://felt.social', a: '1', b: '2', c: '3'},
+				children: [{type: 'Text', content: '1 2 3'}],
 			},
 			{type: 'Text', content: '] and'},
 		]),
@@ -174,39 +166,38 @@ test_parse('parses a component', () => {
 			{
 				type: 'Component',
 				component: 'Anchor',
-				props: {href: '/felt', name: 'felt', content: 'content'},
-				// props: {href: '/felt', name: 'felt'},
-				// children: [{type: 'Text', content: 'content'}],
+				props: {href: '/felt', name: 'felt'},
+				children: [{type: 'Text', content: 'content'}],
 			},
 			{type: 'Text', content: ' is an internal Component'},
 		]),
 	);
 });
 
-// test_parse('parses simple nested html', () => {
-// 	t.equal(
-// 		normalizeChildren(parse('a <a href="https://felt.social">1 <pre a=1 b="2">2</pre> 3</a> b')),
-// 		normalizeChildren([
-// 			{type: 'Text', content: 'a '},
-// 			{
-// 				type: 'Component',
-// 				component: 'Link',
-// 				props: {href: 'https://felt.social'},
-// 				children: [
-// 					{type: 'Text', content: '1 '},
-// 					{
-// 						type: 'Element',
-// 						element: 'pre',
-// 						attributes: {a: '1', b: '2'},
-// 						children: [{type: 'Text', content: '2'}],
-// 					},
-// 					{type: 'Text', content: ' 3'},
-// 				],
-// 			},
-// 			{type: 'Text', content: ' b'},
-// 		]),
-// 	);
-// });
+test_parse('parses simple nested html', () => {
+	t.equal(
+		normalizeChildren(parse('a <a href="https://felt.social">1 <pre a=1 b="2">2</pre> 3</a> b')),
+		normalizeChildren([
+			{type: 'Text', content: 'a '},
+			{
+				type: 'Component',
+				component: 'Link',
+				props: {href: 'https://felt.social'},
+				children: [
+					{type: 'Text', content: '1 '},
+					{
+						type: 'Element',
+						element: 'pre',
+						attributes: {a: '1', b: '2'},
+						children: [{type: 'Text', content: '2'}],
+					},
+					{type: 'Text', content: ' 3'},
+				],
+			},
+			{type: 'Text', content: ' b'},
+		]),
+	);
+});
 
 // test_parse('parses complex nested html, components, and custom markup', () => {
 // 	t.equal(
