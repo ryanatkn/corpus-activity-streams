@@ -196,7 +196,7 @@ const parseAttributes = (tagAttributes: string): {[key: string]: any} => {
 	let result: {[key: string]: any} = {};
 	let key = '';
 	let value = '';
-	let parsingAttributes: 'key' | 'value' = 'key';
+	let parsingAttributes: 'key' | 'value' = 'key'; // TODO const enum?
 	for (let i = 0; i < tagAttributes.length; i++) {
 		const char = tagAttributes[i];
 		if (parsingAttributes === 'key') {
