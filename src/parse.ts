@@ -77,7 +77,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 	let i = 0;
 	let len = content.length;
 	let currentString = '';
-	let parsingHtml: null | 'open' | 'attributes' | 'children' | 'close' = null;
+	let parsingHtml: null | 'open' | 'attributes' | 'children' | 'close' = null; // TODO const enum?
 	let tagName = '';
 	let tagAttributes = '';
 	let tagContent = ''; // TODO maybe combine with `tagAttributes` into a single kind?
@@ -221,6 +221,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 						shouldAppendChar = preserve;
 					}
 				} else if (wrapperChar === insideWrapperChar) {
+					// TODO can we remove this?
 					insideWrapperCharContents += char;
 					shouldAppendChar = false;
 				}
@@ -278,5 +279,5 @@ const toValue = (value: string): string => {
 
 // TODO if this is `false`, we need the full Svelte/mdsvex language+tools
 // export const isSafeSubset = (content: string): boolean =>
-// hmm both?
+// TODO hmm both? names?
 // export const isSafeSubset = (tree: Tree): boolean =>
