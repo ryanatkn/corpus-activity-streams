@@ -75,7 +75,7 @@ test_parse('parses insecure http link', () => {
 		normalizeChildren([
 			{type: 'Text', content: 'this '},
 			{type: 'Component', component: 'Link', props: {href: 'http://felt.social'}},
-			{type: 'Text', content: ' is an external link'},
+			{type: 'Text', content: ' is an external insecure link'},
 		]),
 	);
 });
@@ -86,7 +86,7 @@ test_parse('parses link in backticks', () => {
 		normalizeChildren([
 			{type: 'Text', content: 'this '},
 			{type: 'Component', component: 'Link', props: {href: 'https://felt.social'}},
-			{type: 'Text', content: ' is an external link'},
+			{type: 'Text', content: ' is an external link in backticks'},
 		]),
 	);
 });
@@ -97,7 +97,7 @@ test_parse('parses link in quotes', () => {
 		normalizeChildren([
 			{type: 'Text', content: 'this "'},
 			{type: 'Component', component: 'Link', props: {href: 'https://felt.social'}},
-			{type: 'Text', content: '" is an external link'},
+			{type: 'Text', content: '" is an external link in quotes'},
 		]),
 	);
 });
