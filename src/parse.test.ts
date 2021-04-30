@@ -71,7 +71,7 @@ test_parse('parses link', () => {
 
 test_parse('parses insecure http link', () => {
 	t.equal(
-		normalizeChildren(parse('this http://felt.social is an external link')),
+		normalizeChildren(parse('this http://felt.social is an external insecure link')),
 		normalizeChildren([
 			{type: 'Text', content: 'this '},
 			{type: 'Component', component: 'Link', props: {href: 'http://felt.social'}},
@@ -82,7 +82,7 @@ test_parse('parses insecure http link', () => {
 
 test_parse('parses link in backticks', () => {
 	t.equal(
-		normalizeChildren(parse('this `https://felt.social` is an external link')),
+		normalizeChildren(parse('this `https://felt.social` is an external link in backticks')),
 		normalizeChildren([
 			{type: 'Text', content: 'this '},
 			{type: 'Component', component: 'Link', props: {href: 'https://felt.social'}},
@@ -93,7 +93,7 @@ test_parse('parses link in backticks', () => {
 
 test_parse('parses link in quotes', () => {
 	t.equal(
-		normalizeChildren(parse('this "https://felt.social" is an external link')),
+		normalizeChildren(parse('this "https://felt.social" is an external link in quotes')),
 		normalizeChildren([
 			{type: 'Text', content: 'this "'},
 			{type: 'Component', component: 'Link', props: {href: 'https://felt.social'}},
