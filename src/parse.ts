@@ -44,7 +44,6 @@ const TAG_OPEN_CHAR = '<';
 const TAG_CLOSE_CHAR = '>';
 const LINK_MATCHER = /^https?:\/\//;
 
-// export const isSafeSubset = (content: string): boolean => // TODO
 // TODO use object pooling
 interface ParsingContext {
 	children: Tree[];
@@ -276,3 +275,8 @@ const toValue = (value: string): string => {
 	}
 	return value;
 };
+
+// TODO if this is `false`, we need the full Svelte/mdsvex language+tools
+// export const isSafeSubset = (content: string): boolean =>
+// hmm both?
+// export const isSafeSubset = (tree: Tree): boolean =>
