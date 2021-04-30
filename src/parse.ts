@@ -19,7 +19,7 @@ goals
 TODO
 
 - nested html, components, and custom markup
-- /absolute and ./relative ../links
+- /absolute and ./relative ../links //root.links
 - emoji
 
 */
