@@ -44,17 +44,40 @@ const TAG_OPEN_CHAR = '<';
 const TAG_CLOSE_CHAR = '>';
 const LINK_MATCHER = /^https?:\/\//;
 
-// export const isSafeSubset = (content: string): boolean => // TODO
+// TODO use object pooling
+interface ParsingContext {
+	children: Tree[];
+	currentString: string;
+	parsingHtml: null | 'open' | 'attributes' | 'children' | 'close';
+	tagName: string;
+	tagAttributes: string;
+	tagContent: string; // TODO maybe combine with `tagAttributes` into a single kind? and `insideWrapperCharContents`?
+	insideWrapperChar: WrapperChar | null;
+	insideWrapperCharContents: string;
+	shouldAppendChar: boolean; // TODO?
+}
+const toParsingContext = (): ParsingContext => ({
+	children: [],
+	currentString: '',
+	parsingHtml: null,
+	tagName: '',
+	tagAttributes: '',
+	tagContent: '',
+	insideWrapperChar: null,
+	insideWrapperCharContents: '',
+	shouldAppendChar: false,
+});
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 // also I (naively) like the idea of having no intermediate data structure, to keep minimal for UX
 export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrapperChars): Tree[] => {
 	const children: Tree[] = [];
+	const stack: ParsingContext[] = [];
 	const vocabularyByName = vocabulary.byName; // TODO make this an arg or smth
 	let i = 0;
 	let len = content.length;
 	let currentString = '';
-	let parsingHtml: null | 'open' | 'attributes' | 'children' | 'close' = null;
+	let parsingHtml: null | 'open' | 'attributes' | 'children' | 'close' = null; // TODO const enum?
 	let tagName = '';
 	let tagAttributes = '';
 	let tagContent = ''; // TODO maybe combine with `tagAttributes` into a single kind?
@@ -69,6 +92,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 		// TODO refactor all of this
 		const breaks = breaksWord.has(char);
 		if (breaks) {
+			// TODO bad
 			if (LINK_MATCHER.test(word)) {
 				currentString = currentString.substring(0, currentString.length - word.length);
 				if (currentString) {
@@ -104,6 +128,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 				if (char === TAG_CLOSE_CHAR) {
 					// console.log('finalized attrs', tagAttributes);
 					parsingHtml = 'children';
+					stack.push(toParsingContext());
 				} else {
 					tagAttributes += char;
 				}
@@ -119,12 +144,35 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 				if (char === TAG_CLOSE_CHAR) {
 					// console.log('finalized close tag', tagName);
 					parsingHtml = null;
-					if (tagName !== 'a') throw Error('TODO');
+					// TODO `toComponent` but how to implement?
+					const component = tagName === 'a' ? 'Link' : tagName;
+					if (component[0] === component[0].toLocaleLowerCase()) {
+						throw Error('TODO must be uppercase right now');
+					}
 					children.push({
 						type: 'Component',
-						component: 'Link',
+						component,
 						props: {...parseAttributes(tagAttributes), content: tagContent}, // TODO parse actual children
 					});
+					// console.log('tagContent', tagContent);
+					// // TODO push
+					// const popped = stack.pop();
+					// // TODO instead of recursing, we can do this implicit state machine thing right?
+					// // children.push(
+					// // 	tagName === 'a'
+					// // 		? {
+					// // 				type: 'Component',
+					// // 				component: 'Link',
+					// // 				props: parseAttributes(tagAttributes),
+					// // 				children: parse(tagContent, toId, wrapperChars),
+					// // 		  }
+					// // 		: {
+					// // 				type: 'Element',
+					// // 				element: tagName as 'pre',
+					// // 				attributes: parseAttributes(tagAttributes),
+					// // 				children: parse(tagContent, toId, wrapperChars),
+					// // 		  },
+					// // );
 				}
 			} else {
 				throw Error();
@@ -173,6 +221,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 						shouldAppendChar = preserve;
 					}
 				} else if (wrapperChar === insideWrapperChar) {
+					// TODO can we remove this?
 					insideWrapperCharContents += char;
 					shouldAppendChar = false;
 				}
@@ -227,3 +276,8 @@ const toValue = (value: string): string => {
 	}
 	return value;
 };
+
+// TODO if this is `false`, we need the full Svelte/mdsvex language+tools
+// export const isSafeSubset = (content: string): boolean =>
+// TODO hmm both? names?
+// export const isSafeSubset = (tree: Tree): boolean =>

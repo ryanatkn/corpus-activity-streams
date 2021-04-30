@@ -22,7 +22,7 @@
 		this={components[tree.component]}
 		{...tree.props}
 	/>{:else if tree.type === 'Frame'}<div class="markup-Frame">
-		{tree.content}
+		<!-- TODO implement frame -->{tree.content}
 	</div>{/if}{#if tree.children}{#if tree.type === 'Element'}{#if tree.element === 'pre'}<pre>{#each tree.children as child (child.id)}<svelte:self
 			tree={child}
 		/>{/each}</pre>{:else if tree.element === 'code'}<code
