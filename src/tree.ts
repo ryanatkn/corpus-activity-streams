@@ -78,7 +78,9 @@ export const assignNodeIds = <T extends Tree>(tree: T, toId: ToId = toToId()): T
 };
 
 // TODO import random utils from `felt` using `uid` probably
-export const toToId: ToToId = (i = Number(Math.random().toString().substring(7))) => () =>
-	`tree${i++}`;
+export const toToId: ToToId =
+	(i = Number(Math.random().toString().substring(7))) =>
+	() =>
+		`tree${i++}`;
 // this name lol ask luke
 export const toToDeterministicId: ToToId = () => toToId(0);
