@@ -1,8 +1,8 @@
 <script lang="ts">
-	import EntityLink from './EntityLink.svelte';
-	import Items from './Items.svelte';
-	import StringLink from './StringLink.svelte';
-	import type {Vocabulary} from './vocabulary.js';
+	import EntityLink from 'src/EntityLink.svelte';
+	import Items from 'src/Items.svelte';
+	import StringLink from 'src/StringLink.svelte';
+	import type {Vocabulary} from 'src/vocabulary.js';
 
 	export let vocabulary: Vocabulary;
 </script>

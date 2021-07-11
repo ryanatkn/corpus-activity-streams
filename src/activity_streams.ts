@@ -1,4 +1,4 @@
-export {vocabulary} from './activity_streams_vocabulary.js';
+export {vocabulary} from 'src/activity_streams_vocabulary.js';
 
 export interface VocabularyTerm {
 	// TODO generate this or otherwise do it correctly

@@ -1,8 +1,8 @@
 import type {Gen} from '@feltcoop/gro/dist/gen/gen.js';
 
-import {notes} from './activity_streams_notes.js';
-import {parse} from './parse.js';
-import {toToDeterministicId} from './tree.js';
+import {notes} from 'src/activity_streams_notes.js';
+import {parse} from 'src/parse.js';
+import {toToDeterministicId} from 'src/tree.js';
 
 // parses markup and outputs its AST - we're not using it yet, but it's cool
 

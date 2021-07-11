@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type {VocabularyItem} from './activity_streams.js';
-	import Markup from './Markup.svelte';
-	import {notes} from './activity_streams_notes.js';
-	import {parse} from './parse.js';
-	import {parseExamples} from './parseExamples.js';
-	import {examples} from './activity_streams_examples.js';
+	import type {VocabularyItem} from 'src/activity_streams.js';
+	import Markup from 'src/Markup.svelte';
+	import {notes} from 'src/activity_streams_notes.js';
+	import {parse} from 'src/parse.js';
+	import {parseExamples} from 'src/parseExamples.js';
+	import {examples} from 'src/activity_streams_examples.js';
 
 	export let item: VocabularyItem;
 

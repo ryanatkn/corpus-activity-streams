@@ -1,7 +1,7 @@
 <script lang="ts">
-	import EntityLink from './EntityLink.svelte';
+	import EntityLink from 'src/EntityLink.svelte';
 	import {slide} from 'svelte/transition';
-	import type {VocabularyType} from './activity_streams.js';
+	import type {VocabularyType} from 'src/activity_streams.js';
 
 	export let tree: VocabularyType;
 	export let getChildren: (item: VocabularyType) => VocabularyType[];

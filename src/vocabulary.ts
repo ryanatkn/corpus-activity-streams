@@ -1,5 +1,8 @@
-import {vocabulary as activityStreamsVocabulary, vocabularyCategories} from './activity_streams.js';
-import type {VocabularyItem, VocabularyProperty} from './activity_streams.js';
+import {
+	vocabulary as activityStreamsVocabulary,
+	vocabularyCategories,
+} from 'src/activity_streams.js';
+import type {VocabularyItem, VocabularyProperty} from 'src/activity_streams.js';
 
 export interface Vocabulary {
 	items: VocabularyItem[];

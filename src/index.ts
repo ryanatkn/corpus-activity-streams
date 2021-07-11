@@ -1,6 +1,6 @@
 import '@feltcoop/gro/dist/client/devtools.js';
 
-import App from './App.svelte';
+import App from 'src/App.svelte';
 
 const rootElId = 'root';
 const root = document.getElementById(rootElId);

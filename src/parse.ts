@@ -1,9 +1,9 @@
 // TODO fix this, some error with importing paths
 // import {UnreachableError} from '@feltcoop/gro';
 
-import type {Tree, ToId} from './tree.js';
-import {assignNodeIds} from './tree.js';
-import {vocabulary} from './vocabulary.js';
+import type {Tree, ToId} from 'src/tree.js';
+import {assignNodeIds} from 'src/tree.js';
+import {vocabulary} from 'src/vocabulary.js';
 
 /*
 

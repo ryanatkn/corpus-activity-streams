@@ -1,6 +1,6 @@
 import type {Gen} from '@feltcoop/gro/dist/gen/gen.js';
 import {to_root_path} from '@feltcoop/gro/dist/paths.js';
-import {toEmbeddedJson} from './render.js';
+import {toEmbeddedJson} from 'src/render.js';
 
 // Renders the vocabulary data as a TypeScript file with type annotated JSON.
 

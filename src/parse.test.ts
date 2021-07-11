@@ -1,9 +1,9 @@
 import {suite} from 'uvu';
 import * as t from 'uvu/assert';
 
-import {parse} from './parse.js';
-import {assignNodeIds, toToDeterministicId} from './tree.js';
-import type {Tree} from './tree.js';
+import {parse} from 'src/parse.js';
+import {assignNodeIds, toToDeterministicId} from 'src/tree.js';
+import type {Tree} from 'src/tree.js';
 
 const normalizeChildren = (children: Tree[]) => {
 	const toId = toToDeterministicId();

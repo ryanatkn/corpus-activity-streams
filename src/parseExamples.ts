@@ -1,7 +1,7 @@
-import type {Tree, ToId} from './tree.js';
-import {assignNodeIds} from './tree.js';
-import type {VocabularyTerm} from './activity_streams.js';
-import {parse} from './parse.js';
+import type {Tree, ToId} from 'src/tree.js';
+import {assignNodeIds} from 'src/tree.js';
+import type {VocabularyTerm} from 'src/activity_streams.js';
+import {parse} from 'src/parse.js';
 
 // TODO delete this?
 export const parseExamples = (examples: VocabularyTerm[], toId?: ToId): Tree | null => {

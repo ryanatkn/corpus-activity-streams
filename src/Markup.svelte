@@ -1,6 +1,6 @@
 <script lang="ts">
-	import {useComponents} from './components.js';
-	import type {Tree} from './tree.js';
+	import {useComponents} from 'src/components.js';
+	import type {Tree} from 'src/tree.js';
 
 	// `<Markup />` renders a `Tree` AST
 
