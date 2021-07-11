@@ -1,44 +1,44 @@
 import {suite} from 'uvu';
 import * as t from 'uvu/assert';
 
-import {toToDeterministicId, toToId} from 'src/tree.js';
+import {to_to_deterministic_id, to_to_id} from 'src/tree.js';
 
-/* test_toToId */
-const test_toToId = suite('toToId');
+/* test_to_to_id */
+const test_to_to_id = suite('to_to_id');
 
-test_toToId('basic behaior', () => {
-	const toIdA = toToId();
-	const idA1 = toIdA();
-	const idA2 = toIdA();
-	const toIdB = toToId();
-	const idB1 = toIdB();
-	const idB2 = toIdB();
-	t.is.not(idA1, idA2);
-	t.is.not(idA1, idB1);
-	t.is.not(idA1, idB2);
-	t.is.not(idA2, idB1);
-	t.is.not(idA2, idB2);
-	t.is.not(idB1, idB2);
+test_to_to_id('basic behaior', () => {
+	const to_id_a = to_to_id();
+	const id_a1 = to_id_a();
+	const id_a2 = to_id_a();
+	const to_id_b = to_to_id();
+	const id_b1 = to_id_b();
+	const id_b2 = to_id_b();
+	t.is.not(id_a1, id_a2);
+	t.is.not(id_a1, id_b1);
+	t.is.not(id_a1, id_b2);
+	t.is.not(id_a2, id_b1);
+	t.is.not(id_a2, id_b2);
+	t.is.not(id_b1, id_b2);
 });
 
-test_toToId.run();
-/* /test_toToId */
+test_to_to_id.run();
+/* /test_to_to_id */
 
-/* test_toToDeterministicId */
-const test_toToDeterministicId = suite('toToDeterministicId');
+/* test_to_to_deterministic_id */
+const test_to_to_deterministic_id = suite('to_to_deterministic_id');
 
-test_toToDeterministicId('basic behaior', () => {
-	const toIdA = toToDeterministicId();
-	const idA1 = toIdA();
-	const idA2 = toIdA();
-	const toIdB = toToDeterministicId();
-	const idB1 = toIdB();
-	const idB2 = toIdB();
-	t.is.not(idA1, idA2);
-	t.is.not(idB1, idB2);
-	t.is(idA1, idB1);
-	t.is(idA2, idB2);
+test_to_to_deterministic_id('basic behaior', () => {
+	const to_id_a = to_to_deterministic_id();
+	const id_a1 = to_id_a();
+	const id_a2 = to_id_a();
+	const to_id_b = to_to_deterministic_id();
+	const id_b1 = to_id_b();
+	const id_b2 = to_id_b();
+	t.is.not(id_a1, id_a2);
+	t.is.not(id_b1, id_b2);
+	t.is(id_a1, id_b1);
+	t.is(id_a2, id_b2);
 });
 
-test_toToDeterministicId.run();
-/* /test_toToDeterministicId */
+test_to_to_deterministic_id.run();
+/* /test_to_to_deterministic_id */

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import VocabularyDetails from 'src/VocabularyDetails.svelte';
-	import VocabularyTree from 'src/VocabularyTree.svelte';
-	import VocabularyGroups from 'src/VocabularyGroups.svelte';
+	import Vocabulary_Details from 'src/Vocabulary_Details.svelte';
+	import Vocabulary_Tree from 'src/Vocabulary_Tree.svelte';
+	import Vocabulary_Groups from 'src/Vocabulary_Groups.svelte';
 	import type {Vocabulary} from 'src/vocabulary.js';
 
 	export let vocabulary: Vocabulary;
@@ -9,13 +9,13 @@
 
 <div class="tiled-view">
 	<div class="tile">
-		<VocabularyTree {vocabulary} />
+		<Vocabulary_Tree {vocabulary} />
 	</div>
 	<div class="tile">
-		<VocabularyDetails {vocabulary} />
+		<Vocabulary_Details {vocabulary} />
 	</div>
 	<div class="tile">
-		<VocabularyGroups {vocabulary} />
+		<Vocabulary_Groups {vocabulary} />
 	</div>
 </div>
 

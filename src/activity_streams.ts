@@ -1,6 +1,6 @@
 export {vocabulary} from 'src/activity_streams_vocabulary.js';
 
-export interface VocabularyTerm {
+export interface Vocabulary_Term {
 	// TODO generate this or otherwise do it correctly
 	[key: string]: any;
 	'@context': string;
@@ -8,32 +8,32 @@ export interface VocabularyTerm {
 	type?: string | string[];
 }
 
-export type VocabularyItem = VocabularyType | VocabularyProperty;
-export interface BaseVocabularyItem {
+export type Vocabulary_Item = Vocabulary_Type | Vocabulary_Property;
+export interface Base_Vocabulary_Item {
 	name: string;
-	category: VocabularyCategory;
+	category: Vocabulary_Category;
 }
-export interface VocabularyType extends BaseVocabularyItem {
-	extends?: string | string[]; // TODO should swap in the actual `VocabularyType` like `extendedBy`
-	extendedBy?: string[];
+export interface Vocabulary_Type extends Base_Vocabulary_Item {
+	extends?: string | string[]; // TODO should swap in the actual `Vocabulary_Type` like `extended_by`
+	extended_by?: string[];
 	properties?: string[];
-	disjointWith?: string;
+	disjoint_with?: string;
 }
-export interface VocabularyProperty extends BaseVocabularyItem {
+export interface Vocabulary_Property extends Base_Vocabulary_Item {
 	domain: string | string[];
 	range: string | string[];
 	functional: boolean;
-	subpropertyOf?: string;
+	subproperty_of?: string;
 }
 
-export type VocabularyCategory =
+export type Vocabulary_Category =
 	| 'vocab.core'
 	| 'vocab.object'
 	| 'vocab.link'
 	| 'vocab.activity'
 	| 'vocab.actor'
 	| 'vocab.property';
-export const vocabularyCategories: VocabularyCategory[] = [
+export const vocabulary_categories: Vocabulary_Category[] = [
 	'vocab.core',
 	'vocab.object',
 	'vocab.link',

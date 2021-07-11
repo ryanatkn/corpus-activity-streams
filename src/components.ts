@@ -3,10 +3,8 @@ import type {SvelteComponent} from 'svelte';
 
 export type Components<T extends string = string> = Record<T, typeof SvelteComponent>;
 
-const componentsKey = {};
+const KEY = {};
 
-export const provideComponents = (initial: Components<string>): void =>
-	setContext(componentsKey, initial);
+export const set_components = (initial: Components<string>): void => setContext(KEY, initial);
 
-export const useComponents = <T extends string = string>(): Components<T> =>
-	getContext(componentsKey);
+export const get_components = <T extends string = string>(): Components<T> => getContext(KEY);

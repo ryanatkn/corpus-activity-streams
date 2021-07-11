@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {useComponents} from 'src/components.js';
+	import {get_components} from 'src/components.js';
 	import type {Tree} from 'src/tree.js';
 
 	// `<Markup />` renders a `Tree` AST
@@ -8,7 +8,7 @@
 
 	export let tree: Tree;
 
-	const components = useComponents(); // TODO is this the pattern we want?
+	const components = get_components(); // TODO is this the pattern we want?
 </script>
 
 <!--

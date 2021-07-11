@@ -1,47 +1,47 @@
 <script lang="ts">
-	import EntityLink from 'src/EntityLink.svelte';
+	import Entity_Link from 'src/Entity_Link.svelte';
 	import {slide} from 'svelte/transition';
-	import type {VocabularyType} from 'src/activity_streams.js';
+	import type {Vocabulary_Type} from 'src/activity_streams.js';
 
-	export let tree: VocabularyType;
-	export let getChildren: (item: VocabularyType) => VocabularyType[];
+	export let tree: Vocabulary_Type;
+	export let get_children: (item: Vocabulary_Type) => Vocabulary_Type[];
 	export let depth = 0;
 
-	let showChildren = true;
-	const toggleShowChildren = (e: MouseEvent) => {
+	let show_children = true;
+	const toggle_show_children = (e: MouseEvent) => {
 		// If `preventDefault` and `stopPropagation` are put on the event handler as modifiers,
 		// it results in undesired UX, because we want to conditionally add the click handler and behavior.
-		// We solve this problem with `getChildren` above, which also seems like a hack.
+		// We solve this problem with `get_children` above, which also seems like a hack.
 		e.preventDefault();
 		e.stopPropagation();
-		showChildren = !showChildren;
+		show_children = !show_children;
 	};
 
-	$: children = getChildren(tree);
+	$: children = get_children(tree);
 	$: clickable = !!children;
 </script>
 
 <div class="tree" class:root={depth === 0} class:clickable transition:slide={{duration: 137}}>
 	<div class="content">
 		{#if clickable}
-			<button class="icon" on:click={clickable ? toggleShowChildren : undefined}>
-				{#if showChildren}
+			<button class="icon" on:click={clickable ? toggle_show_children : undefined}>
+				{#if show_children}
 					{#if children}–{:else}∙{/if}
 				{:else}+{/if}
 			</button>
 		{:else}<span class="icon">∙</span>{/if}
 
 		<!-- TODO this is a hack, attempts at recursive slots failed	 -->
-		<EntityLink entity={tree} />
+		<Entity_Link entity={tree} />
 		{#if tree.properties}
 			{#each tree.properties as property (property)}
-				<EntityLink name={property} />
+				<Entity_Link name={property} />
 			{/each}
 		{/if}
 	</div>
-	{#if children && showChildren}
+	{#if children && show_children}
 		{#each children as child (child)}
-			<svelte:self tree={child} depth={depth + 1} {getChildren} />
+			<svelte:self tree={child} depth={depth + 1} {get_children} />
 		{/each}
 	{/if}
 </div>

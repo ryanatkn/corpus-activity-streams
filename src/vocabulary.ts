@@ -1,32 +1,32 @@
 import {
-	vocabulary as activityStreamsVocabulary,
-	vocabularyCategories,
+	vocabulary as activity_streams_vocabulary,
+	vocabulary_categories,
 } from 'src/activity_streams.js';
-import type {VocabularyItem, VocabularyProperty} from 'src/activity_streams.js';
+import type {Vocabulary_Item, Vocabulary_Property} from 'src/activity_streams.js';
 
 export interface Vocabulary {
-	items: VocabularyItem[];
-	types: VocabularyItem[];
-	properties: VocabularyProperty[]; // with `.category === 'vocab.property'`
-	byTypeName: {[key: string]: VocabularyItem[]};
-	byName: {[key: string]: VocabularyItem};
-	typesTreeRoot: VocabularyItem;
+	items: Vocabulary_Item[];
+	types: Vocabulary_Item[];
+	properties: Vocabulary_Property[]; // with `.category === 'vocab.property'`
+	by_type_name: {[key: string]: Vocabulary_Item[]};
+	by_name: {[key: string]: Vocabulary_Item};
+	types_tree_root: Vocabulary_Item;
 }
 
 export const vocabulary: Vocabulary = {
-	items: activityStreamsVocabulary,
-	types: activityStreamsVocabulary.filter((v) => v.category !== 'vocab.property'),
-	properties: activityStreamsVocabulary.filter((v) => v.category === 'vocab.property'),
-	byTypeName: vocabularyCategories.reduce((result, t) => {
-		result[t] = activityStreamsVocabulary.filter((v) => v.category === t);
+	items: activity_streams_vocabulary,
+	types: activity_streams_vocabulary.filter((v) => v.category !== 'vocab.property'),
+	properties: activity_streams_vocabulary.filter((v) => v.category === 'vocab.property'),
+	by_type_name: vocabulary_categories.reduce((result, t) => {
+		result[t] = activity_streams_vocabulary.filter((v) => v.category === t);
 		if (t === 'vocab.property') {
 			result[t].sort((a, b) => (a.name > b.name ? 1 : -1));
 		}
 		return result;
-	}, {} as Vocabulary['byTypeName']),
-	byName: activityStreamsVocabulary.reduce((result, item) => {
+	}, {} as Vocabulary['by_type_name']),
+	by_name: activity_streams_vocabulary.reduce((result, item) => {
 		result[item.name] = item;
 		return result;
-	}, {} as Vocabulary['byName']),
-	typesTreeRoot: activityStreamsVocabulary.find((v) => v.name === 'Entity')!,
+	}, {} as Vocabulary['by_name']),
+	types_tree_root: activity_streams_vocabulary.find((v) => v.name === 'Entity')!,
 };

@@ -3,8 +3,8 @@ import {render_noscript_section, render_meta_tags} from '@feltcoop/gro/dist/gen/
 
 export const gen: Gen = () => {
 	const title = 'corpus-activity-streams';
-	const sourceCodeUrl = 'https://github.com/ryanatkn/corpus-activity-streams';
-	// TODO get the `sourceCodeUrl` from gen context param?
+	const source_code_url = 'https://github.com/ryanatkn/corpus-activity-streams';
+	// TODO get the `source_code_url` from gen context param?
 	return `<!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -17,7 +17,7 @@ export const gen: Gen = () => {
 
 	<body>
 		<div id="root">
-			${render_noscript_section(sourceCodeUrl)}
+			${render_noscript_section(source_code_url)}
 		</div>
 		<script src="index.js" type="module"></script>
 	</body>
