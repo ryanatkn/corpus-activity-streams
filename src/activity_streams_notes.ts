@@ -3,8 +3,7 @@ export const notes: {[key: string]: string} = {
 	Entity: 'The `Entity` is the base of all of types.',
 	Object:
 		'Describes an object of any kind. The `Object` type serves as the base type for most of the other kinds of objects defined in the Activity Vocabulary, including other Core types such as `Activity`, `IntransitiveActivity`, `Collection` and `OrderedCollection`.',
-	Link:
-		'A `Link` is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is established by [ <a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988">RFC5988</a>]. Many of the properties defined by the Activity Vocabulary allow values that are either instances of `Object` or `Link`. When a `Link` is used, it establishes a <a href="http://patterns.dataincubator.org/book/qualified-relation.html">qualified relation</a> connecting the subject (the containing object) to the resource identified by the `href`. Properties of the `Link` are properties of the reference as opposed to properties of the resource.',
+	Link: 'A `Link` is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is established by [ <a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988">RFC5988</a>]. Many of the properties defined by the Activity Vocabulary allow values that are either instances of `Object` or `Link`. When a `Link` is used, it establishes a <a href="http://patterns.dataincubator.org/book/qualified-relation.html">qualified relation</a> connecting the subject (the containing object) to the resource identified by the `href`. Properties of the `Link` are properties of the reference as opposed to properties of the resource.',
 	Activity:
 		'An `Activity` is a subtype of `Object` that describes some form of action that may happen, is currently happening, or has already happened. The `Activity` type itself serves as an abstract base type for all types of activities. It is important to note that the `Activity` type itself does not carry any specific semantics about the kind of action being taken.',
 	IntransitiveActivity:
@@ -19,8 +18,7 @@ export const notes: {[key: string]: string} = {
 		'Used to represent ordered subsets of items from an `OrderedCollection`. Refer to the <a href="https://www.w3.org/TR/activitystreams-core/#dfn-orderedcollectionpage">Activity Streams 2.0 Core</a> for a complete description of the `OrderedCollectionPage` object.',
 	Accept:
 		'Indicates that the `actor` accepts the `object`. The `target` property can be used in certain circumstances to indicate the context into which the `object` has been accepted.',
-	Add:
-		'Indicates that the `actor` has added the `object` to the `target`. If the `target` property is not explicitly specified, the target would need to be determined implicitly by context. The `origin` can be used to identify the context from which the `object` originated.',
+	Add: 'Indicates that the `actor` has added the `object` to the `target`. If the `target` property is not explicitly specified, the target would need to be determined implicitly by context. The `origin` can be used to identify the context from which the `object` originated.',
 	Announce:
 		"Indicates that the `actor` is calling the `target`'s attention the `object`. The `origin` typically has no defined meaning.",
 	Arrive:
@@ -31,23 +29,19 @@ export const notes: {[key: string]: string} = {
 	Delete:
 		'Indicates that the `actor` has deleted the `object`. If specified, the `origin` indicates the context from which the `object` was deleted.',
 	Dislike: 'Indicates that the `actor` dislikes the `object`.',
-	Flag:
-		'Indicates that the `actor` is "flagging" the `object`. Flagging is defined in the sense common to many social platforms as reporting content as being inappropriate for any number of reasons.',
+	Flag: 'Indicates that the `actor` is "flagging" the `object`. Flagging is defined in the sense common to many social platforms as reporting content as being inappropriate for any number of reasons.',
 	Follow:
 		'Indicates that the `actor` is "following" the `object`. Following is defined in the sense typically used within Social systems in which the actor is interested in any activity performed by or on the object. The `target` and `origin` typically have no defined meaning.',
 	Ignore:
 		'Indicates that the `actor` is ignoring the `object`. The `target` and `origin` typically have no defined meaning.',
 	Invite:
 		'A specialization of `Offer` in which the `actor` is extending an invitation for the `object` to the `target`.',
-	Join:
-		'Indicates that the `actor` has joined the `object`. The `target` and `origin` typically have no defined meaning.',
+	Join: 'Indicates that the `actor` has joined the `object`. The `target` and `origin` typically have no defined meaning.',
 	Leave:
 		'Indicates that the `actor` has left the `object`. The `target` and `origin` typically have no meaning.',
-	Like:
-		'Indicates that the `actor` likes, recommends or endorses the `object`. The `target` and `origin` typically have no defined meaning.',
+	Like: 'Indicates that the `actor` likes, recommends or endorses the `object`. The `target` and `origin` typically have no defined meaning.',
 	Listen: 'Indicates that the `actor` has listened to the `object`.',
-	Move:
-		'Indicates that the `actor` has moved `object` from `origin` to `target`. If the `origin` or `target` are not specified, either can be determined by context.',
+	Move: 'Indicates that the `actor` has moved `object` from `origin` to `target`. If the `origin` or `target` are not specified, either can be determined by context.',
 	Offer:
 		'Indicates that the `actor` is offering the `object`. If specified, the `target` indicates the entity to which the `object` is being offered.',
 	Question:
@@ -61,8 +55,7 @@ export const notes: {[key: string]: string} = {
 	TentativeAccept: 'A specialization of `Accept` indicating that the acceptance is tentative.',
 	Travel:
 		'Indicates that the `actor` is traveling to `target` from `origin`. `Travel` is an `IntransitiveObject` whose `actor` specifies the direct object. If the `target` or `origin` are not specified, either can be determined by context.',
-	Undo:
-		'Indicates that the `actor` is undoing the `object`. In most cases, the `object` will be an `Activity` describing some previously performed action (for instance, a person may have previously "liked" an article but, for whatever reason, might choose to undo that like at some later point in time). The `target` and `origin` typically have no defined meaning.',
+	Undo: 'Indicates that the `actor` is undoing the `object`. In most cases, the `object` will be an `Activity` describing some previously performed action (for instance, a person may have previously "liked" an article but, for whatever reason, might choose to undo that like at some later point in time). The `target` and `origin` typically have no defined meaning.',
 	Update:
 		'Indicates that the `actor` has updated the `object`. Note, however, that this vocabulary does not define a mechanism for describing the actual set of modifications made to `object`. The `target` and `origin` typically have no defined meaning.',
 	View: 'Indicates that the `actor` has viewed the `object`.',
@@ -98,8 +91,7 @@ export const notes: {[key: string]: string} = {
 		'Identifies one or more entities to which this object is attributed. The attributed entities might not be Actors. For instance, an object might be attributed to the completion of another activity. ',
 	audience:
 		'Identifies one or more entities that represent the total population of entities for which the object can considered to be relevant.',
-	bcc:
-		'Identifies one or more Objects that are part of the private secondary audience of this Object.',
+	bcc: 'Identifies one or more Objects that are part of the private secondary audience of this Object.',
 	bto: 'Identifies an Object that is part of the private primary audience of this Object.',
 	cc: 'Identifies an Object that is part of the public secondary audience of this Object.',
 	context:
@@ -109,8 +101,7 @@ export const notes: {[key: string]: string} = {
 	first:
 		'In a paged `Collection`, indicates the furthest preceeding page of items in the collection.',
 	generator: 'Identifies the entity (e.g. an application) that generated the object.',
-	icon:
-		'Indicates an entity that describes an icon for this object. The image should have an aspect ratio of one (horizontal) to one (vertical) and should be suitable for presentation at a small size.',
+	icon: 'Indicates an entity that describes an icon for this object. The image should have an aspect ratio of one (horizontal) to one (vertical) and should be suitable for presentation at a small size.',
 	image:
 		'Indicates an entity that describes an image for this object. Unlike the icon property, there are no aspect ratio or display size limitations assumed.',
 	inReplyTo: 'Indicates one or more entities for which this object is considered a response.',
@@ -136,8 +127,7 @@ export const notes: {[key: string]: string} = {
 		'Describes the result of the activity. For instance, if a particular action results in the creation of a new resource, the result property can be used to describe that new resource.',
 	replies:
 		'Identifies a `Collection` containing objects considered to be responses to this object.',
-	tag:
-		'One or more "tags" that have been associated with an objects. A `tag` can be any kind of `Object`. The key difference between `attachment` and `tag` is that the former implies association by inclusion, while the latter implies associated by reference.',
+	tag: 'One or more "tags" that have been associated with an objects. A `tag` can be any kind of `Object`. The key difference between `attachment` and `tag` is that the former implies association by inclusion, while the latter implies associated by reference.',
 	target:
 		'Describes the indirect object, or target, of the activity. The precise meaning of the target is largely dependent on the type of action being described but will often be the object of the English preposition "to". For instance, in the activity "John added a movie to his wishlist", the target of the activity is John\'s wishlist. An activity can have more than one target.',
 	to: 'Identifies an entity considered to be part of the public primary audience of an `Object`.',
@@ -148,8 +138,7 @@ export const notes: {[key: string]: string} = {
 		'Indicates the altitude of a place. The measurement units is indicated using the `units` property. If `units` is not specified, the default is assumed to be "m" indicating meters.',
 	content:
 		'The content or textual representation of the `Object` encoded as a JSON string. By default, the value of `content` is HTML. The `mediaType` property can be used in the object to indicate a different content type. The content MAY be expressed using multiple language-tagged values.',
-	name:
-		'A simple, human-readable, plain-text name for the object. HTML markup MUST NOT be included. The name MAY be expressed using multiple language-tagged values.',
+	name: 'A simple, human-readable, plain-text name for the object. HTML markup MUST NOT be included. The name MAY be expressed using multiple language-tagged values.',
 	duration:
 		'When the object describes a time-bound resource, such as an audio or video, a meeting, etc, the `duration` property indicates the object\'s approximate duration. The value MUST be expressed as an `xsd:duration` as defined by [ <a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-xmlschema11-2">xmlschema11-2</a>], section 3.3.6 (e.g. a period of 5 seconds is represented as "PT5S").',
 	height:
@@ -169,8 +158,7 @@ export const notes: {[key: string]: string} = {
 		'The date and time describing the actual or expected starting time of the object. When used with an `Activity` object, for instance, the `startTime` property specifies the moment the activity began or is scheduled to begin.',
 	radius:
 		'The radius from the given `latitude` and `longitude` for a `Place`. The units is expressed by the `units` property. If `units` is not specified, the default is assumed to be "m" indicating "meters".',
-	rel:
-		'A link relation associated with a `Link`. The value MUST conform to both the [<a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5">HTML5</a>] and [<a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988">RFC5988</a>] "link relation" definitions. In the [<a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5">HTML5</a>], any string not containing the "space" U+0020, "tab" (U+0009), "LF" (U+000A), "FF" (U+000C), "CR" (U+000D) or "," (U+002C) characters can be used as a valid link relation.',
+	rel: 'A link relation associated with a `Link`. The value MUST conform to both the [<a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5">HTML5</a>] and [<a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988">RFC5988</a>] "link relation" definitions. In the [<a href="https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5">HTML5</a>], any string not containing the "space" U+0020, "tab" (U+0009), "LF" (U+000A), "FF" (U+000C), "CR" (U+000D) or "," (U+002C) characters can be used as a valid link relation.',
 	startIndex:
 		'A non-negative integer value identifying the relative position within the logical view of a strictly ordered collection.',
 	summary:

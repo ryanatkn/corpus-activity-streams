@@ -1,5 +1,5 @@
 import type {Gen} from '@feltcoop/gro';
-import {renderNoscriptSection, renderMetaTags} from '@feltcoop/gro/dist/gen/helpers/html.js';
+import {render_noscript_section, render_meta_tags} from '@feltcoop/gro/dist/gen/helpers/html.js';
 
 export const gen: Gen = () => {
 	const title = 'corpus-activity-streams';
@@ -9,14 +9,15 @@ export const gen: Gen = () => {
 <html lang="en">
 	<head>
 		<title>${title}</title>
-		${renderMetaTags()}
+		${render_meta_tags()}
 		<link rel="shortcut icon" href="favicon.png" />
 		<link rel="stylesheet" href="bundle.svelte.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body>
 		<div id="root">
-			${renderNoscriptSection(sourceCodeUrl)}
+			${render_noscript_section(sourceCodeUrl)}
 		</div>
 		<script src="index.js" type="module"></script>
 	</body>
