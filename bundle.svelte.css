@@ -1,0 +1,15 @@
+.app.svelte-12lra2z{height:100%;display:flex;flex-direction:column}.content.svelte-12lra2z{flex:1;overflow:hidden}
+code.svelte-1c47zef.svelte-1c47zef{background-color:var(--color);padding:0 3px;margin:3px;border-radius:3px;line-height:20px}.hovered.svelte-1c47zef code.svelte-1c47zef{background-color:var(--hovered-color)}.hovered.svelte-1c47zef code.svelte-1c47zef:active{background-color:var(--pressed-color)}
+a.svelte-1py1aaz{position:fixed;top:0;right:0;padding:4px;opacity:0.8}a.svelte-1py1aaz:hover{opacity:1}
+a.svelte-1hakj9k{color:var(--color_brown_text)}
+.markup-Frame.svelte-1yqj1ns{border:1px solid #ddd;padding:10px}
+.string-link.svelte-19gmcj6{padding:0 3px;margin:0 3px;border-radius:2px;background-color:var(--color_gray)}
+button.svelte-toipdt{padding:10px 30px}button[disabled].svelte-toipdt{background-color:rgba(208, 214, 227)}
+.tiled-view.svelte-k27l6h{display:flex;height:100%}.tile.svelte-k27l6h{flex:1;padding:0 10px;overflow:auto}
+.tree.svelte-hx7ay0{border:1px solid transparent;white-space:nowrap;padding-left:30px}.tree.clickable.svelte-hx7ay0:hover{border-color:rgba(10, 3, 4, 0.38);border-style:dashed}.root.svelte-hx7ay0{padding-left:0}.tree.clickable.svelte-hx7ay0:active{border-color:rgba(10, 3, 4, 0.62);border-style:dotted}.content.svelte-hx7ay0{display:flex;align-items:center}.icon.svelte-hx7ay0{display:inline-block;flex-shrink:0;width:30px;text-align:center;font-size:20px;line-height:22px;height:22px;padding:0;margin:0;background:none;border:none}button.svelte-hx7ay0:hover{background:#f0f0f0}button.svelte-hx7ay0:active{background:#d9d9d9}
+.unknown-link.svelte-21vpkq{padding:0 3px;margin:0 3px;border-radius:2px;background-color:#fbf5f2}
+.item.svelte-1x82xu2{padding:20px 0}.property-name.svelte-1x82xu2{color:#777;padding-right:10px;font-family:monospace, monospace}.property-name.svelte-1x82xu2:before{content:'.'}.property-value.svelte-1x82xu2{display:flex;flex-wrap:wrap}
+.vocabulary-group.svelte-10othv6{display:flex;flex-direction:column}.items.svelte-10othv6{display:flex;flex-wrap:wrap}
+td.svelte-6w0l8d{padding:0 8px}th.svelte-6w0l8d{text-align:left;padding:10px 0}
+.vocabulary-tree.svelte-m48ad9{padding-top:30px}
+td.svelte-6w0l8d{padding:0 8px}th.svelte-6w0l8d{text-align:left;padding:10px 0}
