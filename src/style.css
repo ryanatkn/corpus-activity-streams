@@ -37,7 +37,7 @@ body {
 
 h1,
 h2 {
-	margin: 1em 0 0.4em;
+	margin: 20px 0 10px;
 	font-weight: 300;
 }
 
@@ -58,4 +58,9 @@ pre {
 	color: var(--color_yellow_text);
 	padding: 4px;
 	overflow: hidden; /* maybe `auto`, but this looks better */
+	margin: 10px 0;
+}
+
+table {
+	margin: 10px 0;
 }
