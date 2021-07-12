@@ -1,9 +1,9 @@
 <script>
-	import GithubLogo from './GithubLogo.svelte';
+	import Github_Logo from 'src/Github_Logo.svelte';
 </script>
 
 <a href="https://github.com/ryanatkn/corpus-activity-streams">
-	<GithubLogo />
+	<Github_Logo />
 </a>
 
 <style>

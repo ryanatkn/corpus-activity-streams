@@ -1,22 +1,23 @@
 import type {Gen} from '@feltcoop/gro';
-import {renderNoscriptSection, renderMetaTags} from '@feltcoop/gro/dist/gen/helpers/html.js';
+import {render_noscript_section, render_meta_tags} from '@feltcoop/gro/dist/gen/helpers/html.js';
 
 export const gen: Gen = () => {
 	const title = 'corpus-activity-streams';
-	const sourceCodeUrl = 'https://github.com/ryanatkn/corpus-activity-streams';
-	// TODO get the `sourceCodeUrl` from gen context param?
+	const source_code_url = 'https://github.com/ryanatkn/corpus-activity-streams';
+	// TODO get the `source_code_url` from gen context param?
 	return `<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>${title}</title>
-		${renderMetaTags()}
+		${render_meta_tags()}
 		<link rel="shortcut icon" href="favicon.png" />
 		<link rel="stylesheet" href="bundle.svelte.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body>
 		<div id="root">
-			${renderNoscriptSection(sourceCodeUrl)}
+			${render_noscript_section(source_code_url)}
 		</div>
 		<script src="index.js" type="module"></script>
 	</body>

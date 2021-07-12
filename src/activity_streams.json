@@ -9,13 +9,13 @@
 			"name": "Entity",
 			"category": "vocab.core",
 			"properties": ["id", "type", "name", "mediaType", "preview", "attributedTo"],
-			"extendedBy": ["Link", "Object"]
+			"extended_by": ["Link", "Object"]
 		},
 		{
 			"name": "Object",
 			"category": "vocab.core",
 			"extends": "Entity",
-			"disjointWith": "Link",
+			"disjoint_with": "Link",
 			"properties": [
 				"attachment",
 				"audience",
@@ -40,7 +40,7 @@
 				"bcc",
 				"duration"
 			],
-			"extendedBy": [
+			"extended_by": [
 				"Activity",
 				"Application",
 				"Article",
@@ -62,16 +62,16 @@
 			"name": "Link",
 			"category": "vocab.core",
 			"extends": "Entity",
-			"disjointWith": "Object",
+			"disjoint_with": "Object",
 			"properties": ["href", "rel", "hreflang", "height", "width"],
-			"extendedBy": ["Mention"]
+			"extended_by": ["Mention"]
 		},
 		{
 			"name": "Activity",
 			"category": "vocab.core",
 			"extends": "Object",
 			"properties": ["actor", "object", "target", "origin", "result", "instrument"],
-			"extendedBy": [
+			"extended_by": [
 				"Accept",
 				"Add",
 				"Announce",
@@ -100,21 +100,21 @@
 			"name": "IntransitiveActivity",
 			"category": "vocab.core",
 			"extends": "Activity",
-			"extendedBy": ["Arrive", "Question", "Travel"]
+			"extended_by": ["Arrive", "Question", "Travel"]
 		},
 		{
 			"name": "Collection",
 			"category": "vocab.core",
 			"extends": "Object",
 			"properties": ["totalItems", "current", "first", "last", "items"],
-			"extendedBy": ["CollectionPage", "OrderedCollection"]
+			"extended_by": ["CollectionPage", "OrderedCollection"]
 		},
 		{
 			"name": "OrderedCollection",
 			"category": "vocab.core",
 			"extends": "Collection",
 			"properties": ["orderedItems"],
-			"extendedBy": ["OrderedCollectionPage"]
+			"extended_by": ["OrderedCollectionPage"]
 		},
 		{
 			"name": "CollectionPage",
@@ -132,7 +132,7 @@
 			"name": "Accept",
 			"category": "vocab.activity",
 			"extends": "Activity",
-			"extendedBy": ["TentativeAccept"]
+			"extended_by": ["TentativeAccept"]
 		},
 		{
 			"name": "Add",
@@ -183,7 +183,7 @@
 			"name": "Ignore",
 			"category": "vocab.activity",
 			"extends": "Activity",
-			"extendedBy": ["Block"]
+			"extended_by": ["Block"]
 		},
 		{
 			"name": "Invite",
@@ -219,7 +219,7 @@
 			"name": "Offer",
 			"category": "vocab.activity",
 			"extends": "Activity",
-			"extendedBy": ["Invite"]
+			"extended_by": ["Invite"]
 		},
 		{
 			"name": "Question",
@@ -231,7 +231,7 @@
 			"name": "Reject",
 			"category": "vocab.activity",
 			"extends": "Activity",
-			"extendedBy": ["TentativeReject"]
+			"extended_by": ["TentativeReject"]
 		},
 		{
 			"name": "Read",
@@ -312,7 +312,7 @@
 			"name": "Document",
 			"category": "vocab.object",
 			"extends": "Object",
-			"extendedBy": ["Audio", "Image", "Page", "Video"]
+			"extended_by": ["Audio", "Image", "Page", "Video"]
 		},
 		{
 			"name": "Event",
@@ -387,7 +387,7 @@
 			"category": "vocab.property",
 			"domain": "Activity",
 			"range": ["Object", "Link"],
-			"subpropertyOf": "attributedTo",
+			"subproperty_of": "attributedTo",
 			"functional": false
 		},
 		{

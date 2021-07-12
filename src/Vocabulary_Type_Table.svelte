@@ -1,8 +1,8 @@
 <script lang="ts">
-	import EntityLink from './EntityLink.svelte';
-	import Items from './Items.svelte';
-	import StringLink from './StringLink.svelte';
-	import type {Vocabulary} from './vocabulary.js';
+	import Entity_Link from 'src/Entity_Link.svelte';
+	import Items from 'src/Items.svelte';
+	import String_Link from 'src/String_Link.svelte';
+	import type {Vocabulary} from 'src/vocabulary.js';
 
 	export let vocabulary: Vocabulary;
 </script>
@@ -19,13 +19,13 @@
 	{#each vocabulary.types as item (item)}
 		<tr>
 			<td>
-				<EntityLink entity={item} />
+				<Entity_Link entity={item} />
 			</td>
 			{#if 'extends' in item}
 				<td>
 					<Items items={item.extends} let:item>
 						{#if item}
-							<EntityLink entity={vocabulary.byName[item]} />
+							<Entity_Link entity={vocabulary.by_name[item]} />
 						{/if}
 					</Items>
 				</td>
@@ -34,13 +34,13 @@
 				<td>
 					<Items items={item.properties} let:item>
 						{#if item}
-							<EntityLink entity={vocabulary.byName[item]} />
+							<Entity_Link entity={vocabulary.by_name[item]} />
 						{/if}
 					</Items>
 				</td>
 			{/if}
 			<td>
-				<StringLink>{item.category}</StringLink>
+				<String_Link>{item.category}</String_Link>
 			</td>
 		</tr>
 	{/each}

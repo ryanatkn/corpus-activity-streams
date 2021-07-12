@@ -1,10 +1,10 @@
 import '@feltcoop/gro/dist/client/devtools.js';
 
-import App from './App.svelte';
+import App from 'src/App.svelte';
 
-const rootElId = 'root';
-const root = document.getElementById(rootElId);
-if (!root) throw Error(`Cannot find app target element with id '${rootElId}'`);
+const root_el_id = 'root';
+const root = document.getElementById(root_el_id);
+if (!root) throw Error(`Cannot find app target element with id '${root_el_id}'`);
 
 export const app = new App({
 	target: root,

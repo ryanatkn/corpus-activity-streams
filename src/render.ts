@@ -1,8 +1,10 @@
-// Parsing JSON is a lot faster than parsing JS,
-// so we use this helper to improve the perf of some generated files.
 // TODO upstream helper
-export const toEmbeddedJson = (data: any): string => {
-	return JSON.stringify(data);
-	// const str = JSON.stringify(data).replace(/\'/g, "\\'");
-	// return `JSON.parse('${str}')`;
+// TODO `Json` type instead of `any`
+
+// Parsing JSON is significantly faster than parsing JS,
+// so we use this helper to improve the perf of some generated files.
+// https://v8.dev/blog/cost-of-javascript-2019#json
+// https://v8.dev/features/subsume-json#embedding-json-parse
+export const render_optimized_json = (data: any): string => {
+	return `JSON.parse(${JSON.stringify(JSON.stringify(data))})`;
 };

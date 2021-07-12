@@ -1,9 +1,9 @@
 // TODO fix this, some error with importing paths
 // import {UnreachableError} from '@feltcoop/gro';
 
-import type {Tree, ToId} from './tree.js';
-import {assignNodeIds} from './tree.js';
-import {vocabulary} from './vocabulary.js';
+import type {Tree, To_Id} from 'src/tree.js';
+import {assign_node_ids} from 'src/tree.js';
+import {vocabulary} from 'src/vocabulary.js';
 
 /*
 
@@ -31,10 +31,10 @@ export interface WrapperChar {
 	component: string;
 	toProps: (...args: any[]) => Record<string, any>; // TODO type ? generic?
 }
-const toEntityLinkProps = (name: string) => ({name}); // TODO refactor, where and how?
+const toEntity_LinkProps = (name: string) => ({name}); // TODO refactor, where and how?
 export const defaultWrapperChars: WrapperChar[] = [
-	{char: '`', preserve: false, component: 'EntityLink', toProps: toEntityLinkProps},
-	{char: '"', preserve: true, component: 'EntityLink', toProps: toEntityLinkProps},
+	{char: '`', preserve: false, component: 'Entity_Link', toProps: toEntity_LinkProps},
+	{char: '"', preserve: true, component: 'Entity_Link', toProps: toEntity_LinkProps},
 ];
 
 // TODO regexp? refactor?
@@ -48,9 +48,13 @@ const LINK_MATCHER = /^https?:\/\//;
 
 // why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
 // also I (naively) like the idea of having no intermediate data structure, to keep minimal for UX
-export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrapperChars): Tree[] => {
+export const parse = (
+	content: string,
+	toId?: To_Id,
+	wrapperChars = defaultWrapperChars,
+): Tree[] => {
 	const children: Tree[] = [];
-	const vocabularyByName = vocabulary.byName; // TODO make this an arg or smth
+	const vocabularyByName = vocabulary.by_name; // TODO make this an arg or smth
 	let i = 0;
 	let len = content.length;
 	let currentString = '';
@@ -188,7 +192,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 	if (currentString) {
 		children.push({type: 'Text', content: currentString});
 	}
-	return children.map((c) => assignNodeIds(c, toId));
+	return children.map((c) => assign_node_ids(c, toId));
 };
 
 // TODO tests

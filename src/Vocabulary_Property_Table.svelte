@@ -1,8 +1,8 @@
 <script lang="ts">
-	import EntityLink from './EntityLink.svelte';
-	import Items from './Items.svelte';
-	import UnknownLink from './UnknownLink.svelte';
-	import type {Vocabulary} from './vocabulary.js';
+	import Entity_Link from 'src/Entity_Link.svelte';
+	import Items from 'src/Items.svelte';
+	import Unknown_Link from 'src/Unknown_Link.svelte';
+	import type {Vocabulary} from 'src/vocabulary.js';
 
 	export let vocabulary: Vocabulary;
 </script>
@@ -19,19 +19,19 @@
 	{#each vocabulary.properties as entity (entity)}
 		<tr>
 			<td>
-				<EntityLink {entity} />
+				<Entity_Link {entity} />
 			</td>
 			<td>
 				<Items items={entity.domain} let:item>
-					<EntityLink entity={vocabulary.byName[item]} />
+					<Entity_Link entity={vocabulary.by_name[item]} />
 				</Items>
 			</td>
 			<td>
 				<Items items={entity.range} let:item>
-					{#if item in vocabulary.byName}
-						<EntityLink entity={vocabulary.byName[item]} />
+					{#if item in vocabulary.by_name}
+						<Entity_Link entity={vocabulary.by_name[item]} />
 					{:else}
-						<UnknownLink>{item}</UnknownLink>
+						<Unknown_Link>{item}</Unknown_Link>
 					{/if}
 				</Items>
 			</td>
