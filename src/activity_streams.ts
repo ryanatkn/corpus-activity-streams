@@ -1,7 +1,3 @@
-import activity_streams_vocabulary from 'src/activity_streams_vocabulary.json';
-
-export const vocabulary = activity_streams_vocabulary.vocabulary;
-
 export interface Vocabulary_Term {
 	// TODO generate this or otherwise do it correctly
 	[key: string]: any;
@@ -36,11 +32,3 @@ export type Vocabulary_Category =
 	| 'vocab.activity'
 	| 'vocab.actor'
 	| 'vocab.property';
-export const vocabulary_categories: Vocabulary_Category[] = [
-	'vocab.core',
-	'vocab.object',
-	'vocab.link',
-	'vocab.activity',
-	'vocab.actor',
-	'vocab.property',
-];

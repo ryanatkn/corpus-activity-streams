@@ -19,7 +19,7 @@
     the vocabulary items
   - [src/activity_streams_notes.json](/src/activity_streams_notes.json):
     the `notes` property of the vocabulary items and
-    [the parsed AST](/src/activity_streams_notes_ast.json)-
+    [the parsed AST](/src/activity_streams_notes_ast.json)
   - [src/activity_streams_examples.json](/src/activity_streams_examples.json):
     the examples data and
     [the parsed AST](/src/activity_streams_examples_ast.json)
