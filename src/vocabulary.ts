@@ -1,7 +1,4 @@
-import {
-	vocabulary as activity_streams_vocabulary,
-	vocabulary_categories,
-} from 'src/activity_streams.js';
+import {vocabulary as vocabulary_items, vocabulary_categories} from 'src/activity_streams.js';
 import type {Vocabulary_Item, Vocabulary_Property} from 'src/activity_streams.js';
 
 export interface Vocabulary {
@@ -14,19 +11,21 @@ export interface Vocabulary {
 }
 
 export const vocabulary: Vocabulary = {
-	items: activity_streams_vocabulary,
-	types: activity_streams_vocabulary.filter((v) => v.category !== 'vocab.property'),
-	properties: activity_streams_vocabulary.filter((v) => v.category === 'vocab.property'),
+	items: vocabulary_items,
+	types: vocabulary_items.filter((v) => v.category !== 'vocab.property'),
+	properties: vocabulary_items.filter(
+		(v) => v.category === 'vocab.property',
+	) as Vocabulary_Property[], // TODO rework types to avoid this typecast
 	by_type_name: vocabulary_categories.reduce((result, t) => {
-		result[t] = activity_streams_vocabulary.filter((v) => v.category === t);
+		result[t] = vocabulary_items.filter((v) => v.category === t);
 		if (t === 'vocab.property') {
 			result[t].sort((a, b) => (a.name > b.name ? 1 : -1));
 		}
 		return result;
 	}, {} as Vocabulary['by_type_name']),
-	by_name: activity_streams_vocabulary.reduce((result, item) => {
+	by_name: vocabulary_items.reduce((result, item) => {
 		result[item.name] = item;
 		return result;
 	}, {} as Vocabulary['by_name']),
-	types_tree_root: activity_streams_vocabulary.find((v) => v.name === 'Entity')!,
+	types_tree_root: vocabulary_items.find((v) => v.name === 'Entity')!,
 };

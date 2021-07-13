@@ -1,4 +1,6 @@
-export {vocabulary} from 'src/activity_streams_vocabulary.js';
+import activity_streams_vocabulary from 'src/activity_streams_vocabulary.json';
+
+export const vocabulary = activity_streams_vocabulary.vocabulary;
 
 export interface Vocabulary_Term {
 	// TODO generate this or otherwise do it correctly
@@ -20,6 +22,7 @@ export interface Vocabulary_Type extends Base_Vocabulary_Item {
 	disjoint_with?: string;
 }
 export interface Vocabulary_Property extends Base_Vocabulary_Item {
+	category: 'vocab.property';
 	domain: string | string[];
 	range: string | string[];
 	functional: boolean;
