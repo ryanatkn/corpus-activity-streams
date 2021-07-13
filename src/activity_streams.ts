@@ -1,5 +1,3 @@
-export {vocabulary} from 'src/activity_streams_vocabulary.js';
-
 export interface Vocabulary_Term {
 	// TODO generate this or otherwise do it correctly
 	[key: string]: any;
@@ -20,6 +18,7 @@ export interface Vocabulary_Type extends Base_Vocabulary_Item {
 	disjoint_with?: string;
 }
 export interface Vocabulary_Property extends Base_Vocabulary_Item {
+	category: 'vocab.property';
 	domain: string | string[];
 	range: string | string[];
 	functional: boolean;
@@ -33,11 +32,3 @@ export type Vocabulary_Category =
 	| 'vocab.activity'
 	| 'vocab.actor'
 	| 'vocab.property';
-export const vocabulary_categories: Vocabulary_Category[] = [
-	'vocab.core',
-	'vocab.object',
-	'vocab.link',
-	'vocab.activity',
-	'vocab.actor',
-	'vocab.property',
-];

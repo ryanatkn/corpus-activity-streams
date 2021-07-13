@@ -14,17 +14,17 @@
 
 ## useful data & modules
 
-- [src/activity_streams.json](src/activity_streams.json): vocabulary JSON data
-  - [src/activity_streams_notes.json](src/activity_streams_notes.json): notes data
-  - [src/activity_streams_examples.json](src/activity_streams_examples.json): examples JSON data
-- [src/activity_streams.ts](src/activity_streams.ts): vocabulary types
-- [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
-- [src/activity_streams_notes.ts](src/activity_streams_notes.ts):
-  the `notes` property of the vocabulary items and
-  [its AST](src/activity_streams_notes_ast.json)
-- [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
-  the vocabulary examples data and
-  [its AST](src/activity_streams_examples_ast.json)
+- data:
+  - [src/activity_streams_vocabulary.json](/src/activity_streams_vocabulary.json):
+    the vocabulary items
+  - [src/activity_streams_notes.json](/src/activity_streams_notes.json):
+    the `notes` property of the vocabulary items and
+    [the parsed AST](/src/activity_streams_notes_ast.json)
+  - [src/activity_streams_examples.json](/src/activity_streams_examples.json):
+    the examples data and
+    [the parsed AST](/src/activity_streams_examples_ast.json)
+- [src/activity_streams.ts](/src/activity_streams.ts): vocabulary types
+- [src/vocabulary.ts](/src/vocabulary.ts): all of the vocab data collections
 
 ## compared to the spec
 

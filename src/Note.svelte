@@ -1,16 +1,15 @@
 <script lang="ts">
 	import type {Vocabulary_Item} from 'src/activity_streams.js';
 	import Markup from 'src/Markup.svelte';
-	import {notes} from 'src/activity_streams_notes.js';
 	import {parse} from 'src/parse.js';
 	import {parse_examples} from 'src/parse_examples.js';
-	import {examples} from 'src/activity_streams_examples.js';
+	import activity_streams_notes from 'src/activity_streams_notes.json';
+	import activity_streams_examples from 'src/activity_streams_examples.json';
 
 	export let item: Vocabulary_Item;
 
-	$: item_notes = notes[item.name];
-	$: notes_tree = parse(item_notes);
-	$: examples_tree = parse_examples(examples[item.name]);
+	$: notes_tree = parse(activity_streams_notes.notes[item.name]);
+	$: examples_tree = parse_examples(activity_streams_examples.examples[item.name]);
 </script>
 
 {#each notes_tree as tree (tree.id)}
