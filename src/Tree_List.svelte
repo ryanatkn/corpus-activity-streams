@@ -18,7 +18,7 @@
 	};
 
 	$: children = get_children(tree);
-	$: clickable = !!children;
+	$: clickable = !!children.length;
 </script>
 
 <div class="tree" class:root={depth === 0} class:clickable transition:slide={{duration: 137}}>
@@ -26,11 +26,14 @@
 		{#if clickable}
 			<button class="icon" on:click={clickable ? toggle_show_children : undefined}>
 				{#if show_children}
-					{#if children}–{:else}∙{/if}
-				{:else}+{/if}
+					–
+				{:else}
+					+
+				{/if}
 			</button>
-		{:else}<span class="icon">∙</span>{/if}
-
+		{:else}
+			<span class="icon"> ∙ </span>
+		{/if}
 		<!-- TODO this is a hack, attempts at recursive slots failed	 -->
 		<Entity_Link entity={tree} />
 		{#if tree.properties}
