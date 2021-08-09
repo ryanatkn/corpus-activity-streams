@@ -37,7 +37,6 @@ The properties are inferred from what `Object` and `Link` share.
 
 ## todo
 
-- build the parsed ASTs instead of parsing at runtime
 - generate JSON schema for each term (see the in-progress branch
   [**schema**](https://github.com/ryanatkn/corpus-activity-streams/tree/schema))
   - use JSON schemas to generate types with
