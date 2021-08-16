@@ -31,7 +31,7 @@
     "ActivityStreams"
   ],
   "devDependencies": {
-    "@feltcoop/gro": "^0.39.0",
+    "@feltcoop/gro": "^0.39.1",
     "@types/node": "^16.6.1",
     "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.3.1",
