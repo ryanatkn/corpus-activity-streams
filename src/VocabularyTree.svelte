@@ -1,18 +1,18 @@
 <script lang="ts">
-	import Tree_List from 'src/Tree_List.svelte';
+	import TreeList from 'src/TreeList.svelte';
 	import type {Vocabulary} from 'src/vocabulary.js';
-	import type {Vocabulary_Type} from 'src/activity_streams';
+	import type {VocabularyType} from 'src/activity_streams';
 
 	export let vocabulary: Vocabulary;
 
 	// TODO refactor with cached values
-	const get_children = (item: Vocabulary_Type): Vocabulary_Type[] => {
+	const get_children = (item: VocabularyType): VocabularyType[] => {
 		return item.extended_by?.map((name) => vocabulary.by_name[name]) || [];
 	};
 </script>
 
 <div class="vocabulary-tree">
-	<Tree_List tree={vocabulary.types_tree_root} {get_children} />
+	<TreeList tree={vocabulary.types_tree_root} {get_children} />
 </div>
 
 <style>

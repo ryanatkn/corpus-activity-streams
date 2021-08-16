@@ -1,13 +1,9 @@
-import type {
-	Vocabulary_Category,
-	Vocabulary_Item,
-	Vocabulary_Property,
-} from 'src/activity_streams.js';
+import type {VocabularyCategory, VocabularyItem, VocabularyProperty} from 'src/activity_streams.js';
 import activity_streams_vocabulary from 'src/activity_streams_vocabulary.json';
 
 const vocabulary_items = activity_streams_vocabulary.vocabulary;
 
-const categories: Vocabulary_Category[] = [
+const categories: VocabularyCategory[] = [
 	'vocab.core',
 	'vocab.object',
 	'vocab.link',
@@ -17,13 +13,13 @@ const categories: Vocabulary_Category[] = [
 ];
 
 export interface Vocabulary {
-	items: Vocabulary_Item[];
-	types: Vocabulary_Item[];
-	properties: Vocabulary_Property[]; // with `.category === 'vocab.property'`
-	by_type_name: {[key: string]: Vocabulary_Item[]};
-	by_name: {[key: string]: Vocabulary_Item};
-	types_tree_root: Vocabulary_Item;
-	categories: Vocabulary_Category[];
+	items: VocabularyItem[];
+	types: VocabularyItem[];
+	properties: VocabularyProperty[]; // with `.category === 'vocab.property'`
+	by_type_name: {[key: string]: VocabularyItem[]};
+	by_name: {[key: string]: VocabularyItem};
+	types_tree_root: VocabularyItem;
+	categories: VocabularyCategory[];
 }
 
 export const vocabulary: Vocabulary = {
@@ -31,7 +27,7 @@ export const vocabulary: Vocabulary = {
 	types: vocabulary_items.filter((v) => v.category !== 'vocab.property'),
 	properties: vocabulary_items.filter(
 		(v) => v.category === 'vocab.property',
-	) as Vocabulary_Property[], // TODO rework types to avoid this typecast
+	) as VocabularyProperty[], // TODO rework types to avoid this typecast
 	by_type_name: categories.reduce((result, t) => {
 		result[t] = vocabulary_items.filter((v) => v.category === t);
 		if (t === 'vocab.property') {

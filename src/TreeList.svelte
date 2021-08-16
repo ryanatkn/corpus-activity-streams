@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Entity_Link from 'src/Entity_Link.svelte';
+	import EntityLink from 'src/EntityLink.svelte';
 	import {slide} from 'svelte/transition';
-	import type {Vocabulary_Type} from 'src/activity_streams.js';
+	import type {VocabularyType} from 'src/activity_streams.js';
 
-	export let tree: Vocabulary_Type;
-	export let get_children: (item: Vocabulary_Type) => Vocabulary_Type[];
+	export let tree: VocabularyType;
+	export let get_children: (item: VocabularyType) => VocabularyType[];
 	export let depth = 0;
 
 	let show_children = true;
@@ -35,10 +35,10 @@
 			<span class="icon"> ∙ </span>
 		{/if}
 		<!-- TODO this is a hack, attempts at recursive slots failed	 -->
-		<Entity_Link entity={tree} />
+		<EntityLink entity={tree} />
 		{#if tree.properties}
 			{#each tree.properties as property (property)}
-				<Entity_Link name={property} />
+				<EntityLink name={property} />
 			{/each}
 		{/if}
 	</div>

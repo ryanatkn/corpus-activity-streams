@@ -1,4 +1,4 @@
-export interface Vocabulary_Term {
+export interface VocabularyTerm {
 	// TODO generate this or otherwise do it correctly
 	[key: string]: any;
 	'@context': string;
@@ -6,18 +6,18 @@ export interface Vocabulary_Term {
 	type?: string | string[];
 }
 
-export type Vocabulary_Item = Vocabulary_Type | Vocabulary_Property;
-export interface Base_Vocabulary_Item {
+export type VocabularyItem = VocabularyType | VocabularyProperty;
+export interface BaseVocabularyItem {
 	name: string;
-	category: Vocabulary_Category;
+	category: VocabularyCategory;
 }
-export interface Vocabulary_Type extends Base_Vocabulary_Item {
-	extends?: string | string[]; // TODO should swap in the actual `Vocabulary_Type` like `extended_by`
+export interface VocabularyType extends BaseVocabularyItem {
+	extends?: string | string[]; // TODO should swap in the actual `VocabularyType` like `extended_by`
 	extended_by?: string[];
 	properties?: string[];
 	disjoint_with?: string;
 }
-export interface Vocabulary_Property extends Base_Vocabulary_Item {
+export interface VocabularyProperty extends BaseVocabularyItem {
 	category: 'vocab.property';
 	domain: string | string[];
 	range: string | string[];
@@ -25,7 +25,7 @@ export interface Vocabulary_Property extends Base_Vocabulary_Item {
 	subproperty_of?: string;
 }
 
-export type Vocabulary_Category =
+export type VocabularyCategory =
 	| 'vocab.core'
 	| 'vocab.object'
 	| 'vocab.link'

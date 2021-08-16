@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Vocabulary_Type_Table from 'src/Vocabulary_Type_Table.svelte';
-	import Vocabulary_Property_Table from 'src/Vocabulary_Property_Table.svelte';
-	import Vocabulary_Details from 'src/Vocabulary_Details.svelte';
-	import Vocabulary_Tree from 'src/Vocabulary_Tree.svelte';
-	import Vocabulary_Groups from 'src/Vocabulary_Groups.svelte';
+	import VocabularyTypeTable from 'src/VocabularyTypeTable.svelte';
+	import VocabularyPropertyTable from 'src/VocabularyPropertyTable.svelte';
+	import VocabularyDetails from 'src/VocabularyDetails.svelte';
+	import VocabularyTree from 'src/VocabularyTree.svelte';
+	import VocabularyGroups from 'src/VocabularyGroups.svelte';
 	import type {Vocabulary} from 'src/vocabulary.js';
 
 	export let vocabulary: Vocabulary;
@@ -24,15 +24,15 @@
 </nav>
 
 {#if active_tab === 'types'}
-	<Vocabulary_Type_Table {vocabulary} />
+	<VocabularyTypeTable {vocabulary} />
 {:else if active_tab === 'properties'}
-	<Vocabulary_Property_Table {vocabulary} />
+	<VocabularyPropertyTable {vocabulary} />
 {:else if active_tab === 'details'}
-	<Vocabulary_Details {vocabulary} />
+	<VocabularyDetails {vocabulary} />
 {:else if active_tab === 'tree'}
-	<Vocabulary_Tree {vocabulary} />
+	<VocabularyTree {vocabulary} />
 {:else if active_tab === 'groups'}
-	<Vocabulary_Groups {vocabulary} />
+	<VocabularyGroups {vocabulary} />
 {:else}unknown tab: {active_tab}{/if}
 
 <style>

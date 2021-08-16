@@ -1,10 +1,10 @@
 <script lang="ts">
 	import {vocabulary} from 'src/vocabulary.js';
 	import {hovered_entity} from 'src/entities.js';
-	import type {Vocabulary_Item} from 'src/activity_streams.js';
+	import type {VocabularyItem} from 'src/activity_streams.js';
 
 	// one of these two is required
-	export let entity: Vocabulary_Item | null = null;
+	export let entity: VocabularyItem | null = null;
 	export let name: string | null = null;
 
 	if (!entity && !name) throw Error('Expected an entity or a name');
@@ -59,7 +59,7 @@
 		background-color: var(--hovered-color);
 	}
 	.hovered code:active {
-		/* TODO store pressed state and style all `Entity_Links` with the pressed entity,
+		/* TODO store pressed state and style all `EntityLinks` with the pressed entity,
 		not just the sole active one */
 		background-color: var(--pressed-color);
 	}

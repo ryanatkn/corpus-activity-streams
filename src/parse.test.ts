@@ -18,7 +18,7 @@ test_parse('parses entity link in backticks', () => {
 		normalizeChildren(parse('The `Entity` is the base of all of types.')),
 		normalizeChildren([
 			{type: 'Text', content: 'The '},
-			{type: 'Component', component: 'Entity_Link', props: {name: 'Entity'}},
+			{type: 'Component', component: 'EntityLink', props: {name: 'Entity'}},
 			{type: 'Text', content: ' is the base of all of types.'},
 		]),
 	);
@@ -44,15 +44,15 @@ test_parse('parses entity links in quotes', () => {
 			{type: 'Text', content: '{\n  "@context": "'},
 			{type: 'Component', component: 'Link', props: {href: 'http://www.w3.org/ns/activitystreams'}},
 			{type: 'Text', content: '",\n  "'},
-			{type: 'Component', component: 'Entity_Link', props: {name: 'type'}},
+			{type: 'Component', component: 'EntityLink', props: {name: 'type'}},
 			{type: 'Text', content: '": "'},
-			{type: 'Component', component: 'Entity_Link', props: {name: 'Object'}},
+			{type: 'Component', component: 'EntityLink', props: {name: 'Object'}},
 			{type: 'Text', content: '",\n  "'},
-			{type: 'Component', component: 'Entity_Link', props: {name: 'id'}},
+			{type: 'Component', component: 'EntityLink', props: {name: 'id'}},
 			{type: 'Text', content: '": "'},
 			{type: 'Component', component: 'Link', props: {href: 'http://www.test.example/object/1'}},
 			{type: 'Text', content: '",\n  "'},
-			{type: 'Component', component: 'Entity_Link', props: {name: 'name'}},
+			{type: 'Component', component: 'EntityLink', props: {name: 'name'}},
 			{type: 'Text', content: '": "A Simple, non-specific object `note`"\n}'},
 		]),
 	);

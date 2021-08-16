@@ -1,19 +1,19 @@
 <script lang="ts">
 	import {vocabulary} from 'src/vocabulary.js';
-	import Tabbed_View from 'src/Tabbed_View.svelte';
-	import Tiled_View from 'src/Tiled_View.svelte';
-	import Github_Link from 'src/Github_Link.svelte';
+	import TabbedView from 'src/TabbedView.svelte';
+	import TiledView from 'src/TiledView.svelte';
+	import GithubLink from 'src/GithubLink.svelte';
 	import {set_components} from 'src/components.js';
 	import type {Components} from 'src/components.js';
 	import Link from 'src/Link.svelte';
-	import Entity_Link from 'src/Entity_Link.svelte';
+	import EntityLink from 'src/EntityLink.svelte';
 
-	let view = Tiled_View || Tabbed_View;
-	type Default_Components = 'Link' | 'Entity_Link';
+	let view = TiledView || TabbedView;
+	type DefaultComponents = 'Link' | 'EntityLink';
 
-	const to_default_components = (): Components<Default_Components> => ({
+	const to_default_components = (): Components<DefaultComponents> => ({
 		Link,
-		Entity_Link,
+		EntityLink,
 	});
 
 	set_components(to_default_components());
@@ -21,7 +21,7 @@
 
 <div class="app">
 	<!-- TODO nav? -->
-	<Github_Link />
+	<GithubLink />
 	<div class="content">
 		<svelte:component this={view} {vocabulary} />
 	</div>

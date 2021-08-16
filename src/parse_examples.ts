@@ -1,10 +1,10 @@
-import type {Tree, To_Id} from 'src/tree.js';
+import type {Tree, ToId} from 'src/tree.js';
 import {assign_node_ids} from 'src/tree.js';
-import type {Vocabulary_Term} from 'src/activity_streams.js';
+import type {VocabularyTerm} from 'src/activity_streams.js';
 import {parse} from 'src/parse.js';
 
 // TODO delete this?
-export const parse_examples = (examples: Vocabulary_Term[], to_id?: To_Id): Tree | null => {
+export const parse_examples = (examples: VocabularyTerm[], to_id?: ToId): Tree | null => {
 	if (!examples) return null;
 	const children: Tree[] = [];
 	for (const example of examples) {

@@ -15,38 +15,38 @@ const tree: Tree[] = [
 
 */
 
-export interface Base_Tree<T_Children extends Base_Tree = Base_Tree<any>> {
+export interface BaseTree<TChildren extends BaseTree = BaseTree<any>> {
 	type: string;
 	id?: string;
 	// optional properties that any tree type can have - trying to stick close to Activity Streams
-	children?: T_Children[];
+	children?: TChildren[];
 	content?: string;
 }
 
-export type Tree = Block_Tree | Text_Tree | Element_Tree | Component_Tree | Frame_Tree;
+export type Tree = BlockTree | TextTree | ElementTree | ComponentTree | FrameTree;
 
-export interface Block_Tree extends Base_Tree<Tree> {
+export interface BlockTree extends BaseTree<Tree> {
 	type: 'Block';
 }
 
-export interface Text_Tree extends Base_Tree<Tree> {
+export interface TextTree extends BaseTree<Tree> {
 	type: 'Text';
 	content: string;
 }
 
-export interface Element_Tree extends Base_Tree<Tree> {
+export interface ElementTree extends BaseTree<Tree> {
 	type: 'Element';
 	element: 'pre' | 'code';
 }
 
-// TODO or `Markup_View_Node` ?
-export interface Component_Tree extends Base_Tree<Tree> {
+// TODO or `MarkupViewNode` ?
+export interface ComponentTree extends BaseTree<Tree> {
 	type: 'Component';
-	component: string; // TODO type? `Component_Name` or `Component_Id` ?
+	component: string; // TODO type? `ComponentName` or `ComponentId` ?
 	props: {[key: string]: any}; // TODO type
 }
 
-export interface Frame_Tree extends Base_Tree<Tree> {
+export interface FrameTree extends BaseTree<Tree> {
 	type: 'Frame';
 	model: string; // TODO id type
 	view: string; // TODO id type
@@ -62,15 +62,15 @@ export const for_each_node = (tree: Tree, cb: (tree: Tree) => void): void => {
 	}
 };
 
-export interface To_Id {
+export interface ToId {
 	(): string;
 }
 
-export interface To_To_Id {
-	(i?: number): To_Id;
+export interface ToToId {
+	(i?: number): ToId;
 }
 
-export const assign_node_ids = <T extends Tree>(tree: T, to_id: To_Id = to_to_id()): T => {
+export const assign_node_ids = <T extends Tree>(tree: T, to_id: ToId = to_to_id()): T => {
 	for_each_node(tree, (tree) => {
 		tree.id = to_id(); // TODO ? path? what if we passed in the parent so we could do /1/3/2/2?
 	});
@@ -78,8 +78,8 @@ export const assign_node_ids = <T extends Tree>(tree: T, to_id: To_Id = to_to_id
 };
 
 // TODO import random utils from `felt` using `uid` probably
-export const to_to_id: To_To_Id =
+export const to_to_id: ToToId =
 	(i = Number(Math.random().toString().substring(7))) =>
 	() =>
 		`tree${i++}`;
-export const to_to_deterministic_id: To_To_Id = () => to_to_id(0);
+export const to_to_deterministic_id: ToToId = () => to_to_id(0);
