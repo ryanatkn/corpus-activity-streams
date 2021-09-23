@@ -57,6 +57,7 @@
 	}
 	.hovered code {
 		background-color: var(--hovered-color);
+		text-decoration: underline;
 	}
 	.hovered code:active {
 		/* TODO store pressed state and style all `EntityLinks` with the pressed entity,
