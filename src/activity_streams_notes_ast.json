@@ -2,47 +2,55 @@
 	"Entity": [
 		{"type": "Text", "content": "The ", "id": "tree0"},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "Entity"}, "id": "tree1"},
-		{"type": "Text", "content": " is the base of all of types.", "id": "tree2"}
+		{
+			"type": "Text",
+			"content": " is the base of all of types. Importantly, it is not part of the spec; it's included here to show what ",
+			"id": "tree2"
+		},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree3"},
+		{"type": "Text", "content": " and ", "id": "tree4"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree5"},
+		{"type": "Text", "content": " have in common.", "id": "tree6"}
 	],
 	"Object": [
-		{"type": "Text", "content": "Describes an object of any kind. The ", "id": "tree3"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree4"},
+		{"type": "Text", "content": "Describes an object of any kind. The ", "id": "tree7"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree8"},
 		{
 			"type": "Text",
 			"content": " type serves as the base type for most of the other kinds of objects defined in the Activity Vocabulary, including other Core types such as ",
-			"id": "tree5"
+			"id": "tree9"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree6"},
-		{"type": "Text", "content": ", ", "id": "tree7"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree10"},
+		{"type": "Text", "content": ", ", "id": "tree11"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "IntransitiveActivity"},
-			"id": "tree8"
+			"id": "tree12"
 		},
-		{"type": "Text", "content": ", ", "id": "tree9"},
+		{"type": "Text", "content": ", ", "id": "tree13"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree10"
+			"id": "tree14"
 		},
-		{"type": "Text", "content": " and ", "id": "tree11"},
+		{"type": "Text", "content": " and ", "id": "tree15"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "OrderedCollection"},
-			"id": "tree12"
+			"id": "tree16"
 		},
-		{"type": "Text", "content": ".", "id": "tree13"}
+		{"type": "Text", "content": ".", "id": "tree17"}
 	],
 	"Link": [
-		{"type": "Text", "content": "A ", "id": "tree14"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree15"},
+		{"type": "Text", "content": "A ", "id": "tree18"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree19"},
 		{
 			"type": "Text",
 			"content": " is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is established by [ ",
-			"id": "tree16"
+			"id": "tree20"
 		},
 		{
 			"type": "Component",
@@ -51,19 +59,19 @@
 				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988",
 				"content": "RFC5988"
 			},
-			"id": "tree17"
+			"id": "tree21"
 		},
 		{
 			"type": "Text",
 			"content": "]. Many of the properties defined by the Activity Vocabulary allow values that are either instances of ",
-			"id": "tree18"
+			"id": "tree22"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree19"},
-		{"type": "Text", "content": " or ", "id": "tree20"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree21"},
-		{"type": "Text", "content": ". When a ", "id": "tree22"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree23"},
-		{"type": "Text", "content": " is used, it establishes a ", "id": "tree24"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree23"},
+		{"type": "Text", "content": " or ", "id": "tree24"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree25"},
+		{"type": "Text", "content": ". When a ", "id": "tree26"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree27"},
+		{"type": "Text", "content": " is used, it establishes a ", "id": "tree28"},
 		{
 			"type": "Component",
 			"component": "Link",
@@ -71,78 +79,78 @@
 				"href": "http://patterns.dataincubator.org/book/qualified-relation.html",
 				"content": "RFC5988qualified relation"
 			},
-			"id": "tree25"
+			"id": "tree29"
 		},
 		{
 			"type": "Text",
 			"content": " connecting the subject (the containing object) to the resource identified by the ",
-			"id": "tree26"
+			"id": "tree30"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "href"}, "id": "tree27"},
-		{"type": "Text", "content": ". Properties of the ", "id": "tree28"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree29"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "href"}, "id": "tree31"},
+		{"type": "Text", "content": ". Properties of the ", "id": "tree32"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree33"},
 		{
 			"type": "Text",
 			"content": " are properties of the reference as opposed to properties of the resource.",
-			"id": "tree30"
+			"id": "tree34"
 		}
 	],
 	"Activity": [
-		{"type": "Text", "content": "An ", "id": "tree31"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree32"},
-		{"type": "Text", "content": " is a subtype of ", "id": "tree33"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree34"},
+		{"type": "Text", "content": "An ", "id": "tree35"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree36"},
+		{"type": "Text", "content": " is a subtype of ", "id": "tree37"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree38"},
 		{
 			"type": "Text",
 			"content": " that describes some form of action that may happen, is currently happening, or has already happened. The ",
-			"id": "tree35"
+			"id": "tree39"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree36"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree40"},
 		{
 			"type": "Text",
 			"content": " type itself serves as an abstract base type for all types of activities. It is important to note that the ",
-			"id": "tree37"
+			"id": "tree41"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree38"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree42"},
 		{
 			"type": "Text",
 			"content": " type itself does not carry any specific semantics about the kind of action being taken.",
-			"id": "tree39"
+			"id": "tree43"
 		}
 	],
 	"IntransitiveActivity": [
-		{"type": "Text", "content": "Instances of ", "id": "tree40"},
+		{"type": "Text", "content": "Instances of ", "id": "tree44"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "IntransitiveActivity"},
-			"id": "tree41"
+			"id": "tree45"
 		},
-		{"type": "Text", "content": " are a subtype of ", "id": "tree42"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree43"},
-		{"type": "Text", "content": " representing intransitive actions. The ", "id": "tree44"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree45"},
+		{"type": "Text", "content": " are a subtype of ", "id": "tree46"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Activity"}, "id": "tree47"},
+		{"type": "Text", "content": " representing intransitive actions. The ", "id": "tree48"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree49"},
 		{
 			"type": "Text",
 			"content": " property is therefore inappropriate for these activities.",
-			"id": "tree46"
+			"id": "tree50"
 		}
 	],
 	"Collection": [
-		{"type": "Text", "content": "A ", "id": "tree47"},
+		{"type": "Text", "content": "A ", "id": "tree51"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree48"
+			"id": "tree52"
 		},
-		{"type": "Text", "content": " is a subtype of ", "id": "tree49"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree50"},
-		{"type": "Text", "content": " that represents ordered or unordered sets of ", "id": "tree51"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree52"},
-		{"type": "Text", "content": " or ", "id": "tree53"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree54"},
-		{"type": "Text", "content": " instances. Refer to the ", "id": "tree55"},
+		{"type": "Text", "content": " is a subtype of ", "id": "tree53"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree54"},
+		{"type": "Text", "content": " that represents ordered or unordered sets of ", "id": "tree55"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree56"},
+		{"type": "Text", "content": " or ", "id": "tree57"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree58"},
+		{"type": "Text", "content": " instances. Refer to the ", "id": "tree59"},
 		{
 			"type": "Component",
 			"component": "Link",
@@ -150,48 +158,48 @@
 				"href": "https://www.w3.org/TR/activitystreams-core/#collection",
 				"content": "Activity Streams 2.0 Core"
 			},
-			"id": "tree56"
+			"id": "tree60"
 		},
 		{
 			"type": "Text",
 			"content": " specification for a complete description of the ",
-			"id": "tree57"
+			"id": "tree61"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree58"
+			"id": "tree62"
 		},
-		{"type": "Text", "content": " type.", "id": "tree59"}
+		{"type": "Text", "content": " type.", "id": "tree63"}
 	],
 	"OrderedCollection": [
-		{"type": "Text", "content": "A subtype of ", "id": "tree60"},
+		{"type": "Text", "content": "A subtype of ", "id": "tree64"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree61"
+			"id": "tree65"
 		},
 		{
 			"type": "Text",
 			"content": " in which members of the logical collection are assumed to always be strictly ordered.",
-			"id": "tree62"
+			"id": "tree66"
 		}
 	],
 	"CollectionPage": [
 		{
 			"type": "Text",
 			"content": "Used to represent distinct subsets of items from a ",
-			"id": "tree63"
+			"id": "tree67"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree64"
+			"id": "tree68"
 		},
-		{"type": "Text", "content": ". Refer to the ", "id": "tree65"},
+		{"type": "Text", "content": ". Refer to the ", "id": "tree69"},
 		{
 			"type": "Component",
 			"component": "Link",
@@ -199,30 +207,30 @@
 				"href": "https://www.w3.org/TR/activitystreams-core/#dfn-collectionpage",
 				"content": "Activity Streams 2.0 Core"
 			},
-			"id": "tree66"
+			"id": "tree70"
 		},
-		{"type": "Text", "content": " for a complete description of the ", "id": "tree67"},
+		{"type": "Text", "content": " for a complete description of the ", "id": "tree71"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "CollectionPage"},
-			"id": "tree68"
+			"id": "tree72"
 		},
-		{"type": "Text", "content": " object.", "id": "tree69"}
+		{"type": "Text", "content": " object.", "id": "tree73"}
 	],
 	"OrderedCollectionPage": [
 		{
 			"type": "Text",
 			"content": "Used to represent ordered subsets of items from an ",
-			"id": "tree70"
+			"id": "tree74"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "OrderedCollection"},
-			"id": "tree71"
+			"id": "tree75"
 		},
-		{"type": "Text", "content": ". Refer to the ", "id": "tree72"},
+		{"type": "Text", "content": ". Refer to the ", "id": "tree76"},
 		{
 			"type": "Component",
 			"component": "Link",
@@ -230,443 +238,443 @@
 				"href": "https://www.w3.org/TR/activitystreams-core/#dfn-orderedcollectionpage",
 				"content": "Activity Streams 2.0 Core"
 			},
-			"id": "tree73"
+			"id": "tree77"
 		},
-		{"type": "Text", "content": " for a complete description of the ", "id": "tree74"},
+		{"type": "Text", "content": " for a complete description of the ", "id": "tree78"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "OrderedCollectionPage"},
-			"id": "tree75"
+			"id": "tree79"
 		},
-		{"type": "Text", "content": " object.", "id": "tree76"}
+		{"type": "Text", "content": " object.", "id": "tree80"}
 	],
 	"Accept": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree77"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree78"},
-		{"type": "Text", "content": " accepts the ", "id": "tree79"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree80"},
-		{"type": "Text", "content": ". The ", "id": "tree81"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree82"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree81"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree82"},
+		{"type": "Text", "content": " accepts the ", "id": "tree83"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree84"},
+		{"type": "Text", "content": ". The ", "id": "tree85"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree86"},
 		{
 			"type": "Text",
 			"content": " property can be used in certain circumstances to indicate the context into which the ",
-			"id": "tree83"
+			"id": "tree87"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree84"},
-		{"type": "Text", "content": " has been accepted.", "id": "tree85"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree88"},
+		{"type": "Text", "content": " has been accepted.", "id": "tree89"}
 	],
 	"Add": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree86"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree87"},
-		{"type": "Text", "content": " has added the ", "id": "tree88"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree89"},
-		{"type": "Text", "content": " to the ", "id": "tree90"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree91"},
-		{"type": "Text", "content": ". If the ", "id": "tree92"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree93"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree90"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree91"},
+		{"type": "Text", "content": " has added the ", "id": "tree92"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree93"},
+		{"type": "Text", "content": " to the ", "id": "tree94"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree95"},
+		{"type": "Text", "content": ". If the ", "id": "tree96"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree97"},
 		{
 			"type": "Text",
 			"content": " property is not explicitly specified, the target would need to be determined implicitly by context. The ",
-			"id": "tree94"
+			"id": "tree98"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree95"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree99"},
 		{
 			"type": "Text",
 			"content": " can be used to identify the context from which the ",
-			"id": "tree96"
+			"id": "tree100"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree97"},
-		{"type": "Text", "content": " originated.", "id": "tree98"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree101"},
+		{"type": "Text", "content": " originated.", "id": "tree102"}
 	],
 	"Announce": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree99"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree100"},
-		{"type": "Text", "content": " is calling the ", "id": "tree101"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree102"},
-		{"type": "Text", "content": "'s attention the ", "id": "tree103"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree104"},
-		{"type": "Text", "content": ". The ", "id": "tree105"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree106"},
-		{"type": "Text", "content": " typically has no defined meaning.", "id": "tree107"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree103"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree104"},
+		{"type": "Text", "content": " is calling the ", "id": "tree105"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree106"},
+		{"type": "Text", "content": "'s attention the ", "id": "tree107"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree108"},
+		{"type": "Text", "content": ". The ", "id": "tree109"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree110"},
+		{"type": "Text", "content": " typically has no defined meaning.", "id": "tree111"}
 	],
 	"Arrive": [
-		{"type": "Text", "content": "An ", "id": "tree108"},
+		{"type": "Text", "content": "An ", "id": "tree112"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "IntransitiveActivity"},
-			"id": "tree109"
+			"id": "tree113"
 		},
-		{"type": "Text", "content": " that indicates that the ", "id": "tree110"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree111"},
-		{"type": "Text", "content": " has arrived at the ", "id": "tree112"},
+		{"type": "Text", "content": " that indicates that the ", "id": "tree114"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree115"},
+		{"type": "Text", "content": " has arrived at the ", "id": "tree116"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "location"},
-			"id": "tree113"
+			"id": "tree117"
 		},
-		{"type": "Text", "content": ". The ", "id": "tree114"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree115"},
+		{"type": "Text", "content": ". The ", "id": "tree118"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree119"},
 		{
 			"type": "Text",
 			"content": " can be used to identify the context from which the ",
-			"id": "tree116"
+			"id": "tree120"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree117"},
-		{"type": "Text", "content": " originated. The ", "id": "tree118"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree119"},
-		{"type": "Text", "content": " typically has no defined meaning.", "id": "tree120"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree121"},
+		{"type": "Text", "content": " originated. The ", "id": "tree122"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree123"},
+		{"type": "Text", "content": " typically has no defined meaning.", "id": "tree124"}
 	],
 	"Block": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree121"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree122"},
-		{"type": "Text", "content": " is blocking the ", "id": "tree123"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree124"},
-		{"type": "Text", "content": ". Blocking is a stronger form of ", "id": "tree125"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Ignore"}, "id": "tree126"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree125"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree126"},
+		{"type": "Text", "content": " is blocking the ", "id": "tree127"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree128"},
+		{"type": "Text", "content": ". Blocking is a stronger form of ", "id": "tree129"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Ignore"}, "id": "tree130"},
 		{
 			"type": "Text",
 			"content": ". The typical use is to support social systems that allow one user to block activities or content of other users. The ",
-			"id": "tree127"
+			"id": "tree131"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree128"},
-		{"type": "Text", "content": " and ", "id": "tree129"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree130"},
-		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree131"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree132"},
+		{"type": "Text", "content": " and ", "id": "tree133"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree134"},
+		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree135"}
 	],
 	"Create": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree132"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree133"},
-		{"type": "Text", "content": " has created the ", "id": "tree134"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree135"},
-		{"type": "Text", "content": ".", "id": "tree136"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree136"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree137"},
+		{"type": "Text", "content": " has created the ", "id": "tree138"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree139"},
+		{"type": "Text", "content": ".", "id": "tree140"}
 	],
 	"Delete": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree137"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree138"},
-		{"type": "Text", "content": " has deleted the ", "id": "tree139"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree140"},
-		{"type": "Text", "content": ". If specified, the ", "id": "tree141"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree142"},
-		{"type": "Text", "content": " indicates the context from which the ", "id": "tree143"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree141"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree142"},
+		{"type": "Text", "content": " has deleted the ", "id": "tree143"},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree144"},
-		{"type": "Text", "content": " was deleted.", "id": "tree145"}
+		{"type": "Text", "content": ". If specified, the ", "id": "tree145"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree146"},
+		{"type": "Text", "content": " indicates the context from which the ", "id": "tree147"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree148"},
+		{"type": "Text", "content": " was deleted.", "id": "tree149"}
 	],
 	"Dislike": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree146"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree147"},
-		{"type": "Text", "content": " dislikes the ", "id": "tree148"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree149"},
-		{"type": "Text", "content": ".", "id": "tree150"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree150"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree151"},
+		{"type": "Text", "content": " dislikes the ", "id": "tree152"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree153"},
+		{"type": "Text", "content": ".", "id": "tree154"}
 	],
 	"Flag": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree151"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree152"},
-		{"type": "Text", "content": " is \"flagging\" the ", "id": "tree153"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree154"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree155"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree156"},
+		{"type": "Text", "content": " is \"flagging\" the ", "id": "tree157"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree158"},
 		{
 			"type": "Text",
 			"content": ". Flagging is defined in the sense common to many social platforms as reporting content as being inappropriate for any number of reasons.",
-			"id": "tree155"
+			"id": "tree159"
 		}
 	],
 	"Follow": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree156"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree157"},
-		{"type": "Text", "content": " is \"following\" the ", "id": "tree158"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree159"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree160"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree161"},
+		{"type": "Text", "content": " is \"following\" the ", "id": "tree162"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree163"},
 		{
 			"type": "Text",
 			"content": ". Following is defined in the sense typically used within Social systems in which the actor is interested in any activity performed by or on the object. The ",
-			"id": "tree160"
+			"id": "tree164"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree161"},
-		{"type": "Text", "content": " and ", "id": "tree162"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree163"},
-		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree164"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree165"},
+		{"type": "Text", "content": " and ", "id": "tree166"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree167"},
+		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree168"}
 	],
 	"Ignore": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree165"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree166"},
-		{"type": "Text", "content": " is ignoring the ", "id": "tree167"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree168"},
-		{"type": "Text", "content": ". The ", "id": "tree169"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree170"},
-		{"type": "Text", "content": " and ", "id": "tree171"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree172"},
-		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree173"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree169"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree170"},
+		{"type": "Text", "content": " is ignoring the ", "id": "tree171"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree172"},
+		{"type": "Text", "content": ". The ", "id": "tree173"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree174"},
+		{"type": "Text", "content": " and ", "id": "tree175"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree176"},
+		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree177"}
 	],
 	"Invite": [
-		{"type": "Text", "content": "A specialization of ", "id": "tree174"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Offer"}, "id": "tree175"},
-		{"type": "Text", "content": " in which the ", "id": "tree176"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree177"},
-		{"type": "Text", "content": " is extending an invitation for the ", "id": "tree178"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree179"},
-		{"type": "Text", "content": " to the ", "id": "tree180"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree181"},
-		{"type": "Text", "content": ".", "id": "tree182"}
+		{"type": "Text", "content": "A specialization of ", "id": "tree178"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Offer"}, "id": "tree179"},
+		{"type": "Text", "content": " in which the ", "id": "tree180"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree181"},
+		{"type": "Text", "content": " is extending an invitation for the ", "id": "tree182"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree183"},
+		{"type": "Text", "content": " to the ", "id": "tree184"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree185"},
+		{"type": "Text", "content": ".", "id": "tree186"}
 	],
 	"Join": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree183"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree184"},
-		{"type": "Text", "content": " has joined the ", "id": "tree185"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree186"},
-		{"type": "Text", "content": ". The ", "id": "tree187"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree188"},
-		{"type": "Text", "content": " and ", "id": "tree189"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree190"},
-		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree191"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree187"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree188"},
+		{"type": "Text", "content": " has joined the ", "id": "tree189"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree190"},
+		{"type": "Text", "content": ". The ", "id": "tree191"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree192"},
+		{"type": "Text", "content": " and ", "id": "tree193"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree194"},
+		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree195"}
 	],
 	"Leave": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree192"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree193"},
-		{"type": "Text", "content": " has left the ", "id": "tree194"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree195"},
-		{"type": "Text", "content": ". The ", "id": "tree196"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree197"},
-		{"type": "Text", "content": " and ", "id": "tree198"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree199"},
-		{"type": "Text", "content": " typically have no meaning.", "id": "tree200"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree196"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree197"},
+		{"type": "Text", "content": " has left the ", "id": "tree198"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree199"},
+		{"type": "Text", "content": ". The ", "id": "tree200"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree201"},
+		{"type": "Text", "content": " and ", "id": "tree202"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree203"},
+		{"type": "Text", "content": " typically have no meaning.", "id": "tree204"}
 	],
 	"Like": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree201"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree202"},
-		{"type": "Text", "content": " likes, recommends or endorses the ", "id": "tree203"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree204"},
-		{"type": "Text", "content": ". The ", "id": "tree205"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree206"},
-		{"type": "Text", "content": " and ", "id": "tree207"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree208"},
-		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree209"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree205"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree206"},
+		{"type": "Text", "content": " likes, recommends or endorses the ", "id": "tree207"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree208"},
+		{"type": "Text", "content": ". The ", "id": "tree209"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree210"},
+		{"type": "Text", "content": " and ", "id": "tree211"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree212"},
+		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree213"}
 	],
 	"Listen": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree210"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree211"},
-		{"type": "Text", "content": " has listened to the ", "id": "tree212"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree213"},
-		{"type": "Text", "content": ".", "id": "tree214"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree214"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree215"},
+		{"type": "Text", "content": " has listened to the ", "id": "tree216"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree217"},
+		{"type": "Text", "content": ".", "id": "tree218"}
 	],
 	"Move": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree215"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree216"},
-		{"type": "Text", "content": " has moved ", "id": "tree217"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree218"},
-		{"type": "Text", "content": " from ", "id": "tree219"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree220"},
-		{"type": "Text", "content": " to ", "id": "tree221"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree222"},
-		{"type": "Text", "content": ". If the ", "id": "tree223"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree219"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree220"},
+		{"type": "Text", "content": " has moved ", "id": "tree221"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree222"},
+		{"type": "Text", "content": " from ", "id": "tree223"},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree224"},
-		{"type": "Text", "content": " or ", "id": "tree225"},
+		{"type": "Text", "content": " to ", "id": "tree225"},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree226"},
+		{"type": "Text", "content": ". If the ", "id": "tree227"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree228"},
+		{"type": "Text", "content": " or ", "id": "tree229"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree230"},
 		{
 			"type": "Text",
 			"content": " are not specified, either can be determined by context.",
-			"id": "tree227"
+			"id": "tree231"
 		}
 	],
 	"Offer": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree228"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree229"},
-		{"type": "Text", "content": " is offering the ", "id": "tree230"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree231"},
-		{"type": "Text", "content": ". If specified, the ", "id": "tree232"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree233"},
-		{"type": "Text", "content": " indicates the entity to which the ", "id": "tree234"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree232"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree233"},
+		{"type": "Text", "content": " is offering the ", "id": "tree234"},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree235"},
-		{"type": "Text", "content": " is being offered.", "id": "tree236"}
+		{"type": "Text", "content": ". If specified, the ", "id": "tree236"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree237"},
+		{"type": "Text", "content": " indicates the entity to which the ", "id": "tree238"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree239"},
+		{"type": "Text", "content": " is being offered.", "id": "tree240"}
 	],
 	"Question": [
 		{
 			"type": "Text",
 			"content": "Represents a question being asked. Question objects are an extension of ",
-			"id": "tree237"
+			"id": "tree241"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "IntransitiveActivity"},
-			"id": "tree238"
+			"id": "tree242"
 		},
-		{"type": "Text", "content": ". That is, the ", "id": "tree239"},
+		{"type": "Text", "content": ". That is, the ", "id": "tree243"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Question"},
-			"id": "tree240"
+			"id": "tree244"
 		},
-		{"type": "Text", "content": " object is an ", "id": "tree241"},
+		{"type": "Text", "content": " object is an ", "id": "tree245"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Activity"},
-			"id": "tree242"
+			"id": "tree246"
 		},
 		{
 			"type": "Text",
 			"content": ", but the direct object is the question itself and therefore it would not contain an ",
-			"id": "tree243"
+			"id": "tree247"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree244"},
-		{"type": "Text", "content": " property. Either of the ", "id": "tree245"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "tree246"},
-		{"type": "Text", "content": " and ", "id": "tree247"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "tree248"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree248"},
+		{"type": "Text", "content": " property. Either of the ", "id": "tree249"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "tree250"},
+		{"type": "Text", "content": " and ", "id": "tree251"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "tree252"},
 		{
 			"type": "Text",
 			"content": " properties MAY be used to express possible answers, but a Question object MUST NOT have both properties.",
-			"id": "tree249"
+			"id": "tree253"
 		}
 	],
 	"Reject": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree250"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree251"},
-		{"type": "Text", "content": " is rejecting the ", "id": "tree252"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree253"},
-		{"type": "Text", "content": ". The ", "id": "tree254"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree255"},
-		{"type": "Text", "content": " and ", "id": "tree256"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree257"},
-		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree258"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree254"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree255"},
+		{"type": "Text", "content": " is rejecting the ", "id": "tree256"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree257"},
+		{"type": "Text", "content": ". The ", "id": "tree258"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree259"},
+		{"type": "Text", "content": " and ", "id": "tree260"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree261"},
+		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree262"}
 	],
 	"Read": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree259"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree260"},
-		{"type": "Text", "content": " has read the ", "id": "tree261"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree262"},
-		{"type": "Text", "content": ".", "id": "tree263"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree263"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree264"},
+		{"type": "Text", "content": " has read the ", "id": "tree265"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree266"},
+		{"type": "Text", "content": ".", "id": "tree267"}
 	],
 	"Remove": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree264"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree265"},
-		{"type": "Text", "content": " is removing the ", "id": "tree266"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree267"},
-		{"type": "Text", "content": ". If specified, the ", "id": "tree268"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree269"},
-		{"type": "Text", "content": " indicates the context from which the ", "id": "tree270"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree268"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree269"},
+		{"type": "Text", "content": " is removing the ", "id": "tree270"},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree271"},
-		{"type": "Text", "content": " is being removed.", "id": "tree272"}
+		{"type": "Text", "content": ". If specified, the ", "id": "tree272"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree273"},
+		{"type": "Text", "content": " indicates the context from which the ", "id": "tree274"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree275"},
+		{"type": "Text", "content": " is being removed.", "id": "tree276"}
 	],
 	"TentativeReject": [
-		{"type": "Text", "content": "A specialization of ", "id": "tree273"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Reject"}, "id": "tree274"},
-		{"type": "Text", "content": " in which the rejection is considered tentative.", "id": "tree275"}
+		{"type": "Text", "content": "A specialization of ", "id": "tree277"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Reject"}, "id": "tree278"},
+		{"type": "Text", "content": " in which the rejection is considered tentative.", "id": "tree279"}
 	],
 	"TentativeAccept": [
-		{"type": "Text", "content": "A specialization of ", "id": "tree276"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Accept"}, "id": "tree277"},
-		{"type": "Text", "content": " indicating that the acceptance is tentative.", "id": "tree278"}
+		{"type": "Text", "content": "A specialization of ", "id": "tree280"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Accept"}, "id": "tree281"},
+		{"type": "Text", "content": " indicating that the acceptance is tentative.", "id": "tree282"}
 	],
 	"Travel": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree279"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree280"},
-		{"type": "Text", "content": " is traveling to ", "id": "tree281"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree282"},
-		{"type": "Text", "content": " from ", "id": "tree283"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree284"},
-		{"type": "Text", "content": ". ", "id": "tree285"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Travel"}, "id": "tree286"},
-		{"type": "Text", "content": " is an `IntransitiveObject` whose ", "id": "tree287"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree288"},
-		{"type": "Text", "content": " specifies the direct object. If the ", "id": "tree289"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree290"},
-		{"type": "Text", "content": " or ", "id": "tree291"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree292"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree283"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree284"},
+		{"type": "Text", "content": " is traveling to ", "id": "tree285"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree286"},
+		{"type": "Text", "content": " from ", "id": "tree287"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree288"},
+		{"type": "Text", "content": ". ", "id": "tree289"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Travel"}, "id": "tree290"},
+		{"type": "Text", "content": " is an `IntransitiveObject` whose ", "id": "tree291"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree292"},
+		{"type": "Text", "content": " specifies the direct object. If the ", "id": "tree293"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree294"},
+		{"type": "Text", "content": " or ", "id": "tree295"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree296"},
 		{
 			"type": "Text",
 			"content": " are not specified, either can be determined by context.",
-			"id": "tree293"
+			"id": "tree297"
 		}
 	],
 	"Undo": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree294"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree295"},
-		{"type": "Text", "content": " is undoing the ", "id": "tree296"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree297"},
-		{"type": "Text", "content": ". In most cases, the ", "id": "tree298"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree299"},
-		{"type": "Text", "content": " will be an ", "id": "tree300"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree298"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree299"},
+		{"type": "Text", "content": " is undoing the ", "id": "tree300"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree301"},
+		{"type": "Text", "content": ". In most cases, the ", "id": "tree302"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree303"},
+		{"type": "Text", "content": " will be an ", "id": "tree304"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Activity"},
-			"id": "tree301"
+			"id": "tree305"
 		},
 		{
 			"type": "Text",
 			"content": " describing some previously performed action (for instance, a person may have previously \"liked\" an article but, for whatever reason, might choose to undo that like at some later point in time). The ",
-			"id": "tree302"
+			"id": "tree306"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree303"},
-		{"type": "Text", "content": " and ", "id": "tree304"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree305"},
-		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree306"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree307"},
+		{"type": "Text", "content": " and ", "id": "tree308"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree309"},
+		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree310"}
 	],
 	"Update": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree307"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree308"},
-		{"type": "Text", "content": " has updated the ", "id": "tree309"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree310"},
+		{"type": "Text", "content": "Indicates that the ", "id": "tree311"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree312"},
+		{"type": "Text", "content": " has updated the ", "id": "tree313"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree314"},
 		{
 			"type": "Text",
 			"content": ". Note, however, that this vocabulary does not define a mechanism for describing the actual set of modifications made to ",
-			"id": "tree311"
+			"id": "tree315"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree312"},
-		{"type": "Text", "content": ". The ", "id": "tree313"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree314"},
-		{"type": "Text", "content": " and ", "id": "tree315"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree316"},
-		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree317"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree316"},
+		{"type": "Text", "content": ". The ", "id": "tree317"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "target"}, "id": "tree318"},
+		{"type": "Text", "content": " and ", "id": "tree319"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "origin"}, "id": "tree320"},
+		{"type": "Text", "content": " typically have no defined meaning.", "id": "tree321"}
 	],
 	"View": [
-		{"type": "Text", "content": "Indicates that the ", "id": "tree318"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree319"},
-		{"type": "Text", "content": " has viewed the ", "id": "tree320"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree321"},
-		{"type": "Text", "content": ".", "id": "tree322"}
+		{"type": "Text", "content": "Indicates that the ", "id": "tree322"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree323"},
+		{"type": "Text", "content": " has viewed the ", "id": "tree324"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree325"},
+		{"type": "Text", "content": ".", "id": "tree326"}
 	],
 	"Application": [
-		{"type": "Text", "content": "Describes a software application.", "id": "tree323"}
+		{"type": "Text", "content": "Describes a software application.", "id": "tree327"}
 	],
 	"Group": [
 		{
 			"type": "Text",
 			"content": "Represents a formal or informal collective of Actors.",
-			"id": "tree324"
+			"id": "tree328"
 		}
 	],
-	"Organization": [{"type": "Text", "content": "Represents an organization.", "id": "tree325"}],
-	"Person": [{"type": "Text", "content": "Represents an individual person.", "id": "tree326"}],
-	"Service": [{"type": "Text", "content": "Represents a service of any kind.", "id": "tree327"}],
+	"Organization": [{"type": "Text", "content": "Represents an organization.", "id": "tree329"}],
+	"Person": [{"type": "Text", "content": "Represents an individual person.", "id": "tree330"}],
+	"Service": [{"type": "Text", "content": "Represents a service of any kind.", "id": "tree331"}],
 	"Article": [
 		{
 			"type": "Text",
 			"content": "Represents any kind of multi-paragraph written work.",
-			"id": "tree328"
+			"id": "tree332"
 		}
 	],
 	"Audio": [
-		{"type": "Text", "content": "Represents an audio document of any kind.", "id": "tree329"}
+		{"type": "Text", "content": "Represents an audio document of any kind.", "id": "tree333"}
 	],
-	"Document": [{"type": "Text", "content": "Represents a document of any kind.", "id": "tree330"}],
-	"Event": [{"type": "Text", "content": "Represents any kind of event.", "id": "tree331"}],
+	"Document": [{"type": "Text", "content": "Represents a document of any kind.", "id": "tree334"}],
+	"Event": [{"type": "Text", "content": "Represents any kind of event.", "id": "tree335"}],
 	"Image": [
-		{"type": "Text", "content": "Represents an image document of any kind.", "id": "tree332"}
+		{"type": "Text", "content": "Represents an image document of any kind.", "id": "tree336"}
 	],
 	"Note": [
 		{
 			"type": "Text",
 			"content": "Represents a short written work typically less than a single paragraph in length.",
-			"id": "tree333"
+			"id": "tree337"
 		}
 	],
-	"Page": [{"type": "Text", "content": "Represents a Web Page.", "id": "tree334"}],
+	"Page": [{"type": "Text", "content": "Represents a Web Page.", "id": "tree338"}],
 	"Place": [
-		{"type": "Text", "content": "Represents a logical or physical location. See ", "id": "tree335"},
+		{"type": "Text", "content": "Represents a logical or physical location. See ", "id": "tree339"},
 		{
 			"type": "Component",
 			"component": "Link",
@@ -674,45 +682,45 @@
 				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#places",
 				"content": "5.3 Representing Places"
 			},
-			"id": "tree336"
+			"id": "tree340"
 		},
-		{"type": "Text", "content": " for additional information.", "id": "tree337"}
+		{"type": "Text", "content": " for additional information.", "id": "tree341"}
 	],
 	"Profile": [
-		{"type": "Text", "content": "A ", "id": "tree338"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Profile"}, "id": "tree339"},
-		{"type": "Text", "content": " is a content object that describes another ", "id": "tree340"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree341"},
+		{"type": "Text", "content": "A ", "id": "tree342"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Profile"}, "id": "tree343"},
+		{"type": "Text", "content": " is a content object that describes another ", "id": "tree344"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree345"},
 		{
 			"type": "Text",
 			"content": ", typically used to describe `Actor Type` objects. The ",
-			"id": "tree342"
+			"id": "tree346"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "describes"},
-			"id": "tree343"
+			"id": "tree347"
 		},
 		{
 			"type": "Text",
 			"content": " property is used to reference the object being described by the profile.",
-			"id": "tree344"
+			"id": "tree348"
 		}
 	],
 	"Relationship": [
 		{
 			"type": "Text",
 			"content": "Describes a relationship between two individuals. The ",
-			"id": "tree345"
+			"id": "tree349"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree346"},
-		{"type": "Text", "content": " and ", "id": "tree347"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree348"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree350"},
+		{"type": "Text", "content": " and ", "id": "tree351"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree352"},
 		{
 			"type": "Text",
 			"content": " properties are used to identify the connected individuals. ",
-			"id": "tree349"
+			"id": "tree353"
 		},
 		{
 			"type": "Component",
@@ -721,501 +729,501 @@
 				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#connections",
 				"content": "See 5.2 Representing Relationships Between Entities"
 			},
-			"id": "tree350"
+			"id": "tree354"
 		},
-		{"type": "Text", "content": " for additional information.", "id": "tree351"}
+		{"type": "Text", "content": " for additional information.", "id": "tree355"}
 	],
 	"Tombstone": [
-		{"type": "Text", "content": "A ", "id": "tree352"},
+		{"type": "Text", "content": "A ", "id": "tree356"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Tombstone"},
-			"id": "tree353"
+			"id": "tree357"
 		},
 		{
 			"type": "Text",
 			"content": " represents a content object that has been deleted. It can be used in ",
-			"id": "tree354"
+			"id": "tree358"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree355"
+			"id": "tree359"
 		},
 		{
 			"type": "Text",
 			"content": "s to signify that there used to be an object at this position, but it has been deleted.",
-			"id": "tree356"
+			"id": "tree360"
 		}
 	],
 	"Video": [
-		{"type": "Text", "content": "Represents a video document of any kind.", "id": "tree357"}
+		{"type": "Text", "content": "Represents a video document of any kind.", "id": "tree361"}
 	],
 	"Mention": [
-		{"type": "Text", "content": "A specialized ", "id": "tree358"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree359"},
-		{"type": "Text", "content": " that represents an @mention.", "id": "tree360"}
+		{"type": "Text", "content": "A specialized ", "id": "tree362"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree363"},
+		{"type": "Text", "content": " that represents an @mention.", "id": "tree364"}
 	],
 	"id": [
-		{"type": "Text", "content": "Provides the globally unique identifier for an ", "id": "tree361"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree362"},
-		{"type": "Text", "content": " or ", "id": "tree363"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree364"},
-		{"type": "Text", "content": ".", "id": "tree365"}
+		{"type": "Text", "content": "Provides the globally unique identifier for an ", "id": "tree365"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree366"},
+		{"type": "Text", "content": " or ", "id": "tree367"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree368"},
+		{"type": "Text", "content": ".", "id": "tree369"}
 	],
 	"type": [
-		{"type": "Text", "content": "Identifies the ", "id": "tree366"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree367"},
-		{"type": "Text", "content": " or ", "id": "tree368"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree369"},
-		{"type": "Text", "content": " type. Multiple values may be specified.", "id": "tree370"}
+		{"type": "Text", "content": "Identifies the ", "id": "tree370"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree371"},
+		{"type": "Text", "content": " or ", "id": "tree372"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree373"},
+		{"type": "Text", "content": " type. Multiple values may be specified.", "id": "tree374"}
 	],
 	"actor": [
 		{
 			"type": "Text",
 			"content": "Describes one or more entities that either performed or are expected to perform the activity. Any single activity can have multiple ",
-			"id": "tree371"
+			"id": "tree375"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree372"},
-		{"type": "Text", "content": "s. The ", "id": "tree373"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree374"},
-		{"type": "Text", "content": " MAY be specified using an indirect ", "id": "tree375"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree376"},
-		{"type": "Text", "content": ".", "id": "tree377"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree376"},
+		{"type": "Text", "content": "s. The ", "id": "tree377"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "actor"}, "id": "tree378"},
+		{"type": "Text", "content": " MAY be specified using an indirect ", "id": "tree379"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree380"},
+		{"type": "Text", "content": ".", "id": "tree381"}
 	],
 	"attachment": [
 		{
 			"type": "Text",
 			"content": "Identifies a resource attached or related to an object that potentially requires special handling. The intent is to provide a model that is at least semantically similar to attachments in email.",
-			"id": "tree378"
+			"id": "tree382"
 		}
 	],
 	"attributedTo": [
 		{
 			"type": "Text",
 			"content": "Identifies one or more entities to which this object is attributed. The attributed entities might not be Actors. For instance, an object might be attributed to the completion of another activity. ",
-			"id": "tree379"
+			"id": "tree383"
 		}
 	],
 	"audience": [
 		{
 			"type": "Text",
 			"content": "Identifies one or more entities that represent the total population of entities for which the object can considered to be relevant.",
-			"id": "tree380"
+			"id": "tree384"
 		}
 	],
 	"bcc": [
 		{
 			"type": "Text",
 			"content": "Identifies one or more Objects that are part of the private secondary audience of this Object.",
-			"id": "tree381"
+			"id": "tree385"
 		}
 	],
 	"bto": [
 		{
 			"type": "Text",
 			"content": "Identifies an Object that is part of the private primary audience of this Object.",
-			"id": "tree382"
+			"id": "tree386"
 		}
 	],
 	"cc": [
 		{
 			"type": "Text",
 			"content": "Identifies an Object that is part of the public secondary audience of this Object.",
-			"id": "tree383"
+			"id": "tree387"
 		}
 	],
 	"context": [
 		{
 			"type": "Text",
 			"content": "Identifies the context within which the object exists or an activity was performed. The notion of \"",
-			"id": "tree384"
+			"id": "tree388"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "context"}, "id": "tree385"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "context"}, "id": "tree389"},
 		{
 			"type": "Text",
 			"content": "\" used is intentionally vague. The intended function is to serve as a means of grouping objects and activities that share a common originating context or purpose. An example could be all activities relating to a common project or event.",
-			"id": "tree386"
+			"id": "tree390"
 		}
 	],
 	"current": [
-		{"type": "Text", "content": "In a paged ", "id": "tree387"},
+		{"type": "Text", "content": "In a paged ", "id": "tree391"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree388"
+			"id": "tree392"
 		},
 		{
 			"type": "Text",
 			"content": ", indicates the page that contains the most recently updated member items.",
-			"id": "tree389"
+			"id": "tree393"
 		}
 	],
 	"first": [
-		{"type": "Text", "content": "In a paged ", "id": "tree390"},
+		{"type": "Text", "content": "In a paged ", "id": "tree394"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree391"
+			"id": "tree395"
 		},
 		{
 			"type": "Text",
 			"content": ", indicates the furthest preceeding page of items in the collection.",
-			"id": "tree392"
+			"id": "tree396"
 		}
 	],
 	"generator": [
 		{
 			"type": "Text",
 			"content": "Identifies the entity (e.g. an application) that generated the object.",
-			"id": "tree393"
+			"id": "tree397"
 		}
 	],
 	"icon": [
 		{
 			"type": "Text",
 			"content": "Indicates an entity that describes an icon for this object. The image should have an aspect ratio of one (horizontal) to one (vertical) and should be suitable for presentation at a small size.",
-			"id": "tree394"
+			"id": "tree398"
 		}
 	],
 	"image": [
 		{
 			"type": "Text",
 			"content": "Indicates an entity that describes an image for this object. Unlike the icon property, there are no aspect ratio or display size limitations assumed.",
-			"id": "tree395"
+			"id": "tree399"
 		}
 	],
 	"inReplyTo": [
 		{
 			"type": "Text",
 			"content": "Indicates one or more entities for which this object is considered a response.",
-			"id": "tree396"
+			"id": "tree400"
 		}
 	],
 	"instrument": [
 		{
 			"type": "Text",
 			"content": "Identifies one or more objects used (or to be used) in the completion of an ",
-			"id": "tree397"
+			"id": "tree401"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Activity"},
-			"id": "tree398"
+			"id": "tree402"
 		},
-		{"type": "Text", "content": ".", "id": "tree399"}
+		{"type": "Text", "content": ".", "id": "tree403"}
 	],
 	"last": [
-		{"type": "Text", "content": "In a paged ", "id": "tree400"},
+		{"type": "Text", "content": "In a paged ", "id": "tree404"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree401"
+			"id": "tree405"
 		},
 		{
 			"type": "Text",
 			"content": ", indicates the furthest proceeding page of the collection.",
-			"id": "tree402"
+			"id": "tree406"
 		}
 	],
 	"location": [
 		{
 			"type": "Text",
 			"content": "Indicates one or more physical or logical locations associated with the object.",
-			"id": "tree403"
+			"id": "tree407"
 		}
 	],
 	"items": [
 		{
 			"type": "Text",
 			"content": "Identifies the items contained in a collection. The items might be ordered or unordered.",
-			"id": "tree404"
+			"id": "tree408"
 		}
 	],
 	"orderedItems": [
 		{
 			"type": "Text",
 			"content": "Identifies the items contained in a collection. The items are unordered.",
-			"id": "tree405"
+			"id": "tree409"
 		}
 	],
 	"oneOf": [
-		{"type": "Text", "content": "Identifies an exclusive option for a ", "id": "tree406"},
-		{
-			"type": "Component",
-			"component": "EntityLink",
-			"props": {"name": "Question"},
-			"id": "tree407"
-		},
-		{"type": "Text", "content": ". Use of ", "id": "tree408"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "tree409"},
-		{"type": "Text", "content": " implies that the ", "id": "tree410"},
+		{"type": "Text", "content": "Identifies an exclusive option for a ", "id": "tree410"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Question"},
 			"id": "tree411"
 		},
+		{"type": "Text", "content": ". Use of ", "id": "tree412"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "tree413"},
+		{"type": "Text", "content": " implies that the ", "id": "tree414"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Question"},
+			"id": "tree415"
+		},
 		{
 			"type": "Text",
 			"content": " can have only a single answer. To indicate that a ",
-			"id": "tree412"
+			"id": "tree416"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Question"},
-			"id": "tree413"
+			"id": "tree417"
 		},
-		{"type": "Text", "content": " can have multiple answers, use ", "id": "tree414"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "tree415"},
-		{"type": "Text", "content": ".", "id": "tree416"}
+		{"type": "Text", "content": " can have multiple answers, use ", "id": "tree418"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "tree419"},
+		{"type": "Text", "content": ".", "id": "tree420"}
 	],
 	"anyOf": [
-		{"type": "Text", "content": "Identifies an inclusive option for a ", "id": "tree417"},
-		{
-			"type": "Component",
-			"component": "EntityLink",
-			"props": {"name": "Question"},
-			"id": "tree418"
-		},
-		{"type": "Text", "content": ". Use of ", "id": "tree419"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "tree420"},
-		{"type": "Text", "content": " implies that the ", "id": "tree421"},
+		{"type": "Text", "content": "Identifies an inclusive option for a ", "id": "tree421"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Question"},
 			"id": "tree422"
 		},
-		{"type": "Text", "content": " can have multiple answers. To indicate that a ", "id": "tree423"},
+		{"type": "Text", "content": ". Use of ", "id": "tree423"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "anyOf"}, "id": "tree424"},
+		{"type": "Text", "content": " implies that the ", "id": "tree425"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Question"},
-			"id": "tree424"
+			"id": "tree426"
 		},
-		{"type": "Text", "content": " can have only one answer, use ", "id": "tree425"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "tree426"},
-		{"type": "Text", "content": ".", "id": "tree427"}
+		{"type": "Text", "content": " can have multiple answers. To indicate that a ", "id": "tree427"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Question"},
+			"id": "tree428"
+		},
+		{"type": "Text", "content": " can have only one answer, use ", "id": "tree429"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "oneOf"}, "id": "tree430"},
+		{"type": "Text", "content": ".", "id": "tree431"}
 	],
 	"closed": [
 		{
 			"type": "Text",
 			"content": "Indicates that a question has been closed, and answers are no longer accepted.",
-			"id": "tree428"
+			"id": "tree432"
 		}
 	],
 	"origin": [
 		{
 			"type": "Text",
 			"content": "Describes an indirect object of the activity from which the activity is directed. The precise meaning of the origin is the object of the English preposition \"from\". For instance, in the activity \"John moved an item to List B from List A\", the origin of the activity is \"List A\".",
-			"id": "tree429"
+			"id": "tree433"
 		}
 	],
 	"next": [
-		{"type": "Text", "content": "In a paged ", "id": "tree430"},
+		{"type": "Text", "content": "In a paged ", "id": "tree434"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree431"
+			"id": "tree435"
 		},
-		{"type": "Text", "content": ", indicates the next page of items.", "id": "tree432"}
+		{"type": "Text", "content": ", indicates the next page of items.", "id": "tree436"}
 	],
 	"object": [
-		{"type": "Text", "content": "When used within an ", "id": "tree433"},
+		{"type": "Text", "content": "When used within an ", "id": "tree437"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Activity"},
-			"id": "tree434"
+			"id": "tree438"
 		},
 		{
 			"type": "Text",
 			"content": ", describes the direct object of the activity. For instance, in the activity \"John added a movie to his wishlist\", the object of the activity is the movie added. When used within a ",
-			"id": "tree435"
+			"id": "tree439"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Relationship"},
-			"id": "tree436"
+			"id": "tree440"
 		},
-		{"type": "Text", "content": " describes the entity to which the ", "id": "tree437"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree438"},
-		{"type": "Text", "content": " is related.", "id": "tree439"}
+		{"type": "Text", "content": " describes the entity to which the ", "id": "tree441"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree442"},
+		{"type": "Text", "content": " is related.", "id": "tree443"}
 	],
 	"prev": [
-		{"type": "Text", "content": "In a paged ", "id": "tree440"},
+		{"type": "Text", "content": "In a paged ", "id": "tree444"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree441"
+			"id": "tree445"
 		},
-		{"type": "Text", "content": ", identifies the previous page of items.", "id": "tree442"}
+		{"type": "Text", "content": ", identifies the previous page of items.", "id": "tree446"}
 	],
 	"preview": [
 		{
 			"type": "Text",
 			"content": "Identifies an entity that provides a preview of this object.",
-			"id": "tree443"
+			"id": "tree447"
 		}
 	],
 	"result": [
 		{
 			"type": "Text",
 			"content": "Describes the result of the activity. For instance, if a particular action results in the creation of a new resource, the result property can be used to describe that new resource.",
-			"id": "tree444"
+			"id": "tree448"
 		}
 	],
 	"replies": [
-		{"type": "Text", "content": "Identifies a ", "id": "tree445"},
+		{"type": "Text", "content": "Identifies a ", "id": "tree449"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree446"
+			"id": "tree450"
 		},
 		{
 			"type": "Text",
 			"content": " containing objects considered to be responses to this object.",
-			"id": "tree447"
+			"id": "tree451"
 		}
 	],
 	"tag": [
 		{
 			"type": "Text",
 			"content": "One or more \"tags\" that have been associated with an objects. A ",
-			"id": "tree448"
+			"id": "tree452"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "tag"}, "id": "tree449"},
-		{"type": "Text", "content": " can be any kind of ", "id": "tree450"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree451"},
-		{"type": "Text", "content": ". The key difference between ", "id": "tree452"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "tag"}, "id": "tree453"},
+		{"type": "Text", "content": " can be any kind of ", "id": "tree454"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree455"},
+		{"type": "Text", "content": ". The key difference between ", "id": "tree456"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "attachment"},
-			"id": "tree453"
+			"id": "tree457"
 		},
-		{"type": "Text", "content": " and ", "id": "tree454"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "tag"}, "id": "tree455"},
+		{"type": "Text", "content": " and ", "id": "tree458"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "tag"}, "id": "tree459"},
 		{
 			"type": "Text",
 			"content": " is that the former implies association by inclusion, while the latter implies associated by reference.",
-			"id": "tree456"
+			"id": "tree460"
 		}
 	],
 	"target": [
 		{
 			"type": "Text",
 			"content": "Describes the indirect object, or target, of the activity. The precise meaning of the target is largely dependent on the type of action being described but will often be the object of the English preposition \"",
-			"id": "tree457"
+			"id": "tree461"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "to"}, "id": "tree458"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "to"}, "id": "tree462"},
 		{
 			"type": "Text",
 			"content": "\". For instance, in the activity \"John added a movie to his wishlist\", the target of the activity is John's wishlist. An activity can have more than one target.",
-			"id": "tree459"
+			"id": "tree463"
 		}
 	],
 	"to": [
 		{
 			"type": "Text",
 			"content": "Identifies an entity considered to be part of the public primary audience of an ",
-			"id": "tree460"
+			"id": "tree464"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree461"},
-		{"type": "Text", "content": ".", "id": "tree462"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree465"},
+		{"type": "Text", "content": ".", "id": "tree466"}
 	],
 	"url": [
 		{
 			"type": "Text",
 			"content": "Identifies one or more links to representations of the object.",
-			"id": "tree463"
+			"id": "tree467"
 		}
 	],
 	"accuracy": [
 		{
 			"type": "Text",
 			"content": "Indicates the accuracy of position coordinates on a ",
-			"id": "tree464"
+			"id": "tree468"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "tree465"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "tree469"},
 		{
 			"type": "Text",
 			"content": " objects. Expressed in properties of percentage. e.g. \"94.0\" means \"94.0% accurate\".",
-			"id": "tree466"
+			"id": "tree470"
 		}
 	],
 	"altitude": [
 		{
 			"type": "Text",
 			"content": "Indicates the altitude of a place. The measurement units is indicated using the ",
-			"id": "tree467"
+			"id": "tree471"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree468"},
-		{"type": "Text", "content": " property. If ", "id": "tree469"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree470"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree472"},
+		{"type": "Text", "content": " property. If ", "id": "tree473"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree474"},
 		{
 			"type": "Text",
 			"content": " is not specified, the default is assumed to be \"m\" indicating meters.",
-			"id": "tree471"
+			"id": "tree475"
 		}
 	],
 	"content": [
-		{"type": "Text", "content": "The content or textual representation of the ", "id": "tree472"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree473"},
+		{"type": "Text", "content": "The content or textual representation of the ", "id": "tree476"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree477"},
 		{
 			"type": "Text",
 			"content": " encoded as a JSON string. By default, the value of ",
-			"id": "tree474"
+			"id": "tree478"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "content"}, "id": "tree475"},
-		{"type": "Text", "content": " is HTML. The ", "id": "tree476"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "content"}, "id": "tree479"},
+		{"type": "Text", "content": " is HTML. The ", "id": "tree480"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "mediaType"},
-			"id": "tree477"
+			"id": "tree481"
 		},
 		{
 			"type": "Text",
 			"content": " property can be used in the object to indicate a different content type. The content MAY be expressed using multiple language-tagged values.",
-			"id": "tree478"
+			"id": "tree482"
 		}
 	],
 	"name": [
 		{
 			"type": "Text",
 			"content": "A simple, human-readable, plain-text name for the object. HTML markup MUST NOT be included. The name MAY be expressed using multiple language-tagged values.",
-			"id": "tree479"
+			"id": "tree483"
 		}
 	],
 	"duration": [
 		{
 			"type": "Text",
 			"content": "When the object describes a time-bound resource, such as an audio or video, a meeting, etc, the ",
-			"id": "tree480"
+			"id": "tree484"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "duration"},
-			"id": "tree481"
+			"id": "tree485"
 		},
 		{
 			"type": "Text",
 			"content": " property indicates the object's approximate duration. The value MUST be expressed as an `xsd:duration` as defined by [ ",
-			"id": "tree482"
+			"id": "tree486"
 		},
 		{
 			"type": "Component",
@@ -1224,32 +1232,32 @@
 				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-xmlschema11-2",
 				"content": "xmlschema11-2"
 			},
-			"id": "tree483"
+			"id": "tree487"
 		},
 		{
 			"type": "Text",
 			"content": "], section 3.3.6 (e.g. a period of 5 seconds is represented as \"PT5S\").",
-			"id": "tree484"
+			"id": "tree488"
 		}
 	],
 	"height": [
-		{"type": "Text", "content": "On a ", "id": "tree485"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree486"},
+		{"type": "Text", "content": "On a ", "id": "tree489"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree490"},
 		{
 			"type": "Text",
 			"content": ", specifies a hint as to the rendering height in device-independent pixels of the linked resource.",
-			"id": "tree487"
+			"id": "tree491"
 		}
 	],
 	"href": [
-		{"type": "Text", "content": "The target resource pointed to by a ", "id": "tree488"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree489"}
+		{"type": "Text", "content": "The target resource pointed to by a ", "id": "tree492"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree493"}
 	],
 	"hreflang": [
 		{
 			"type": "Text",
 			"content": "Hints as to the language used by the target resource. Value MUST be a [",
-			"id": "tree490"
+			"id": "tree494"
 		},
 		{
 			"type": "Component",
@@ -1258,135 +1266,135 @@
 				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-BCP47",
 				"content": "BCP47"
 			},
-			"id": "tree491"
+			"id": "tree495"
 		},
-		{"type": "Text", "content": "] Language-Tag.", "id": "tree492"}
+		{"type": "Text", "content": "] Language-Tag.", "id": "tree496"}
 	],
 	"partOf": [
-		{"type": "Text", "content": "Identifies the ", "id": "tree493"},
+		{"type": "Text", "content": "Identifies the ", "id": "tree497"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree494"
+			"id": "tree498"
 		},
-		{"type": "Text", "content": " to which a ", "id": "tree495"},
+		{"type": "Text", "content": " to which a ", "id": "tree499"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "CollectionPage"},
-			"id": "tree496"
+			"id": "tree500"
 		},
-		{"type": "Text", "content": " objects items belong.", "id": "tree497"}
+		{"type": "Text", "content": " objects items belong.", "id": "tree501"}
 	],
-	"latitude": [{"type": "Text", "content": "The latitude of a place", "id": "tree498"}],
-	"longitude": [{"type": "Text", "content": "The longitude of a place", "id": "tree499"}],
+	"latitude": [{"type": "Text", "content": "The latitude of a place", "id": "tree502"}],
+	"longitude": [{"type": "Text", "content": "The longitude of a place", "id": "tree503"}],
 	"mediaType": [
-		{"type": "Text", "content": "When used on a ", "id": "tree500"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree501"},
+		{"type": "Text", "content": "When used on a ", "id": "tree504"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree505"},
 		{
 			"type": "Text",
 			"content": ", identifies the MIME media type of the referenced resource. When used on an ",
-			"id": "tree502"
+			"id": "tree506"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree503"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree507"},
 		{
 			"type": "Text",
 			"content": ", identifies the MIME media type of the value of the ",
-			"id": "tree504"
+			"id": "tree508"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "content"}, "id": "tree505"},
-		{"type": "Text", "content": " property. If not specified, the ", "id": "tree506"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "content"}, "id": "tree507"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "content"}, "id": "tree509"},
+		{"type": "Text", "content": " property. If not specified, the ", "id": "tree510"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "content"}, "id": "tree511"},
 		{
 			"type": "Text",
 			"content": " property is assumed to contain text/html content.",
-			"id": "tree508"
+			"id": "tree512"
 		}
 	],
 	"endTime": [
 		{
 			"type": "Text",
 			"content": "The date and time describing the actual or expected ending time of the object. When used with an ",
-			"id": "tree509"
+			"id": "tree513"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Activity"},
-			"id": "tree510"
+			"id": "tree514"
 		},
-		{"type": "Text", "content": " object, for instance, the ", "id": "tree511"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "endTime"}, "id": "tree512"},
+		{"type": "Text", "content": " object, for instance, the ", "id": "tree515"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "endTime"}, "id": "tree516"},
 		{
 			"type": "Text",
 			"content": " property specifies the moment the activity concluded or is expected to conclude.",
-			"id": "tree513"
+			"id": "tree517"
 		}
 	],
 	"published": [
 		{
 			"type": "Text",
 			"content": "The date and time at which the object was published",
-			"id": "tree514"
+			"id": "tree518"
 		}
 	],
 	"startTime": [
 		{
 			"type": "Text",
 			"content": "The date and time describing the actual or expected starting time of the object. When used with an ",
-			"id": "tree515"
+			"id": "tree519"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Activity"},
-			"id": "tree516"
+			"id": "tree520"
 		},
-		{"type": "Text", "content": " object, for instance, the ", "id": "tree517"},
+		{"type": "Text", "content": " object, for instance, the ", "id": "tree521"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "startTime"},
-			"id": "tree518"
+			"id": "tree522"
 		},
 		{
 			"type": "Text",
 			"content": " property specifies the moment the activity began or is scheduled to begin.",
-			"id": "tree519"
+			"id": "tree523"
 		}
 	],
 	"radius": [
-		{"type": "Text", "content": "The radius from the given ", "id": "tree520"},
+		{"type": "Text", "content": "The radius from the given ", "id": "tree524"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "latitude"},
-			"id": "tree521"
+			"id": "tree525"
 		},
-		{"type": "Text", "content": " and ", "id": "tree522"},
+		{"type": "Text", "content": " and ", "id": "tree526"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "longitude"},
-			"id": "tree523"
+			"id": "tree527"
 		},
-		{"type": "Text", "content": " for a ", "id": "tree524"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "tree525"},
-		{"type": "Text", "content": ". The units is expressed by the ", "id": "tree526"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree527"},
-		{"type": "Text", "content": " property. If ", "id": "tree528"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree529"},
+		{"type": "Text", "content": " for a ", "id": "tree528"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "tree529"},
+		{"type": "Text", "content": ". The units is expressed by the ", "id": "tree530"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree531"},
+		{"type": "Text", "content": " property. If ", "id": "tree532"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "units"}, "id": "tree533"},
 		{
 			"type": "Text",
 			"content": " is not specified, the default is assumed to be \"m\" indicating \"meters\".",
-			"id": "tree530"
+			"id": "tree534"
 		}
 	],
 	"rel": [
-		{"type": "Text", "content": "A link relation associated with a ", "id": "tree531"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree532"},
-		{"type": "Text", "content": ". The value MUST conform to both the [", "id": "tree533"},
+		{"type": "Text", "content": "A link relation associated with a ", "id": "tree535"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree536"},
+		{"type": "Text", "content": ". The value MUST conform to both the [", "id": "tree537"},
 		{
 			"type": "Component",
 			"component": "Link",
@@ -1394,9 +1402,9 @@
 				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5",
 				"content": "HTML5"
 			},
-			"id": "tree534"
+			"id": "tree538"
 		},
-		{"type": "Text", "content": "] and [", "id": "tree535"},
+		{"type": "Text", "content": "] and [", "id": "tree539"},
 		{
 			"type": "Component",
 			"component": "Link",
@@ -1404,9 +1412,9 @@
 				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988",
 				"content": "HTML5RFC5988"
 			},
-			"id": "tree536"
+			"id": "tree540"
 		},
-		{"type": "Text", "content": "] \"link relation\" definitions. In the [", "id": "tree537"},
+		{"type": "Text", "content": "] \"link relation\" definitions. In the [", "id": "tree541"},
 		{
 			"type": "Component",
 			"component": "Link",
@@ -1414,183 +1422,183 @@
 				"href": "https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5",
 				"content": "HTML5RFC5988HTML5"
 			},
-			"id": "tree538"
+			"id": "tree542"
 		},
 		{
 			"type": "Text",
 			"content": "], any string not containing the \"space\" U+0020, \"tab\" (U+0009), \"LF\" (U+000A), \"FF\" (U+000C), \"CR\" (U+000D) or \",\" (U+002C) characters can be used as a valid link relation.",
-			"id": "tree539"
+			"id": "tree543"
 		}
 	],
 	"startIndex": [
 		{
 			"type": "Text",
 			"content": "A non-negative integer value identifying the relative position within the logical view of a strictly ordered collection.",
-			"id": "tree540"
+			"id": "tree544"
 		}
 	],
 	"summary": [
 		{
 			"type": "Text",
 			"content": "A natural language summarization of the object encoded as HTML. Multiple language tagged summaries MAY be provided.",
-			"id": "tree541"
+			"id": "tree545"
 		}
 	],
 	"totalItems": [
 		{
 			"type": "Text",
 			"content": "A non-negative integer specifying the total number of objects contained by the logical view of the collection. This number might not reflect the actual number of items serialized within the ",
-			"id": "tree542"
+			"id": "tree546"
 		},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Collection"},
-			"id": "tree543"
+			"id": "tree547"
 		},
-		{"type": "Text", "content": " object instance.", "id": "tree544"}
+		{"type": "Text", "content": " object instance.", "id": "tree548"}
 	],
 	"units": [
-		{"type": "Text", "content": "Specifies the measurement units for the ", "id": "tree545"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "radius"}, "id": "tree546"},
-		{"type": "Text", "content": " and ", "id": "tree547"},
+		{"type": "Text", "content": "Specifies the measurement units for the ", "id": "tree549"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "radius"}, "id": "tree550"},
+		{"type": "Text", "content": " and ", "id": "tree551"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "altitude"},
-			"id": "tree548"
+			"id": "tree552"
 		},
-		{"type": "Text", "content": " properties on a ", "id": "tree549"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "tree550"},
+		{"type": "Text", "content": " properties on a ", "id": "tree553"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Place"}, "id": "tree554"},
 		{
 			"type": "Text",
 			"content": " object. If not specified, the default is assumed to be \"m\" for \"meters\".",
-			"id": "tree551"
+			"id": "tree555"
 		}
 	],
 	"updated": [
 		{
 			"type": "Text",
 			"content": "The date and time at which the object was updated",
-			"id": "tree552"
+			"id": "tree556"
 		}
 	],
 	"width": [
-		{"type": "Text", "content": "On a ", "id": "tree553"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree554"},
+		{"type": "Text", "content": "On a ", "id": "tree557"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Link"}, "id": "tree558"},
 		{
 			"type": "Text",
 			"content": ", specifies a hint as to the rendering width in device-independent pixels of the linked resource.",
-			"id": "tree555"
+			"id": "tree559"
 		}
 	],
 	"subject": [
-		{"type": "Text", "content": "On a ", "id": "tree556"},
-		{
-			"type": "Component",
-			"component": "EntityLink",
-			"props": {"name": "Relationship"},
-			"id": "tree557"
-		},
-		{"type": "Text", "content": " object, the ", "id": "tree558"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree559"},
-		{
-			"type": "Text",
-			"content": " property identifies one of the connected individuals. For instance, for a ",
-			"id": "tree560"
-		},
+		{"type": "Text", "content": "On a ", "id": "tree560"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Relationship"},
 			"id": "tree561"
 		},
+		{"type": "Text", "content": " object, the ", "id": "tree562"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree563"},
 		{
 			"type": "Text",
-			"content": " object describing \"John is related to Sally\", ",
-			"id": "tree562"
+			"content": " property identifies one of the connected individuals. For instance, for a ",
+			"id": "tree564"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree563"},
-		{"type": "Text", "content": " would refer to John.", "id": "tree564"}
-	],
-	"relationship": [
-		{"type": "Text", "content": "On a ", "id": "tree565"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Relationship"},
+			"id": "tree565"
+		},
+		{
+			"type": "Text",
+			"content": " object describing \"John is related to Sally\", ",
 			"id": "tree566"
 		},
-		{"type": "Text", "content": " object, the ", "id": "tree567"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree567"},
+		{"type": "Text", "content": " would refer to John.", "id": "tree568"}
+	],
+	"relationship": [
+		{"type": "Text", "content": "On a ", "id": "tree569"},
+		{
+			"type": "Component",
+			"component": "EntityLink",
+			"props": {"name": "Relationship"},
+			"id": "tree570"
+		},
+		{"type": "Text", "content": " object, the ", "id": "tree571"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "relationship"},
-			"id": "tree568"
+			"id": "tree572"
 		},
 		{
 			"type": "Text",
 			"content": " property identifies the kind of relationship that exists between ",
-			"id": "tree569"
+			"id": "tree573"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree570"},
-		{"type": "Text", "content": " and ", "id": "tree571"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree572"},
-		{"type": "Text", "content": ".", "id": "tree573"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "subject"}, "id": "tree574"},
+		{"type": "Text", "content": " and ", "id": "tree575"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "object"}, "id": "tree576"},
+		{"type": "Text", "content": ".", "id": "tree577"}
 	],
 	"describes": [
-		{"type": "Text", "content": "On a ", "id": "tree574"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Profile"}, "id": "tree575"},
-		{"type": "Text", "content": " object, the ", "id": "tree576"},
+		{"type": "Text", "content": "On a ", "id": "tree578"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Profile"}, "id": "tree579"},
+		{"type": "Text", "content": " object, the ", "id": "tree580"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "describes"},
-			"id": "tree577"
+			"id": "tree581"
 		},
 		{
 			"type": "Text",
 			"content": " property identifies the object described by the ",
-			"id": "tree578"
+			"id": "tree582"
 		},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "Profile"}, "id": "tree579"},
-		{"type": "Text", "content": ".", "id": "tree580"}
+		{"type": "Component", "component": "EntityLink", "props": {"name": "Profile"}, "id": "tree583"},
+		{"type": "Text", "content": ".", "id": "tree584"}
 	],
 	"formerType": [
-		{"type": "Text", "content": "On a ", "id": "tree581"},
+		{"type": "Text", "content": "On a ", "id": "tree585"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Tombstone"},
-			"id": "tree582"
+			"id": "tree586"
 		},
-		{"type": "Text", "content": " object, the ", "id": "tree583"},
+		{"type": "Text", "content": " object, the ", "id": "tree587"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "formerType"},
-			"id": "tree584"
+			"id": "tree588"
 		},
 		{
 			"type": "Text",
 			"content": " property identifies the type of the object that was deleted.",
-			"id": "tree585"
+			"id": "tree589"
 		}
 	],
 	"deleted": [
-		{"type": "Text", "content": "On a ", "id": "tree586"},
+		{"type": "Text", "content": "On a ", "id": "tree590"},
 		{
 			"type": "Component",
 			"component": "EntityLink",
 			"props": {"name": "Tombstone"},
-			"id": "tree587"
+			"id": "tree591"
 		},
-		{"type": "Text", "content": " object, the ", "id": "tree588"},
-		{"type": "Component", "component": "EntityLink", "props": {"name": "deleted"}, "id": "tree589"},
+		{"type": "Text", "content": " object, the ", "id": "tree592"},
+		{"type": "Component", "component": "EntityLink", "props": {"name": "deleted"}, "id": "tree593"},
 		{
 			"type": "Text",
 			"content": " property is a timestamp for when the object was deleted.",
-			"id": "tree590"
+			"id": "tree594"
 		}
 	]
 }

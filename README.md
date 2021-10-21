@@ -34,6 +34,7 @@ This project's data was assembled by hand from both
 
 The data also includes `Entity`, a term used only informally in the spec.
 The properties are inferred from what `Object` and `Link` share.
+If you want a spec compliant dataset, you'll need to correct for this.
 
 ## todo
 
