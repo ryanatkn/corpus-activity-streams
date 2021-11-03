@@ -4,7 +4,7 @@
 		{"type": "Component", "component": "EntityLink", "props": {"name": "Entity"}, "id": "tree1"},
 		{
 			"type": "Text",
-			"content": " is the base of all of types. Importantly, it is not part of the spec; it's included here to show what ",
+			"content": " is the base of all of types. Importantly, it's not part of the spec; it's included here to show what ",
 			"id": "tree2"
 		},
 		{"type": "Component", "component": "EntityLink", "props": {"name": "Object"}, "id": "tree3"},
