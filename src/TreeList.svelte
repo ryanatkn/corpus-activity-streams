@@ -71,6 +71,7 @@
 	.content {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 	.icon {
 		display: inline-block;
