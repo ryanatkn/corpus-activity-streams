@@ -9,7 +9,7 @@
     "dev": "gro dev",
     "build": "gro build",
     "test": "gro test",
-    "start": "gro start",
+    "start": "gro dev",
     "deploy": "gro deploy"
   },
   "repository": {
