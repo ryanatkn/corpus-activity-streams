@@ -1,11 +1,11 @@
-node_modules
-npm-debug.log
+.DS_Store
+/node_modules
+/.svelte-kit
+/build
 
-*.env
-env*
-
+/.gro
+/dist
 *.ignore
 *.ignore.*
-
-.gro/
-dist/
+ignore/
+*.pem

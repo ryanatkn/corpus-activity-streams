@@ -1,6 +1,12 @@
 # corpus-activity-streams
 
-> [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/) data and alternative docs
+> [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/)
+> data and alternative docs
+
+> **important**: this project is unofficial and
+> [non-normative](https://github.com/w3c/activitystreams/issues/516#issuecomment-805937131)
+
+> spec: [w3c/activitystreams](https://github.com/w3c/activitystreams)
 
 ## website[🕸️](https://ryanatkn.github.io/corpus-activity-streams)
 
@@ -8,14 +14,17 @@
 
 ## useful data & modules
 
-- [src/activity_streams.json](src/activity_streams.json): vocabulary JSON data
-- [src/activity_streams_examples.json](src/activity_streams_examples.json): examples JSON data
-- [src/vocabulary.ts](src/vocabulary.ts): all of the vocab data collections
-- [src/activity_streams.ts](src/activity_streams.ts): vocabulary pimary data and types
-- [src/activity_streams_notes.ts](src/activity_streams_notes.ts):
-  the `notes` property of the vocabulary items
-- [src/activity_streams_examples.ts](src/activity_streams_examples.ts):
-  the vocabulary examples data
+- data:
+  - [src/activity_streams_vocabulary.json](/src/activity_streams_vocabulary.json):
+    the vocabulary items
+  - [src/activity_streams_notes.json](/src/activity_streams_notes.json):
+    the `notes` property of the vocabulary items and
+    [the parsed AST](/src/activity_streams_notes_ast.json)
+  - [src/activity_streams_examples.json](/src/activity_streams_examples.json):
+    the examples data and
+    [the parsed AST](/src/activity_streams_examples_ast.json)
+- [src/activity_streams.ts](/src/activity_streams.ts): vocabulary types
+- [src/vocabulary.ts](/src/vocabulary.ts): all of the vocab data collections
 
 ## compared to the spec
 
@@ -25,6 +34,7 @@ This project's data was assembled by hand from both
 
 The data also includes `Entity`, a term used only informally in the spec.
 The properties are inferred from what `Object` and `Link` share.
+If you want a spec compliant dataset, you'll need to correct for this.
 
 ## todo
 
@@ -41,27 +51,36 @@ The properties are inferred from what `Object` and `Link` share.
 - More and better views! And then some way manage them.
 - Somehow display the
   [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_examples.ts#L1426).
-- It currently uses a harshly inefficient codegen solution
-  (that was
-  [quick to implement](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_notes_html.gen.ts)!)
-  to output Svelte components to `src/notes`, bloating the JS payload.
-  All it's doing is injecting the `EntityLink` Svelte components into otherwise plain HTML,
-  so unless there's something more clever that can be done with codegen,
-  the app should render notes from data at runtime instead of generating components.
 
 ## develop
 
 ```bash
-# node 14+
 npm i
-npm run setup # needed the first time (TODO remove this step)
-npm start
-# browse to localhost:8999 or whatever it says
+# then
+npm run dev
+# or
+gro dev # npm i -g @feltcoop/gro
 ```
 
-should look the same as the deployed version:
-[ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)
+## build
+
+```bash
+npm run build
+# or
+gro build
+```
+
+## deploy
+
+[Deploy](https://github.com/feltcoop/gro/blob/main/src/docs/deploy.md)
+(build, commit, and push) to the `deploy` branch, e.g. for GitHub Pages:
+
+```bash
+npm run deploy
+# or
+gro deploy
+```
 
 ## license 🐦
 
-[public domain](license) (The Unlicense)
+public domain ([The Unlicense](license))

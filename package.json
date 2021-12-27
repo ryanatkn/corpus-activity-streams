@@ -6,8 +6,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "setup": "gro gen && gro assets",
-    "start": "gro dev"
+    "dev": "gro dev",
+    "build": "gro build",
+    "test": "gro test",
+    "start": "gro dev",
+    "deploy": "gro deploy"
   },
   "repository": {
     "type": "git",
@@ -19,37 +22,38 @@
     "url": "https://www.ryanatkn.com"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16.6"
   },
   "bugs": {
     "url": "https://github.com/ryanatkn/corpus-activity-streams/issues"
   },
   "keywords": [
-    "Activity Streams"
+    "ActivityStreams"
   ],
+  "devDependencies": {
+    "@feltcoop/gro": "^0.47.3",
+    "@sveltejs/adapter-static": "^1.0.0-next.23",
+    "@sveltejs/kit": "^1.0.0-next.203",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.5.1",
+    "svelte": "^3.44.3",
+    "svelte-preprocess-esbuild": "^2.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
+  },
   "prettier": {
     "useTabs": true,
     "printWidth": 100,
     "singleQuote": true,
     "trailingComma": "all",
     "bracketSpacing": false,
-    "svelteSortOrder": "options-scripts-markup-styles",
-    "svelteBracketNewLine": true,
     "overrides": [
       {
-        "files": "*.json",
+        "files": "package.json",
         "options": {
           "useTabs": false
         }
       }
     ]
-  },
-  "devDependencies": {
-    "@feltcoop/gro": "^0.5.0",
-    "@types/node": "^14.14.14",
-    "prettier": "^2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.31.0",
-    "typescript": "^4.2.3"
   }
 }
