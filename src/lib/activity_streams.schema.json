@@ -1,7 +1,7 @@
 {
 	"definitions": {
 		"Entity": {
-			"title": "Entity",
+			"name": "Entity",
 			"type": "object",
 			"description": "The `Entity` is the base of all of types. Importantly, it's not part of the spec; it's included here to show what `Object` and `Link` have in common.",
 			"properties": {
@@ -14,7 +14,7 @@
 			}
 		},
 		"Object": {
-			"title": "Object",
+			"name": "Object",
 			"type": "object",
 			"description": "Describes an object of any kind. The `Object` type serves as the base type for most of the other kinds of objects defined in the Activity Vocabulary, including other Core types such as `Activity`, `IntransitiveActivity`, `Collection` and `OrderedCollection`.",
 			"properties": {
@@ -51,7 +51,7 @@
 			]
 		},
 		"Link": {
-			"title": "Link",
+			"name": "Link",
 			"type": "object",
 			"description": "A `Link` is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is established by [ <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988\">RFC5988</a>]. Many of the properties defined by the Activity Vocabulary allow values that are either instances of `Object` or `Link`. When a `Link` is used, it establishes a <a href=\"http://patterns.dataincubator.org/book/qualified-relation.html\">qualified relation</a> connecting the subject (the containing object) to the resource identified by the `href`. Properties of the `Link` are properties of the reference as opposed to properties of the resource.",
 			"properties": {
@@ -73,7 +73,7 @@
 			]
 		},
 		"Activity": {
-			"title": "Activity",
+			"name": "Activity",
 			"type": "object",
 			"description": "An `Activity` is a subtype of `Object` that describes some form of action that may happen, is currently happening, or has already happened. The `Activity` type itself serves as an abstract base type for all types of activities. It is important to note that the `Activity` type itself does not carry any specific semantics about the kind of action being taken.",
 			"properties": {
@@ -95,7 +95,7 @@
 			]
 		},
 		"IntransitiveActivity": {
-			"title": "IntransitiveActivity",
+			"name": "IntransitiveActivity",
 			"type": "object",
 			"description": "Instances of `IntransitiveActivity` are a subtype of `Activity` representing intransitive actions. The `object` property is therefore inappropriate for these activities.",
 			"examples": [
@@ -109,7 +109,7 @@
 			]
 		},
 		"Collection": {
-			"title": "Collection",
+			"name": "Collection",
 			"type": "object",
 			"description": "A `Collection` is a subtype of `Object` that represents ordered or unordered sets of `Object` or `Link` instances. Refer to the <a href=\"https://www.w3.org/TR/activitystreams-core/#collection\">Activity Streams 2.0 Core</a> specification for a complete description of the `Collection` type.",
 			"properties": {
@@ -133,7 +133,7 @@
 			]
 		},
 		"OrderedCollection": {
-			"title": "OrderedCollection",
+			"name": "OrderedCollection",
 			"type": "object",
 			"description": "A subtype of `Collection` in which members of the logical collection are assumed to always be strictly ordered.",
 			"properties": {"orderedItems": {"$ref": "#/definitions/orderedItems"}},
@@ -151,7 +151,7 @@
 			]
 		},
 		"CollectionPage": {
-			"title": "CollectionPage",
+			"name": "CollectionPage",
 			"type": "object",
 			"description": "Used to represent distinct subsets of items from a `Collection`. Refer to the <a href=\"https://www.w3.org/TR/activitystreams-core/#dfn-collectionpage\">Activity Streams 2.0 Core</a> for a complete description of the `CollectionPage` object.",
 			"properties": {
@@ -174,7 +174,7 @@
 			]
 		},
 		"OrderedCollectionPage": {
-			"title": "OrderedCollectionPage",
+			"name": "OrderedCollectionPage",
 			"type": "object",
 			"description": "Used to represent ordered subsets of items from an `OrderedCollection`. Refer to the <a href=\"https://www.w3.org/TR/activitystreams-core/#dfn-orderedcollectionpage\">Activity Streams 2.0 Core</a> for a complete description of the `OrderedCollectionPage` object.",
 			"properties": {"startIndex": {"$ref": "#/definitions/startIndex"}},
@@ -193,7 +193,7 @@
 			]
 		},
 		"Accept": {
-			"title": "Accept",
+			"name": "Accept",
 			"type": "object",
 			"description": "Indicates that the `actor` accepts the `object`. The `target` property can be used in certain circumstances to indicate the context into which the `object` has been accepted.",
 			"examples": [
@@ -219,7 +219,7 @@
 			]
 		},
 		"Add": {
-			"title": "Add",
+			"name": "Add",
 			"type": "object",
 			"description": "Indicates that the `actor` has added the `object` to the `target`. If the `target` property is not explicitly specified, the target would need to be determined implicitly by context. The `origin` can be used to identify the context from which the `object` originated.",
 			"examples": [
@@ -246,7 +246,7 @@
 			]
 		},
 		"Announce": {
-			"title": "Announce",
+			"name": "Announce",
 			"type": "object",
 			"description": "Indicates that the `actor` is calling the `target`'s attention the `object`. The `origin` typically has no defined meaning.",
 			"examples": [
@@ -264,7 +264,7 @@
 			]
 		},
 		"Arrive": {
-			"title": "Arrive",
+			"name": "Arrive",
 			"type": "object",
 			"description": "An `IntransitiveActivity` that indicates that the `actor` has arrived at the `location`. The `origin` can be used to identify the context from which the `actor` originated. The `target` typically has no defined meaning.",
 			"examples": [
@@ -279,7 +279,7 @@
 			]
 		},
 		"Block": {
-			"title": "Block",
+			"name": "Block",
 			"type": "object",
 			"description": "Indicates that the `actor` is blocking the `object`. Blocking is a stronger form of `Ignore`. The typical use is to support social systems that allow one user to block activities or content of other users. The `target` and `origin` typically have no defined meaning.",
 			"examples": [
@@ -293,7 +293,7 @@
 			]
 		},
 		"Create": {
-			"title": "Create",
+			"name": "Create",
 			"type": "object",
 			"description": "Indicates that the `actor` has created the `object`.",
 			"examples": [
@@ -307,7 +307,7 @@
 			]
 		},
 		"Delete": {
-			"title": "Delete",
+			"name": "Delete",
 			"type": "object",
 			"description": "Indicates that the `actor` has deleted the `object`. If specified, the `origin` indicates the context from which the `object` was deleted.",
 			"examples": [
@@ -322,7 +322,7 @@
 			]
 		},
 		"Dislike": {
-			"title": "Dislike",
+			"name": "Dislike",
 			"type": "object",
 			"description": "Indicates that the `actor` dislikes the `object`.",
 			"examples": [
@@ -336,7 +336,7 @@
 			]
 		},
 		"Flag": {
-			"title": "Flag",
+			"name": "Flag",
 			"type": "object",
 			"description": "Indicates that the `actor` is \"flagging\" the `object`. Flagging is defined in the sense common to many social platforms as reporting content as being inappropriate for any number of reasons.",
 			"examples": [
@@ -350,7 +350,7 @@
 			]
 		},
 		"Follow": {
-			"title": "Follow",
+			"name": "Follow",
 			"type": "object",
 			"description": "Indicates that the `actor` is \"following\" the `object`. Following is defined in the sense typically used within Social systems in which the actor is interested in any activity performed by or on the object. The `target` and `origin` typically have no defined meaning.",
 			"examples": [
@@ -364,7 +364,7 @@
 			]
 		},
 		"Ignore": {
-			"title": "Ignore",
+			"name": "Ignore",
 			"type": "object",
 			"description": "Indicates that the `actor` is ignoring the `object`. The `target` and `origin` typically have no defined meaning.",
 			"examples": [
@@ -378,7 +378,7 @@
 			]
 		},
 		"Invite": {
-			"title": "Invite",
+			"name": "Invite",
 			"type": "object",
 			"description": "A specialization of `Offer` in which the `actor` is extending an invitation for the `object` to the `target`.",
 			"examples": [
@@ -396,7 +396,7 @@
 			]
 		},
 		"Join": {
-			"title": "Join",
+			"name": "Join",
 			"type": "object",
 			"description": "Indicates that the `actor` has joined the `object`. The `target` and `origin` typically have no defined meaning.",
 			"examples": [
@@ -410,7 +410,7 @@
 			]
 		},
 		"Leave": {
-			"title": "Leave",
+			"name": "Leave",
 			"type": "object",
 			"description": "Indicates that the `actor` has left the `object`. The `target` and `origin` typically have no meaning.",
 			"examples": [
@@ -431,7 +431,7 @@
 			]
 		},
 		"Like": {
-			"title": "Like",
+			"name": "Like",
 			"type": "object",
 			"description": "Indicates that the `actor` likes, recommends or endorses the `object`. The `target` and `origin` typically have no defined meaning.",
 			"examples": [
@@ -445,7 +445,7 @@
 			]
 		},
 		"Listen": {
-			"title": "Listen",
+			"name": "Listen",
 			"type": "object",
 			"description": "Indicates that the `actor` has listened to the `object`.",
 			"examples": [
@@ -459,7 +459,7 @@
 			]
 		},
 		"Move": {
-			"title": "Move",
+			"name": "Move",
 			"type": "object",
 			"description": "Indicates that the `actor` has moved `object` from `origin` to `target`. If the `origin` or `target` are not specified, either can be determined by context.",
 			"examples": [
@@ -475,7 +475,7 @@
 			]
 		},
 		"Offer": {
-			"title": "Offer",
+			"name": "Offer",
 			"type": "object",
 			"description": "Indicates that the `actor` is offering the `object`. If specified, the `target` indicates the entity to which the `object` is being offered.",
 			"examples": [
@@ -490,7 +490,7 @@
 			]
 		},
 		"Question": {
-			"title": "Question",
+			"name": "Question",
 			"type": "object",
 			"description": "Represents a question being asked. Question objects are an extension of `IntransitiveActivity`. That is, the `Question` object is an `Activity`, but the direct object is the question itself and therefore it would not contain an `object` property. Either of the `anyOf` and `oneOf` properties MAY be used to express possible answers, but a Question object MUST NOT have both properties.",
 			"properties": {
@@ -517,7 +517,7 @@
 			]
 		},
 		"Reject": {
-			"title": "Reject",
+			"name": "Reject",
 			"type": "object",
 			"description": "Indicates that the `actor` is rejecting the `object`. The `target` and `origin` typically have no defined meaning.",
 			"examples": [
@@ -535,7 +535,7 @@
 			]
 		},
 		"Read": {
-			"title": "Read",
+			"name": "Read",
 			"type": "object",
 			"description": "Indicates that the `actor` has read the `object`.",
 			"examples": [
@@ -549,7 +549,7 @@
 			]
 		},
 		"Remove": {
-			"title": "Remove",
+			"name": "Remove",
 			"type": "object",
 			"description": "Indicates that the `actor` is removing the `object`. If specified, the `origin` indicates the context from which the `object` is being removed.",
 			"examples": [
@@ -572,7 +572,7 @@
 			]
 		},
 		"TentativeReject": {
-			"title": "TentativeReject",
+			"name": "TentativeReject",
 			"type": "object",
 			"description": "A specialization of `Reject` in which the rejection is considered tentative.",
 			"examples": [
@@ -590,7 +590,7 @@
 			]
 		},
 		"TentativeAccept": {
-			"title": "TentativeAccept",
+			"name": "TentativeAccept",
 			"type": "object",
 			"description": "A specialization of `Accept` indicating that the acceptance is tentative.",
 			"examples": [
@@ -608,7 +608,7 @@
 			]
 		},
 		"Travel": {
-			"title": "Travel",
+			"name": "Travel",
 			"type": "object",
 			"description": "Indicates that the `actor` is traveling to `target` from `origin`. `Travel` is an `IntransitiveObject` whose `actor` specifies the direct object. If the `target` or `origin` are not specified, either can be determined by context.",
 			"examples": [
@@ -623,7 +623,7 @@
 			]
 		},
 		"Undo": {
-			"title": "Undo",
+			"name": "Undo",
 			"type": "object",
 			"description": "Indicates that the `actor` is undoing the `object`. In most cases, the `object` will be an `Activity` describing some previously performed action (for instance, a person may have previously \"liked\" an article but, for whatever reason, might choose to undo that like at some later point in time). The `target` and `origin` typically have no defined meaning.",
 			"examples": [
@@ -642,7 +642,7 @@
 			]
 		},
 		"Update": {
-			"title": "Update",
+			"name": "Update",
 			"type": "object",
 			"description": "Indicates that the `actor` has updated the `object`. Note, however, that this vocabulary does not define a mechanism for describing the actual set of modifications made to `object`. The `target` and `origin` typically have no defined meaning.",
 			"examples": [
@@ -656,7 +656,7 @@
 			]
 		},
 		"View": {
-			"title": "View",
+			"name": "View",
 			"type": "object",
 			"description": "Indicates that the `actor` has viewed the `object`.",
 			"examples": [
@@ -670,7 +670,7 @@
 			]
 		},
 		"Application": {
-			"title": "Application",
+			"name": "Application",
 			"type": "object",
 			"description": "Describes a software application.",
 			"examples": [
@@ -682,7 +682,7 @@
 			]
 		},
 		"Group": {
-			"title": "Group",
+			"name": "Group",
 			"type": "object",
 			"description": "Represents a formal or informal collective of Actors.",
 			"examples": [
@@ -694,7 +694,7 @@
 			]
 		},
 		"Organization": {
-			"title": "Organization",
+			"name": "Organization",
 			"type": "object",
 			"description": "Represents an organization.",
 			"examples": [
@@ -706,7 +706,7 @@
 			]
 		},
 		"Person": {
-			"title": "Person",
+			"name": "Person",
 			"type": "object",
 			"description": "Represents an individual person.",
 			"examples": [
@@ -718,7 +718,7 @@
 			]
 		},
 		"Service": {
-			"title": "Service",
+			"name": "Service",
 			"type": "object",
 			"description": "Represents a service of any kind.",
 			"examples": [
@@ -730,7 +730,7 @@
 			]
 		},
 		"Article": {
-			"title": "Article",
+			"name": "Article",
 			"type": "object",
 			"description": "Represents any kind of multi-paragraph written work.",
 			"examples": [
@@ -744,7 +744,7 @@
 			]
 		},
 		"Audio": {
-			"title": "Audio",
+			"name": "Audio",
 			"type": "object",
 			"description": "Represents an audio document of any kind.",
 			"examples": [
@@ -761,7 +761,7 @@
 			]
 		},
 		"Document": {
-			"title": "Document",
+			"name": "Document",
 			"type": "object",
 			"description": "Represents a document of any kind.",
 			"examples": [
@@ -774,7 +774,7 @@
 			]
 		},
 		"Event": {
-			"title": "Event",
+			"name": "Event",
 			"type": "object",
 			"description": "Represents any kind of event.",
 			"examples": [
@@ -788,7 +788,7 @@
 			]
 		},
 		"Image": {
-			"title": "Image",
+			"name": "Image",
 			"type": "object",
 			"description": "Represents an image document of any kind.",
 			"examples": [
@@ -804,7 +804,7 @@
 			]
 		},
 		"Note": {
-			"title": "Note",
+			"name": "Note",
 			"type": "object",
 			"description": "Represents a short written work typically less than a single paragraph in length.",
 			"examples": [
@@ -817,7 +817,7 @@
 			]
 		},
 		"Page": {
-			"title": "Page",
+			"name": "Page",
 			"type": "object",
 			"description": "Represents a Web Page.",
 			"examples": [
@@ -830,7 +830,7 @@
 			]
 		},
 		"Place": {
-			"title": "Place",
+			"name": "Place",
 			"type": "object",
 			"description": "Represents a logical or physical location. See <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#places\">5.3 Representing Places</a> for additional information.",
 			"properties": {
@@ -855,7 +855,7 @@
 			]
 		},
 		"Profile": {
-			"title": "Profile",
+			"name": "Profile",
 			"type": "object",
 			"description": "A `Profile` is a content object that describes another `Object`, typically used to describe `Actor Type` objects. The `describes` property is used to reference the object being described by the profile.",
 			"properties": {"describes": {"$ref": "#/definitions/describes"}},
@@ -869,7 +869,7 @@
 			]
 		},
 		"Relationship": {
-			"title": "Relationship",
+			"name": "Relationship",
 			"type": "object",
 			"description": "Describes a relationship between two individuals. The `subject` and `object` properties are used to identify the connected individuals. <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#connections\">See 5.2 Representing Relationships Between Entities</a> for additional information.",
 			"properties": {
@@ -889,7 +889,7 @@
 			]
 		},
 		"Tombstone": {
-			"title": "Tombstone",
+			"name": "Tombstone",
 			"type": "object",
 			"description": "A `Tombstone` represents a content object that has been deleted. It can be used in `Collection`s to signify that there used to be an object at this position, but it has been deleted.",
 			"properties": {
@@ -916,7 +916,7 @@
 			]
 		},
 		"Video": {
-			"title": "Video",
+			"name": "Video",
 			"type": "object",
 			"description": "Represents a video document of any kind.",
 			"examples": [
@@ -930,7 +930,7 @@
 			]
 		},
 		"Mention": {
-			"title": "Mention",
+			"name": "Mention",
 			"type": "object",
 			"description": "A specialized `Link` that represents an @mention.",
 			"examples": [
@@ -943,7 +943,7 @@
 			]
 		},
 		"id": {
-			"title": "id",
+			"name": "id",
 			"type": "object",
 			"description": "Provides the globally unique identifier for an `Object` or `Link`.",
 			"examples": [
@@ -955,7 +955,7 @@
 			]
 		},
 		"type": {
-			"title": "type",
+			"name": "type",
 			"type": "object",
 			"description": "Identifies the `Object` or `Link` type. Multiple values may be specified.",
 			"examples": [
@@ -967,7 +967,7 @@
 			]
 		},
 		"actor": {
-			"title": "actor",
+			"name": "actor",
 			"type": "object",
 			"description": "Describes one or more entities that either performed or are expected to perform the activity. Any single activity can have multiple `actor`s. The `actor` MAY be specified using an indirect `Link`.",
 			"examples": [
@@ -998,7 +998,7 @@
 			]
 		},
 		"attachment": {
-			"title": "attachment",
+			"name": "attachment",
 			"type": "object",
 			"description": "Identifies a resource attached or related to an object that potentially requires special handling. The intent is to provide a model that is at least semantically similar to attachments in email.",
 			"examples": [
@@ -1017,7 +1017,7 @@
 			]
 		},
 		"attributedTo": {
-			"title": "attributedTo",
+			"name": "attributedTo",
 			"type": "object",
 			"description": "Identifies one or more entities to which this object is attributed. The attributed entities might not be Actors. For instance, an object might be attributed to the completion of another activity. ",
 			"examples": [
@@ -1038,7 +1038,7 @@
 			]
 		},
 		"audience": {
-			"title": "audience",
+			"name": "audience",
 			"type": "object",
 			"description": "Identifies one or more entities that represent the total population of entities for which the object can considered to be relevant.",
 			"examples": [
@@ -1052,7 +1052,7 @@
 			]
 		},
 		"bcc": {
-			"title": "bcc",
+			"name": "bcc",
 			"type": "object",
 			"description": "Identifies one or more Objects that are part of the private secondary audience of this Object.",
 			"examples": [
@@ -1068,7 +1068,7 @@
 			]
 		},
 		"bto": {
-			"title": "bto",
+			"name": "bto",
 			"type": "object",
 			"description": "Identifies an Object that is part of the private primary audience of this Object.",
 			"examples": [
@@ -1084,7 +1084,7 @@
 			]
 		},
 		"cc": {
-			"title": "cc",
+			"name": "cc",
 			"type": "object",
 			"description": "Identifies an Object that is part of the public secondary audience of this Object.",
 			"examples": [
@@ -1100,7 +1100,7 @@
 			]
 		},
 		"context": {
-			"title": "context",
+			"name": "context",
 			"type": "object",
 			"description": "Identifies the context within which the object exists or an activity was performed. The notion of \"context\" used is intentionally vague. The intended function is to serve as a means of grouping objects and activities that share a common originating context or purpose. An example could be all activities relating to a common project or event.",
 			"examples": [
@@ -1127,7 +1127,7 @@
 			]
 		},
 		"current": {
-			"title": "current",
+			"name": "current",
 			"type": "object",
 			"description": "In a paged `Collection`, indicates the page that contains the most recently updated member items.",
 			"examples": [
@@ -1162,7 +1162,7 @@
 			]
 		},
 		"first": {
-			"title": "first",
+			"name": "first",
 			"type": "object",
 			"description": "In a paged `Collection`, indicates the furthest preceeding page of items in the collection.",
 			"examples": [
@@ -1187,7 +1187,7 @@
 			]
 		},
 		"generator": {
-			"title": "generator",
+			"name": "generator",
 			"type": "object",
 			"description": "Identifies the entity (e.g. an application) that generated the object.",
 			"examples": [
@@ -1201,7 +1201,7 @@
 			]
 		},
 		"icon": {
-			"title": "icon",
+			"name": "icon",
 			"type": "object",
 			"description": "Indicates an entity that describes an icon for this object. The image should have an aspect ratio of one (horizontal) to one (vertical) and should be suitable for presentation at a small size.",
 			"examples": [
@@ -1252,7 +1252,7 @@
 			]
 		},
 		"image": {
-			"title": "image",
+			"name": "image",
 			"type": "object",
 			"description": "Indicates an entity that describes an image for this object. Unlike the icon property, there are no aspect ratio or display size limitations assumed.",
 			"examples": [
@@ -1276,7 +1276,7 @@
 			]
 		},
 		"inReplyTo": {
-			"title": "inReplyTo",
+			"name": "inReplyTo",
 			"type": "object",
 			"description": "Indicates one or more entities for which this object is considered a response.",
 			"examples": [
@@ -1301,7 +1301,7 @@
 			]
 		},
 		"instrument": {
-			"title": "instrument",
+			"name": "instrument",
 			"type": "object",
 			"description": "Identifies one or more objects used (or to be used) in the completion of an `Activity`.",
 			"examples": [
@@ -1316,7 +1316,7 @@
 			]
 		},
 		"last": {
-			"title": "last",
+			"name": "last",
 			"type": "object",
 			"description": "In a paged `Collection`, indicates the furthest proceeding page of the collection.",
 			"examples": [
@@ -1341,7 +1341,7 @@
 			]
 		},
 		"location": {
-			"title": "location",
+			"name": "location",
 			"type": "object",
 			"description": "Indicates one or more physical or logical locations associated with the object.",
 			"examples": [
@@ -1361,7 +1361,7 @@
 			]
 		},
 		"items": {
-			"title": "items",
+			"name": "items",
 			"type": "object",
 			"description": "Identifies the items contained in a collection. The items might be ordered or unordered.",
 			"examples": [
@@ -1388,12 +1388,12 @@
 			]
 		},
 		"orderedItems": {
-			"title": "orderedItems",
+			"name": "orderedItems",
 			"type": "object",
 			"description": "Identifies the items contained in a collection. The items are unordered."
 		},
 		"oneOf": {
-			"title": "oneOf",
+			"name": "oneOf",
 			"type": "object",
 			"description": "Identifies an exclusive option for a `Question`. Use of `oneOf` implies that the `Question` can have only a single answer. To indicate that a `Question` can have multiple answers, use `anyOf`.",
 			"examples": [
@@ -1409,7 +1409,7 @@
 			]
 		},
 		"anyOf": {
-			"title": "anyOf",
+			"name": "anyOf",
 			"type": "object",
 			"description": "Identifies an inclusive option for a `Question`. Use of `anyOf` implies that the `Question` can have multiple answers. To indicate that a `Question` can have only one answer, use `oneOf`.",
 			"examples": [
@@ -1425,7 +1425,7 @@
 			]
 		},
 		"closed": {
-			"title": "closed",
+			"name": "closed",
 			"type": "object",
 			"description": "Indicates that a question has been closed, and answers are no longer accepted.",
 			"examples": [
@@ -1438,7 +1438,7 @@
 			]
 		},
 		"origin": {
-			"title": "origin",
+			"name": "origin",
 			"type": "object",
 			"description": "Describes an indirect object of the activity from which the activity is directed. The precise meaning of the origin is the object of the English preposition \"from\". For instance, in the activity \"John moved an item to List B from List A\", the origin of the activity is \"List A\".",
 			"examples": [
@@ -1454,7 +1454,7 @@
 			]
 		},
 		"next": {
-			"title": "next",
+			"name": "next",
 			"type": "object",
 			"description": "In a paged `Collection`, indicates the next page of items.",
 			"examples": [
@@ -1487,7 +1487,7 @@
 			]
 		},
 		"object": {
-			"title": "object",
+			"name": "object",
 			"type": "object",
 			"description": "When used within an `Activity`, describes the direct object of the activity. For instance, in the activity \"John added a movie to his wishlist\", the object of the activity is the movie added. When used within a `Relationship` describes the entity to which the `subject` is related.",
 			"examples": [
@@ -1517,7 +1517,7 @@
 			]
 		},
 		"prev": {
-			"title": "prev",
+			"name": "prev",
 			"type": "object",
 			"description": "In a paged `Collection`, identifies the previous page of items.",
 			"examples": [
@@ -1550,7 +1550,7 @@
 			]
 		},
 		"preview": {
-			"title": "preview",
+			"name": "preview",
 			"type": "object",
 			"description": "Identifies an entity that provides a preview of this object.",
 			"examples": [
@@ -1569,7 +1569,7 @@
 			]
 		},
 		"result": {
-			"title": "result",
+			"name": "result",
 			"type": "object",
 			"description": "Describes the result of the activity. For instance, if a particular action results in the creation of a new resource, the result property can be used to describe that new resource.",
 			"examples": [
@@ -1584,7 +1584,7 @@
 			]
 		},
 		"replies": {
-			"title": "replies",
+			"name": "replies",
 			"type": "object",
 			"description": "Identifies a `Collection` containing objects considered to be responses to this object.",
 			"examples": [
@@ -1610,7 +1610,7 @@
 			]
 		},
 		"tag": {
-			"title": "tag",
+			"name": "tag",
 			"type": "object",
 			"description": "One or more \"tags\" that have been associated with an objects. A `tag` can be any kind of `Object`. The key difference between `attachment` and `tag` is that the former implies association by inclusion, while the latter implies associated by reference.",
 			"examples": [
@@ -1624,7 +1624,7 @@
 			]
 		},
 		"target": {
-			"title": "target",
+			"name": "target",
 			"type": "object",
 			"description": "Describes the indirect object, or target, of the activity. The precise meaning of the target is largely dependent on the type of action being described but will often be the object of the English preposition \"to\". For instance, in the activity \"John added a movie to his wishlist\", the target of the activity is John's wishlist. An activity can have more than one target.",
 			"examples": [
@@ -1647,7 +1647,7 @@
 			]
 		},
 		"to": {
-			"title": "to",
+			"name": "to",
 			"type": "object",
 			"description": "Identifies an entity considered to be part of the public primary audience of an `Object`.",
 			"examples": [
@@ -1663,7 +1663,7 @@
 			]
 		},
 		"url": {
-			"title": "url",
+			"name": "url",
 			"type": "object",
 			"description": "Identifies one or more links to representations of the object.",
 			"examples": [
@@ -1699,7 +1699,7 @@
 			]
 		},
 		"accuracy": {
-			"title": "accuracy",
+			"name": "accuracy",
 			"type": "object",
 			"description": "Indicates the accuracy of position coordinates on a `Place` objects. Expressed in properties of percentage. e.g. \"94.0\" means \"94.0% accurate\".",
 			"examples": [
@@ -1714,7 +1714,7 @@
 			]
 		},
 		"altitude": {
-			"title": "altitude",
+			"name": "altitude",
 			"type": "object",
 			"description": "Indicates the altitude of a place. The measurement units is indicated using the `units` property. If `units` is not specified, the default is assumed to be \"m\" indicating meters.",
 			"examples": [
@@ -1730,7 +1730,7 @@
 			]
 		},
 		"content": {
-			"title": "content",
+			"name": "content",
 			"type": "object",
 			"description": "The content or textual representation of the `Object` encoded as a JSON string. By default, the value of `content` is HTML. The `mediaType` property can be used in the object to indicate a different content type. The content MAY be expressed using multiple language-tagged values.",
 			"examples": [
@@ -1760,7 +1760,7 @@
 			]
 		},
 		"name": {
-			"title": "name",
+			"name": "name",
 			"type": "object",
 			"description": "A simple, human-readable, plain-text name for the object. HTML markup MUST NOT be included. The name MAY be expressed using multiple language-tagged values.",
 			"examples": [
@@ -1777,7 +1777,7 @@
 			]
 		},
 		"duration": {
-			"title": "duration",
+			"name": "duration",
 			"type": "object",
 			"description": "When the object describes a time-bound resource, such as an audio or video, a meeting, etc, the `duration` property indicates the object's approximate duration. The value MUST be expressed as an `xsd:duration` as defined by [ <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-xmlschema11-2\">xmlschema11-2</a>], section 3.3.6 (e.g. a period of 5 seconds is represented as \"PT5S\").",
 			"examples": [
@@ -1791,7 +1791,7 @@
 			]
 		},
 		"height": {
-			"title": "height",
+			"name": "height",
 			"type": "object",
 			"description": "On a `Link`, specifies a hint as to the rendering height in device-independent pixels of the linked resource.",
 			"examples": [
@@ -1805,7 +1805,7 @@
 			]
 		},
 		"href": {
-			"title": "href",
+			"name": "href",
 			"type": "object",
 			"description": "The target resource pointed to by a `Link`",
 			"examples": [
@@ -1819,7 +1819,7 @@
 			]
 		},
 		"hreflang": {
-			"title": "hreflang",
+			"name": "hreflang",
 			"type": "object",
 			"description": "Hints as to the language used by the target resource. Value MUST be a [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-BCP47\">BCP47</a>] Language-Tag.",
 			"examples": [
@@ -1834,7 +1834,7 @@
 			]
 		},
 		"partOf": {
-			"title": "partOf",
+			"name": "partOf",
 			"type": "object",
 			"description": "Identifies the `Collection` to which a `CollectionPage` objects items belong.",
 			"examples": [
@@ -1852,7 +1852,7 @@
 			]
 		},
 		"latitude": {
-			"title": "latitude",
+			"name": "latitude",
 			"type": "object",
 			"description": "The latitude of a place",
 			"examples": [
@@ -1868,7 +1868,7 @@
 			]
 		},
 		"longitude": {
-			"title": "longitude",
+			"name": "longitude",
 			"type": "object",
 			"description": "The longitude of a place",
 			"examples": [
@@ -1884,7 +1884,7 @@
 			]
 		},
 		"mediaType": {
-			"title": "mediaType",
+			"name": "mediaType",
 			"type": "object",
 			"description": "When used on a `Link`, identifies the MIME media type of the referenced resource. When used on an `Object`, identifies the MIME media type of the value of the `content` property. If not specified, the `content` property is assumed to contain text/html content.",
 			"examples": [
@@ -1899,7 +1899,7 @@
 			]
 		},
 		"endTime": {
-			"title": "endTime",
+			"name": "endTime",
 			"type": "object",
 			"description": "The date and time describing the actual or expected ending time of the object. When used with an `Activity` object, for instance, the `endTime` property specifies the moment the activity concluded or is expected to conclude.",
 			"examples": [
@@ -1913,7 +1913,7 @@
 			]
 		},
 		"published": {
-			"title": "published",
+			"name": "published",
 			"type": "object",
 			"description": "The date and time at which the object was published",
 			"examples": [
@@ -1927,7 +1927,7 @@
 			]
 		},
 		"startTime": {
-			"title": "startTime",
+			"name": "startTime",
 			"type": "object",
 			"description": "The date and time describing the actual or expected starting time of the object. When used with an `Activity` object, for instance, the `startTime` property specifies the moment the activity began or is scheduled to begin.",
 			"examples": [
@@ -1941,7 +1941,7 @@
 			]
 		},
 		"radius": {
-			"title": "radius",
+			"name": "radius",
 			"type": "object",
 			"description": "The radius from the given `latitude` and `longitude` for a `Place`. The units is expressed by the `units` property. If `units` is not specified, the default is assumed to be \"m\" indicating \"meters\".",
 			"examples": [
@@ -1957,7 +1957,7 @@
 			]
 		},
 		"rel": {
-			"title": "rel",
+			"name": "rel",
 			"type": "object",
 			"description": "A link relation associated with a `Link`. The value MUST conform to both the [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5\">HTML5</a>] and [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988\">RFC5988</a>] \"link relation\" definitions. In the [<a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-HTML5\">HTML5</a>], any string not containing the \"space\" U+0020, \"tab\" (U+0009), \"LF\" (U+000A), \"FF\" (U+000C), \"CR\" (U+000D) or \",\" (U+002C) characters can be used as a valid link relation.",
 			"examples": [
@@ -1973,7 +1973,7 @@
 			]
 		},
 		"startIndex": {
-			"title": "startIndex",
+			"name": "startIndex",
 			"type": "object",
 			"description": "A non-negative integer value identifying the relative position within the logical view of a strictly ordered collection.",
 			"examples": [
@@ -1990,7 +1990,7 @@
 			]
 		},
 		"summary": {
-			"title": "summary",
+			"name": "summary",
 			"type": "object",
 			"description": "A natural language summarization of the object encoded as HTML. Multiple language tagged summaries MAY be provided.",
 			"examples": [
@@ -2013,7 +2013,7 @@
 			]
 		},
 		"totalItems": {
-			"title": "totalItems",
+			"name": "totalItems",
 			"type": "object",
 			"description": "A non-negative integer specifying the total number of objects contained by the logical view of the collection. This number might not reflect the actual number of items serialized within the `Collection` object instance.",
 			"examples": [
@@ -2030,7 +2030,7 @@
 			]
 		},
 		"units": {
-			"title": "units",
+			"name": "units",
 			"type": "object",
 			"description": "Specifies the measurement units for the `radius` and `altitude` properties on a `Place` object. If not specified, the default is assumed to be \"m\" for \"meters\".",
 			"examples": [
@@ -2046,7 +2046,7 @@
 			]
 		},
 		"updated": {
-			"title": "updated",
+			"name": "updated",
 			"type": "object",
 			"description": "The date and time at which the object was updated",
 			"examples": [
@@ -2060,7 +2060,7 @@
 			]
 		},
 		"width": {
-			"title": "width",
+			"name": "width",
 			"type": "object",
 			"description": "On a `Link`, specifies a hint as to the rendering width in device-independent pixels of the linked resource.",
 			"examples": [
@@ -2074,7 +2074,7 @@
 			]
 		},
 		"subject": {
-			"title": "subject",
+			"name": "subject",
 			"type": "object",
 			"description": "On a `Relationship` object, the `subject` property identifies one of the connected individuals. For instance, for a `Relationship` object describing \"John is related to Sally\", `subject` would refer to John.",
 			"examples": [
@@ -2089,7 +2089,7 @@
 			]
 		},
 		"relationship": {
-			"title": "relationship",
+			"name": "relationship",
 			"type": "object",
 			"description": "On a `Relationship` object, the `relationship` property identifies the kind of relationship that exists between `subject` and `object`.",
 			"examples": [
@@ -2104,7 +2104,7 @@
 			]
 		},
 		"describes": {
-			"title": "describes",
+			"name": "describes",
 			"type": "object",
 			"description": "On a `Profile` object, the `describes` property identifies the object described by the `Profile`.",
 			"examples": [
@@ -2118,7 +2118,7 @@
 			]
 		},
 		"formerType": {
-			"title": "formerType",
+			"name": "formerType",
 			"type": "object",
 			"description": "On a `Tombstone` object, the `formerType` property identifies the type of the object that was deleted.",
 			"examples": [
@@ -2132,7 +2132,7 @@
 			]
 		},
 		"deleted": {
-			"title": "deleted",
+			"name": "deleted",
 			"type": "object",
 			"description": "On a `Tombstone` object, the `deleted` property is a timestamp for when the object was deleted.",
 			"examples": [

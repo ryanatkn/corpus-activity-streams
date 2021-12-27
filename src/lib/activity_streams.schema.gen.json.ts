@@ -40,7 +40,7 @@ type TODOSchemaType = {[key: string]: any};
 
 const toSchema = (item: VocabularyItem): TODOSchemaType => {
 	return {
-		title: item.name,
+		name: item.name,
 		type: 'object',
 		description: notesData.notes[item.name],
 		properties: toProperties(item),
