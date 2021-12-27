@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Items from 'src/Items.svelte';
-	import EntityLink from 'src/EntityLink.svelte';
-	import UnknownLink from 'src/UnknownLink.svelte';
-	import StringLink from 'src/StringLink.svelte';
-	import Note from 'src/Note.svelte';
-	import type {Vocabulary} from 'src/vocabulary.js';
-	import type {VocabularyItem} from 'src/activity_streams.js';
+	import Items from '$lib/Items.svelte';
+	import EntityLink from '$lib/EntityLink.svelte';
+	import UnknownLink from '$lib/UnknownLink.svelte';
+	import StringLink from '$lib/StringLink.svelte';
+	import Note from '$lib/Note.svelte';
+	import {type Vocabulary} from '$lib/vocabulary';
+	import {type VocabularyItem} from '$lib/activity_streams';
 
 	export let item: VocabularyItem;
 	export let vocabulary: Vocabulary;

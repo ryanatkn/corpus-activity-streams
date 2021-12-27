@@ -1,10 +1,10 @@
 <script lang="ts">
-	import VocabularyTypeTable from 'src/VocabularyTypeTable.svelte';
-	import VocabularyPropertyTable from 'src/VocabularyPropertyTable.svelte';
-	import VocabularyDetails from 'src/VocabularyDetails.svelte';
-	import VocabularyTree from 'src/VocabularyTree.svelte';
-	import VocabularyGroups from 'src/VocabularyGroups.svelte';
-	import type {Vocabulary} from 'src/vocabulary.js';
+	import VocabularyTypeTable from '$lib/VocabularyTypeTable.svelte';
+	import VocabularyPropertyTable from '$lib/VocabularyPropertyTable.svelte';
+	import VocabularyDetails from '$lib/VocabularyDetails.svelte';
+	import VocabularyTree from '$lib/VocabularyTree.svelte';
+	import VocabularyGroups from '$lib/VocabularyGroups.svelte';
+	import {type Vocabulary} from '$lib/vocabulary';
 
 	export let vocabulary: Vocabulary;
 

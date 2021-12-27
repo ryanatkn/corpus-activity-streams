@@ -55,14 +55,31 @@ If you want a spec compliant dataset, you'll need to correct for this.
 ## develop
 
 ```bash
-# node >=16.6
 npm i
-npm test # everything should look ok
-npm start # browse to localhost:8999 or whatever it says
+# then
+npm run dev
+# or
+gro dev # npm i -g @feltcoop/gro
 ```
 
-should look the same as the deployed version:
-[ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)
+## build
+
+```bash
+npm run build
+# or
+gro build
+```
+
+## deploy
+
+[Deploy](https://github.com/feltcoop/gro/blob/main/src/docs/deploy.md)
+(build, commit, and push) to the `deploy` branch, e.g. for GitHub Pages:
+
+```bash
+npm run deploy
+# or
+gro deploy
+```
 
 ## license 🐦
 

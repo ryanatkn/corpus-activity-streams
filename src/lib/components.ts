@@ -1,5 +1,4 @@
-import {getContext, setContext} from 'svelte';
-import type {SvelteComponent} from 'svelte';
+import {getContext, setContext, type SvelteComponent} from 'svelte';
 
 export type Components<T extends string = string> = Record<T, typeof SvelteComponent>;
 

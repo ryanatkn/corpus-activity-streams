@@ -6,14 +6,17 @@
 		"module": "esnext",
 		"lib": ["esnext", "dom"],
 		"strict": true,
+		"useUnknownInCatchVariables": false,
+		"exactOptionalPropertyTypes": false,
 		"forceConsistentCasingInFileNames": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
 		"noImplicitOverride": true,
 		"noFallthroughCasesInSwitch": true,
-		"importsNotUsedAsValues": "error",
+		"importsNotUsedAsValues": "remove",
 		"isolatedModules": true,
+		"preserveValueImports": true,
 		"resolveJsonModule": true,
 		"sourceMap": true,
 		"importHelpers": true,
@@ -21,7 +24,7 @@
 		"skipLibCheck": true,
 		"checkJs": true,
 		"paths": {
-			"src/*": ["./src/*"]
+			"$lib/*": ["./src/lib/*"]
 		}
 	}
 }

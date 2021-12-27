@@ -1,7 +1,7 @@
 <script lang="ts">
-	import {vocabulary} from 'src/vocabulary.js';
-	import {hovered_entity} from 'src/entities.js';
-	import type {VocabularyItem} from 'src/activity_streams.js';
+	import {vocabulary} from '$lib/vocabulary';
+	import {hovered_entity} from '$lib/entities';
+	import {type VocabularyItem} from '$lib/activity_streams';
 
 	// one of these two is required
 	export let entity: VocabularyItem | null = null;

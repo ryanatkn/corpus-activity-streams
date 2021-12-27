@@ -1,8 +1,8 @@
 <script lang="ts">
-	import VocabularyDetails from 'src/VocabularyDetails.svelte';
-	import VocabularyTree from 'src/VocabularyTree.svelte';
-	import VocabularyGroups from 'src/VocabularyGroups.svelte';
-	import type {Vocabulary} from 'src/vocabulary.js';
+	import VocabularyDetails from '$lib/VocabularyDetails.svelte';
+	import VocabularyTree from '$lib/VocabularyTree.svelte';
+	import VocabularyGroups from '$lib/VocabularyGroups.svelte';
+	import {type Vocabulary} from '$lib/vocabulary';
 
 	export let vocabulary: Vocabulary;
 </script>

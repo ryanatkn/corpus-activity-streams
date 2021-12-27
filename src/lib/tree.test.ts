@@ -1,7 +1,7 @@
 import {suite} from 'uvu';
 import * as t from 'uvu/assert';
 
-import {to_to_deterministic_id, to_to_id} from 'src/tree.js';
+import {to_to_deterministic_id, to_to_id} from '$lib/tree';
 
 /* test_to_to_id */
 const test_to_to_id = suite('to_to_id');

@@ -1,12 +1,11 @@
 <script lang="ts">
-	import {vocabulary} from 'src/vocabulary.js';
-	import TabbedView from 'src/TabbedView.svelte';
-	import TiledView from 'src/TiledView.svelte';
-	import GithubLink from 'src/GithubLink.svelte';
-	import {set_components} from 'src/components.js';
-	import type {Components} from 'src/components.js';
-	import Link from 'src/Link.svelte';
-	import EntityLink from 'src/EntityLink.svelte';
+	import {vocabulary} from '$lib/vocabulary';
+	import TabbedView from '$lib/TabbedView.svelte';
+	import TiledView from '$lib/TiledView.svelte';
+	import GithubLink from '$lib/GithubLink.svelte';
+	import {set_components, type Components} from '$lib/components';
+	import Link from '$lib/Link.svelte';
+	import EntityLink from '$lib/EntityLink.svelte';
 
 	let view = TiledView || TabbedView;
 	type DefaultComponents = 'Link' | 'EntityLink';

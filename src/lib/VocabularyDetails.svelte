@@ -1,6 +1,6 @@
 <script lang="ts">
-	import VocabularyDetail from 'src/VocabularyDetail.svelte';
-	import type {Vocabulary} from 'src/vocabulary.js';
+	import VocabularyDetail from '$lib/VocabularyDetail.svelte';
+	import {type Vocabulary} from '$lib/vocabulary';
 
 	export let vocabulary: Vocabulary;
 </script>

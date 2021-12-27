@@ -1,6 +1,6 @@
 <script lang="ts">
-	import {get_components} from 'src/components.js';
-	import type {Tree} from 'src/tree.js';
+	import {get_components} from '$lib/components';
+	import {type Tree} from '$lib/tree';
 
 	// `<Markup />` renders a `Tree` AST
 
@@ -24,8 +24,8 @@
 	/>{:else if tree.type === 'Frame'}<div class="markup-Frame">
 		{tree.content}
 	</div>{/if}{#if tree.children}{#if tree.type === 'Element'}{#if tree.element === 'pre'}<pre>{#each tree.children as child (child.id)}<svelte:self
-			tree={child}
-		/>{/each}</pre>{:else if tree.element === 'code'}<code
+						tree={child}
+					/>{/each}</pre>{:else if tree.element === 'code'}<code
 				>{#each tree.children as child (child.id)}<svelte:self tree={child} />{/each}</code
 			>{:else}<div>
 				<!-- TODO warn that it's unknown? -->{#each tree.children as child (child.id)}<svelte:self
