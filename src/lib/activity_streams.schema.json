@@ -3,7 +3,7 @@
 		"Entity": {
 			"title": "Entity",
 			"type": "object",
-			"description": "The `Entity` is the base of all of types.",
+			"description": "The `Entity` is the base of all of types. Importantly, it's not part of the spec; it's included here to show what `Object` and `Link` have in common.",
 			"properties": {
 				"id": {"$ref": "#/definitions/id"},
 				"type": {"$ref": "#/definitions/type"},
@@ -936,7 +936,6 @@
 			"examples": [
 				{
 					"@context": "https://www.w3.org/ns/activitystreams",
-					"summary": "Mention of Joe by Carrie in her note",
 					"type": "Mention",
 					"href": "http://example.org/joe",
 					"name": "Joe"
@@ -1213,10 +1212,13 @@
 					"content": "This is all there is.",
 					"icon": {
 						"type": "Image",
-						"name": "Note icon",
-						"url": "http://example.org/note.png",
-						"width": 16,
-						"height": 16
+						"summary": "Note (16x16)",
+						"url": {
+							"type": "Link",
+							"href": "http://example.org/note.png",
+							"width": 16,
+							"height": 16
+						}
 					}
 				},
 				{
@@ -1228,16 +1230,22 @@
 						{
 							"type": "Image",
 							"summary": "Note (16x16)",
-							"url": "http://example.org/note1.png",
-							"width": 16,
-							"height": 16
+							"url": {
+								"type": "Link",
+								"href": "http://example.org/note1.png",
+								"width": 16,
+								"height": 16
+							}
 						},
 						{
 							"type": "Image",
 							"summary": "Note (32x32)",
-							"url": "http://example.org/note2.png",
-							"width": 32,
-							"height": 32
+							"url": {
+								"type": "Link",
+								"href": "http://example.org/note2.png",
+								"width": 32,
+								"height": 32
+							}
 						}
 					]
 				}

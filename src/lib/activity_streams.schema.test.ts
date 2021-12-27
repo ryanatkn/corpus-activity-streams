@@ -1,10 +1,16 @@
-import {test, t} from '@feltcoop/gro';
-import {readJsonSync} from '@feltcoop/gro/dist/fs/nodeFs.js';
+import {suite} from 'uvu';
+import * as t from 'uvu/assert';
 
-const activity_streams_json = readJsonSync('./src/activity_streams.schema.json');
+import activity_streams_json from './activity_streams.schema.json';
 
-test('schema examples pass validation', () => {
+/* test_schemas */
+const test_schemas = suite('schemas');
+
+test_schemas('schema examples pass validation', () => {
 	console.log('todo!', activity_streams_json);
 	// TODO compile the schemas with ajv and test their examples
 	t.ok(1);
 });
+
+test_schemas.run();
+/* test_schemas */

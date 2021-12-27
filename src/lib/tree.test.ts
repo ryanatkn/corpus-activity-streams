@@ -22,7 +22,7 @@ test_to_to_id('basic behaior', () => {
 });
 
 test_to_to_id.run();
-/* /test_to_to_id */
+/* test_to_to_id */
 
 /* test_to_to_deterministic_id */
 const test_to_to_deterministic_id = suite('to_to_deterministic_id');
@@ -41,4 +41,4 @@ test_to_to_deterministic_id('basic behaior', () => {
 });
 
 test_to_to_deterministic_id.run();
-/* /test_to_to_deterministic_id */
+/* test_to_to_deterministic_id */

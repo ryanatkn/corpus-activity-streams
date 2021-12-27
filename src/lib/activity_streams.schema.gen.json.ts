@@ -1,9 +1,9 @@
-import {Gen} from '@feltcoop/gro/dist/gen/gen.js';
+import {type Gen} from '@feltcoop/gro';
 
-import {vocabulary} from './vocabulary.js';
-import {vocabularyNotes} from './activity_streams_notes.js';
-import {examples} from './activity_streams_examples.js';
-import {VocabularyItem} from './activity_streams.js';
+import {vocabulary} from '$lib/vocabulary';
+import notesData from '$lib/activity_streams_notes.json';
+import examplesData from '$lib/activity_streams_examples.json';
+import {type VocabularyItem} from '$lib/activity_streams';
 
 // this renders the vocabulary examples to JSON
 
@@ -36,19 +36,21 @@ const renderDefinitions = (): string => {
 	return str;
 };
 
-const toSchema = (item: VocabularyItem): Obj => {
+type TODOSchemaType = {[key: string]: any};
+
+const toSchema = (item: VocabularyItem): TODOSchemaType => {
 	return {
 		title: item.name,
 		type: 'object',
-		description: vocabularyNotes[item.name],
+		description: notesData.notes[item.name],
 		properties: toProperties(item),
-		examples: examples[item.name],
+		examples: examplesData.examples[item.name],
 	};
 };
 
-const toProperties = (item: VocabularyItem): Obj | undefined => {
+const toProperties = (item: VocabularyItem): TODOSchemaType | undefined => {
 	if (!('properties' in item && item.properties)) return;
-	const properties: Obj = {};
+	const properties: TODOSchemaType = {};
 	for (const propertyName of item.properties) {
 		properties[propertyName] = {$ref: `#/definitions/${propertyName}`};
 	}

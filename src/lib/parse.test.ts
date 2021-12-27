@@ -162,4 +162,4 @@ test_parse('parses a more complex html anchor link', () => {
 // TODO nested html
 
 test_parse.run();
-/* /test_parse */
+/* test_parse */
