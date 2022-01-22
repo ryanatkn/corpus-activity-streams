@@ -5,7 +5,7 @@
 
 > **important**: this project is unofficial and
 > [non-normative](https://github.com/w3c/activitystreams/issues/516#issuecomment-805937131),
-> and it has data in basic JSON, not the full JSON-LD dataset;
+> and it has data in a lossy basic JSON form, not the full JSON-LD dataset;
 > for the full dataset I recommend [go-fed/activity](https://github.com/go-fed/activity) and its
 > [activitystreams.jsonld](https://github.com/go-fed/activity/blob/master/astool/activitystreams.jsonld)
 
