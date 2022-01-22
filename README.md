@@ -18,16 +18,16 @@ spec: [w3c/activitystreams](https://github.com/w3c/activitystreams)
 ## useful data & modules
 
 - data:
-  - [src/activity_streams_vocabulary.json](/src/activity_streams_vocabulary.json):
+  - [src/lib/activity_streams_vocabulary.json](/src/lib/activity_streams_vocabulary.json):
     the vocabulary items
-  - [src/activity_streams_notes.json](/src/activity_streams_notes.json):
+  - [src/lib/activity_streams_notes.json](/src/lib/activity_streams_notes.json):
     the `notes` property of the vocabulary items and
-    [the parsed AST](/src/activity_streams_notes_ast.json)
-  - [src/activity_streams_examples.json](/src/activity_streams_examples.json):
+    [the parsed AST](/src/lib/activity_streams_notes_ast.json)
+  - [src/lib/activity_streams_examples.json](/src/lib/activity_streams_examples.json):
     the examples data and
-    [the parsed AST](/src/activity_streams_examples_ast.json)
-- [src/activity_streams.ts](/src/activity_streams.ts): vocabulary types
-- [src/vocabulary.ts](/src/vocabulary.ts): all of the vocab data collections
+    [the parsed AST](/src/lib/activity_streams_examples_ast.json)
+- [src/lib/activity_streams.ts](/src/lib/activity_streams.ts): vocabulary types
+- [src/lib/vocabulary.ts](/src/lib/vocabulary.ts): all of the vocab data collections
 
 ## compared to the spec
 
@@ -53,7 +53,7 @@ If you want a spec compliant dataset, you'll need to correct for this.
   [ActivityStreams 2.0](https://www.w3.org/TR/activitystreams-core/).
 - More and better views! And then some way manage them.
 - Somehow display the
-  [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_examples.ts#L1426).
+  [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/lib/activity_streams_examples.ts#L1426).
 
 ## develop
 
