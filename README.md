@@ -1,12 +1,15 @@
 # corpus-activity-streams
 
-> [Activity Streams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/)
+> [ActivityStreams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/)
 > data and alternative docs
 
 > **important**: this project is unofficial and
-> [non-normative](https://github.com/w3c/activitystreams/issues/516#issuecomment-805937131)
+> [non-normative](https://github.com/w3c/activitystreams/issues/516#issuecomment-805937131),
+> and it has data in basic JSON, not the full JSON-LD dataset;
+> for the full dataset I recommend [go-fed/activity](https://github.com/go-fed/activity) and its
+> [activitystreams.jsonld](https://github.com/go-fed/activity/blob/master/astool/activitystreams.jsonld)
 
-> spec: [w3c/activitystreams](https://github.com/w3c/activitystreams)
+spec: [w3c/activitystreams](https://github.com/w3c/activitystreams)
 
 ## website[🕸️](https://ryanatkn.github.io/corpus-activity-streams)
 
@@ -47,7 +50,7 @@ If you want a spec compliant dataset, you'll need to correct for this.
 - Make it usable on smaller screens. Collapse columns to tabs, probably.
 - More data than just the vocabulary?
   See [ActivityPub](https://www.w3.org/TR/activitypub/) and
-  [Activity Streams 2.0](https://www.w3.org/TR/activitystreams-core/).
+  [ActivityStreams 2.0](https://www.w3.org/TR/activitystreams-core/).
 - More and better views! And then some way manage them.
 - Somehow display the
   [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/activity_streams_examples.ts#L1426).

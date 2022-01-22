@@ -18,7 +18,7 @@ const tree: Tree[] = [
 export interface BaseTree<TChildren extends BaseTree = BaseTree<any>> {
 	type: string;
 	id?: string;
-	// optional properties that any tree type can have - trying to stick close to Activity Streams
+	// optional properties that any tree type can have - trying to stick close to ActivityStreams
 	children?: TChildren[];
 	content?: string;
 }
