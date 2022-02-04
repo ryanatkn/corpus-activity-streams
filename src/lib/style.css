@@ -57,7 +57,6 @@ pre {
 	background-color: var(--color_yellow_bg);
 	color: var(--color_yellow_text);
 	padding: 4px;
-	overflow: hidden; /* maybe `auto`, but this looks better */
 	margin: 10px 0;
 }
 

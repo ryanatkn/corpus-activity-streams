@@ -23,9 +23,11 @@
 		{...tree.props}
 	/>{:else if tree.type === 'Frame'}<div class="markup-Frame">
 		{tree.content}
-	</div>{/if}{#if tree.children}{#if tree.type === 'Element'}{#if tree.element === 'pre'}<pre>{#each tree.children as child (child.id)}<svelte:self
-						tree={child}
-					/>{/each}</pre>{:else if tree.element === 'code'}<code
+	</div>{/if}{#if tree.children}{#if tree.type === 'Element'}{#if tree.element === 'pre'}<div
+				class="pre-wrapper"
+			>
+				<pre>{#each tree.children as child (child.id)}<svelte:self tree={child} />{/each}</pre>
+			</div>{:else if tree.element === 'code'}<code
 				>{#each tree.children as child (child.id)}<svelte:self tree={child} />{/each}</code
 			>{:else}<div>
 				<!-- TODO warn that it's unknown? -->{#each tree.children as child (child.id)}<svelte:self
@@ -39,5 +41,8 @@
 	.markup-Frame {
 		border: 1px solid #ddd;
 		padding: 10px;
+	}
+	.pre-wrapper {
+		display: flex;
 	}
 </style>
