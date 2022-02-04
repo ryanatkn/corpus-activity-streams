@@ -31,10 +31,6 @@ body {
 	-moz-tab-size: var(--tab_size);
 }
 
-#root {
-	height: 100%;
-}
-
 h1,
 h2 {
 	margin: 20px 0 10px;

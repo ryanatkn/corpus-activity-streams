@@ -30,9 +30,7 @@
 			</div>{:else if tree.element === 'code'}<code
 				>{#each tree.children as child (child.id)}<svelte:self tree={child} />{/each}</code
 			>{:else}<div>
-				<!-- TODO warn that it's unknown? -->{#each tree.children as child (child.id)}<svelte:self
-						tree={child}
-					/>{/each}
+				{#each tree.children as child (child.id)}<svelte:self tree={child} />{/each}
 			</div>{/if}{:else}{#each tree.children as child (child.id)}<svelte:self
 				tree={child}
 			/>{/each}{/if}{/if}

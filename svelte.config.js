@@ -11,7 +11,6 @@ export default {
 	},
 	kit: {
 		adapter: static_adapter(),
-		target: '#root',
 		paths: dev ? undefined : {base: '/corpus-activity-streams'},
 		files: {assets: 'src/static'},
 	},
