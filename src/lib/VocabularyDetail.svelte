@@ -63,6 +63,9 @@
 							<UnknownLink>{item}</UnknownLink>
 						{/if}
 					</Items>
+					{#if 'functional' in item && !item.functional}
+						<code class="literal" title="can be an Array because it is not 'functional'">[]</code>
+					{/if}
 				</td>
 			</tr>
 		{/if}
@@ -101,5 +104,11 @@
 	.property-value {
 		display: flex;
 		flex-wrap: wrap;
+	}
+	.literal {
+		padding: 0 3px;
+		margin: 0 3px;
+		border-radius: 2px;
+		background-color: var(--color_gray);
 	}
 </style>
