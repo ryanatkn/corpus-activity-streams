@@ -104,6 +104,7 @@
 	.property-value {
 		display: flex;
 		flex-wrap: wrap;
+		padding: 3px 0;
 	}
 	.literal {
 		padding: 0 3px;
