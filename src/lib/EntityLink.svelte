@@ -1,7 +1,7 @@
 <script lang="ts">
 	import {vocabulary} from '$lib/vocabulary';
 	import {hovered_entity} from '$lib/entities';
-	import {type VocabularyItem} from '$lib/activity_streams';
+	import type {VocabularyItem} from '$lib/activity_streams';
 
 	// one of these two is required
 	export let entity: VocabularyItem | null = null;

@@ -1,8 +1,4 @@
-import {
-	type VocabularyCategory,
-	type VocabularyItem,
-	type VocabularyProperty,
-} from '$lib/activity_streams';
+import type {VocabularyCategory, VocabularyItem, VocabularyProperty} from '$lib/activity_streams';
 import activity_streams_vocabulary from '$lib/activity_streams_vocabulary.json';
 
 const vocabulary_items = activity_streams_vocabulary.vocabulary;

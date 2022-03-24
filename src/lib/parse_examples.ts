@@ -1,5 +1,5 @@
 import {type Tree, type ToId, assign_node_ids} from '$lib/tree';
-import {type VocabularyTerm} from '$lib/activity_streams';
+import type {VocabularyTerm} from '$lib/activity_streams';
 import {parse} from '$lib/parse';
 
 // TODO delete this?

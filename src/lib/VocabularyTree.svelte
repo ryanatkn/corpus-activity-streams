@@ -1,7 +1,7 @@
 <script lang="ts">
 	import TreeList from '$lib/TreeList.svelte';
-	import {type Vocabulary} from '$lib/vocabulary';
-	import {type VocabularyType} from '$lib/activity_streams';
+	import type {Vocabulary} from '$lib/vocabulary';
+	import type {VocabularyType} from '$lib/activity_streams';
 
 	export let vocabulary: Vocabulary;
 

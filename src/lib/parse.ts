@@ -30,7 +30,7 @@ export interface WrapperChar {
 	component: string;
 	toProps: (...args: any[]) => Record<string, any>; // TODO type ? generic?
 }
-const toEntityLinkProps = (name: string) => ({name}); // TODO refactor, where and how?
+const toEntityLinkProps = (name: string): {name: string} => ({name}); // TODO refactor, where and how?
 export const defaultWrapperChars: WrapperChar[] = [
 	{char: '`', preserve: false, component: 'EntityLink', toProps: toEntityLinkProps},
 	{char: '"', preserve: true, component: 'EntityLink', toProps: toEntityLinkProps},
@@ -41,7 +41,7 @@ const breaksWord: Set<string> = new Set([' ', '\n']);
 
 const TAG_OPEN_CHAR = '<';
 const TAG_CLOSE_CHAR = '>';
-const LINK_MATCHER = /^https?:\/\//;
+const LINK_MATCHER = /^https?:\/\//u;
 
 // export const isSafeSubset = (content: string): boolean => // TODO
 
@@ -51,7 +51,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 	const children: Tree[] = [];
 	const vocabularyByName = vocabulary.by_name; // TODO make this an arg or smth
 	let i = 0;
-	let len = content.length;
+	const len = content.length;
 	let currentString = '';
 	let parsingHtml: null | 'open' | 'attributes' | 'children' | 'close' = null;
 	let tagName = '';
@@ -192,10 +192,11 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 
 // TODO tests
 const parseAttributes = (tagAttributes: string): {[key: string]: any} => {
-	let result: {[key: string]: any} = {};
+	const result: {[key: string]: any} = {};
 	let key = '';
 	let value = '';
 	let parsingAttributes: 'key' | 'value' = 'key'; // TODO const enum?
+	// eslint-disable-next-line @typescript-eslint/prefer-for-of
 	for (let i = 0; i < tagAttributes.length; i++) {
 		const char = tagAttributes[i];
 		if (parsingAttributes === 'key') {
@@ -221,7 +222,7 @@ const parseAttributes = (tagAttributes: string): {[key: string]: any} => {
 
 // TODO hacky
 const toValue = (value: string): string => {
-	if (value[0] === '"' && value[value.length - 1] === '"') {
+	if (value.startsWith('"') && value.endsWith('"')) {
 		return value.substring(1, value.length - 1);
 	}
 	return value;

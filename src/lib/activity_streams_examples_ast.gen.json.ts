@@ -1,4 +1,4 @@
-import {type Gen} from '@feltcoop/gro';
+import type {Gen} from '@feltcoop/gro';
 
 import activity_streams_examples from '$lib/activity_streams_examples.json';
 import {parse_examples} from '$lib/parse_examples';

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import {get_components} from '$lib/components';
-	import {type Tree} from '$lib/tree';
+	import type {Tree} from '$lib/tree';
 
 	// `<Markup />` renders a `Tree` AST
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {type VocabularyItem} from '$lib/activity_streams';
+	import type {VocabularyItem} from '$lib/activity_streams';
 	import Markup from '$lib/Markup.svelte';
 	import {parse} from '$lib/parse';
 	import {parse_examples} from '$lib/parse_examples';

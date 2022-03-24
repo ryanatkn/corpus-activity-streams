@@ -7,7 +7,7 @@
 	import Link from '$lib/Link.svelte';
 	import EntityLink from '$lib/EntityLink.svelte';
 
-	let view = TiledView || TabbedView;
+	const view = TiledView || TabbedView;
 	type DefaultComponents = 'Link' | 'EntityLink';
 
 	const to_default_components = (): Components<DefaultComponents> => ({

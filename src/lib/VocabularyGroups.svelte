@@ -1,7 +1,7 @@
 <script lang="ts">
 	import EntityLink from '$lib/EntityLink.svelte';
 	import StringLink from '$lib/StringLink.svelte';
-	import {type Vocabulary} from '$lib/vocabulary';
+	import type {Vocabulary} from '$lib/vocabulary';
 
 	export let vocabulary: Vocabulary;
 </script>

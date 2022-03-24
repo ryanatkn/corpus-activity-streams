@@ -2,7 +2,7 @@
 	import EntityLink from '$lib/EntityLink.svelte';
 	import Items from '$lib/Items.svelte';
 	import UnknownLink from '$lib/UnknownLink.svelte';
-	import {type Vocabulary} from '$lib/vocabulary';
+	import type {Vocabulary} from '$lib/vocabulary';
 
 	export let vocabulary: Vocabulary;
 </script>

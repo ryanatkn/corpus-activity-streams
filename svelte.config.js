@@ -13,5 +13,6 @@ export default {
 		adapter: static_adapter(),
 		paths: dev ? undefined : {base: '/corpus-activity-streams'},
 		files: {assets: 'src/static'},
+		prerender: {default: true},
 	},
 };

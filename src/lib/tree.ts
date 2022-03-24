@@ -81,5 +81,6 @@ export const assign_node_ids = <T extends Tree>(tree: T, to_id: ToId = to_to_id(
 export const to_to_id: ToToId =
 	(i = Number(Math.random().toString().substring(7))) =>
 	() =>
+		// eslint-disable-next-line no-param-reassign
 		`tree${i++}`;
 export const to_to_deterministic_id: ToToId = () => to_to_id(0);
