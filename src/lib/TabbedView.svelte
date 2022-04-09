@@ -14,13 +14,13 @@
 </script>
 
 <nav>
-	<button on:click={() => go_to('types')} disabled={active_tab === 'types'}> types </button>
-	<button on:click={() => go_to('properties')} disabled={active_tab === 'properties'}>
-		properties
-	</button>
-	<button on:click={() => go_to('details')} disabled={active_tab === 'details'}> details </button>
-	<button on:click={() => go_to('tree')} disabled={active_tab === 'tree'}> tree </button>
-	<button on:click={() => go_to('groups')} disabled={active_tab === 'groups'}> groups </button>
+	<button on:click={() => go_to('types')} disabled={active_tab === 'types'}>types</button>
+	<button on:click={() => go_to('properties')} disabled={active_tab === 'properties'}
+		>properties</button
+	>
+	<button on:click={() => go_to('details')} disabled={active_tab === 'details'}>details</button>
+	<button on:click={() => go_to('tree')} disabled={active_tab === 'tree'}>tree</button>
+	<button on:click={() => go_to('groups')} disabled={active_tab === 'groups'}>groups</button>
 </nav>
 
 {#if active_tab === 'types'}

@@ -21,7 +21,7 @@
 {#if tree.type === 'Text'}{tree.content}{:else if tree.type === 'Component'}<svelte:component
 		this={components[tree.component]}
 		{...tree.props}
-	/>{:else if tree.type === 'Frame'}<div class="markup-Frame">
+	/>{:else if tree.type === 'Frame'}<div class="frame">
 		{tree.content}
 	</div>{/if}{#if tree.children}{#if tree.type === 'Element'}{#if tree.element === 'pre'}<div
 				class="pre-wrapper"
@@ -36,7 +36,7 @@
 			/>{/each}{/if}{/if}
 
 <style>
-	.markup-Frame {
+	.frame {
 		border: 1px solid #ddd;
 		padding: 10px;
 	}

@@ -6,9 +6,7 @@
 	$: child = content || href;
 </script>
 
-<a {href} target="_blank" rel="noopener noreferrer">
-	{child}
-</a>
+<a {href} target="_blank" rel="noopener noreferrer">{child}</a>
 
 <style>
 	a {

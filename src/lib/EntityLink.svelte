@@ -42,10 +42,8 @@
 	}}
 	on:mouseleave={() => {
 		$hovered_entity = null;
-	}}
+	}}><slot entity={ent} {color}><code>{ent.name}</code></slot></a
 >
-	<slot entity={ent} {color}><code> {ent.name} </code></slot>
-</a>
 
 <style>
 	code {
