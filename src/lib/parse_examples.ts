@@ -1,9 +1,9 @@
-import {type Tree, type ToId, assign_node_ids, type BlockTree} from '$lib/tree';
+import {type Tree, assign_node_ids, type BlockTree} from '$lib/tree';
 import type {VocabularyTerm} from '$lib/activity_streams';
 import {parse} from '$lib/parse';
 
 // TODO delete this?
-export const parse_examples = (examples: VocabularyTerm[], to_id?: ToId): Tree | null => {
+export const parse_examples = (examples: VocabularyTerm[]): Tree | null => {
 	if (!examples) return null;
 	const children: Tree[] = [];
 	for (const example of examples) {
@@ -20,12 +20,12 @@ export const parse_examples = (examples: VocabularyTerm[], to_id?: ToId): Tree |
 				],
 			});
 		}
-		assign_node_ids(tree, to_id);
+		assign_node_ids(tree);
 		children.push({
 			type: 'Component',
 			component: 'Example',
 			props: {tree},
 		});
 	}
-	return assign_node_ids({type: 'Block', children}, to_id);
+	return assign_node_ids({type: 'Block', children});
 };

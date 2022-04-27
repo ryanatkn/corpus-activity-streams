@@ -70,17 +70,12 @@ export interface ToToId {
 	(i?: number): ToId;
 }
 
-export const assign_node_ids = <T extends Tree>(tree: T, to_id: ToId = to_to_id()): T => {
+export const assign_node_ids = <T extends Tree>(tree: T): T => {
 	for_each_node(tree, (tree) => {
 		tree.id = to_id(); // TODO ? path? what if we passed in the parent so we could do /1/3/2/2?
 	});
 	return tree;
 };
 
-// TODO import random utils from `felt` using `uid` probably
-export const to_to_id: ToToId =
-	(i = Number(Math.random().toString().substring(7))) =>
-	() =>
-		// eslint-disable-next-line no-param-reassign
-		`tree${i++}`;
-export const to_to_deterministic_id: ToToId = () => to_to_id(0);
+let i = 0;
+const to_id: ToId = () => `tree_${++i}`;

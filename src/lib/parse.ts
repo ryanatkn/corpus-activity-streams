@@ -1,4 +1,4 @@
-import {type Tree, type ToId, assign_node_ids} from '$lib/tree';
+import {type Tree, assign_node_ids} from '$lib/tree';
 import {vocabulary} from '$lib/vocabulary';
 
 // this is all very hacky but serviceable for the needs of this app
@@ -23,7 +23,7 @@ const TAG_OPEN_CHAR = '<';
 const TAG_CLOSE_CHAR = '>';
 const LINK_MATCHER = /^https?:\/\//u;
 
-export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrapperChars): Tree[] => {
+export const parse = (content: string, wrapperChars = defaultWrapperChars): Tree[] => {
 	const children: Tree[] = [];
 	const vocabularyByName = vocabulary.by_name; // TODO make this an arg or smth
 	let i = 0;
@@ -163,7 +163,7 @@ export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrappe
 	if (currentString) {
 		children.push({type: 'Text', content: currentString});
 	}
-	return children.map((c) => assign_node_ids(c, toId));
+	return children.map((c) => assign_node_ids(c));
 };
 
 // TODO tests
