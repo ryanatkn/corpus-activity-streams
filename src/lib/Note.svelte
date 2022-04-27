@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type {VocabularyItem} from '$lib/activity_streams';
-	import Markup from '$lib/Markup.svelte';
+	import TreeView from '$lib/TreeView.svelte';
 	import {parse} from '$lib/parse';
 	import {parse_examples} from '$lib/parse_examples';
 	import activity_streams_notes from '$lib/activity_streams_notes.json';
@@ -12,9 +12,6 @@
 	$: examples_tree = parse_examples(activity_streams_examples.examples[item.name]);
 </script>
 
-{#each notes_tree as tree (tree.id)}
-	<Markup {tree} />
-{/each}
-{#if examples_tree}
-	<Markup tree={examples_tree} />
-{/if}
+{#each notes_tree as tree (tree.id)}<TreeView {tree} />{/each}{#if examples_tree}<TreeView
+		tree={examples_tree}
+	/>{/if}

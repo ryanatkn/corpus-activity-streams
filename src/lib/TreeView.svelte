@@ -2,9 +2,7 @@
 	import {get_components} from '$lib/components';
 	import type {Tree} from '$lib/tree';
 
-	// `<Markup />` renders a `Tree` AST
-
-	// TODO maybe rename `MarkupView`?
+	// `<TreeView />` renders a `Tree` AST
 
 	export let tree: Tree;
 

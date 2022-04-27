@@ -21,11 +21,9 @@ spec: [w3c/activitystreams](https://github.com/w3c/activitystreams)
   - [src/lib/activity_streams_vocabulary.json](/src/lib/activity_streams_vocabulary.json):
     the vocabulary items
   - [src/lib/activity_streams_notes.json](/src/lib/activity_streams_notes.json):
-    the `notes` property of the vocabulary items and
-    [the parsed AST](/src/lib/activity_streams_notes_ast.json)
+    the `notes` property of the vocabulary items
   - [src/lib/activity_streams_examples.json](/src/lib/activity_streams_examples.json):
-    the examples data and
-    [the parsed AST](/src/lib/activity_streams_examples_ast.json)
+    the examples data
 - [src/lib/activity_streams.ts](/src/lib/activity_streams.ts): vocabulary types
 - [src/lib/vocabulary.ts](/src/lib/vocabulary.ts): all of the vocab data collections
 
