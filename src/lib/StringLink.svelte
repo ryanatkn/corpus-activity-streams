@@ -1,6 +1,4 @@
-<code class="string-link">
-	'<slot />'
-</code>
+<code class="string-link">'<slot />'</code>
 
 <style>
 	.string-link {

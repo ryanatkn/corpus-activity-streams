@@ -1,6 +1,4 @@
-<code class="unknown-link">
-	<slot />
-</code>
+<code class="unknown-link"><slot /></code>
 
 <style>
 	.unknown-link {

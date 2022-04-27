@@ -2,9 +2,7 @@
 	import GithubLogo from '$lib/GithubLogo.svelte';
 </script>
 
-<a href="https://github.com/ryanatkn/corpus-activity-streams">
-	<GithubLogo />
-</a>
+<a href="https://github.com/ryanatkn/corpus-activity-streams"><GithubLogo /> </a>
 
 <style>
 	a {
