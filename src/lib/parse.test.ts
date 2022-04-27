@@ -2,11 +2,11 @@ import {suite} from 'uvu';
 import * as t from 'uvu/assert';
 
 import {parse} from '$lib/parse';
-import {type Tree, assign_node_ids, to_to_deterministic_id} from '$lib/tree';
+import {type Tree, assign_node_ids} from '$lib/tree';
 
 const normalizeChildren = (children: Tree[]) => {
-	const to_id = to_to_deterministic_id();
-	return children.map((c) => assign_node_ids(c, to_id));
+	let i = 0;
+	return children.map((c) => assign_node_ids(c, () => `tree_${i++}`));
 };
 
 /* test_parse */
@@ -104,7 +104,7 @@ test_parse('parses link in quotes', () => {
 test_parse('parses custom link in backticks', () => {
 	t.equal(
 		normalizeChildren(
-			parse('The `Entity` is the base of all of types.', undefined, [
+			parse('The `Entity` is the base of all of types.', [
 				{
 					char: '`',
 					preserve: false,

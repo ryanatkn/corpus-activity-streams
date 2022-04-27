@@ -27,7 +27,9 @@
 				<pre>{#each tree.children as child (child.id)}<svelte:self tree={child} />{/each}</pre>
 			</div>{:else if tree.element === 'code'}<code
 				>{#each tree.children as child (child.id)}<svelte:self tree={child} />{/each}</code
-			>{:else}<div>
+			>{:else if tree.element === 'div'}<div>
+				{#each tree.children as child (child.id)}<svelte:self tree={child} />{/each}
+			</div>{:else}<div>
 				{#each tree.children as child (child.id)}<svelte:self tree={child} />{/each}
 			</div>{/if}{:else}{#each tree.children as child (child.id)}<svelte:self
 				tree={child}
