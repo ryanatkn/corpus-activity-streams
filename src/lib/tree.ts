@@ -70,7 +70,7 @@ export interface ToToId {
 	(i?: number): ToId;
 }
 
-export const assign_node_ids = <T extends Tree>(tree: T): T => {
+export const assign_node_ids = <T extends Tree>(tree: T, to_id: ToId = _to_id): T => {
 	for_each_node(tree, (tree) => {
 		tree.id = to_id(); // TODO ? path? what if we passed in the parent so we could do /1/3/2/2?
 	});
@@ -78,4 +78,4 @@ export const assign_node_ids = <T extends Tree>(tree: T): T => {
 };
 
 let i = 0;
-const to_id: ToId = () => `tree_${++i}`;
+const _to_id: ToId = () => `tree_${i++}`;

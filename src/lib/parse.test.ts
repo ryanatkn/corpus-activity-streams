@@ -5,7 +5,8 @@ import {parse} from '$lib/parse';
 import {type Tree, assign_node_ids} from '$lib/tree';
 
 const normalizeChildren = (children: Tree[]) => {
-	return children.map((c) => assign_node_ids(c));
+	let i = 0;
+	return children.map((c) => assign_node_ids(c, () => `tree_${i++}`));
 };
 
 /* test_parse */
