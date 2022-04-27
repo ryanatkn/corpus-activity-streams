@@ -39,7 +39,7 @@ export interface ElementTree extends BaseTree<Tree> {
 	element: 'pre' | 'code';
 }
 
-// TODO or `MarkupViewNode` ?
+// TODO or `TreeViewNode` ?
 export interface ComponentTree extends BaseTree<Tree> {
 	type: 'Component';
 	component: string; // TODO type? `ComponentName` or `ComponentId` ?
