@@ -36,7 +36,7 @@ export interface TextTree extends BaseTree<Tree> {
 
 export interface ElementTree extends BaseTree<Tree> {
 	type: 'Element';
-	element: 'pre' | 'code';
+	element: 'pre' | 'code' | 'div';
 }
 
 // TODO or `TreeViewNode` ?

@@ -12,6 +12,5 @@
 	$: examples_tree = parse_examples(activity_streams_examples.examples[item.name]);
 </script>
 
-{#each notes_tree as tree (tree.id)}<TreeView {tree} />{/each}{#if examples_tree}<TreeView
-		tree={examples_tree}
-	/>{/if}
+{#each notes_tree as tree (tree.id)}<TreeView {tree} />{/each}
+{#if examples_tree}<TreeView tree={examples_tree} />{/if}

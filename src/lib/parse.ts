@@ -1,27 +1,7 @@
-// TODO fix this, some error with importing paths
-// import {UnreachableError} from '@feltcoop/gro';
-
 import {type Tree, type ToId, assign_node_ids} from '$lib/tree';
 import {vocabulary} from '$lib/vocabulary';
 
-/*
-
-goals
-
-- small code size
-- fast
-- safe subset that can be securely shared and rendered without trust
-	(security by capability? e.g. no external link resource loading, so no IP address leakage)
-- incomplete: handle the "80%"" of use cases; need Svelte/mdsvex tooling for the full language
-- minimal: single-pass parsing, no intermediate lexed/tokenized data structure
-
-TODO
-
-- nested html, components, and custom markup
-- /absolute and ./relative ../links //root.links
-- emoji
-
-*/
+// this is all very hacky but serviceable for the needs of this app
 
 // TODO haphazardly named
 export interface WrapperChar {
@@ -43,10 +23,6 @@ const TAG_OPEN_CHAR = '<';
 const TAG_CLOSE_CHAR = '>';
 const LINK_MATCHER = /^https?:\/\//u;
 
-// export const isSafeSubset = (content: string): boolean => // TODO
-
-// why not lex/scan/tokenize? lol what do you think this is, computer rocket science?
-// also I (naively) like the idea of having no intermediate data structure, to keep minimal for UX
 export const parse = (content: string, toId?: ToId, wrapperChars = defaultWrapperChars): Tree[] => {
 	const children: Tree[] = [];
 	const vocabularyByName = vocabulary.by_name; // TODO make this an arg or smth
