@@ -13,6 +13,7 @@
 
 <style>
 	.example {
+		overflow: auto;
 		background-color: var(--color_yellow_bg);
 		color: var(--color_yellow_text);
 		padding: 4px;
