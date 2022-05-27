@@ -31,10 +31,10 @@
     "ActivityStreams"
   ],
   "devDependencies": {
-    "@feltcoop/eslint-config": "^0.1.6",
+    "@feltcoop/eslint-config": "^0.1.7",
     "@feltcoop/gro": "^0.55.2",
-    "@sveltejs/adapter-static": "^1.0.0-next.31",
-    "@sveltejs/kit": "^1.0.0-next.338",
+    "@sveltejs/adapter-static": "^1.0.0-next.32",
+    "@sveltejs/kit": "^1.0.0-next.345",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
     "eslint": "^8.14.0",
