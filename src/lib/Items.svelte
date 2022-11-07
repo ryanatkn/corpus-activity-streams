@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let items: any | any[];
+	export let items: any;
 </script>
 
 {#if Array.isArray(items)}{#each items as item (item)}<slot {item} />{/each}{:else}<slot
