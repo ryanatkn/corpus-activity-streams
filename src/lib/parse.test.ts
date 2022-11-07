@@ -1,5 +1,5 @@
 import {suite} from 'uvu';
-import * as t from 'uvu/assert';
+import * as assert from 'uvu/assert';
 
 import {parse} from '$lib/parse';
 import {type Tree, assign_node_ids} from '$lib/tree';
@@ -13,7 +13,7 @@ const normalizeChildren = (children: Tree[]) => {
 const test_parse = suite('parse');
 
 test_parse('parses entity link in backticks', () => {
-	t.equal(
+	assert.equal(
 		normalizeChildren(parse('The `Entity` is the base of all of types.')),
 		normalizeChildren([
 			{type: 'Text', content: 'The '},
@@ -24,7 +24,7 @@ test_parse('parses entity link in backticks', () => {
 });
 
 test_parse('parses entity links in quotes', () => {
-	t.equal(
+	assert.equal(
 		normalizeChildren(
 			parse(
 				JSON.stringify(
@@ -58,7 +58,7 @@ test_parse('parses entity links in quotes', () => {
 });
 
 test_parse('parses link', () => {
-	t.equal(
+	assert.equal(
 		normalizeChildren(parse('this https://felt.social is an external link')),
 		normalizeChildren([
 			{type: 'Text', content: 'this '},
@@ -69,7 +69,7 @@ test_parse('parses link', () => {
 });
 
 test_parse('parses insecure http link', () => {
-	t.equal(
+	assert.equal(
 		normalizeChildren(parse('this http://felt.social is an external insecure link')),
 		normalizeChildren([
 			{type: 'Text', content: 'this '},
@@ -80,7 +80,7 @@ test_parse('parses insecure http link', () => {
 });
 
 test_parse('parses link in backticks', () => {
-	t.equal(
+	assert.equal(
 		normalizeChildren(parse('this `https://felt.social` is an external link in backticks')),
 		normalizeChildren([
 			{type: 'Text', content: 'this '},
@@ -91,7 +91,7 @@ test_parse('parses link in backticks', () => {
 });
 
 test_parse('parses link in quotes', () => {
-	t.equal(
+	assert.equal(
 		normalizeChildren(parse('this "https://felt.social" is an external link in quotes')),
 		normalizeChildren([
 			{type: 'Text', content: 'this "'},
@@ -102,7 +102,7 @@ test_parse('parses link in quotes', () => {
 });
 
 test_parse('parses custom link in backticks', () => {
-	t.equal(
+	assert.equal(
 		normalizeChildren(
 			parse('The `Entity` is the base of all of types.', [
 				{
@@ -122,7 +122,7 @@ test_parse('parses custom link in backticks', () => {
 });
 
 test_parse('parses a simple html anchor link', () => {
-	t.equal(
+	assert.equal(
 		normalizeChildren(
 			parse('this <a href="https://felt.social" name="felt">content</a> is an external link'),
 		),
@@ -139,7 +139,7 @@ test_parse('parses a simple html anchor link', () => {
 });
 
 test_parse('parses a more complex html anchor link', () => {
-	t.equal(
+	assert.equal(
 		normalizeChildren(parse('the [<a href="https://felt.social" a="1" b=2 c="3">1 2 3</a>] and')),
 		normalizeChildren([
 			{type: 'Text', content: 'the ['},
