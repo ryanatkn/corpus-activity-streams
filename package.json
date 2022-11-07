@@ -1,0 +1,73 @@
+{
+  "name": "corpus-activity-streams",
+  "description": "ActivityStreams 2.0 vocabulary data and alternative docs",
+  "homepage": "https://ryanatkn.github.io/corpus-activity-streams",
+  "license": "Unlicense",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "gro dev",
+    "build": "gro build",
+    "test": "gro test",
+    "start": "gro dev",
+    "deploy": "gro deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanatkn/corpus-activity-streams.git"
+  },
+  "author": {
+    "name": "Ryan Atkinson",
+    "email": "mail@ryanatkn.com",
+    "url": "https://www.ryanatkn.com"
+  },
+  "engines": {
+    "node": ">=18.6"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanatkn/corpus-activity-streams/issues"
+  },
+  "keywords": [
+    "ActivityStreams"
+  ],
+  "devDependencies": {
+    "@feltcoop/eslint-config": "^0.2.1",
+    "@feltcoop/gro": "^0.62.4",
+    "@sveltejs/adapter-static": "^1.0.0-next.48",
+    "@sveltejs/kit": "^1.0.0-next.535",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.27.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-svelte": "^2.8.0",
+    "svelte": "^3.52.0",
+    "svelte-check": "^2.9.2",
+    "svelte-preprocess-esbuild": "^3.0.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.8.4",
+    "uvu": "^0.5.6"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "@feltcoop",
+    "ignorePatterns": [
+      "svelte.config.js"
+    ]
+  },
+  "prettier": {
+    "useTabs": true,
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": false,
+    "overrides": [
+      {
+        "files": "package.json",
+        "options": {
+          "useTabs": false
+        }
+      }
+    ]
+  }
+}
