@@ -4,6 +4,7 @@ export type Components<T extends string = string> = Record<T, typeof SvelteCompo
 
 const KEY = {};
 
-export const set_components = (initial: Components<string>): void => setContext(KEY, initial);
+export const set_components = <T extends string = string>(initial: Components<T>): Components<T> =>
+	setContext(KEY, initial);
 
 export const get_components = <T extends string = string>(): Components<T> => getContext(KEY);
