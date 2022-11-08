@@ -41,7 +41,8 @@ or see [go-fed/activity](https://github.com/go-fed/activity) and its
 
 ## todo
 
-- generate JSON schema for each term (see the in-progress branch
+- generate JSON schema (maybe with [zod](https://github.com/colinhacks/zod))
+  for each term (see the in-progress branch
   [**schema**](https://github.com/ryanatkn/corpus-activity-streams/tree/schema))
   - use JSON schemas to generate types with
     [`json-schema-to-typescript`](https://github.com/bcherny/json-schema-to-typescript)
