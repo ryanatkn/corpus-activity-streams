@@ -15,7 +15,7 @@ export const parse_examples = (examples: VocabularyTerm[]): Tree | null => {
 				children: [
 					...parse('"' + key + '"'),
 					{type: 'Text', content: ': '},
-					...parse('"' + value + '"'),
+					...parse(typeof value === 'object' ? JSON.stringify(value, null, 2) : '"' + value + '"'),
 					{type: 'Text', content: ','},
 				],
 			});
