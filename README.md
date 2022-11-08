@@ -63,6 +63,9 @@ npm run dev
 gro dev # npm i -g @feltcoop/gro
 ```
 
+> learn more about [Gro](https://github.com/feltcoop/gro)
+> (Windows users: you'll need Linux, see the readme)
+
 ## build
 
 ```bash
