@@ -52,8 +52,6 @@ or see [go-fed/activity](https://github.com/go-fed/activity) and its
   See [ActivityPub](https://www.w3.org/TR/activitypub/) and
   [ActivityStreams 2.0](https://www.w3.org/TR/activitystreams-core/).
 - More and better views! And then some way manage them.
-- Somehow display the
-  [other examples](https://github.com/ryanatkn/corpus-activity-streams/blob/main/src/lib/activity_streams_examples.ts#L1426).
 
 ## develop
 
