@@ -19,6 +19,7 @@
 		padding: 4px;
 		margin: 10px 0;
 		font-family: monospace, monospace; /* funky hack to prevent it from shrinking */
+		white-space: nowrap;
 	}
 	.example > :global(div:not(:first-child, :last-child)) {
 		padding-left: 1em;
