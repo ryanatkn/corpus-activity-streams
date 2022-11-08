@@ -6,9 +6,7 @@
 </script>
 
 <div class="example">
-	<div>{'{'}</div>
 	<TreeView {tree} />
-	<div>}</div>
 </div>
 
 <style>
@@ -21,7 +19,13 @@
 		font-family: monospace, monospace; /* funky hack to prevent it from shrinking */
 		white-space: nowrap;
 	}
-	.example > :global(div:not(:first-child, :last-child)) {
+	.example > :global(div) {
+		padding-left: 1em;
+	}
+	.example > :global(div > div) {
+		padding-left: 1em;
+	}
+	.example > :global(div > div > div) {
 		padding-left: 1em;
 	}
 </style>
