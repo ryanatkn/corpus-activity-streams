@@ -9,7 +9,7 @@
 > for the full dataset I recommend [go-fed/activity](https://github.com/go-fed/activity) and its
 > [activitystreams.jsonld](https://github.com/go-fed/activity/blob/master/astool/activitystreams.jsonld)
 
-[spec](https://www.w3.org/TR/activitystreams-vocabulary/),
+[ActivityStreams spec](https://www.w3.org/TR/activitystreams-vocabulary/),
 [w3c/activitystreams](https://github.com/w3c/activitystreams)
 
 ## website[🕸️](https://ryanatkn.github.io/corpus-activity-streams)
