@@ -14,11 +14,11 @@ const test_parse = suite('parse');
 
 test_parse('parses entity link in backticks', () => {
 	assert.equal(
-		normalizeChildren(parse('The `Entity` is the base of all of types.')),
+		normalizeChildren(parse('The `Entity` is the base of all non-primitive types.')),
 		normalizeChildren([
 			{type: 'Text', content: 'The '},
 			{type: 'Component', component: 'EntityLink', props: {name: 'Entity'}},
-			{type: 'Text', content: ' is the base of all of types.'},
+			{type: 'Text', content: ' is the base of all non-primitive types.'},
 		]),
 	);
 });
@@ -104,7 +104,7 @@ test_parse('parses link in quotes', () => {
 test_parse('parses custom link in backticks', () => {
 	assert.equal(
 		normalizeChildren(
-			parse('The `Entity` is the base of all of types.', [
+			parse('The `Entity` is the base of all non-primitive types.', [
 				{
 					char: '`',
 					preserve: false,
@@ -116,7 +116,7 @@ test_parse('parses custom link in backticks', () => {
 		normalizeChildren([
 			{type: 'Text', content: 'The '},
 			{type: 'Component', component: 'CustomLink', props: {othername: 'Entity'}},
-			{type: 'Text', content: ' is the base of all of types.'},
+			{type: 'Text', content: ' is the base of all non-primitive types.'},
 		]),
 	);
 });
