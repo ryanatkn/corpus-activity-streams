@@ -27,13 +27,14 @@
 - [src/lib/activity_streams.ts](/src/lib/activity_streams.ts): vocabulary types
 - [src/lib/vocabulary.ts](/src/lib/vocabulary.ts): all of the vocab data collections
 
-## compared to the spec
+## compared to [the spec](https://www.w3.org/TR/activitystreams-vocabulary/)
 
 This project's data was assembled by hand from both
 [the ActivityStreams website](https://www.w3.org/TR/activitystreams-vocabulary/) and
 [the w3c OWL spec](https://github.com/w3c/activitystreams/blob/master/vocabulary/activitystreams2.owl).
 
-The data also includes `Entity`, a term used only informally in the spec.
+The data also includes `Entity`, a term used only informally in
+[the spec](https://www.w3.org/TR/activitystreams-vocabulary/).
 The properties are inferred from what `Object` and `Link` share.
 If you want a spec compliant dataset, you'll need to correct for this,
 or see [go-fed/activity](https://github.com/go-fed/activity) and its
