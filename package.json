@@ -1,6 +1,6 @@
 {
   "name": "corpus-activity-streams",
-  "description": "ActivityStreams 2.0 vocabulary data and alternative docs",
+  "description": "alternative docs for ActivityStreams 2.0 vocabulary",
   "homepage": "https://ryanatkn.github.io/corpus-activity-streams",
   "license": "Unlicense",
   "version": "0.0.0",
