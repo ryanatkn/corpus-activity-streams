@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import GithubLogo from '$lib/GithubLogo.svelte';
 </script>
 

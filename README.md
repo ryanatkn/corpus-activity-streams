@@ -35,10 +35,10 @@ npm i
 # then
 npm run dev
 # or
-gro dev # npm i -g @feltcoop/gro
+gro dev # npm i -g @feltjs/gro
 ```
 
-> learn more about [Gro](https://github.com/feltcoop/gro)
+> learn more about [Gro](https://github.com/feltjs/gro)
 > (Windows users: you'll need Linux, see the readme)
 
 ## build
@@ -51,7 +51,7 @@ gro build
 
 ## deploy
 
-[Deploy](https://github.com/feltcoop/gro/blob/main/src/docs/deploy.md)
+[Deploy](https://github.com/feltjs/gro/blob/main/src/docs/deploy.md)
 (build, commit, and push) to the `deploy` branch, e.g. for GitHub Pages:
 
 ```bash

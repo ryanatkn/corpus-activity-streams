@@ -1,6 +1,6 @@
 import {getContext, setContext, type SvelteComponent} from 'svelte';
 
-export type Components<T extends string = string> = Record<T, typeof SvelteComponent>;
+export type Components<T extends string = string> = Record<T, typeof SvelteComponent<any>>;
 
 const KEY = {};
 

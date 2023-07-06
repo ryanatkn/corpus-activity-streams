@@ -31,26 +31,26 @@
     "ActivityStreams"
   ],
   "devDependencies": {
-    "@feltcoop/eslint-config": "^0.2.1",
-    "@feltcoop/gro": "^0.63.2",
-    "@sveltejs/adapter-static": "^1.0.0-next.48",
-    "@sveltejs/kit": "^1.0.0-next.539",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
-    "eslint": "^8.27.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "prettier": "^2.7.1",
-    "prettier-plugin-svelte": "^2.8.0",
-    "svelte": "^3.52.0",
-    "svelte-check": "^2.9.2",
+    "@feltjs/eslint-config": "^0.3.0",
+    "@feltjs/gro": "^0.78.2",
+    "@sveltejs/adapter-static": "^2.0.2",
+    "@sveltejs/kit": "^1.22.0",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.44.0",
+    "eslint-plugin-svelte": "^2.32.2",
+    "prettier": "^2.8.8",
+    "prettier-plugin-svelte": "^2.10.1",
+    "svelte": "^4.0.4",
+    "svelte-check": "^3.4.4",
     "svelte-preprocess-esbuild": "^3.0.1",
-    "tslib": "^2.4.1",
-    "typescript": "^4.8.4",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6",
     "uvu": "^0.5.6"
   },
   "eslintConfig": {
     "root": true,
-    "extends": "@feltcoop",
+    "extends": "@feltjs",
     "ignorePatterns": [
       "svelte.config.js"
     ]
