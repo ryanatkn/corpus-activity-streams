@@ -1,6 +1,7 @@
 <script lang="ts">
 	import EntityLink from '$lib/EntityLink.svelte';
 	import {slide} from 'svelte/transition';
+	import {swallow} from '@feltjs/util/dom.js';
 	import type {VocabularyType} from '$lib/activity_streams';
 
 	export let tree: VocabularyType;
@@ -9,11 +10,7 @@
 
 	let show_children = true;
 	const toggle_show_children = (e: MouseEvent) => {
-		// If `preventDefault` and `stopPropagation` are put on the event handler as modifiers,
-		// it results in undesired UX, because we want to conditionally add the click handler and behavior.
-		// We solve this problem with `get_children` above, which also seems like a hack.
-		e.preventDefault();
-		e.stopPropagation();
+		swallow(e);
 		show_children = !show_children;
 	};
 
@@ -21,7 +18,7 @@
 	$: clickable = !!children.length;
 </script>
 
-<div class="tree" class:root={depth === 0} class:clickable transition:slide={{duration: 137}}>
+<div class="tree" class:root={depth === 0} class:clickable>
 	<div class="content">
 		{#if clickable}
 			<button class="icon" on:click={clickable ? toggle_show_children : undefined}>
@@ -34,7 +31,6 @@
 		{:else}
 			<span class="icon"> ∙ </span>
 		{/if}
-		<!-- TODO this is a hack, attempts at recursive slots failed	 -->
 		<EntityLink entity={tree} />
 		{#if tree.properties}
 			{#each tree.properties as property (property)}
@@ -43,9 +39,11 @@
 		{/if}
 	</div>
 	{#if children && show_children}
-		{#each children as child (child)}
-			<svelte:self tree={child} depth={depth + 1} {get_children} />
-		{/each}
+		<div class="children" transition:slide={{duration: 137}}>
+			{#each children as child (child)}
+				<svelte:self tree={child} depth={depth + 1} {get_children} />
+			{/each}
+		</div>
 	{/if}
 </div>
 

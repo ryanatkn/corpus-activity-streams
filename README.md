@@ -7,6 +7,9 @@
 > for the full dataset I recommend [go-fed/activity](https://github.com/go-fed/activity) and its
 > [activitystreams.jsonld](https://github.com/go-fed/activity/blob/master/astool/activitystreams.jsonld).
 > also, it's [non-normative](https://github.com/w3c/activitystreams/issues/516#issuecomment-805937131)
+> and the spec authors
+> [intentionally do not publish](https://github.com/w3c/activitystreams/issues/416#issuecomment-1552189009)
+> a machine-readable vocabulary
 
 [ActivityStreams spec](https://www.w3.org/TR/activitystreams-vocabulary/),
 [w3c/activitystreams](https://github.com/w3c/activitystreams)
