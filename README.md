@@ -27,7 +27,7 @@ This project's data was assembled by hand from both
 The data also includes `Entity`, a term used only informally in
 [the ActivityStreams spec](https://www.w3.org/TR/activitystreams-vocabulary/).
 The properties are inferred from what `Object` and `Link` share.
-For a spec compliant dataset,
+For a spec-compliant dataset,
 I recommend [go-fed/activity](https://github.com/go-fed/activity) and its
 [activitystreams.jsonld](https://github.com/go-fed/activity/blob/master/astool/activitystreams.jsonld).
 
