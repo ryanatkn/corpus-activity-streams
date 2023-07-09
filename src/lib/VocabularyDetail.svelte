@@ -3,7 +3,7 @@
 	import EntityLink from '$lib/EntityLink.svelte';
 	import UnknownLink from '$lib/UnknownLink.svelte';
 	import StringLink from '$lib/StringLink.svelte';
-	import Note from '$lib/Note.svelte';
+	import VocabularySummary from '$lib/VocabularySummary.svelte';
 	import type {Vocabulary} from '$lib/vocabulary';
 	import type {VocabularyItem} from '$lib/activity_streams';
 
@@ -86,7 +86,7 @@
 			</tr>
 		{/if}
 	</table>
-	<Note {item} />
+	<VocabularySummary {item} />
 </div>
 
 <style>

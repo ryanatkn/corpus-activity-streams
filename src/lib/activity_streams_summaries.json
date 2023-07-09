@@ -1,5 +1,5 @@
 {
-	"notes": {
+	"summaries": {
 		"Entity": "The `Entity` is the base of all non-primitive types. Importantly, it's not part of <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/\">the ActivityStreams spec</a>; it's included here to show what `Object` and `Link` have in common.",
 		"Object": "Describes an object of any kind. The `Object` type serves as the base type for most of the other kinds of objects defined in the Activity Vocabulary, including other Core types such as `Activity`, `IntransitiveActivity`, `Collection` and `OrderedCollection`.",
 		"Link": "A `Link` is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is established by [ <a href=\"https://www.w3.org/TR/activitystreams-vocabulary/#bib-RFC5988\">RFC5988</a>]. Many of the properties defined by the Activity Vocabulary allow values that are either instances of `Object` or `Link`. When a `Link` is used, it establishes a <a href=\"http://patterns.dataincubator.org/book/qualified-relation.html\">qualified relation</a> connecting the subject (the containing object) to the resource identified by the `href`. Properties of the `Link` are properties of the reference as opposed to properties of the resource.",
