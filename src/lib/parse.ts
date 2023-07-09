@@ -1,5 +1,6 @@
 import {type Tree, assign_node_ids} from '$lib/tree';
 import {vocabulary} from '$lib/vocabulary';
+import {UnreachableError} from '@feltjs/util/error.js';
 
 // this is all very hacky but serviceable for the needs of this app
 
@@ -102,9 +103,7 @@ export const parse = (content: string, wrapperChars = defaultWrapperChars): Tree
 					});
 				}
 			} else {
-				throw Error();
-				// TODO fix import problem
-				// throw new UnreachableError(parsingHtml);
+				throw new UnreachableError(parsingHtml);
 			}
 		} else {
 			for (const wrapperChar of wrapperChars) {
