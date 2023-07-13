@@ -101,6 +101,7 @@ export const parse = (content: string, wrapperChars = defaultWrapperChars): Tree
 						component: 'Link',
 						props: {...parseAttributes(tagAttributes), content: tagContent}, // TODO parse actual children
 					});
+					tagContent = '';
 				}
 			} else {
 				throw new UnreachableError(parsingHtml);
