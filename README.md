@@ -16,7 +16,7 @@
 
 ## website[🕸️](https://ryanatkn.github.io/corpus-activity-streams)
 
-**[ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)** (mobile unfriendly)
+**[ryanatkn.github.io/corpus-activity-streams](https://ryanatkn.github.io/corpus-activity-streams)**
 
 ## compared to [the spec](https://www.w3.org/TR/activitystreams-vocabulary/)
 
