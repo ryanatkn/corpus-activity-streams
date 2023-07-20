@@ -28,10 +28,6 @@
 		.tiled-view {
 			flex-direction: column;
 		}
-		.tile:nth-child(2) {
-			border-top: 1px solid #999;
-			border-bottom: 1px solid #999;
-		}
 	}
 	.tile {
 		flex: 1;
