@@ -24,7 +24,7 @@
 		display: flex;
 		height: 100%;
 	}
-	@media (max-width: 1070px) {
+	@media (max-width: 950px) {
 		.tiled-view {
 			flex-direction: column;
 		}
