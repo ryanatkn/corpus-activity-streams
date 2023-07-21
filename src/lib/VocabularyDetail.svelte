@@ -13,7 +13,7 @@
 
 <div class="item" id={item.name}>
 	<h2>
-		<ItemLink item={item} />
+		<ItemLink {item} />
 	</h2>
 	<table>
 		<tr>

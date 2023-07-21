@@ -19,7 +19,7 @@
 	{#each vocabulary.types as item (item)}
 		<tr>
 			<td>
-				<ItemLink item={item} />
+				<ItemLink {item} />
 			</td>
 			{#if 'extends' in item}
 				<td>
