@@ -800,7 +800,7 @@
 			"name": "formerType",
 			"category": "vocab.property",
 			"domain": "Tombstone",
-			"range": "Object",
+			"range": ["xsd:anyURI", "Object"],
 			"functional": true
 		},
 		{
