@@ -1,5 +1,5 @@
 <script lang="ts">
-	import EntityLink from '$lib/EntityLink.svelte';
+	import ItemLink from '$lib/ItemLink.svelte';
 	import Items from '$lib/Items.svelte';
 	import StringLink from '$lib/StringLink.svelte';
 	import type {Vocabulary} from '$lib/vocabulary';
@@ -19,13 +19,13 @@
 	{#each vocabulary.types as item (item)}
 		<tr>
 			<td>
-				<EntityLink entity={item} />
+				<ItemLink item={item} />
 			</td>
 			{#if 'extends' in item}
 				<td>
 					<Items items={item.extends} let:item>
 						{#if item}
-							<EntityLink entity={vocabulary.by_name[item]} />
+							<ItemLink item={vocabulary.by_name[item]} />
 						{/if}
 					</Items>
 				</td>
@@ -34,7 +34,7 @@
 				<td>
 					<Items items={item.properties} let:item>
 						{#if item}
-							<EntityLink entity={vocabulary.by_name[item]} />
+							<ItemLink item={vocabulary.by_name[item]} />
 						{/if}
 					</Items>
 				</td>

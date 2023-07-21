@@ -1,5 +1,5 @@
 <script lang="ts">
-	import EntityLink from '$lib/EntityLink.svelte';
+	import ItemLink from '$lib/ItemLink.svelte';
 	import Items from '$lib/Items.svelte';
 	import UnknownLink from '$lib/UnknownLink.svelte';
 	import type {Vocabulary} from '$lib/vocabulary';
@@ -16,26 +16,26 @@
 			<th>functional</th>
 		</tr>
 	</thead>
-	{#each vocabulary.properties as entity (entity)}
+	{#each vocabulary.properties as item (item)}
 		<tr>
 			<td>
-				<EntityLink {entity} />
+				<ItemLink {item} />
 			</td>
 			<td>
-				<Items items={entity.domain} let:item>
-					<EntityLink entity={vocabulary.by_name[item]} />
+				<Items items={item.domain} let:item>
+					<ItemLink item={vocabulary.by_name[item]} />
 				</Items>
 			</td>
 			<td>
-				<Items items={entity.range} let:item>
+				<Items items={item.range} let:item>
 					{#if item in vocabulary.by_name}
-						<EntityLink entity={vocabulary.by_name[item]} />
+						<ItemLink item={vocabulary.by_name[item]} />
 					{:else}
 						<UnknownLink>{item}</UnknownLink>
 					{/if}
 				</Items>
 			</td>
-			<td><code>{entity.functional}</code></td>
+			<td><code>{item.functional}</code></td>
 		</tr>
 	{/each}
 </table>

@@ -6,7 +6,7 @@
 	],
 	"vocabulary": [
 		{
-			"name": "Entity",
+			"name": "Item",
 			"category": "vocab.core",
 			"properties": ["id", "type", "name", "mediaType", "preview", "attributedTo"],
 			"extended_by": ["Link", "Object"]
@@ -14,7 +14,7 @@
 		{
 			"name": "Object",
 			"category": "vocab.core",
-			"extends": "Entity",
+			"extends": "Item",
 			"disjoint_with": "Link",
 			"properties": [
 				"attachment",
@@ -61,7 +61,7 @@
 		{
 			"name": "Link",
 			"category": "vocab.core",
-			"extends": "Entity",
+			"extends": "Item",
 			"disjoint_with": "Object",
 			"properties": ["href", "rel", "hreflang", "height", "width"],
 			"extended_by": ["Mention"]

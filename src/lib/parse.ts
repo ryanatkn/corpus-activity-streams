@@ -11,10 +11,10 @@ export interface WrapperChar {
 	component: string;
 	toProps: (...args: any[]) => Record<string, any>; // TODO type ? generic?
 }
-const toEntityLinkProps = (name: string): {name: string} => ({name}); // TODO refactor, where and how?
+const toItemLinkProps = (name: string): {name: string} => ({name}); // TODO refactor, where and how?
 export const defaultWrapperChars: WrapperChar[] = [
-	{char: '`', preserve: false, component: 'EntityLink', toProps: toEntityLinkProps},
-	{char: '"', preserve: true, component: 'EntityLink', toProps: toEntityLinkProps},
+	{char: '`', preserve: false, component: 'ItemLink', toProps: toItemLinkProps},
+	{char: '"', preserve: true, component: 'ItemLink', toProps: toItemLinkProps},
 ];
 
 // TODO regexp? refactor?

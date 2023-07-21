@@ -1,5 +1,5 @@
 <script lang="ts">
-	import EntityLink from '$lib/EntityLink.svelte';
+	import ItemLink from '$lib/ItemLink.svelte';
 	import {slide} from 'svelte/transition';
 	import {swallow} from '@feltjs/util/dom.js';
 	import type {VocabularyType} from '$lib/activity_streams';
@@ -31,10 +31,10 @@
 		{:else}
 			<span class="icon"> ∙ </span>
 		{/if}
-		<EntityLink entity={tree} />
+		<ItemLink item={tree} />
 		{#if tree.properties}
 			{#each tree.properties as property (property)}
-				<EntityLink name={property} />
+				<ItemLink name={property} />
 			{/each}
 		{/if}
 	</div>

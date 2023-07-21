@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Items from '$lib/Items.svelte';
-	import EntityLink from '$lib/EntityLink.svelte';
+	import ItemLink from '$lib/ItemLink.svelte';
 	import UnknownLink from '$lib/UnknownLink.svelte';
 	import StringLink from '$lib/StringLink.svelte';
 	import VocabularySummary from '$lib/VocabularySummary.svelte';
@@ -13,7 +13,7 @@
 
 <div class="item" id={item.name}>
 	<h2>
-		<EntityLink entity={item} />
+		<ItemLink item={item} />
 	</h2>
 	<table>
 		<tr>
@@ -27,7 +27,7 @@
 				<td class="property-name">extends</td>
 				<td class="property-value">
 					<Items items={item.extends} let:item>
-						<EntityLink entity={vocabulary.by_name[item]} />
+						<ItemLink item={vocabulary.by_name[item]} />
 					</Items>
 				</td>
 			</tr>
@@ -37,7 +37,7 @@
 				<td class="property-name">extended_by</td>
 				<td class="property-value">
 					<Items items={item.extended_by} let:item>
-						<EntityLink entity={vocabulary.by_name[item]} />
+						<ItemLink item={vocabulary.by_name[item]} />
 					</Items>
 				</td>
 			</tr>
@@ -47,7 +47,7 @@
 				<td class="property-name">domain</td>
 				<td class="property-value">
 					<Items items={item.domain} let:item>
-						<EntityLink entity={vocabulary.by_name[item]} />
+						<ItemLink item={vocabulary.by_name[item]} />
 					</Items>
 				</td>
 			</tr>
@@ -58,7 +58,7 @@
 				<td class="property-value">
 					<Items items={item.range} let:item>
 						{#if item in vocabulary.by_name}
-							<EntityLink entity={vocabulary.by_name[item]} />
+							<ItemLink item={vocabulary.by_name[item]} />
 						{:else}
 							<UnknownLink>{item}</UnknownLink>
 						{/if}
@@ -74,7 +74,7 @@
 				<td class="property-name">properties</td>
 				<td class="property-value">
 					<Items items={item.properties} let:item>
-						<EntityLink entity={vocabulary.by_name[item]} />
+						<ItemLink item={vocabulary.by_name[item]} />
 					</Items>
 				</td>
 			</tr>

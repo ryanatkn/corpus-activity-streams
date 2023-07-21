@@ -5,14 +5,14 @@
 	import GithubLink from '$lib/GithubLink.svelte';
 	import {set_components} from '$lib/components';
 	import Link from '$lib/Link.svelte';
-	import EntityLink from '$lib/EntityLink.svelte';
+	import ItemLink from '$lib/ItemLink.svelte';
 	import Example from '$lib/Example.svelte';
 
 	const view = TiledView;
 
 	const default_components = {
 		Link,
-		EntityLink,
+		ItemLink,
 		Example,
 	};
 

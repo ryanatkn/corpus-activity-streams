@@ -1,17 +1,17 @@
 <script lang="ts">
 	import {vocabulary} from '$lib/vocabulary';
-	import {hovered_entity} from '$lib/entities';
+	import {hovered_item} from '$lib/items';
 	import type {VocabularyItem} from '$lib/activity_streams';
 
 	// one of these two is required
-	export let entity: VocabularyItem | null = null;
+	export let item: VocabularyItem | null = null;
 	export let name: string | null = null;
 
-	if (!entity && !name) throw Error('Expected an entity or a name');
+	if (!item && !name) throw Error('Expected an item or a name');
 
-	$: ent = name ? vocabulary.by_name[name] : entity!;
+	$: ent = name ? vocabulary.by_name[name] : item!;
 
-	$: hovered = ent && ent === $hovered_entity;
+	$: hovered = ent && ent === $hovered_item;
 
 	const colors = {
 		'vocab.core': 123,
@@ -38,11 +38,11 @@
 	style="--color: {color}; --hovered-color: {hovered_color}; --pressed-color: {pressed_color};"
 	href="#{ent.name}"
 	on:mouseenter={() => {
-		$hovered_entity = ent;
+		$hovered_item = ent;
 	}}
 	on:mouseleave={() => {
-		$hovered_entity = null;
-	}}><slot entity={ent} {color}><code>{ent.name}</code></slot></a
+		$hovered_item = null;
+	}}><slot item={ent} {color}><code>{ent.name}</code></slot></a
 >
 
 <style>
@@ -58,7 +58,7 @@
 		text-decoration: underline;
 	}
 	.hovered code:active {
-		/* TODO store pressed state and style all `EntityLinks` with the pressed entity,
+		/* TODO store pressed state and style all `ItemLinks` with the pressed item,
 		not just the sole active one */
 		background-color: var(--pressed-color);
 	}
