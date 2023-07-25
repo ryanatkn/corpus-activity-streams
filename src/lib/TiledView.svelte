@@ -11,7 +11,7 @@
 	<div class="tile">
 		<VocabularyTree {vocabulary} />
 	</div>
-	<div class="tile">
+	<div class="tile shadowed">
 		<VocabularyDetails {vocabulary} />
 	</div>
 	<div class="tile">
@@ -34,7 +34,7 @@
 		padding: 0 10px;
 		overflow: auto;
 	}
-	.tile:nth-child(2) {
-		box-shadow: 0px 0px 10px #7778 inset;
+	.shadowed {
+		box-shadow: 0px 0px 11px #2224 inset;
 	}
 </style>
