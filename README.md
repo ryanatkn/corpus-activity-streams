@@ -22,7 +22,7 @@
 
 This project's data was assembled by hand from both
 [the ActivityStreams website](https://www.w3.org/TR/activitystreams-vocabulary/) and
-[the w3c OWL spec](https://github.com/w3c/activitystreams/blob/master/vocabulary/activitystreams2.owl).
+[the w3c OWL file](https://github.com/w3c/activitystreams/blob/master/vocabulary/activitystreams2.owl).
 
 The data also includes `Item`, a term not used in
 [the ActivityStreams spec](https://www.w3.org/TR/activitystreams-vocabulary/).
