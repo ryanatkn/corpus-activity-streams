@@ -1,14 +1,12 @@
 <script lang="ts">
 	import {vocabulary} from '$lib/vocabulary';
-	// import TabbedView from '$lib/TabbedView.svelte'; // experimental
+	// import TabbedView from '$lib/TabbedView.svelte'; // experimental alternative to TiledView
 	import TiledView from '$lib/TiledView.svelte';
 	import GithubLink from '$lib/GithubLink.svelte';
 	import {set_components} from '$lib/components';
 	import Link from '$lib/Link.svelte';
 	import ItemLink from '$lib/ItemLink.svelte';
 	import Example from '$lib/Example.svelte';
-
-	const view = TiledView;
 
 	const default_components = {
 		Link,
@@ -23,7 +21,7 @@
 	<!-- TODO nav? -->
 	<GithubLink />
 	<div class="content">
-		<svelte:component this={view} {vocabulary} />
+		<TiledView {vocabulary} />
 	</div>
 </main>
 
