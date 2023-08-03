@@ -1,4 +1,9 @@
 {
+	"summary": "Activity Streams 2.0 vocabulary examples",
+	"source": [
+		"https://www.w3.org/TR/activitystreams-vocabulary/",
+		"https://github.com/w3c/activitystreams/blob/master/vocabulary/activitystreams2.owl"
+	],
 	"examples": {
 		"Object": [
 			{
