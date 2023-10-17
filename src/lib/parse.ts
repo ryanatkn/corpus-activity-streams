@@ -1,6 +1,7 @@
+import {UnreachableError} from '@grogarden/util/error.js';
+
 import {type Tree, assign_node_ids} from '$lib/tree';
 import {vocabulary} from '$lib/vocabulary';
-import {UnreachableError} from '@feltjs/util/error.js';
 
 // this is all very hacky but serviceable for the needs of this app
 

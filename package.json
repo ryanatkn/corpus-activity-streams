@@ -33,6 +33,7 @@
   "devDependencies": {
     "@feltjs/eslint-config": "^0.4.0",
     "@grogarden/gro": "^0.95.3",
+    "@grogarden/util": "^0.15.0",
     "@sveltejs/adapter-static": "^2.0.3",
     "@sveltejs/kit": "^1.25.2",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
@@ -50,15 +51,17 @@
   "eslintConfig": {
     "root": true,
     "extends": "@feltjs",
-    "ignorePatterns": [
-      "svelte.config.js"
-    ]
+    "rules": {
+      "no-console": 1
+    }
   },
   "prettier": {
+    "plugins": [
+      "prettier-plugin-svelte"
+    ],
     "useTabs": true,
     "printWidth": 100,
     "singleQuote": true,
-    "trailingComma": "all",
     "bracketSpacing": false,
     "overrides": [
       {
