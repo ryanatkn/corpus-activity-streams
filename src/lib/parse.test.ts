@@ -1,4 +1,4 @@
-import {suite} from 'uvu';
+import {test} from 'uvu';
 import * as assert from 'uvu/assert';
 
 import {parse} from '$lib/parse';
@@ -9,10 +9,7 @@ const normalizeChildren = (children: Tree[]) => {
 	return children.map((c) => assign_node_ids(c, () => `tree_${i++}`));
 };
 
-/* test_parse */
-const test_parse = suite('parse');
-
-test_parse('parses item link in backticks', () => {
+test('parses item link in backticks', () => {
 	assert.equal(
 		normalizeChildren(parse('The `Item` is the base of all non-primitive types.')),
 		normalizeChildren([
@@ -23,7 +20,7 @@ test_parse('parses item link in backticks', () => {
 	);
 });
 
-test_parse('parses item links in quotes', () => {
+test('parses item links in quotes', () => {
 	assert.equal(
 		normalizeChildren(
 			parse(
@@ -57,7 +54,7 @@ test_parse('parses item links in quotes', () => {
 	);
 });
 
-test_parse('parses link', () => {
+test('parses link', () => {
 	assert.equal(
 		normalizeChildren(parse('this https://felt.social is an external link')),
 		normalizeChildren([
@@ -68,7 +65,7 @@ test_parse('parses link', () => {
 	);
 });
 
-test_parse('parses insecure http link', () => {
+test('parses insecure http link', () => {
 	assert.equal(
 		normalizeChildren(parse('this http://felt.social is an external insecure link')),
 		normalizeChildren([
@@ -79,7 +76,7 @@ test_parse('parses insecure http link', () => {
 	);
 });
 
-test_parse('parses link in backticks', () => {
+test('parses link in backticks', () => {
 	assert.equal(
 		normalizeChildren(parse('this `https://felt.social` is an external link in backticks')),
 		normalizeChildren([
@@ -90,7 +87,7 @@ test_parse('parses link in backticks', () => {
 	);
 });
 
-test_parse('parses link in quotes', () => {
+test('parses link in quotes', () => {
 	assert.equal(
 		normalizeChildren(parse('this "https://felt.social" is an external link in quotes')),
 		normalizeChildren([
@@ -101,7 +98,7 @@ test_parse('parses link in quotes', () => {
 	);
 });
 
-test_parse('parses custom link in backticks', () => {
+test('parses custom link in backticks', () => {
 	assert.equal(
 		normalizeChildren(
 			parse('The `Item` is the base of all non-primitive types.', [
@@ -121,7 +118,7 @@ test_parse('parses custom link in backticks', () => {
 	);
 });
 
-test_parse('parses a simple html anchor link', () => {
+test('parses a simple html anchor link', () => {
 	assert.equal(
 		normalizeChildren(
 			parse('this <a href="https://felt.social" name="felt">content</a> is an external link'),
@@ -138,7 +135,7 @@ test_parse('parses a simple html anchor link', () => {
 	);
 });
 
-test_parse('parses a more complex html anchor link', () => {
+test('parses a more complex html anchor link', () => {
 	assert.equal(
 		normalizeChildren(parse('the [<a href="https://felt.social" a="1" b=2 c="3">1 2 3</a>] and')),
 		normalizeChildren([
@@ -159,7 +156,4 @@ test_parse('parses a more complex html anchor link', () => {
 	);
 });
 
-// TODO nested html
-
-test_parse.run();
-/* /test_parse */
+test.run();
