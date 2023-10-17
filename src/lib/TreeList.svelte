@@ -2,7 +2,7 @@
 	import ItemLink from '$lib/ItemLink.svelte';
 	import {slide} from 'svelte/transition';
 	import {swallow} from '@grogarden/util/dom.js';
-	
+
 	import type {VocabularyType} from '$lib/activity_streams';
 
 	export let tree: VocabularyType;
