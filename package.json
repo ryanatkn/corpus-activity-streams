@@ -22,7 +22,7 @@
     "url": "https://www.ryanatkn.com"
   },
   "engines": {
-    "node": ">=18.6"
+    "node": ">=20.7"
   },
   "bugs": {
     "url": "https://github.com/ryanatkn/corpus-activity-streams/issues"
@@ -32,7 +32,7 @@
   ],
   "devDependencies": {
     "@feltjs/eslint-config": "^0.3.0",
-    "@feltjs/gro": "^0.78.2",
+    "@grogarden/gro": "^0.95.3",
     "@sveltejs/adapter-static": "^2.0.2",
     "@sveltejs/kit": "^1.22.1",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
@@ -43,7 +43,6 @@
     "prettier-plugin-svelte": "^2.10.1",
     "svelte": "^4.0.5",
     "svelte-check": "^3.4.5",
-    "svelte-preprocess-esbuild": "^3.0.1",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6",
     "uvu": "^0.5.6"
