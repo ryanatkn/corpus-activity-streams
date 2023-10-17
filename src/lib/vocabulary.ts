@@ -28,17 +28,23 @@ export const vocabulary: Vocabulary = {
 	properties: vocabulary_items.filter(
 		(v) => v.category === 'vocab.property',
 	) as VocabularyProperty[], // TODO rework types to avoid this typecast
-	by_type_name: categories.reduce((result, t) => {
-		result[t] = vocabulary_items.filter((v) => v.category === t);
-		if (t === 'vocab.property') {
-			result[t].sort((a, b) => (a.name > b.name ? 1 : -1));
-		}
-		return result;
-	}, {} as Vocabulary['by_type_name']),
-	by_name: vocabulary_items.reduce((result, item) => {
-		result[item.name] = item;
-		return result;
-	}, {} as Vocabulary['by_name']),
+	by_type_name: categories.reduce(
+		(result, t) => {
+			result[t] = vocabulary_items.filter((v) => v.category === t);
+			if (t === 'vocab.property') {
+				result[t].sort((a, b) => (a.name > b.name ? 1 : -1));
+			}
+			return result;
+		},
+		{} as Vocabulary['by_type_name'],
+	),
+	by_name: vocabulary_items.reduce(
+		(result, item) => {
+			result[item.name] = item;
+			return result;
+		},
+		{} as Vocabulary['by_name'],
+	),
 	types_tree_root: vocabulary_items.find((v) => v.name === 'Item')!,
 	categories,
 };

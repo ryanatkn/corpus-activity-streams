@@ -1,7 +1,8 @@
 <script lang="ts">
 	import ItemLink from '$lib/ItemLink.svelte';
 	import {slide} from 'svelte/transition';
-	import {swallow} from '@feltjs/util/dom.js';
+	import {swallow} from '@grogarden/util/dom.js';
+
 	import type {VocabularyType} from '$lib/activity_streams';
 
 	export let tree: VocabularyType;

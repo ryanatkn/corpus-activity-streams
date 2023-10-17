@@ -1,15 +1,13 @@
-import {typescript} from 'svelte-preprocess-esbuild';
+import {vitePreprocess} from '@sveltejs/kit/vite';
 import adapter from '@sveltejs/adapter-static';
-
-const dev = process.argv.includes('dev');
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
-	preprocess: typescript(),
+	preprocess: [vitePreprocess()],
 	compilerOptions: {immutable: true},
+	vitePlugin: {inspector: true}, // docs: https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/inspector.md
 	kit: {
 		adapter: adapter(),
-		paths: dev ? undefined : {base: '/corpus-activity-streams'},
-		files: {assets: 'src/static'},
+		alias: {$routes: 'src/routes', $fixtures: 'src/fixtures'},
 	},
 };

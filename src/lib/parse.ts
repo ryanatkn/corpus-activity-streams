@@ -1,6 +1,7 @@
+import {UnreachableError} from '@grogarden/util/error.js';
+
 import {type Tree, assign_node_ids} from '$lib/tree';
 import {vocabulary} from '$lib/vocabulary';
-import {UnreachableError} from '@feltjs/util/error.js';
 
 // this is all very hacky but serviceable for the needs of this app
 
@@ -172,7 +173,6 @@ const parseAttributes = (tagAttributes: string): {[key: string]: any} => {
 	let key = '';
 	let value = '';
 	let parsingAttributes: 'key' | 'value' = 'key'; // TODO const enum?
-	// eslint-disable-next-line @typescript-eslint/prefer-for-of
 	for (let i = 0; i < tagAttributes.length; i++) {
 		const char = tagAttributes[i];
 		if (parsingAttributes === 'key') {
