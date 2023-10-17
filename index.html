@@ -1,24 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
-		<link rel="modulepreload" href="./_app/immutable/entry/start.16e8de21.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.2c0dc6fc.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.78c05e17.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.52f77bee.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.75070baa.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.bcbd11a3.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.99e1ca4f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.acf3060e.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.16699254.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.113c1a60.js">
 	</head>
-	<noscript>please enable js! there's a whitespace bug with server-side rendering</noscript>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_1u36cda = {
-						assets: "/corpus-activity-streams",
+					__sveltekit_1pz8lgx = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -26,13 +24,17 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.16e8de21.js"),
-						import("./_app/immutable/entry/app.99e1ca4f.js")
+						import("./_app/immutable/entry/start.2c0dc6fc.js"),
+						import("./_app/immutable/entry/app.16699254.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
 				}
 			</script>
 		</div>
+		<noscript
+			>please enable js! there's a whitespace bug with server-side rendering which is why it's
+			disabled</noscript
+		>
 	</body>
 </html>
