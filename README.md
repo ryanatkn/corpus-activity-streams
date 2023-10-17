@@ -43,7 +43,6 @@ gro dev # npm i -g @grogarden/gro
 ```
 
 > learn more about [Gro](https://github.com/grogarden/gro)
-> (Windows users: you'll need Linux, see the readme)
 
 ## build
 
