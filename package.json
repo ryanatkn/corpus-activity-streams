@@ -3,7 +3,7 @@
   "description": "alternative docs for ActivityStreams 2.0 vocabulary",
   "homepage": "https://ryanatkn.github.io/corpus-activity-streams",
   "license": "Unlicense",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "gro dev",
