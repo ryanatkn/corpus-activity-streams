@@ -1,4 +1,4 @@
-import {UnreachableError} from '@grogarden/util/error.js';
+import {Unreachable_Error} from '@grogarden/util/error.js';
 
 import {type Tree, assign_node_ids} from '$lib/tree';
 import {vocabulary} from '$lib/vocabulary';
@@ -105,7 +105,7 @@ export const parse = (content: string, wrapperChars = defaultWrapperChars): Tree
 					tagContent = '';
 				}
 			} else {
-				throw new UnreachableError(parsingHtml);
+				throw new Unreachable_Error(parsingHtml);
 			}
 		} else {
 			for (const wrapperChar of wrapperChars) {
