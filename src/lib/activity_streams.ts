@@ -6,6 +6,7 @@ export interface VocabularyTerm {
 	type?: string | string[];
 }
 
+// TODO probably rename everything from `Item` to `Term`
 export type VocabularyItem = VocabularyType | VocabularyProperty;
 export interface BaseVocabularyItem {
 	name: string;

@@ -11,10 +11,10 @@ const normalizeChildren = (children: Tree[]) => {
 
 test('parses item link in backticks', () => {
 	assert.equal(
-		normalizeChildren(parse('The `Item` is the base of all non-primitive types.')),
+		normalizeChildren(parse('The `Entity` is the base of all non-primitive types.')),
 		normalizeChildren([
 			{type: 'Text', content: 'The '},
-			{type: 'Component', component: 'ItemLink', props: {name: 'Item'}},
+			{type: 'Component', component: 'ItemLink', props: {name: 'Entity'}},
 			{type: 'Text', content: ' is the base of all non-primitive types.'},
 		]),
 	);
@@ -101,7 +101,7 @@ test('parses link in quotes', () => {
 test('parses custom link in backticks', () => {
 	assert.equal(
 		normalizeChildren(
-			parse('The `Item` is the base of all non-primitive types.', [
+			parse('The `Entity` is the base of all non-primitive types.', [
 				{
 					char: '`',
 					preserve: false,
@@ -112,7 +112,7 @@ test('parses custom link in backticks', () => {
 		),
 		normalizeChildren([
 			{type: 'Text', content: 'The '},
-			{type: 'Component', component: 'CustomLink', props: {othername: 'Item'}},
+			{type: 'Component', component: 'CustomLink', props: {othername: 'Entity'}},
 			{type: 'Text', content: ' is the base of all non-primitive types.'},
 		]),
 	);

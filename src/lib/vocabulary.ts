@@ -49,6 +49,6 @@ export const vocabulary: Vocabulary = {
 		},
 		{} as Vocabulary['by_name'],
 	),
-	types_tree_root: vocabulary_items.find((v) => v.name === 'Item')!,
+	types_tree_root: vocabulary_items.find((v) => v.name === 'Entity')!,
 	categories,
 };
