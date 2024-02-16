@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type {VocabularyItem} from '$lib/activity_streams';
+	import type {VocabularyItem} from '$lib/activity_streams.js';
 	import TreeView from '$lib/TreeView.svelte';
-	import {parse} from '$lib/parse';
-	import {parse_examples} from '$lib/parse_examples';
+	import {parse} from '$lib/parse.js';
+	import {parse_examples} from '$lib/parse_examples.js';
 	import activity_streams_summaries from '$lib/activity_streams_summaries.json';
 	import activity_streams_examples from '$lib/activity_streams_examples.json';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type {Tree} from './tree';
+	import type {Tree} from '$lib/tree.js';
 	import TreeView from '$lib/TreeView.svelte';
 
 	export let tree: Tree;

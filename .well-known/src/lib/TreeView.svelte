@@ -1,6 +1,6 @@
 <script lang="ts">
-	import {get_components} from '$lib/components';
-	import type {Tree} from '$lib/tree';
+	import {get_components} from '$lib/components.js';
+	import type {Tree} from '$lib/tree.js';
 
 	// `<TreeView />` renders a `Tree` AST
 

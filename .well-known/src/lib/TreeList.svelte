@@ -1,9 +1,9 @@
 <script lang="ts">
-	import ItemLink from '$lib/ItemLink.svelte';
 	import {slide} from 'svelte/transition';
-	import {swallow} from '@grogarden/util/dom.js';
+	import {swallow} from '@ryanatkn/belt/dom.js';
 
-	import type {VocabularyType} from '$lib/activity_streams';
+	import ItemLink from '$lib/ItemLink.svelte';
+	import type {VocabularyType} from '$lib/activity_streams.js';
 
 	export let tree: VocabularyType;
 	export let get_children: (item: VocabularyType) => VocabularyType[];

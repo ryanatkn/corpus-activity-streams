@@ -1,9 +1,9 @@
 <script lang="ts">
-	import {vocabulary} from '$lib/vocabulary';
+	import {vocabulary} from '$lib/vocabulary.js';
 	// import TabbedView from '$lib/TabbedView.svelte'; // experimental alternative to TiledView
 	import TiledView from '$lib/TiledView.svelte';
 	import GithubLink from '$lib/GithubLink.svelte';
-	import {set_components} from '$lib/components';
+	import {set_components} from '$lib/components.js';
 	import Link from '$lib/Link.svelte';
 	import ItemLink from '$lib/ItemLink.svelte';
 	import Example from '$lib/Example.svelte';

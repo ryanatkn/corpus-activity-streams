@@ -1,6 +1,6 @@
-import {type Tree, assign_node_ids, type BlockTree} from '$lib/tree';
-import type {VocabularyTerm} from '$lib/activity_streams';
-import {parse} from '$lib/parse';
+import {type Tree, assign_node_ids, type BlockTree} from '$lib/tree.js';
+import type {VocabularyTerm} from '$lib/activity_streams.js';
+import {parse} from '$lib/parse.js';
 
 // TODO delete this?
 export const parse_examples = (examples: VocabularyTerm[]): Tree | null => {
