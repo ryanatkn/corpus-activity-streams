@@ -1,7 +1,7 @@
-import {Unreachable_Error} from '@grogarden/util/error.js';
+import {Unreachable_Error} from '@ryanatkn/belt/error.js';
 
-import {type Tree, assign_node_ids} from '$lib/tree';
-import {vocabulary} from '$lib/vocabulary';
+import {type Tree, assign_node_ids} from '$lib/tree.js';
+import {vocabulary} from '$lib/vocabulary.js';
 
 // this is all very hacky but serviceable for the needs of this app
 

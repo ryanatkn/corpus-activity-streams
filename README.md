@@ -39,10 +39,10 @@ npm i
 # then
 npm run dev
 # or
-gro dev # npm i -g @grogarden/gro
+gro dev # npm i -g @ryanatkn/gro
 ```
 
-> learn more about [Gro](https://github.com/grogarden/gro)
+> learn more about [Gro](https://github.com/ryanatkn/gro)
 
 ## build
 
@@ -54,7 +54,7 @@ gro build
 
 ## deploy
 
-[Deploy](https://github.com/grogarden/gro/blob/main/src/docs/deploy.md)
+[Deploy](https://github.com/ryanatkn/gro/blob/main/src/docs/deploy.md)
 (build, commit, and push) to the `deploy` branch, e.g. for GitHub Pages:
 
 ```bash

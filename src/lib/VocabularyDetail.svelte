@@ -4,8 +4,8 @@
 	import UnknownLink from '$lib/UnknownLink.svelte';
 	import StringLink from '$lib/StringLink.svelte';
 	import VocabularySummary from '$lib/VocabularySummary.svelte';
-	import type {Vocabulary} from '$lib/vocabulary';
-	import type {VocabularyItem} from '$lib/activity_streams';
+	import type {Vocabulary} from '$lib/vocabulary.js';
+	import type {VocabularyItem} from '$lib/activity_streams.js';
 
 	export let item: VocabularyItem;
 	export let vocabulary: Vocabulary;

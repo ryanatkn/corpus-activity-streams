@@ -1,8 +1,8 @@
 import {test} from 'uvu';
 import * as assert from 'uvu/assert';
 
-import {parse} from '$lib/parse';
-import {type Tree, assign_node_ids} from '$lib/tree';
+import {parse} from '$lib/parse.js';
+import {type Tree, assign_node_ids} from '$lib/tree.js';
 
 const normalizeChildren = (children: Tree[]) => {
 	let i = 0;
@@ -34,7 +34,7 @@ test('parses item links in quotes', () => {
 					null,
 					2,
 				),
-			)!,
+			),
 		),
 		normalizeChildren([
 			{type: 'Text', content: '{\n  "@context": "'},

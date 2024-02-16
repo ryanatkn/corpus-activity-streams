@@ -2,7 +2,7 @@
 	import VocabularyDetails from '$lib/VocabularyDetails.svelte';
 	import VocabularyTree from '$lib/VocabularyTree.svelte';
 	import VocabularyGroups from '$lib/VocabularyGroups.svelte';
-	import type {Vocabulary} from '$lib/vocabulary';
+	import type {Vocabulary} from '$lib/vocabulary.js';
 
 	export let vocabulary: Vocabulary;
 </script>

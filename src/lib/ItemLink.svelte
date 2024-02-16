@@ -1,7 +1,7 @@
 <script lang="ts">
-	import {vocabulary} from '$lib/vocabulary';
-	import {hovered_item} from '$lib/items';
-	import type {VocabularyItem} from '$lib/activity_streams';
+	import {vocabulary} from '$lib/vocabulary.js';
+	import {hovered_item} from '$lib/items.js';
+	import type {VocabularyItem} from '$lib/activity_streams.js';
 
 	// one of these two is required
 	export let item: VocabularyItem | null = null;
