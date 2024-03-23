@@ -1,5 +1,8 @@
 # corpus-activity-streams
 
+> ⚠️ archived because I'm not keeping up with the small changes to the spec, mostly because it's
+> [not available in a machine-readable format](https://github.com/w3c/activitystreams/issues/516)
+
 > alternative docs for
 > [ActivityStreams 2.0 vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/)
 
